@@ -131,6 +131,7 @@ Final response should include:
 ## Reference Routing
 
 - Read `references/example-patterns.md` when deciding architecture or reusable modules from prior project patterns.
+- Read `references/benchmark-patterns.md` when improving strategy, conversion, trust, B2B buyer support, or overall maturity.
 - Read `references/delivery-standards.md` before significant visual or responsive work.
 - Read `references/qa-checklist.md` before final handoff or review.
 

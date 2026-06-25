@@ -39,5 +39,20 @@
       "path": "scripts/audit_static_site.py",
       "description": "Checks local static site assets, anchors, duplicate IDs, viewport metadata, image alt attributes, and CSS url() references."
     }
-  ]
+  ],
+  "compatibility": {
+    "format": "Agent Skills / SKILL.md",
+    "tested": [
+      "Codex"
+    ],
+    "expected": [
+      "Claude Code",
+      "Cursor",
+      "Trae",
+      "Antigravity",
+      "OpenClaw",
+      "Hermes"
+    ],
+    "notes": "Core workflow uses SKILL.md, references, scripts, and assets. agents/openai.yaml is Codex-specific UI metadata and can be ignored by other runtimes."
+  }
 }
