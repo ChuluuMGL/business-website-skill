@@ -1,5 +1,7 @@
 # Business Website Skill
 
+[中文说明](README.zh-CN.md) | English
+
 Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials.
 
 This Agent Skill is designed for client-facing business website work: enterprise websites, brand websites, project showcase pages,招商/投标 pages, and presentation-ready prototypes. It is not focused on e-commerce storefronts.
@@ -27,7 +29,8 @@ business-website-skill/
 │   └── qa-checklist.md
 ├── scripts/audit_static_site.py
 ├── skill.json
-└── README.md
+├── README.md
+└── README.zh-CN.md
 ```
 
 ## Suggested Prompts
