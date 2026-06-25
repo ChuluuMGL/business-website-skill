@@ -1,0 +1,43 @@
+{
+  "name": "business-website-skill",
+  "display_name": "Business Website Skill",
+  "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, design direction choices, implementation, and QA.",
+  "version": "1.0.0",
+  "author": "ChuluuMGL",
+  "license": "MIT",
+  "repository": "https://github.com/ChuluuMGL/business-website-skill",
+  "category": "Web Development",
+  "keywords": [
+    "business website",
+    "corporate website",
+    "brand website",
+    "B2B website",
+    "proposal website",
+    "client website",
+    "landing page",
+    "static website",
+    "React",
+    "Vite",
+    "Next.js",
+    "Agent Skills"
+  ],
+  "not_for": [
+    "e-commerce storefronts",
+    "shopping cart implementation",
+    "payment checkout implementation"
+  ],
+  "templates": [
+    {
+      "name": "static-business-site",
+      "path": "assets/templates/static-business-site",
+      "description": "Dependency-free static business website starter with generic placeholders."
+    }
+  ],
+  "scripts": [
+    {
+      "name": "audit_static_site",
+      "path": "scripts/audit_static_site.py",
+      "description": "Checks local static site assets, anchors, duplicate IDs, viewport metadata, image alt attributes, and CSS url() references."
+    }
+  ]
+}
