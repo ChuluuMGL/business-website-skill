@@ -8,7 +8,7 @@
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.3.1-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.3.2-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -107,6 +107,7 @@
 | [`references/style-presets.md`](./references/style-presets.md) | 主流高级商业网站视觉风格预设。 |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | 交互和动效预设，包括 Anime.js 使用建议。 |
 | [`references/preview-guide.md`](./references/preview-guide.md) | 视觉预览、风格重合和动效强度评估说明。 |
+| [`references/distribution-platforms.md`](./references/distribution-platforms.md) | 公开发布、市场上架和平台边界说明。 |
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | 最终 QA 清单和常见失败模式。 |
 | [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | 机器可读的风格预设目录。 |
 | [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | 机器可读的交互预设目录。 |
@@ -138,6 +139,12 @@
 `agents/openai.yaml` 是 Codex 专用 UI 元数据；其他 Agent 可以忽略这个文件，直接读取 `SKILL.md`。
 
 兼容性状态保持保守：只有完成端到端实测的运行时才应写入 `skill.json` 的 `tested`。Claude Code 已由维护者测试；其他列出的运行时在验证前保持预期兼容。
+
+### 可发布平台
+
+最适合公开分发的平台是 GitHub、Claude Code Skills、Codex / OpenAI 风格本地 skills、OpenClaw / ClawHub、VS Code / GitHub Copilot Agent Skills。Coze、Dify 和 ChatGPT GPT Store 也可以做，但它们更像 Bot、Workflow、Plugin 或 Knowledge 包装，不是原生读取 `SKILL.md` 目录的 skill 市场。
+
+这个项目不是小红书运营 skill。小红书 skill 通常指小红书/RedNote 账号研究、发布、互动或数据分析自动化。这个项目可以在小红书做内容推广，也可以单独做一个“官网案例转小红书推广笔记”的配套 skill，但不应当作为小红书自动化 skill 上架。详见 [`references/distribution-platforms.md`](./references/distribution-platforms.md)。
 
 ### 让 AI Agent 帮你安装
 
@@ -514,5 +521,5 @@ MIT。Copyright (c) 2026 月瑀科技 YUEYU TECH。
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.3.1"
+  "softwareVersion": "1.3.2"
 } -->

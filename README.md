@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.3.1-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.3.2-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -107,6 +107,7 @@ The skill does not force every site into the same template. It routes the projec
 | [`references/style-presets.md`](./references/style-presets.md) | Premium visual style presets for mainstream business website directions. |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | Interaction and animation presets, including Anime.js guidance. |
 | [`references/preview-guide.md`](./references/preview-guide.md) | Visual preview, overlap review, and motion-intensity evaluation guide. |
+| [`references/distribution-platforms.md`](./references/distribution-platforms.md) | Public distribution, marketplace packaging, and platform boundary guide. |
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | Final QA checklist and failure modes. |
 | [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | Machine-readable style preset catalog. |
 | [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | Machine-readable interaction preset catalog. |
@@ -138,6 +139,12 @@ The core skill follows the open Agent Skills shape: a folder with `SKILL.md`, pl
 Only Codex-specific UI metadata lives in `agents/openai.yaml`. Other agents can ignore that file and use `SKILL.md` directly.
 
 Compatibility status is conservative: only runtimes with completed end-to-end runs should be moved into `skill.json` `tested`. Claude Code has been reported as tested by the maintainer; other listed runtimes remain expected-compatible until verified.
+
+### Publishing Targets
+
+The strongest public distribution targets are GitHub, Claude Code Skills, Codex/OpenAI-style local skills, OpenClaw/ClawHub, and VS Code/GitHub Copilot Agent Skills. Coze, Dify, and ChatGPT GPT Store are possible, but they need wrapper packaging because they are bot/workflow/plugin systems rather than native `SKILL.md` folder registries.
+
+This is not a Xiaohongshu operations skill. Xiaohongshu skills usually automate or assist RedNote account research, publishing, interaction, or analytics. This project can be promoted on Xiaohongshu, or paired with a separate content-promotion companion skill, but should not be listed as a Xiaohongshu automation skill. See [`references/distribution-platforms.md`](./references/distribution-platforms.md).
 
 ### Ask An AI Agent
 
@@ -514,5 +521,5 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.3.1"
+  "softwareVersion": "1.3.2"
 } -->
