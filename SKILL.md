@@ -1,6 +1,6 @@
 ---
 name: business-website-skill
-description: Build client-ready corporate, brand, B2B, service,招商,投标, and proposal-grade business websites from source materials, existing static or React/Vite/Next sites, PPT/PDF/image assets, and reference sites. Use when an agent needs to create, refactor, polish, or QA a business website prototype or launch preview with phased discovery, evidence mapping, sitemap/outline, design direction options, implementation, and delivery checks. Not focused on e-commerce storefronts.
+description: Build client-ready corporate, brand, B2B, service,招商,投标, and proposal-grade business websites from source materials, existing static or React/Vite/Next sites, PPT/PDF/image assets, and reference sites. Use when an agent needs to create, refactor, polish, or QA a business website prototype or launch preview with phased discovery, evidence mapping, sitemap/outline, design direction options, implementation, delivery checks, and standard/premium/showcase interaction choices. Not focused on e-commerce storefronts.
 ---
 
 # Business Website Skill
@@ -16,6 +16,7 @@ Build business websites that are credible enough for client presentation or laun
 - Use `待补充`, `待确认`, or `示例待确认` for missing facts while keeping the visual structure complete.
 - Keep the existing stack unless the requested delivery shape requires a change.
 - Ask for user choice only when the decision materially changes the site. If the user asks to proceed quickly, choose a conservative default and state assumptions.
+- Read `references/agent-experience.md` when choosing interaction mode, deciding whether to ask questions, presenting A/B/C options, or managing checkpoints.
 
 ## Phase Workflow
 
@@ -28,6 +29,7 @@ If the user has not specified the direction, present 2 to 3 choices:
 - Site type: corporate website, brand website, B2B service website, proposal/招商 page, product/project showcase.
 - Delivery shape: static HTML/CSS/JS, React/Vite, Next.js, or existing stack.
 - Visual direction: restrained B2B trust, data/technology, premium brand, content-led professional.
+- Motion tier when relevant: standard, premium, or showcase.
 
 Checkpoint: summarize selected/defaulted choices and any assumptions.
 
@@ -87,6 +89,7 @@ Then implement the selected direction. If the user does not choose, default to a
 
 Read `references/delivery-standards.md` before significant layout, typography, color, image, component, interaction, or responsive decisions.
 Read `references/interaction-presets.md` when the user asks for advanced interactions, Anime.js, GSAP, scroll effects, cinematic motion, micro-interactions, or a more current/trendy experience.
+If the user asks for "炫酷", "高级动效", "潮流交互", "showcase", 3D, WebGL, pinned scroll, or cinematic motion, offer standard/premium/showcase choices and implement the lowest tier that satisfies the goal.
 
 ### Phase 4 - Implementation Plan
 
@@ -136,6 +139,7 @@ Final response should include:
 
 - Read `references/example-patterns.md` when deciding architecture or reusable modules from prior project patterns.
 - Read `references/benchmark-patterns.md` when improving strategy, conversion, trust, B2B buyer support, or overall maturity.
+- Read `references/agent-experience.md` when selecting mode, minimizing questions, or deciding checkpoint behavior.
 - Read `references/style-presets.md` when selecting a visual preset or combining multiple premium website styles.
 - Read `references/interaction-presets.md` when selecting animation libraries, motion recipes, or interaction intensity.
 - Read `references/preview-guide.md` when evaluating visual/interaction preset quality, overlap, or preview assets.

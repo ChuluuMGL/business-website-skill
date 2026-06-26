@@ -2,7 +2,7 @@
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
   "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, design direction choices, implementation, and QA.",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": "ChuluuMGL",
   "license": "MIT",
   "repository": "https://github.com/ChuluuMGL/business-website-skill",
@@ -25,6 +25,7 @@
     "Evidence map",
     "Site blueprint",
     "Design direction options",
+    "Motion tier recommendation",
     "Website implementation",
     "Static site QA report",
     "Handoff notes"
@@ -56,6 +57,11 @@
     "interaction_gifs": "assets/previews/interactions",
     "preview_guide": "references/preview-guide.md"
   },
+  "workflow_references": {
+    "agent_experience": "references/agent-experience.md",
+    "delivery_standards": "references/delivery-standards.md",
+    "qa_checklist": "references/qa-checklist.md"
+  },
   "style_presets": [
     "executive-b2b-trust",
     "industrial-precision",
@@ -82,7 +88,21 @@
     "gsap-scroll-storyline",
     "product-hotspot-tour",
     "comparison-before-after",
+    "pinned-scroll-storytelling",
+    "scroll-scrub-dashboard-morph",
+    "horizontal-case-wall",
+    "shared-layout-transition",
+    "threejs-product-orbit-hero",
+    "shader-liquid-reveal",
+    "magnetic-media-hover",
+    "interactive-orbit-network",
     "reduced-motion-safe-mode"
+  ],
+  "motion_tiers": [
+    "standard",
+    "premium",
+    "showcase",
+    "accessibility"
   ],
   "scripts": [
     {

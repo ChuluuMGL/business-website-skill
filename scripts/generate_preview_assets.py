@@ -358,6 +358,20 @@ def make_frame(title: str, subtitle: str = "", size=(640, 360), bg="#F6F8FB"):
     return img
 
 
+def make_showcase_frame(title: str, subtitle: str = "", size=(640, 360), bg="#071117"):
+    img = Image.new("RGB", size, bg)
+    draw = ImageDraw.Draw(img)
+    for i in range(0, size[0], 32):
+        draw.line((i, 0, i - 80, size[1]), fill="#0C1F28", width=1)
+    rounded(draw, (18, 18, size[0] - 18, size[1] - 18), 22, "#0B1720", "#1C3440", 2)
+    draw.rounded_rectangle((38, 38, 60, 60), 11, fill="#36D399")
+    text(draw, (78, 36), title, 21, "#EAF4F1", True)
+    if subtitle:
+        text(draw, (78, 64), subtitle, 14, "#8EA5A0")
+    draw.line((38, 88, size[0] - 38, 88), fill="#1D343F", width=2)
+    return img
+
+
 def save_gif(frames, path: Path, duration=72):
     path.parent.mkdir(parents=True, exist_ok=True)
     frames[0].save(path, save_all=True, append_images=frames[1:], duration=duration, loop=0, optimize=True, disposal=2)
@@ -588,6 +602,193 @@ def gif_comparison_before_after():
     save_gif(frames, INTERACTION_DIR / "comparison-before-after.gif")
 
 
+def gif_pinned_scroll_storytelling():
+    frames = []
+    scenes = [
+        ("Problem", "#EF5B2A"),
+        ("System", "#2F6BFF"),
+        ("Proof", "#36D399"),
+        ("CTA", "#C9A35D"),
+    ]
+    for f in range(36):
+        img = make_showcase_frame("Pinned scroll storytelling", "GSAP pin + scrub for proposal narratives")
+        draw = ImageDraw.Draw(img)
+        p = f / 35
+        active = min(3, int(p * 4))
+        draw.rounded_rectangle((70, 118, 112, 300), 21, fill="#132B35")
+        draw.rounded_rectangle((70, 118, 112, 118 + int(182 * p)), 21, fill="#36D399")
+        for i, (label, color) in enumerate(scenes):
+            y = 122 + i * 43
+            fill = color if i <= active else "#203842"
+            draw.ellipse((77, y, 105, y + 28), fill=fill, outline="#0B1720", width=3)
+            text(draw, (126, y + 4), label, 16, "#EAF4F1" if i == active else "#8EA5A0", i == active)
+        card_x = 252 + int(math.sin(p * math.pi * 2) * 38)
+        card_y = 126 + int(math.cos(p * math.pi * 2) * 8)
+        rounded(draw, (card_x, card_y, card_x + 272, card_y + 148), 24, "#102632", "#2F4D5A", 2)
+        text(draw, (card_x + 28, card_y + 42), scenes[active][0], 34, scenes[active][1], True)
+        draw.rounded_rectangle((card_x + 30, card_y + 88, card_x + 212, card_y + 102), 7, fill="#24434D")
+        draw.rounded_rectangle((card_x + 30, card_y + 118, card_x + 168, card_y + 130), 6, fill="#24434D")
+        frames.append(img)
+    save_gif(frames, INTERACTION_DIR / "pinned-scroll-storytelling.gif")
+
+
+def gif_scroll_scrub_dashboard_morph():
+    frames = []
+    for f in range(34):
+        img = make_showcase_frame("Scroll-scrub dashboard morph", "Metrics transform with scroll position")
+        draw = ImageDraw.Draw(img)
+        p = f / 33
+        rounded(draw, (62, 116, 578, 292), 24, "#0E202B", "#203D49", 2)
+        for i in range(5):
+            x = 94 + i * 80
+            h = int(32 + 90 * (0.35 + 0.65 * math.sin(p * math.pi + i * 0.65) ** 2))
+            color = blend("#36D399", "#4EA3FF", i / 4)
+            draw.rounded_rectangle((x, 248 - h, x + 36, 248), 8, fill=color)
+        cx = 486
+        cy = 196
+        r = 48
+        draw.arc((cx - r, cy - r, cx + r, cy + r), 0, 360, fill="#1E3A44", width=14)
+        draw.arc((cx - r, cy - r, cx + r, cy + r), -90, -90 + int(320 * p), fill="#36D399", width=14)
+        for i in range(3):
+            y = 126 + i * 34
+            w = int(84 + 72 * abs(math.sin(p * math.pi + i)))
+            draw.rounded_rectangle((94, y, 94 + w, y + 10), 5, fill="#2F6BFF")
+        text(draw, (486, 198), f"{int(42 + p * 48)}", 26, "#EAF4F1", True, "mm")
+        frames.append(img)
+    save_gif(frames, INTERACTION_DIR / "scroll-scrub-dashboard-morph.gif")
+
+
+def gif_horizontal_case_wall():
+    frames = []
+    colors = ["#EF5B2A", "#2F6BFF", "#36D399", "#C9A35D", "#8E4D2D", "#14B8A6"]
+    for f in range(34):
+        img = make_showcase_frame("Horizontal case wall", "Pinned horizontal work/case browsing")
+        draw = ImageDraw.Draw(img)
+        p = f / 33
+        offset = int(-260 * p)
+        for i in range(6):
+            x = 72 + i * 128 + offset
+            y = 122 + int(math.sin((p + i) * math.pi) * 10)
+            rounded(draw, (x, y, x + 106, y + 142), 18, "#102632", "#2A4652", 2)
+            draw.rectangle((x + 14, y + 16, x + 92, y + 76), fill=colors[i])
+            draw.rounded_rectangle((x + 14, y + 96, x + 82, y + 106), 5, fill="#294650")
+            draw.rounded_rectangle((x + 14, y + 118, x + 62, y + 126), 4, fill="#294650")
+        draw.rounded_rectangle((74, 300, 566, 306), 3, fill="#1D343F")
+        draw.rounded_rectangle((74, 300, 74 + int(492 * p), 306), 3, fill="#36D399")
+        frames.append(img)
+    save_gif(frames, INTERACTION_DIR / "horizontal-case-wall.gif")
+
+
+def gif_shared_layout_transition():
+    frames = []
+    for f in range(30):
+        img = make_frame("Shared layout transition", "Motion layoutId / shared element handoff", bg="#F6F8FF")
+        draw = ImageDraw.Draw(img)
+        p = (1 - math.cos((f / 29) * math.pi)) / 2
+        cards = [(72, 128, 172, 202), (204, 128, 304, 202), (336, 128, 436, 202)]
+        for box in cards:
+            rounded(draw, box, 14, "#FFFFFF", "#D9E2FF", 2)
+        x1 = int(72 + (306 - 72) * p)
+        y1 = int(128 + (198 - 128) * p)
+        x2 = int(172 + (548 - 172) * p)
+        y2 = int(202 + (288 - 202) * p)
+        rounded(draw, (x1, y1, x2, y2), 18, "#2F6BFF", "#FFFFFF", 2)
+        draw.rounded_rectangle((x1 + 22, y1 + 24, min(x2 - 22, x1 + 146), y1 + 36), 6, fill="#FFFFFF")
+        draw.rounded_rectangle((x1 + 22, y1 + 52, min(x2 - 36, x1 + 212), y1 + 62), 5, fill="#BFD1FF")
+        if p > 0.42:
+            text(draw, (330, 156), "detail view", 17, "#667085")
+        frames.append(img)
+    save_gif(frames, INTERACTION_DIR / "shared-layout-transition.gif")
+
+
+def gif_threejs_product_orbit():
+    frames = []
+    for f in range(36):
+        img = make_showcase_frame("3D product orbit hero", "Three.js/WebGL only when product or spatial value is real")
+        draw = ImageDraw.Draw(img)
+        cx, cy = 330, 198
+        angle = f / 36 * math.tau
+        draw.ellipse((cx - 160, cy - 44, cx + 160, cy + 44), outline="#1D5660", width=3)
+        for i in range(3):
+            a = angle + i * math.tau / 3
+            x = cx + int(math.cos(a) * 154)
+            y = cy + int(math.sin(a) * 40)
+            size = 18 + int((math.sin(a) + 1) * 7)
+            draw.ellipse((x - size, y - size, x + size, y + size), fill=blend("#36D399", "#4EA3FF", i / 2), outline="#EAF4F1", width=2)
+        for i in range(3):
+            offset = i * 16
+            pts = [(cx, cy - 76 + offset), (cx + 72, cy - 34 + offset), (cx, cy + 8 + offset), (cx - 72, cy - 34 + offset)]
+            draw.polygon(pts, fill=blend("#102632", "#2F6BFF", 0.25 + i * 0.18), outline="#4EA3FF")
+        draw.line((cx, cy - 76, cx, cy + 40), fill="#36D399", width=2)
+        frames.append(img)
+    save_gif(frames, INTERACTION_DIR / "threejs-product-orbit-hero.gif")
+
+
+def gif_shader_liquid_reveal():
+    frames = []
+    for f in range(34):
+        img = make_showcase_frame("Shader / liquid reveal", "WebGL-style reveal for brand and creative pages")
+        draw = ImageDraw.Draw(img)
+        p = f / 33
+        x1, y1, x2, y2 = 72, 116, 568, 292
+        rounded(draw, (x1, y1, x2, y2), 24, "#101828", "#2A4652", 2)
+        points = []
+        for i in range(34):
+            x = x1 + int((x2 - x1) * i / 33)
+            wave = math.sin(i * 0.52 + p * math.tau * 2) * 22
+            y = int(y1 + (y2 - y1) * p + wave)
+            points.append((x, y))
+        poly = [(x1, y2)] + points + [(x2, y2)]
+        draw.polygon(poly, fill="#EF5B2A")
+        for i in range(4):
+            draw.arc((154 + i * 74, 134, 254 + i * 74, 234), 20 + f * 8, 220 + f * 8, fill=blend("#36D399", "#4EA3FF", i / 3), width=4)
+        text(draw, (104, 150), "Reveal", 34, "#FFFFFF", True)
+        frames.append(img)
+    save_gif(frames, INTERACTION_DIR / "shader-liquid-reveal.gif")
+
+
+def gif_magnetic_media_hover():
+    frames = []
+    for f in range(32):
+        img = make_frame("Magnetic media hover", "Premium portfolio and case preview behavior", bg="#FFF7EB")
+        draw = ImageDraw.Draw(img)
+        p = f / 31
+        cursor_x = int(102 + 398 * p)
+        cursor_y = int(136 + 98 * math.sin(p * math.pi))
+        for i in range(4):
+            x = 84 + i * 112
+            y = 150 + int(math.sin(p * math.pi + i) * 16)
+            scale = 1 + 0.18 * max(0, 1 - abs(cursor_x - (x + 44)) / 100)
+            w = int(78 * scale)
+            h = int(96 * scale)
+            rounded(draw, (x, y, x + w, y + h), 16, "#FFFFFF", "#EBD9C2", 2)
+            draw.rectangle((x + 14, y + 14, x + w - 14, y + 58), fill="#EF5B2A" if i % 2 == 0 else "#101828")
+        draw.ellipse((cursor_x - 11, cursor_y - 11, cursor_x + 11, cursor_y + 11), fill="#101828", outline="#FFFFFF", width=3)
+        frames.append(img)
+    save_gif(frames, INTERACTION_DIR / "magnetic-media-hover.gif")
+
+
+def gif_orbit_network_map():
+    frames = []
+    nodes = [(320, 190), (198, 144), (442, 142), (206, 250), (456, 248), (320, 108)]
+    for f in range(36):
+        img = make_showcase_frame("Interactive orbit network", "Platform ecosystem, AI agents, integrations, or coverage maps")
+        draw = ImageDraw.Draw(img)
+        p = f / 35
+        center = nodes[0]
+        for i, n in enumerate(nodes[1:], start=1):
+            phase = (p + i / 5) % 1
+            alpha_color = blend("#1D343F", "#36D399", 0.35 + 0.65 * math.sin(phase * math.pi) ** 2)
+            draw.line((center, n), fill=alpha_color, width=3)
+        draw.ellipse((center[0] - 44, center[1] - 44, center[0] + 44, center[1] + 44), fill="#102632", outline="#36D399", width=4)
+        text(draw, center, "AI", 26, "#EAF4F1", True, "mm")
+        for i, (x, y) in enumerate(nodes[1:], start=1):
+            pulse = 8 + int(6 * math.sin((p + i * 0.17) * math.tau) ** 2)
+            draw.ellipse((x - pulse, y - pulse, x + pulse, y + pulse), fill=blend("#2F6BFF", "#36D399", i / 5), outline="#EAF4F1", width=2)
+        frames.append(img)
+    save_gif(frames, INTERACTION_DIR / "interactive-orbit-network.gif")
+
+
 def generate_interaction_assets():
     INTERACTION_DIR.mkdir(parents=True, exist_ok=True)
     gif_staggered_reveal()
@@ -602,6 +803,14 @@ def generate_interaction_assets():
     gif_gsap_scroll_storyline()
     gif_product_hotspot()
     gif_comparison_before_after()
+    gif_pinned_scroll_storytelling()
+    gif_scroll_scrub_dashboard_morph()
+    gif_horizontal_case_wall()
+    gif_shared_layout_transition()
+    gif_threejs_product_orbit()
+    gif_shader_liquid_reveal()
+    gif_magnetic_media_hover()
+    gif_orbit_network_map()
 
 
 def main():

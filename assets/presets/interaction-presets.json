@@ -1,86 +1,170 @@
 {
-  "version": "1.1.1",
+  "version": "1.2.0",
+  "motion_tiers": [
+    {
+      "id": "standard",
+      "description": "Business-safe motion for most corporate, B2B, service, and proposal websites."
+    },
+    {
+      "id": "premium",
+      "description": "More polished motion for strong brand, product, SaaS, and case-study pages with enough visual assets."
+    },
+    {
+      "id": "showcase",
+      "description": "High-impact motion for creative, AI, campaign, and premium proposal pages; requires stronger QA and fallbacks."
+    }
+  ],
   "presets": [
     {
       "id": "css-only-business-motion",
+      "tier": "standard",
       "library": "CSS",
       "best_for": ["buttons", "navigation states", "cards", "simple reveals"],
       "notes": "Default choice for simple motion and maximum compatibility."
     },
     {
       "id": "animejs-staggered-reveal",
+      "tier": "standard",
       "library": "Anime.js",
       "best_for": ["hero cards", "service grids", "case grids"],
       "notes": "Use animate() and stagger() for lightweight sequencing."
     },
     {
       "id": "animejs-svg-line-draw",
+      "tier": "standard",
       "library": "Anime.js",
       "best_for": ["process diagrams", "network maps", "timelines"],
       "notes": "Use only when the SVG communicates real structure."
     },
     {
       "id": "metric-count-up",
+      "tier": "standard",
       "library": "CSS or JavaScript",
       "best_for": ["confirmed metrics", "impact data", "coverage numbers"],
       "notes": "Never count up unconfirmed or fake metrics."
     },
     {
       "id": "case-filter-transition",
+      "tier": "standard",
       "library": "CSS or JavaScript",
       "best_for": ["case grids", "scenario filters", "industry tabs"],
       "notes": "Maintain stable layout and accessible active states."
     },
     {
       "id": "sticky-cta-rail",
+      "tier": "standard",
       "library": "CSS or JavaScript",
       "best_for": ["long pages", "proposal pages", "service pages"],
       "notes": "Must not obstruct mobile content."
     },
     {
       "id": "roi-calculator-feedback",
+      "tier": "standard",
       "library": "JavaScript",
       "best_for": ["ROI calculators", "cost estimators", "savings models"],
       "notes": "Show assumptions and formulas."
     },
     {
       "id": "premium-image-mask-reveal",
+      "tier": "premium",
       "library": "CSS or Anime.js",
       "best_for": ["brand sites", "luxury sections", "editorial case studies"],
       "notes": "Use only when image crops preserve the subject."
     },
     {
       "id": "dashboard-panel-sequence",
+      "tier": "premium",
       "library": "CSS, Anime.js, or Motion",
       "best_for": ["SaaS dashboards", "AI ops", "analytics product previews"],
       "notes": "Sequence panels in a real product or workflow order."
     },
     {
       "id": "process-stepper",
+      "tier": "standard",
       "library": "CSS or JavaScript",
       "best_for": ["service workflows", "implementation process", "support journeys"],
       "notes": "Provide visible active state and keyboard-friendly controls."
     },
     {
       "id": "gsap-scroll-storyline",
+      "tier": "premium",
       "library": "GSAP",
       "best_for": ["campaign pages", "proposal storytelling", "premium case pages"],
       "notes": "Use for complex scroll-linked sequences, not simple reveals."
     },
     {
       "id": "product-hotspot-tour",
+      "tier": "premium",
       "library": "CSS or JavaScript",
       "best_for": ["product screenshots", "equipment photos", "platform UI walkthroughs"],
       "notes": "Hotspots must point to real, explainable features."
     },
     {
       "id": "comparison-before-after",
+      "tier": "premium",
       "library": "CSS or JavaScript",
       "best_for": ["renovation", "optimization", "environmental impact", "workflow improvement"],
       "notes": "Label both states clearly and avoid unsupported claims."
     },
     {
+      "id": "pinned-scroll-storytelling",
+      "tier": "showcase",
+      "library": "GSAP ScrollTrigger",
+      "best_for": ["proposal narratives", "campaign pages", "premium case pages"],
+      "notes": "Use pin/scrub only when section order and proof points justify a controlled scroll story."
+    },
+    {
+      "id": "scroll-scrub-dashboard-morph",
+      "tier": "showcase",
+      "library": "GSAP, SVG, or Canvas",
+      "best_for": ["AI products", "SaaS analytics", "data platforms", "diagnostic tools"],
+      "notes": "Morph real dashboard states; do not create fake product metrics."
+    },
+    {
+      "id": "horizontal-case-wall",
+      "tier": "showcase",
+      "library": "GSAP or Lenis",
+      "best_for": ["creative agencies", "case libraries", "portfolio-heavy sites"],
+      "notes": "Provide keyboard and mobile alternatives because horizontal scroll can be fragile."
+    },
+    {
+      "id": "shared-layout-transition",
+      "tier": "premium",
+      "library": "Motion for React",
+      "best_for": ["React product pages", "case-detail transitions", "interactive service explorers"],
+      "notes": "Use for route, card-to-detail, and tab transitions when the project stack supports React."
+    },
+    {
+      "id": "threejs-product-orbit-hero",
+      "tier": "showcase",
+      "library": "Three.js",
+      "best_for": ["3D products", "hardware", "spatial services", "data globes", "architecture"],
+      "notes": "Use only when 3D communicates the product or system; provide a static fallback."
+    },
+    {
+      "id": "shader-liquid-reveal",
+      "tier": "showcase",
+      "library": "WebGL, Three.js, or Canvas",
+      "best_for": ["premium brand sites", "creative campaigns", "editorial launches"],
+      "notes": "High visual impact but easy to overuse; keep copy readable and respect reduced motion."
+    },
+    {
+      "id": "magnetic-media-hover",
+      "tier": "premium",
+      "library": "CSS, GSAP, or JavaScript",
+      "best_for": ["creative agencies", "case previews", "brand portfolios"],
+      "notes": "Use as pointer enhancement only; touch devices need a direct non-hover path."
+    },
+    {
+      "id": "interactive-orbit-network",
+      "tier": "showcase",
+      "library": "SVG, Canvas, or Three.js",
+      "best_for": ["AI ecosystems", "platform integrations", "coverage maps", "agent networks"],
+      "notes": "Use when relationships are real and explainable, not as abstract decoration."
+    },
+    {
       "id": "reduced-motion-safe-mode",
+      "tier": "accessibility",
       "library": "CSS or JavaScript",
       "best_for": ["all animated experiences"],
       "notes": "Respect prefers-reduced-motion and keep content visible without animation."

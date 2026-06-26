@@ -6,7 +6,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.1.1-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.2.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
@@ -94,6 +94,7 @@ The skill does not force every site into the same template. It routes the projec
 | File / Folder | Purpose |
 |---|---|
 | [`SKILL.md`](./SKILL.md) | Core skill metadata and agent instructions. |
+| [`references/agent-experience.md`](./references/agent-experience.md) | Agent interaction modes, minimal questions, checkpoints, and handoff behavior. |
 | [`references/delivery-standards.md`](./references/delivery-standards.md) | Layout, typography, color, image, interaction, responsive, and copy standards. |
 | [`references/example-patterns.md`](./references/example-patterns.md) | Reusable patterns from static, React, and service-site examples. |
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | Business website benchmark patterns and maturity checks. |
@@ -219,6 +220,18 @@ Goals:
 - return QA findings and implement safe fixes
 ```
 
+### Premium Or Showcase Motion
+
+```text
+Use $business-website-skill to make this business website feel more premium and interactive.
+
+Before implementation, give me:
+1. standard / premium / showcase motion recommendation
+2. suitable libraries such as Anime.js, GSAP, Lenis, Motion, or Three.js
+3. performance and accessibility risks
+4. the safest fallback if the motion is too heavy
+```
+
 ---
 
 ## Design Principles
@@ -249,7 +262,16 @@ The skill includes preset guidance for mainstream premium business website direc
 | Public Sector Civic | Public service, NGO, education, civic and institutional projects. |
 | Fintech Secure | Finance, insurance, compliance, payment and B2B fintech sites. |
 
-Interaction presets cover CSS-only motion, Anime.js, GSAP, React Motion-style libraries, scroll reveals, staggered cards, metric count-ups, SVG line drawing, sticky CTA rails, case filters, ROI/calculator feedback, dashboard panel sequences, product hotspot tours, before/after comparisons, and process steppers. Anime.js is treated as optional: use it when motion supports comprehension, not as decoration.
+Interaction presets are split into motion tiers:
+
+| Tier | Purpose |
+|---|---|
+| Standard | Safe, practical business motion for most corporate and B2B websites. |
+| Premium | Polished product, brand, case-study, and SaaS interactions. |
+| Showcase | More cinematic motion for AI, creative, campaign, and premium proposal pages. |
+| Accessibility | Reduced-motion and fallback behavior that must accompany animated builds. |
+
+Anime.js is treated as optional: use it when motion supports comprehension, not as decoration. GSAP/Lenis/Motion/Three.js are available for higher-intensity motion when the project has enough content, assets, and QA budget.
 
 ### Visual Preview
 
@@ -263,7 +285,7 @@ The AI concept moodboard is included only as a visual mood reference, not as a r
 
 ### Interaction GIF Preview
 
-Representative motion previews:
+Representative standard/premium motion previews:
 
 | Interaction | Preview |
 |---|---|
@@ -273,6 +295,19 @@ Representative motion previews:
 | Case filter transition | ![Case filter transition](./assets/previews/interactions/case-filter-transition.gif) |
 | Dashboard panel sequence | ![Dashboard panel sequence](./assets/previews/interactions/dashboard-panel-sequence.gif) |
 | Product hotspot tour | ![Product hotspot tour](./assets/previews/interactions/product-hotspot-tour.gif) |
+
+Showcase motion previews:
+
+| Interaction | Preview |
+|---|---|
+| Pinned scroll storytelling | ![Pinned scroll storytelling](./assets/previews/interactions/pinned-scroll-storytelling.gif) |
+| Scroll-scrub dashboard morph | ![Scroll-scrub dashboard morph](./assets/previews/interactions/scroll-scrub-dashboard-morph.gif) |
+| Horizontal case wall | ![Horizontal case wall](./assets/previews/interactions/horizontal-case-wall.gif) |
+| Shared layout transition | ![Shared layout transition](./assets/previews/interactions/shared-layout-transition.gif) |
+| Three.js product orbit hero | ![Three.js product orbit hero](./assets/previews/interactions/threejs-product-orbit-hero.gif) |
+| Shader/liquid reveal | ![Shader liquid reveal](./assets/previews/interactions/shader-liquid-reveal.gif) |
+| Magnetic media hover | ![Magnetic media hover](./assets/previews/interactions/magnetic-media-hover.gif) |
+| Interactive orbit network | ![Interactive orbit network](./assets/previews/interactions/interactive-orbit-network.gif) |
 
 See [`assets/previews/interactions/`](./assets/previews/interactions/) for the full GIF set and [`references/preview-guide.md`](./references/preview-guide.md) for overlap and practicality notes.
 
@@ -345,7 +380,7 @@ Yes, if they support skill folders or can read `SKILL.md`-style packages. Instal
 | Format | Local skill folder with `SKILL.md`, references, scripts, assets, and metadata |
 | Primary output | Website files plus evidence map, blueprint, QA, and handoff notes |
 | Bundled asset | Static business website starter template |
-| Script runtime | Python standard library |
+| Script runtime | Static audit uses Python standard library; preview generation uses Pillow |
 | License | MIT |
 | Author | ChuluuMGL |
 
@@ -360,17 +395,15 @@ business-website-skill/
 ├── skill.json
 ├── agents/
 │   └── openai.yaml
-├── assets/
-│   └── templates/
-│       └── static-business-site/
 ├── references/
+│   ├── agent-experience.md
 │   ├── benchmark-patterns.md
 │   ├── delivery-standards.md
 │   ├── example-patterns.md
 │   ├── interaction-presets.md
 │   ├── preview-guide.md
-│   ├── style-presets.md
-│   └── qa-checklist.md
+│   ├── qa-checklist.md
+│   └── style-presets.md
 ├── assets/
 │   ├── presets/
 │   │   ├── design-styles.json
@@ -421,5 +454,5 @@ MIT
     "url": "https://github.com/ChuluuMGL"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.1.1"
+  "softwareVersion": "1.2.0"
 } -->
