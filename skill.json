@@ -2,7 +2,7 @@
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
   "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, SEO/GEO readiness, design direction choices, implementation, and QA.",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "author": "月瑀科技 YUEYU TECH",
   "copyright": "Copyright (c) 2026 月瑀科技 YUEYU TECH",
   "maintainer": {
@@ -67,12 +67,15 @@
     }
   ],
   "preview_assets": {
-    "style_overview": "assets/previews/style-overview.png",
-    "ai_style_moodboard": "assets/previews/ai-style-moodboard.jpg",
-    "style_thumbnails": "assets/previews/styles",
-    "interaction_gifs": "assets/previews/interactions",
+    "release": "https://github.com/ChuluuMGL/business-website-skill/releases/tag/preview-assets-v1.3.0",
+    "style_overview": "https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/style-overview.png",
+    "ai_style_moodboard": "https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/ai-style-moodboard.jpg",
+    "style_thumbnails": "https://github.com/ChuluuMGL/business-website-skill/releases/tag/preview-assets-v1.3.0",
+    "interaction_gifs": "https://github.com/ChuluuMGL/business-website-skill/releases/tag/preview-assets-v1.3.0",
     "preview_guide": "references/preview-guide.md",
-    "asset_policy": "Preview PNG/GIF/JPG files are optional human-facing documentation assets. The agent workflow works from markdown references, JSON presets, scripts, and templates without loading binary previews. External release or LFS migration requires an explicit history-rewrite plan."
+    "local_preview_readme": "assets/previews/README.md",
+    "local_generation": "scripts/generate_preview_assets.py",
+    "asset_policy": "Preview PNG/GIF/JPG files are optional human-facing documentation assets hosted in GitHub Releases to keep the main checkout lightweight. The agent workflow works from markdown references, JSON presets, scripts, and templates without loading binary previews. A true full-clone history reduction would require an explicit git history rewrite plan."
   },
   "workflow_references": {
     "agent_experience": "references/agent-experience.md",
@@ -137,9 +140,7 @@
   "compatibility": {
     "format": "Agent Skills / SKILL.md",
     "tested": [
-      "Codex"
-    ],
-    "diagnosed": [
+      "Codex",
       "Claude Code"
     ],
     "expected": [
@@ -150,7 +151,7 @@
       "OpenClaw",
       "Hermes"
     ],
-    "notes": "Core workflow uses SKILL.md, references, scripts, and assets. agents/openai.yaml is Codex-specific UI metadata and can be ignored by other runtimes. Claude Code diagnostic feedback has been incorporated, but full Phase 0-7 runtime testing should be recorded before moving it from diagnosed to tested."
+    "notes": "Core workflow uses SKILL.md, references, scripts, and assets. agents/openai.yaml is Codex-specific UI metadata and can be ignored by other runtimes. Claude Code compatibility was reported as tested by the maintainer; keep future runtimes in expected until verified."
   },
   "related_skills": [
     {

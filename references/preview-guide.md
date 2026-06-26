@@ -4,15 +4,15 @@ Use this guide when reviewing whether the built-in style and interaction presets
 
 ## Preview Assets
 
-- Style overview: `assets/previews/style-overview.png`
-- AI concept moodboard: `assets/previews/ai-style-moodboard.jpg`
-- Individual style thumbnails: `assets/previews/styles/`
-- Interaction GIFs: `assets/previews/interactions/`
+- Hosted preview release: `https://github.com/ChuluuMGL/business-website-skill/releases/tag/preview-assets-v1.3.0`
+- Hosted style overview: `https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/style-overview.png`
+- Hosted AI concept moodboard: `https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/ai-style-moodboard.jpg`
+- Local preview note: `assets/previews/README.md`
 - Regeneration script: `scripts/generate_preview_assets.py`
 
 The generated style overview is deterministic and should stay close to the machine-readable presets. The AI concept moodboard is only a visual mood reference and should not be treated as a template or factual website output.
 
-Preview PNG/GIF/JPG files are human-facing documentation assets. Agents should use the markdown references, JSON preset catalogs, scripts, and templates; they do not need to load binary previews into context to execute the workflow.
+Preview PNG/GIF/JPG files are human-facing documentation assets hosted outside the main tree. Agents should use the markdown references, JSON preset catalogs, scripts, and templates; they do not need to load binary previews into context to execute the workflow.
 
 ## Skill UX Audit Summary
 
@@ -106,4 +106,4 @@ Avoid showcase motion when the page is a public-sector, compliance-heavy, financ
 
 ## Asset Footprint Policy
 
-The bundled preview files are optional for execution. If a distribution needs a smaller checkout, keep `references/`, `assets/presets/`, `assets/templates/`, and `scripts/`, then regenerate previews with `scripts/generate_preview_assets.py` or host preview files externally. Moving existing tracked binaries out of git history requires an explicit history-rewrite plan.
+Preview files are optional for execution and hosted in GitHub Releases for human review. If a distribution needs a smaller checkout, keep `references/`, `assets/presets/`, `assets/templates/`, and `scripts/`, then regenerate previews with `scripts/generate_preview_assets.py`. A true full-clone reduction for historical blobs requires an explicit history-rewrite plan.

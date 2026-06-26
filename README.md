@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.3.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.3.1-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -110,7 +110,7 @@ The skill does not force every site into the same template. It routes the projec
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | Final QA checklist and failure modes. |
 | [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | Machine-readable style preset catalog. |
 | [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | Machine-readable interaction preset catalog. |
-| [`assets/previews/`](./assets/previews/) | Style preview images and interaction GIFs. |
+| [`assets/previews/README.md`](./assets/previews/README.md) | Release-hosted style preview images and interaction GIFs. |
 | [`assets/templates/static-business-site/`](./assets/templates/static-business-site/) | Dependency-free static website starter template. |
 | [`scripts/generate_preview_assets.py`](./scripts/generate_preview_assets.py) | Regenerates style preview images and interaction GIFs. |
 | [`scripts/audit_static_site.py`](./scripts/audit_static_site.py) | Static site audit script using only Python standard library. |
@@ -128,7 +128,7 @@ The core skill follows the open Agent Skills shape: a folder with `SKILL.md`, pl
 | Agent/runtime | Suggested install path | Status |
 |---|---|---|
 | Codex | `.agents/skills/business-website-skill/` or user skills folder | Supported |
-| Claude Code | `.claude/skills/business-website-skill/` | Expected compatible |
+| Claude Code | `.claude/skills/business-website-skill/` | Maintainer-tested |
 | Cursor | `.cursor/skills/business-website-skill/` or project skills folder | Expected compatible |
 | Trae | `.trae/skills/business-website-skill/` | Expected compatible |
 | Antigravity | `.agent/skills/business-website-skill/` or configured skills folder | Expected compatible |
@@ -137,7 +137,7 @@ The core skill follows the open Agent Skills shape: a folder with `SKILL.md`, pl
 
 Only Codex-specific UI metadata lives in `agents/openai.yaml`. Other agents can ignore that file and use `SKILL.md` directly.
 
-Compatibility status is conservative: only runtimes with completed end-to-end runs should be moved into `skill.json` `tested`. Claude Code diagnostic feedback has been incorporated, but a full Phase 0-7 runtime run should be recorded before marking it tested.
+Compatibility status is conservative: only runtimes with completed end-to-end runs should be moved into `skill.json` `tested`. Claude Code has been reported as tested by the maintainer; other listed runtimes remain expected-compatible until verified.
 
 ### Ask An AI Agent
 
@@ -303,11 +303,11 @@ Anime.js is treated as optional: use it when motion supports comprehension, not 
 
 The deterministic preview sheet below is generated from the preset catalog and is useful for checking whether the directions are distinct and practical:
 
-![Business website style preset overview](./assets/previews/style-overview.png)
+![Business website style preset overview](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/style-overview.png)
 
 The AI concept moodboard is included only as a visual mood reference, not as a reusable template or factual website output:
 
-![AI concept moodboard for business website styles](./assets/previews/ai-style-moodboard.jpg)
+![AI concept moodboard for business website styles](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/ai-style-moodboard.jpg)
 
 ### Interaction GIF Preview
 
@@ -315,35 +315,35 @@ Representative standard/premium motion previews:
 
 | Interaction | Preview |
 |---|---|
-| Anime.js staggered reveal | ![Anime.js staggered reveal](./assets/previews/interactions/animejs-staggered-reveal.gif) |
-| Anime.js SVG line draw | ![Anime.js SVG line draw](./assets/previews/interactions/animejs-svg-line-draw.gif) |
-| Metric count-up | ![Metric count-up](./assets/previews/interactions/metric-count-up.gif) |
-| Case filter transition | ![Case filter transition](./assets/previews/interactions/case-filter-transition.gif) |
-| Dashboard panel sequence | ![Dashboard panel sequence](./assets/previews/interactions/dashboard-panel-sequence.gif) |
-| Product hotspot tour | ![Product hotspot tour](./assets/previews/interactions/product-hotspot-tour.gif) |
+| Anime.js staggered reveal | ![Anime.js staggered reveal](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/animejs-staggered-reveal.gif) |
+| Anime.js SVG line draw | ![Anime.js SVG line draw](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/animejs-svg-line-draw.gif) |
+| Metric count-up | ![Metric count-up](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/metric-count-up.gif) |
+| Case filter transition | ![Case filter transition](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/case-filter-transition.gif) |
+| Dashboard panel sequence | ![Dashboard panel sequence](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/dashboard-panel-sequence.gif) |
+| Product hotspot tour | ![Product hotspot tour](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/product-hotspot-tour.gif) |
 
 Showcase motion previews:
 
 | Interaction | Preview |
 |---|---|
-| Pinned scroll storytelling | ![Pinned scroll storytelling](./assets/previews/interactions/pinned-scroll-storytelling.gif) |
-| Scroll-scrub dashboard morph | ![Scroll-scrub dashboard morph](./assets/previews/interactions/scroll-scrub-dashboard-morph.gif) |
-| Horizontal case wall | ![Horizontal case wall](./assets/previews/interactions/horizontal-case-wall.gif) |
-| Shared layout transition | ![Shared layout transition](./assets/previews/interactions/shared-layout-transition.gif) |
-| Three.js product orbit hero | ![Three.js product orbit hero](./assets/previews/interactions/threejs-product-orbit-hero.gif) |
-| Shader/liquid reveal | ![Shader liquid reveal](./assets/previews/interactions/shader-liquid-reveal.gif) |
-| Magnetic media hover | ![Magnetic media hover](./assets/previews/interactions/magnetic-media-hover.gif) |
-| Interactive orbit network | ![Interactive orbit network](./assets/previews/interactions/interactive-orbit-network.gif) |
+| Pinned scroll storytelling | ![Pinned scroll storytelling](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/pinned-scroll-storytelling.gif) |
+| Scroll-scrub dashboard morph | ![Scroll-scrub dashboard morph](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/scroll-scrub-dashboard-morph.gif) |
+| Horizontal case wall | ![Horizontal case wall](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/horizontal-case-wall.gif) |
+| Shared layout transition | ![Shared layout transition](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/shared-layout-transition.gif) |
+| Three.js product orbit hero | ![Three.js product orbit hero](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/threejs-product-orbit-hero.gif) |
+| Shader/liquid reveal | ![Shader liquid reveal](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/shader-liquid-reveal.gif) |
+| Magnetic media hover | ![Magnetic media hover](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/magnetic-media-hover.gif) |
+| Interactive orbit network | ![Interactive orbit network](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/interactive-orbit-network.gif) |
 
-See [`assets/previews/interactions/`](./assets/previews/interactions/) for the full GIF set and [`references/preview-guide.md`](./references/preview-guide.md) for overlap and practicality notes.
+See the [preview assets release](https://github.com/ChuluuMGL/business-website-skill/releases/tag/preview-assets-v1.3.0) for the full GIF set and [`references/preview-guide.md`](./references/preview-guide.md) for overlap and practicality notes.
 
 To regenerate previews locally, install Pillow and run `python3 scripts/generate_preview_assets.py`.
 
 ### Preview Asset Policy
 
-The PNG/JPG/GIF previews are human-facing documentation assets. Agents do not need to load them to use the skill; the executable workflow depends on `SKILL.md`, `references/`, `assets/presets/`, `assets/templates/`, and `scripts/`.
+The PNG/JPG/GIF previews are human-facing documentation assets hosted in [GitHub Releases](https://github.com/ChuluuMGL/business-website-skill/releases/tag/preview-assets-v1.3.0). Agents do not need to load them to use the skill; the executable workflow depends on `SKILL.md`, `references/`, `assets/presets/`, `assets/templates/`, and `scripts/`.
 
-The repository currently keeps previews in git for a richer GitHub page. Moving existing binaries to GitHub Releases or Git LFS would require an explicit migration plan, and a true clone-size reduction would require history rewriting.
+The main branch keeps only a lightweight preview README. A true full-clone reduction for historical blobs still requires an explicit history-rewrite plan.
 
 ---
 
@@ -451,10 +451,7 @@ business-website-skill/
 │   │   ├── design-styles.json
 │   │   └── interaction-presets.json
 │   ├── previews/
-│   │   ├── style-overview.png
-│   │   ├── ai-style-moodboard.jpg
-│   │   ├── styles/
-│   │   └── interactions/
+│   │   └── README.md
 │   └── templates/
 │       └── static-business-site/
 └── scripts/
@@ -517,5 +514,5 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.3.0"
+  "softwareVersion": "1.3.1"
 } -->
