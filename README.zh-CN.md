@@ -6,7 +6,7 @@
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.1.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.1.1-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
@@ -99,10 +99,13 @@
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | 商业官网标杆模式和成熟度检查。 |
 | [`references/style-presets.md`](./references/style-presets.md) | 主流高级商业网站视觉风格预设。 |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | 交互和动效预设，包括 Anime.js 使用建议。 |
+| [`references/preview-guide.md`](./references/preview-guide.md) | 视觉预览、风格重合和动效强度评估说明。 |
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | 最终 QA 清单和常见失败模式。 |
 | [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | 机器可读的风格预设目录。 |
 | [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | 机器可读的交互预设目录。 |
+| [`assets/previews/`](./assets/previews/) | 风格预览图和交互动效 GIF。 |
 | [`assets/templates/static-business-site/`](./assets/templates/static-business-site/) | 无依赖静态官网起步模板。 |
+| [`scripts/generate_preview_assets.py`](./scripts/generate_preview_assets.py) | 重新生成风格预览图和交互动效 GIF。 |
 | [`scripts/audit_static_site.py`](./scripts/audit_static_site.py) | 只使用 Python 标准库的静态站审计脚本。 |
 | [`agents/openai.yaml`](./agents/openai.yaml) | Codex / OpenAI 风格 Skill UI 元数据。 |
 | [`skill.json`](./skill.json) | 供目录、市场和其他 Agent 读取的机器可读元数据。 |
@@ -248,6 +251,33 @@ OpenClaw 和其他运行时可能使用可配置的 workspace/global skills root
 
 交互预设覆盖 CSS-only 动效、Anime.js、GSAP、React Motion 风格库、滚动进入、卡片错峰、数字计数、SVG 线条绘制、sticky CTA、案例筛选、ROI/计算器反馈、数据面板分层进入、产品热点导览、前后对比和流程 stepper。Anime.js 是可选增强：只有在动效能帮助理解业务时才使用，而不是为了炫技。
 
+### 视觉预览
+
+下面这张确定性预览图由预设目录生成，适合判断这些方向是否足够区分、是否实用：
+
+![商业网站风格预设总览](./assets/previews/style-overview.png)
+
+AI 概念情绪板只作为视觉氛围参考，不应当被当作可复用模板或真实网站输出：
+
+![商业网站风格 AI 概念情绪板](./assets/previews/ai-style-moodboard.jpg)
+
+### 交互动效 GIF 预览
+
+代表性动效预览：
+
+| 交互 | 预览 |
+|---|---|
+| Anime.js 卡片错峰进入 | ![Anime.js staggered reveal](./assets/previews/interactions/animejs-staggered-reveal.gif) |
+| Anime.js SVG 线条绘制 | ![Anime.js SVG line draw](./assets/previews/interactions/animejs-svg-line-draw.gif) |
+| 数字计数 | ![Metric count-up](./assets/previews/interactions/metric-count-up.gif) |
+| 案例筛选过渡 | ![Case filter transition](./assets/previews/interactions/case-filter-transition.gif) |
+| 数据面板分层进入 | ![Dashboard panel sequence](./assets/previews/interactions/dashboard-panel-sequence.gif) |
+| 产品热点导览 | ![Product hotspot tour](./assets/previews/interactions/product-hotspot-tour.gif) |
+
+完整 GIF 见 [`assets/previews/interactions/`](./assets/previews/interactions/)，重合度和实用性判断见 [`references/preview-guide.md`](./references/preview-guide.md)。
+
+本地重新生成预览时，需要先安装 Pillow，然后运行 `python3 scripts/generate_preview_assets.py`。
+
 ---
 
 ## 静态模板
@@ -338,15 +368,22 @@ business-website-skill/
 │   ├── delivery-standards.md
 │   ├── example-patterns.md
 │   ├── interaction-presets.md
+│   ├── preview-guide.md
 │   ├── style-presets.md
 │   └── qa-checklist.md
 ├── assets/
 │   ├── presets/
 │   │   ├── design-styles.json
 │   │   └── interaction-presets.json
+│   ├── previews/
+│   │   ├── style-overview.png
+│   │   ├── ai-style-moodboard.jpg
+│   │   ├── styles/
+│   │   └── interactions/
 │   └── templates/
 │       └── static-business-site/
 └── scripts/
+    ├── generate_preview_assets.py
     └── audit_static_site.py
 ```
 
@@ -384,5 +421,5 @@ MIT
     "url": "https://github.com/ChuluuMGL"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.1.0"
+  "softwareVersion": "1.1.1"
 } -->

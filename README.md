@@ -6,7 +6,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.1.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.1.1-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
@@ -99,10 +99,13 @@ The skill does not force every site into the same template. It routes the projec
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | Business website benchmark patterns and maturity checks. |
 | [`references/style-presets.md`](./references/style-presets.md) | Premium visual style presets for mainstream business website directions. |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | Interaction and animation presets, including Anime.js guidance. |
+| [`references/preview-guide.md`](./references/preview-guide.md) | Visual preview, overlap review, and motion-intensity evaluation guide. |
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | Final QA checklist and failure modes. |
 | [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | Machine-readable style preset catalog. |
 | [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | Machine-readable interaction preset catalog. |
+| [`assets/previews/`](./assets/previews/) | Style preview images and interaction GIFs. |
 | [`assets/templates/static-business-site/`](./assets/templates/static-business-site/) | Dependency-free static website starter template. |
+| [`scripts/generate_preview_assets.py`](./scripts/generate_preview_assets.py) | Regenerates style preview images and interaction GIFs. |
 | [`scripts/audit_static_site.py`](./scripts/audit_static_site.py) | Static site audit script using only Python standard library. |
 | [`agents/openai.yaml`](./agents/openai.yaml) | Codex/OpenAI-style UI metadata. |
 | [`skill.json`](./skill.json) | Machine-readable metadata for directories and marketplaces. |
@@ -248,6 +251,33 @@ The skill includes preset guidance for mainstream premium business website direc
 
 Interaction presets cover CSS-only motion, Anime.js, GSAP, React Motion-style libraries, scroll reveals, staggered cards, metric count-ups, SVG line drawing, sticky CTA rails, case filters, ROI/calculator feedback, dashboard panel sequences, product hotspot tours, before/after comparisons, and process steppers. Anime.js is treated as optional: use it when motion supports comprehension, not as decoration.
 
+### Visual Preview
+
+The deterministic preview sheet below is generated from the preset catalog and is useful for checking whether the directions are distinct and practical:
+
+![Business website style preset overview](./assets/previews/style-overview.png)
+
+The AI concept moodboard is included only as a visual mood reference, not as a reusable template or factual website output:
+
+![AI concept moodboard for business website styles](./assets/previews/ai-style-moodboard.jpg)
+
+### Interaction GIF Preview
+
+Representative motion previews:
+
+| Interaction | Preview |
+|---|---|
+| Anime.js staggered reveal | ![Anime.js staggered reveal](./assets/previews/interactions/animejs-staggered-reveal.gif) |
+| Anime.js SVG line draw | ![Anime.js SVG line draw](./assets/previews/interactions/animejs-svg-line-draw.gif) |
+| Metric count-up | ![Metric count-up](./assets/previews/interactions/metric-count-up.gif) |
+| Case filter transition | ![Case filter transition](./assets/previews/interactions/case-filter-transition.gif) |
+| Dashboard panel sequence | ![Dashboard panel sequence](./assets/previews/interactions/dashboard-panel-sequence.gif) |
+| Product hotspot tour | ![Product hotspot tour](./assets/previews/interactions/product-hotspot-tour.gif) |
+
+See [`assets/previews/interactions/`](./assets/previews/interactions/) for the full GIF set and [`references/preview-guide.md`](./references/preview-guide.md) for overlap and practicality notes.
+
+To regenerate previews locally, install Pillow and run `python3 scripts/generate_preview_assets.py`.
+
 ---
 
 ## Static Template
@@ -338,15 +368,22 @@ business-website-skill/
 │   ├── delivery-standards.md
 │   ├── example-patterns.md
 │   ├── interaction-presets.md
+│   ├── preview-guide.md
 │   ├── style-presets.md
 │   └── qa-checklist.md
 ├── assets/
 │   ├── presets/
 │   │   ├── design-styles.json
 │   │   └── interaction-presets.json
+│   ├── previews/
+│   │   ├── style-overview.png
+│   │   ├── ai-style-moodboard.jpg
+│   │   ├── styles/
+│   │   └── interactions/
 │   └── templates/
 │       └── static-business-site/
 └── scripts/
+    ├── generate_preview_assets.py
     └── audit_static_site.py
 ```
 
@@ -384,5 +421,5 @@ MIT
     "url": "https://github.com/ChuluuMGL"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.1.0"
+  "softwareVersion": "1.1.1"
 } -->

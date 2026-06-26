@@ -73,6 +73,7 @@ Checkpoint: if the page count, CTA, or business modules are ambiguous, ask the u
 ### Phase 3 - Design Direction
 
 Read `references/style-presets.md` when the user asks for richer styles, trendy design, premium visual directions, or multiple preset looks.
+Read `references/preview-guide.md` when the user asks to compare style previews, judge overlap, review visual quality, or inspect GIF interaction previews.
 
 Offer 2 to 3 design directions when brand direction is unclear. Each option should include:
 
@@ -137,6 +138,7 @@ Final response should include:
 - Read `references/benchmark-patterns.md` when improving strategy, conversion, trust, B2B buyer support, or overall maturity.
 - Read `references/style-presets.md` when selecting a visual preset or combining multiple premium website styles.
 - Read `references/interaction-presets.md` when selecting animation libraries, motion recipes, or interaction intensity.
+- Read `references/preview-guide.md` when evaluating visual/interaction preset quality, overlap, or preview assets.
 - Read `references/delivery-standards.md` before significant visual or responsive work.
 - Read `references/qa-checklist.md` before final handoff or review.
 
