@@ -2,7 +2,7 @@
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
   "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, design direction choices, implementation, and QA.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "ChuluuMGL",
   "license": "MIT",
   "repository": "https://github.com/ChuluuMGL/business-website-skill",
@@ -20,6 +20,22 @@
     "Vite",
     "Next.js",
     "Agent Skills"
+  ],
+  "outputs": [
+    "Evidence map",
+    "Site blueprint",
+    "Design direction options",
+    "Website implementation",
+    "Static site QA report",
+    "Handoff notes"
+  ],
+  "use_cases": [
+    "Corporate website",
+    "B2B service website",
+    "Brand website",
+    "Proposal-grade landing page",
+    "Project showcase",
+    "Existing website audit"
   ],
   "not_for": [
     "e-commerce storefronts",
@@ -54,5 +70,22 @@
       "Hermes"
     ],
     "notes": "Core workflow uses SKILL.md, references, scripts, and assets. agents/openai.yaml is Codex-specific UI metadata and can be ignored by other runtimes."
-  }
+  },
+  "related_skills": [
+    {
+      "name": "proposal-ppt-skill",
+      "repository": "https://github.com/ChuluuMGL/proposal-ppt-skill",
+      "description": "Create stage-gated business proposal decks and presenter scripts."
+    },
+    {
+      "name": "yueyu-skill",
+      "repository": "https://github.com/ChuluuMGL/yueyu-skill",
+      "description": "Query YUEYU TECH company and marketing-service information."
+    },
+    {
+      "name": "dy-creative-skill",
+      "repository": "https://github.com/ChuluuMGL/dy-creative-skill",
+      "description": "Query DY Creative&Tech marketing services and lead capture."
+    }
+  ]
 }

@@ -1,51 +1,111 @@
 # Business Website Skill
 
+> **Business Website Builder Skill for AI Agents**  
+> An open-source Agent Skill that helps AI agents create client-ready corporate, brand, B2B, service, and proposal-grade websites from source materials, existing sites, PPT/PDF files, images, briefs, and reference websites.
+
 [中文说明](README.zh-CN.md) | English
 
-Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials.
+[![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
+[![Version](https://img.shields.io/badge/version-1.0.1-green)](./skill.json)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
+[![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
+[![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
 
-This Agent Skill is designed for client-facing business website work: enterprise websites, brand websites, project showcase pages,招商/投标 pages, and presentation-ready prototypes. It is not focused on e-commerce storefronts.
+---
 
-## What It Does
+## What This Skill Does
 
-- Turns source materials into a phased website plan.
-- Separates confirmed facts from pending or forbidden assumptions.
-- Produces sitemap/page outline and homepage section structure before implementation.
-- Offers design direction choices when the user has not specified a visual route.
-- Builds with the existing stack, or starts from a static HTML/CSS/JS template.
-- Runs delivery checks for static sites and guides React/Vite/Next verification.
+`business-website-skill` turns messy website inputs into a structured, evidence-safe website production workflow.
 
-## Skill Contents
+| Output | What It Contains |
+|---|---|
+| Evidence map | Confirmed facts, missing facts, forbidden assumptions, and usable asset inventory. |
+| Site blueprint | Sitemap, homepage section outline, CTA path, proof modules, and case/scenario taxonomy. |
+| Design direction options | 2-3 visual routes when brand direction is unclear. |
+| Website implementation | Static HTML/CSS/JS, React/Vite, Next.js, or existing-stack edits depending on the project. |
+| QA report | Broken asset checks, anchor checks, responsive/mobile review guidance, source-integrity checks, and handoff notes. |
 
-```text
-business-website-skill/
-├── SKILL.md
-├── agents/openai.yaml
-├── assets/templates/static-business-site/
-├── references/
-│   ├── delivery-standards.md
-│   ├── example-patterns.md
-│   ├── benchmark-patterns.md
-│   └── qa-checklist.md
-├── scripts/audit_static_site.py
-├── skill.json
-├── README.md
-└── README.zh-CN.md
-```
+The purpose is not to create a generic landing page. The purpose is to help a client quickly understand: who this company is, what it does, why it is credible, and how to take the next step.
 
-## Suggested Prompts
+---
 
-```text
-Use $business-website-skill to build a client-ready B2B website from the materials in this folder.
-```
+## Use Cases
 
-```text
-Use $business-website-skill to audit and polish this static company website before client delivery.
-```
+| Scenario | Typical Request |
+|---|---|
+| Corporate website | "Build a company website from this PDF and brand folder." |
+| B2B service website | "Create a B2B service site with capabilities, cases, and contact CTA." |
+| Brand website | "Turn this brand deck into a polished public-facing website." |
+| Proposal-grade landing page | "Create a client presentation page for this pitch or招商 project." |
+| Project showcase | "Build a showcase page for this industrial/technology/project case." |
+| Existing website polish | "Audit and improve this static website before client delivery." |
+| Website IA planning | "Give me the sitemap, page outline, and design direction options first." |
+| Cross-agent workflow reuse | "Install this skill in Cursor, Claude Code, Trae, OpenClaw, Hermes, or Codex." |
 
-```text
-Use $business-website-skill to create a proposal-grade landing page. Ask me for choices before implementation.
-```
+---
+
+## Workflow
+
+This skill uses a stage-gated workflow inspired by professional website strategy and proposal production.
+
+| Phase | Gate | Deliverable |
+|---|---|---|
+| 0. Intake | Choose site type, stack, visual direction, and delivery mode. | Assumptions and user choices |
+| 1. Evidence map | Separate confirmed facts from unknowns and forbidden assumptions. | Source-backed evidence map |
+| 2. Site blueprint | Build sitemap, homepage outline, proof modules, and CTA path. | Blueprint for review |
+| 3. Design direction | Offer 2-3 visual routes when the brand direction is unclear. | Direction options |
+| 4. Implementation plan | Define files, components, assets, interactions, and checks. | Build plan |
+| 5. Build | Implement with static files, React/Vite/Next, or the existing stack. | Website files |
+| 6. QA | Check source integrity, assets, anchors, layout, mobile, forms, and handoff. | QA result |
+| 7. Handoff | Summarize files, preview/run steps, validation, and remaining confirmations. | Delivery notes |
+
+Default behavior is pragmatic: if the user wants speed, the agent proceeds with conservative assumptions and marks unknowns as `to be confirmed`; if the user wants control, the agent pauses after blueprint and design direction choices.
+
+---
+
+## Work Modes
+
+| Mode | When to Use | Behavior |
+|---|---|---|
+| `guided` | You want to confirm strategy before code. | Produces evidence map, sitemap, section outline, and design directions first. |
+| `auto` | You need a complete first draft quickly. | Makes conservative assumptions, marks unknowns, and implements. |
+| `edit` | You already have a website. | Preserves the existing stack and visual system unless asked to redesign. |
+| `audit` | You only want review feedback. | Returns findings, risks, and suggested revisions without rebuilding. |
+
+---
+
+## Website Routes
+
+The skill does not force every site into the same template. It routes the project into one primary website type:
+
+| Route | Best For |
+|---|---|
+| Corporate / enterprise website | Company overview, services, qualifications, news, contact. |
+| B2B service website | Service scope, scenarios, proof, process, inquiry CTA. |
+| Brand website | Brand story, positioning, product/service narrative, visual identity. |
+| Proposal /招商 /投标 page | One-off presentation page, campaign proposal, investment or tender context. |
+| Project showcase | Case detail, project background, solution, outcome, media assets. |
+| Professional service website | Consulting, agency, production, operations, and expert service businesses. |
+
+---
+
+## Included Files
+
+| File / Folder | Purpose |
+|---|---|
+| [`SKILL.md`](./SKILL.md) | Core skill metadata and agent instructions. |
+| [`references/delivery-standards.md`](./references/delivery-standards.md) | Layout, typography, color, image, interaction, responsive, and copy standards. |
+| [`references/example-patterns.md`](./references/example-patterns.md) | Reusable patterns from static, React, and service-site examples. |
+| [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | Business website benchmark patterns and maturity checks. |
+| [`references/qa-checklist.md`](./references/qa-checklist.md) | Final QA checklist and failure modes. |
+| [`assets/templates/static-business-site/`](./assets/templates/static-business-site/) | Dependency-free static website starter template. |
+| [`scripts/audit_static_site.py`](./scripts/audit_static_site.py) | Static site audit script using only Python standard library. |
+| [`agents/openai.yaml`](./agents/openai.yaml) | Codex/OpenAI-style UI metadata. |
+| [`skill.json`](./skill.json) | Machine-readable metadata for directories and marketplaces. |
+
+The static template is a structure starter only. Replace all `待补充`, `待确认`, and sample placeholders with source-backed client facts before delivery.
+
+---
 
 ## Install And Compatibility
 
@@ -62,6 +122,12 @@ The core skill follows the open Agent Skills shape: a folder with `SKILL.md`, pl
 | Hermes | `~/.hermes/skills/business-website-skill/` or configured skills root | Expected compatible |
 
 Only Codex-specific UI metadata lives in `agents/openai.yaml`. Other agents can ignore that file and use `SKILL.md` directly.
+
+### Ask An AI Agent
+
+You can ask a coding agent:
+
+> Install the business-website-skill from https://github.com/ChuluuMGL/business-website-skill
 
 ### Generic Install
 
@@ -102,14 +168,64 @@ git clone https://github.com/ChuluuMGL/business-website-skill.git ~/.hermes/skil
 
 OpenClaw and other runtimes may use configurable workspace or global skill roots. Place the cloned folder under the root they scan.
 
-## Compatibility Notes
+---
 
-- Keep `SKILL.md` uppercase. Some runtimes are case-sensitive.
-- Keep the folder name kebab-case: `business-website-skill`.
-- Keep public metadata in `skill.json`; agents that do not read it can ignore it.
-- The Python audit script uses only the standard library.
-- If a runtime does not support executable scripts, the workflow still works as instructions plus template assets; run `scripts/audit_static_site.py` manually.
-- If a runtime does not support UI-style choice prompts, the skill tells the agent to present 2 to 3 text options.
+## Recommended Prompts
+
+### Guided Blueprint First
+
+```text
+Use $business-website-skill to create a client-ready business website from the materials in this folder.
+
+Do not implement yet. First return:
+1. Evidence map
+2. Sitemap
+3. Homepage section outline
+4. CTA path
+5. 3 design direction options
+6. Questions that need my confirmation
+```
+
+### Direct Static Prototype
+
+```text
+Use $business-website-skill to build a static B2B website prototype.
+
+Requirements:
+- use source-backed facts only
+- mark missing information as to be confirmed
+- start from the static-business-site template if useful
+- include mobile navigation, CTA, proof cards, cases, process, and contact section
+- run the static audit script before final handoff
+```
+
+### Existing Website Audit
+
+```text
+Use $business-website-skill to audit and polish this existing company website.
+
+Goals:
+- improve first-view clarity
+- check evidence and unsupported claims
+- fix responsive layout issues
+- verify anchors, images, mobile menu, and form feedback
+- return QA findings and implement safe fixes
+```
+
+---
+
+## Design Principles
+
+- Start from the buyer's decision problem, not from a generic service list.
+- Make the first viewport explain value in 5 seconds.
+- Separate confirmed facts from assumptions before writing copy.
+- Use business evidence: cases, metrics, qualifications, process, team, certifications, reports, or implementation proof.
+- Show one primary CTA and one secondary research CTA.
+- Avoid fake customers, fake logos, fake awards, fake news, and fake form submission success.
+- Make mobile layouts as credible as desktop layouts.
+- Treat visual style as a business signal: B2B trust, technical clarity, premium brand, or content-led professionalism.
+
+---
 
 ## Static Template
 
@@ -124,6 +240,8 @@ assets/templates/static-business-site/
 
 It uses placeholder copy such as `待补充` and `示例待确认`. Replace placeholders with source-backed client facts before delivery.
 
+---
+
 ## Static Site Audit
 
 Run:
@@ -132,12 +250,108 @@ Run:
 python3 scripts/audit_static_site.py assets/templates/static-business-site index.html
 ```
 
-The script checks local assets, hash anchors, duplicate IDs, viewport metadata, missing image alt text, and CSS `url()` references.
+The script checks:
 
-## Current Maturity
+- local asset references
+- hash anchors
+- duplicate IDs
+- viewport metadata
+- image `alt` attributes
+- CSS `url()` references
 
-This is a practical v1 skill. It is strongest at phased planning, evidence-safe business website structure, static prototypes, and delivery checks. The next maturity step is to add more templates, visual QA automation, and real-world example fixtures.
+---
+
+## FAQ
+
+**Is this an ecommerce website builder?**  
+No. It is focused on corporate, brand, B2B, service, proposal,招商,投标, and project showcase websites. It does not implement shopping carts or payment checkout.
+
+**Does it create websites automatically?**  
+Yes, when used inside an agent that can edit files. It can create static prototypes or work inside React/Vite/Next/existing stacks.
+
+**Does it require an MCP server?**  
+No. This is a local skill package, not an MCP server.
+
+**Can it use an existing website or brand assets?**  
+Yes. Existing sites, brand folders, PPT/PDF files, images, and client visual identity take priority over the fallback static template.
+
+**Will it invent customer cases or metrics?**  
+No. The skill requires unknowns to be marked as `待补充`, `待确认`, or `示例待确认`.
+
+**Can other agents use it?**  
+Yes, if they support skill folders or can read `SKILL.md`-style packages. Installation paths differ by client.
+
+---
+
+## Technical Specs
+
+| Item | Description |
+|---|---|
+| Skill name | `business-website-skill` |
+| Repository | `ChuluuMGL/business-website-skill` |
+| Format | Local skill folder with `SKILL.md`, references, scripts, assets, and metadata |
+| Primary output | Website files plus evidence map, blueprint, QA, and handoff notes |
+| Bundled asset | Static business website starter template |
+| Script runtime | Python standard library |
+| License | MIT |
+| Author | ChuluuMGL |
+
+## Directory Structure
+
+```text
+business-website-skill/
+├── SKILL.md
+├── README.md
+├── README.zh-CN.md
+├── LICENSE
+├── skill.json
+├── agents/
+│   └── openai.yaml
+├── assets/
+│   └── templates/
+│       └── static-business-site/
+├── references/
+│   ├── benchmark-patterns.md
+│   ├── delivery-standards.md
+│   ├── example-patterns.md
+│   └── qa-checklist.md
+└── scripts/
+    └── audit_static_site.py
+```
+
+## Related Skills
+
+- [proposal-ppt-skill](https://github.com/ChuluuMGL/proposal-ppt-skill) - Create stage-gated business proposal decks and presenter scripts.
+- [yueyu-skill](https://github.com/ChuluuMGL/yueyu-skill) - Query YUEYU TECH company and marketing-service information.
+- [dy-creative-skill](https://github.com/ChuluuMGL/dy-creative-skill) - Query DY Creative&Tech marketing services and lead capture.
 
 ## License
 
 MIT
+
+---
+
+<!-- Structured Data for SEO: JSON-LD -->
+<!-- {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "business-website-skill",
+  "alternateName": "Business Website Builder Skill",
+  "description": "Open-source AI Agent Skill for building client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials.",
+  "url": "https://github.com/ChuluuMGL/business-website-skill",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "The skill is open source under the MIT license."
+  },
+  "author": {
+    "@type": "Person",
+    "name": "ChuluuMGL",
+    "url": "https://github.com/ChuluuMGL"
+  },
+  "programmingModel": "Agent Skills / SKILL.md",
+  "softwareVersion": "1.0.1"
+} -->
