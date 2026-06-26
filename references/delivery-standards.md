@@ -113,3 +113,12 @@ Avoid a one-color palette, cheap purple-blue gradients, neon, large dark areas w
 - Put assets in clear folders such as `assets/brand/`, `assets/cases/`, `assets/official/`, or `public/images/`.
 - Do not reference missing images.
 - Check console errors, broken links, image loading, mobile menu, anchors, form feedback, and responsive layout.
+
+## SEO And GEO
+
+- Use one descriptive title and meta description per indexable page.
+- Keep important claims and summaries in crawlable text, not only images, canvas, or animation.
+- Add canonical, Open Graph, Twitter Card, sitemap, robots, and structured data when the site is intended for public launch.
+- Use JSON-LD only for facts visible on the page and confirmed by source materials.
+- For private preview links, use `noindex` or access control; remove those controls before public launch.
+- Keep AI-search/GEO readiness evidence-based: specific claims, useful summaries, clear headings, proof near claims, and no hidden keyword text.

@@ -1,6 +1,6 @@
 ---
 name: business-website-skill
-description: Build client-ready corporate, brand, B2B, service,招商,投标, and proposal-grade business websites from source materials, existing static or React/Vite/Next sites, PPT/PDF/image assets, and reference sites. Use when an agent needs to create, refactor, polish, or QA a business website prototype or launch preview with phased discovery, evidence mapping, sitemap/outline, design direction options, implementation, delivery checks, and standard/premium/showcase interaction choices. Not focused on e-commerce storefronts.
+description: Build client-ready corporate, brand, B2B, service,招商,投标, and proposal-grade business websites from source materials, existing static or React/Vite/Next sites, PPT/PDF/image assets, and reference sites. Use when an agent needs to create, refactor, polish, or QA a business website prototype or launch preview with phased discovery, evidence mapping, sitemap/outline, SEO/GEO readiness, design direction options, implementation, delivery checks, and standard/premium/showcase interaction choices. Not focused on e-commerce storefronts.
 ---
 
 # Business Website Skill
@@ -26,6 +26,7 @@ Build business websites that are credible enough for client presentation or laun
 - Keep the existing stack unless the requested delivery shape requires a change.
 - Ask for user choice only when the decision materially changes the site. If the user asks to proceed quickly, choose a conservative default and state assumptions.
 - Read `references/agent-experience.md` when choosing interaction mode, deciding whether to ask questions, presenting A/B/C options, or managing checkpoints.
+- Read `references/seo-geo-checklist.md` for public launch, SEO-sensitive, GEO-sensitive, AI-search-sensitive, or multi-page website work.
 
 ## Phase Workflow
 
@@ -65,6 +66,7 @@ Include:
 - Required proof modules.
 - Case/scenario taxonomy.
 - Contact and form behavior.
+- SEO/GEO surface: page titles, meta descriptions, indexability, canonical URL assumptions, structured-data candidates, and source-backed summary/FAQ/proof modules.
 
 Default structure:
 
@@ -118,7 +120,8 @@ Use `assets/templates/static-business-site/` for a fast dependency-free starting
 Implement narrowly and consistently with the project.
 
 - Static sites: semantic HTML, CSS variables, responsive grids, small JS modules.
-- React/Vite/Next: componentized sections, data-driven content, SEO/layout components, route-aware navigation when needed.
+- Static launch previews: include title, description, canonical placeholder, social metadata, crawlable text, and JSON-LD only when source-backed.
+- React/Vite/Next: componentized sections, data-driven content, SEO/layout components, route-aware navigation, sitemap/robots handling when needed.
 - Interactions: sticky navigation, mobile menu, anchor/route behavior, active states, CTA, tabs/filters/calculators/timelines only when useful.
 - Forms: honest front-end feedback unless a real backend is connected.
 
@@ -129,6 +132,7 @@ Read `references/qa-checklist.md` before final handoff.
 Run:
 
 - Static site: `python3 <skill-dir>/scripts/audit_static_site.py <site-root> [entry-html]`.
+- Public static launch: add `--strict-seo` after domain, canonical, and preview metadata are ready.
 - React/Vite: `npm run lint` if present, then `npm run build`.
 - Next.js: available typecheck/lint/build commands.
 
@@ -152,6 +156,7 @@ Final response should include:
 - Read `references/style-presets.md` when selecting a visual preset or combining multiple premium website styles.
 - Read `references/interaction-presets.md` when selecting animation libraries, motion recipes, or interaction intensity.
 - Read `references/preview-guide.md` when evaluating visual/interaction preset quality, overlap, or preview assets.
+- Read `references/seo-geo-checklist.md` when planning SEO, GEO, public launch metadata, AI-search readiness, robots/indexing, or structured data.
 - Read `references/delivery-standards.md` before significant visual or responsive work.
 - Read `references/qa-checklist.md` before final handoff or review.
 

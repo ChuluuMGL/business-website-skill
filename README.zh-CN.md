@@ -8,7 +8,7 @@
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.2.2-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.3.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -23,12 +23,13 @@
 | 输出 | 内容 |
 |---|---|
 | 证据地图 | 已确认事实、缺失信息、禁止编造项和可用素材清单。 |
-| 网站蓝图 | sitemap、首页区块、CTA 路径、证明模块、案例/场景分类。 |
+| 网站蓝图 | 站点地图、首页区块、行动路径、证明模块、案例/场景分类。 |
 | 设计方向选项 | 当品牌方向不明确时，提供 2-3 个视觉路线。 |
 | 网站实现 | 根据项目情况使用静态 HTML/CSS/JS、React/Vite、Next.js 或现有技术栈。 |
+| SEO/GEO 就绪检查 | 页面标题、描述、canonical 假设、社交分享元数据、JSON-LD 候选、可抓取文本和证据摘要模块。 |
 | QA 结果 | 断链、锚点、响应式、移动端、事实真实性和交付说明。 |
 
-它的目标不是生成普通 landing page，而是帮助客户快速理解：你是谁、解决什么问题、为什么可信、客户下一步该做什么。
+它的目标不是生成普通落地页，而是帮助客户快速理解：你是谁、解决什么问题、为什么可信、客户下一步该做什么。
 
 ---
 
@@ -38,11 +39,11 @@
 |---|---|
 | 企业官网 | “根据这个 PDF 和品牌素材做一个公司官网。” |
 | B2B 服务官网 | “做一个包含能力、案例、流程和咨询入口的 B2B 官网。” |
-| 品牌官网 | “把这个品牌 deck 转成正式官网。” |
-| 提案级落地页 | “为这个 pitch / 招商项目做一个客户汇报页面。” |
+| 品牌官网 | “把这个品牌资料包转成正式官网。” |
+| 提案级落地页 | “为这个提案 / 招商项目做一个客户汇报页面。” |
 | 项目展示页 | “做一个工业/技术/项目案例展示页。” |
-| 现有网站优化 | “交付客户前，帮我审计和 polish 这个静态官网。” |
-| 网站 IA 规划 | “先给我 sitemap、页面大纲和设计方向。” |
+| 现有网站优化 | “交付客户前，帮我审计并优化这个静态官网。” |
+| 网站信息架构规划 | “先给我站点地图、页面大纲和设计方向。” |
 | 跨 Agent 复用 | “安装到 Cursor、Claude Code、Trae、OpenClaw、Hermes 或 Codex。” |
 
 ---
@@ -55,7 +56,7 @@
 |---|---|---|
 | 0. 问诊 | 判断网站类型、技术栈、视觉方向和交付模式。 | 假设与用户选择 |
 | 1. 证据地图 | 区分已确认事实、未知信息和禁止编造项。 | 证据地图 |
-| 2. 网站蓝图 | 建立 sitemap、首页大纲、证明模块和 CTA 路径。 | 待确认蓝图 |
+| 2. 网站蓝图 | 建立站点地图、首页大纲、证明模块和行动路径。 | 待确认蓝图 |
 | 3. 设计方向 | 品牌方向不明确时，给出 2-3 个视觉路线。 | 方向选项 |
 | 4. 实施计划 | 明确文件、组件、素材、交互和检查方式。 | 构建计划 |
 | 5. 构建 | 用静态文件、React/Vite/Next 或现有技术栈实现。 | 网站文件 |
@@ -70,7 +71,7 @@
 
 | 模式 | 适用情况 | 行为 |
 |---|---|---|
-| `guided` | 需要先确认策略和结构。 | 先输出证据地图、sitemap、区块大纲和设计方向。 |
+| `guided` | 需要先确认策略和结构。 | 先输出证据地图、站点地图、区块大纲和设计方向。 |
 | `auto` | 需要快速得到完整初稿。 | 用保守假设推进，明确标注未知项，并直接实现。 |
 | `edit` | 已有网站需要修改。 | 保留现有技术栈和视觉系统，除非用户要求重做。 |
 | `audit` | 只需要审阅或诊断。 | 输出问题、风险和修改建议，不重建网站。 |
@@ -84,7 +85,7 @@
 | 路线 | 适合项目 |
 |---|---|
 | 企业/集团官网 | 公司介绍、业务、资质、动态、联系。 |
-| B2B 服务官网 | 服务范围、场景、证明、流程、询盘 CTA。 |
+| B2B 服务官网 | 服务范围、场景、证明、流程、询盘行动入口。 |
 | 品牌官网 | 品牌故事、定位、产品/服务叙事、视觉识别。 |
 | 提案/招商/投标页 | 一次性汇报页面、招商项目、活动提案、投标语境。 |
 | 项目展示页 | 案例详情、项目背景、解决方案、成果和媒体素材。 |
@@ -102,6 +103,7 @@
 | [`references/delivery-standards.md`](./references/delivery-standards.md) | 版式、字体、配色、图片、交互、响应式和文案标准。 |
 | [`references/example-patterns.md`](./references/example-patterns.md) | 从静态站、React 官网和服务型网站提炼的可复用模式。 |
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | 商业官网标杆模式和成熟度检查。 |
+| [`references/seo-geo-checklist.md`](./references/seo-geo-checklist.md) | SEO、GEO、AI 搜索就绪、结构化数据、可抓取性和上线索引检查。 |
 | [`references/style-presets.md`](./references/style-presets.md) | 主流高级商业网站视觉风格预设。 |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | 交互和动效预设，包括 Anime.js 使用建议。 |
 | [`references/preview-guide.md`](./references/preview-guide.md) | 视觉预览、风格重合和动效强度评估说明。 |
@@ -134,6 +136,8 @@
 | Hermes | `~/.hermes/skills/business-website-skill/` 或已配置的 skills root | 预期兼容 |
 
 `agents/openai.yaml` 是 Codex 专用 UI 元数据；其他 Agent 可以忽略这个文件，直接读取 `SKILL.md`。
+
+兼容性状态保持保守：只有完成端到端实测的运行时才应写入 `skill.json` 的 `tested`。Claude Code 的诊断反馈已经吸收，但在标记为 tested 前，还应记录一次完整 Phase 0-7 运行。
 
 ### 让 AI Agent 帮你安装
 
@@ -191,9 +195,9 @@ OpenClaw 和其他运行时可能使用可配置的 workspace/global skills root
 
 先不要实现。请先输出：
 1. 证据地图
-2. sitemap
+2. 站点地图
 3. 首页区块大纲
-4. CTA 路径
+4. 行动路径
 5. 3 个设计方向
 6. 需要我确认的问题
 ```
@@ -207,7 +211,7 @@ OpenClaw 和其他运行时可能使用可配置的 workspace/global skills root
 - 只使用有来源的事实
 - 缺失信息标注待确认
 - 可以从 static-business-site 模板开始
-- 包含移动导航、CTA、证明卡片、案例、流程和联系区块
+- 包含移动导航、行动入口、证明卡片、案例、流程和联系区块
 - 最终运行静态审计脚本
 ```
 
@@ -233,7 +237,7 @@ OpenClaw 和其他运行时可能使用可配置的 workspace/global skills root
 1. standard / premium / showcase 动效推荐
 2. 适合使用 Anime.js、GSAP、Lenis、Motion 还是 Three.js
 3. 性能和可访问性风险
-4. 如果动效太重，最稳妥的 fallback 方案
+4. 如果动效太重，最稳妥的降级方案
 ```
 
 ---
@@ -244,10 +248,28 @@ OpenClaw 和其他运行时可能使用可配置的 workspace/global skills root
 - 首屏必须在 5 秒内说明价值。
 - 先区分事实和假设，再写文案。
 - 使用商业证据：案例、指标、资质、流程、团队、认证、报告或执行证明。
-- 设置一个主 CTA 和一个次级研究型 CTA。
+- 设置一个主行动入口和一个次级研究型行动入口。
 - 不编造客户、Logo、奖项、新闻和表单提交成功。
 - 移动端要和桌面端一样可信。
 - 视觉风格是商业信号：B2B 信任、技术清晰、高端品牌或内容专业感。
+
+## SEO 与 GEO 就绪能力
+
+这个 Skill 把 GEO 视为面向 AI 搜索和生成式摘要的证据型 SEO，不使用隐藏文本、虚假 FAQ、无来源 schema 或所谓 AI 专用标记。
+
+公开上线检查包括：
+
+- 可抓取文本说明核心业务、目标客户、证明、流程和下一步行动
+- 页面标题、meta 描述、canonical、Open Graph、Twitter Card 和唯一主 `h1`
+- 与页面可见内容一致的 JSON-LD
+- 清晰的内部链接、站点地图 / robots 状态，以及没有误加 `noindex`
+- 能回答真实买方问题的摘要、FAQ、证明和流程模块
+
+静态网站上线前可以运行：
+
+```bash
+python3 scripts/audit_static_site.py assets/templates/static-business-site index.html --strict-seo
+```
 
 ## 内置风格与交互预设
 
@@ -273,7 +295,7 @@ OpenClaw 和其他运行时可能使用可配置的 workspace/global skills root
 | Standard | 适合大多数企业官网和 B2B 官网的安全实用动效。 |
 | Premium | 更高级的产品、品牌、案例、SaaS 交互。 |
 | Showcase | 更有冲击力的 AI、创意、活动、提案展示型动效。 |
-| Accessibility | 所有动效都必须配套的低动效和 fallback 行为。 |
+| Accessibility | 所有动效都必须配套的低动效和降级行为。 |
 
 Anime.js 是可选增强：只有在动效能帮助理解业务时才使用，而不是为了炫技。GSAP、Lenis、Motion、Three.js 则用于更高强度的动效，但前提是项目有足够内容、素材和 QA 时间。
 
@@ -317,6 +339,12 @@ Showcase 级动效预览：
 
 本地重新生成预览时，需要先安装 Pillow，然后运行 `python3 scripts/generate_preview_assets.py`。
 
+### 预览资产策略
+
+PNG/JPG/GIF 预览是给人看的文档资产。Agent 使用这个 Skill 时不需要把它们加载进上下文；真正的执行工作流依赖 `SKILL.md`、`references/`、`assets/presets/`、`assets/templates/` 和 `scripts/`。
+
+当前仓库保留预览素材，是为了让 GitHub 页面更直观。若迁移到 GitHub Releases 或 Git LFS，需要单独制定迁移方案；如果要真正降低历史 clone 体积，还需要重写 git 历史。
+
 ---
 
 ## 静态模板
@@ -342,20 +370,27 @@ assets/templates/static-business-site/
 python3 scripts/audit_static_site.py assets/templates/static-business-site index.html
 ```
 
+公开静态网站上线前：
+
+```bash
+python3 scripts/audit_static_site.py assets/templates/static-business-site index.html --strict-seo
+```
+
 脚本会检查：
 
 - 本地资源引用。
-- hash 锚点。
+- 哈希锚点。
 - 重复 ID。
-- viewport meta。
+- 视口 meta。
 - 图片 `alt` 属性。
 - CSS `url()` 引用。
+- title、meta description、`lang`、唯一 `h1`、canonical、Open Graph、Twitter Card、robots 提醒和 JSON-LD 有效性。
 
 ---
 
 ## 常见问答
 
-**Q：这是电商网站 builder 吗？**  
+**Q：这是电商网站生成器吗？**
 A：不是。它面向企业官网、品牌官网、B2B 官网、服务型官网、提案/招商/投标页和项目展示页，不实现购物车或支付结账。
 
 **Q：它会自动创建网站吗？**  
@@ -365,7 +400,7 @@ A：可以，前提是在支持文件编辑的 Agent 环境中使用。它可以
 A：不需要。这是本地 Skill 包，不是 MCP Server。
 
 **Q：能使用现有官网或品牌素材吗？**  
-A：可以。现有网站、品牌文件夹、PPT/PDF、图片和客户 VI 的优先级高于 fallback 静态模板。
+A：可以。现有网站、品牌文件夹、PPT/PDF、图片和客户 VI 的优先级高于备用静态模板。
 
 **Q：会不会编造客户案例或数据？**  
 A：不会。Skill 要求未知信息标注为 `待补充`、`待确认` 或 `示例待确认`。
@@ -409,6 +444,7 @@ business-website-skill/
 │   ├── interaction-presets.md
 │   ├── preview-guide.md
 │   ├── qa-checklist.md
+│   ├── seo-geo-checklist.md
 │   └── style-presets.md
 ├── assets/
 │   ├── presets/
@@ -481,5 +517,5 @@ MIT。Copyright (c) 2026 月瑀科技 YUEYU TECH。
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.2.2"
+  "softwareVersion": "1.3.0"
 } -->

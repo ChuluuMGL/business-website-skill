@@ -21,6 +21,8 @@ Use this when improving the skill against strong business, B2B, corporate, profe
 - Resource center: reports, insights, FAQ, procurement support, or implementation guides.
 - Sticky conversion rail: for long pages, keep contact/demo/consultation one click away.
 - Trust footer: legal, privacy, ICP/permit info, contact, social proof, and sitemap.
+- SEO/GEO summary blocks: short source-backed answers for who the company serves, what it provides, where it operates, what proof exists, and how to start.
+- Structured page metadata: title, description, canonical, social share card, and JSON-LD that mirrors visible claims.
 
 ## Mature Skill Behaviors To Emulate
 
@@ -31,6 +33,8 @@ Use this when improving the skill against strong business, B2B, corporate, profe
 - Define exit criteria for every phase.
 - Run deterministic checks and report evidence, not vibes.
 - Keep references modular so the agent loads only what it needs.
+- Separate public-launch checks from prototype checks; a private preview may be `noindex`, while a launch page needs canonical, sitemap, and share metadata.
+- Treat preview images and GIFs as optional human-facing assets, not required runtime context for agents.
 
 ## Avoid
 

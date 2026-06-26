@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.2.2-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.3.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -26,6 +26,7 @@
 | Site blueprint | Sitemap, homepage section outline, CTA path, proof modules, and case/scenario taxonomy. |
 | Design direction options | 2-3 visual routes when brand direction is unclear. |
 | Website implementation | Static HTML/CSS/JS, React/Vite, Next.js, or existing-stack edits depending on the project. |
+| SEO/GEO readiness | Titles, descriptions, canonical assumptions, social metadata, JSON-LD candidates, crawlability, and source-backed summary modules. |
 | QA report | Broken asset checks, anchor checks, responsive/mobile review guidance, source-integrity checks, and handoff notes. |
 
 The purpose is not to create a generic landing page. The purpose is to help a client quickly understand: who this company is, what it does, why it is credible, and how to take the next step.
@@ -102,6 +103,7 @@ The skill does not force every site into the same template. It routes the projec
 | [`references/delivery-standards.md`](./references/delivery-standards.md) | Layout, typography, color, image, interaction, responsive, and copy standards. |
 | [`references/example-patterns.md`](./references/example-patterns.md) | Reusable patterns from static, React, and service-site examples. |
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | Business website benchmark patterns and maturity checks. |
+| [`references/seo-geo-checklist.md`](./references/seo-geo-checklist.md) | SEO, GEO, AI-search readiness, structured-data, crawlability, and launch-indexing checks. |
 | [`references/style-presets.md`](./references/style-presets.md) | Premium visual style presets for mainstream business website directions. |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | Interaction and animation presets, including Anime.js guidance. |
 | [`references/preview-guide.md`](./references/preview-guide.md) | Visual preview, overlap review, and motion-intensity evaluation guide. |
@@ -134,6 +136,8 @@ The core skill follows the open Agent Skills shape: a folder with `SKILL.md`, pl
 | Hermes | `~/.hermes/skills/business-website-skill/` or configured skills root | Expected compatible |
 
 Only Codex-specific UI metadata lives in `agents/openai.yaml`. Other agents can ignore that file and use `SKILL.md` directly.
+
+Compatibility status is conservative: only runtimes with completed end-to-end runs should be moved into `skill.json` `tested`. Claude Code diagnostic feedback has been incorporated, but a full Phase 0-7 runtime run should be recorded before marking it tested.
 
 ### Ask An AI Agent
 
@@ -249,6 +253,24 @@ Before implementation, give me:
 - Make mobile layouts as credible as desktop layouts.
 - Treat visual style as a business signal: B2B trust, technical clarity, premium brand, or content-led professionalism.
 
+## SEO And GEO Readiness
+
+This skill treats GEO as evidence-based SEO for AI-mediated discovery. It does not rely on hidden text, fake FAQs, unsupported schema, or special AI-only markup.
+
+Public-launch checks include:
+
+- crawlable first-party text for the main offer, audience, proof, process, and next step
+- title, meta description, canonical URL, Open Graph, Twitter Card, and one primary `h1`
+- JSON-LD that matches visible source-backed content
+- clear internal links, sitemap/robots status, and no accidental `noindex`
+- concise summary/FAQ/proof modules that answer real buyer questions
+
+For static launch previews, run:
+
+```bash
+python3 scripts/audit_static_site.py assets/templates/static-business-site index.html --strict-seo
+```
+
 ## Built-In Style And Interaction Presets
 
 The skill includes preset guidance for mainstream premium business website directions:
@@ -317,6 +339,12 @@ See [`assets/previews/interactions/`](./assets/previews/interactions/) for the f
 
 To regenerate previews locally, install Pillow and run `python3 scripts/generate_preview_assets.py`.
 
+### Preview Asset Policy
+
+The PNG/JPG/GIF previews are human-facing documentation assets. Agents do not need to load them to use the skill; the executable workflow depends on `SKILL.md`, `references/`, `assets/presets/`, `assets/templates/`, and `scripts/`.
+
+The repository currently keeps previews in git for a richer GitHub page. Moving existing binaries to GitHub Releases or Git LFS would require an explicit migration plan, and a true clone-size reduction would require history rewriting.
+
 ---
 
 ## Static Template
@@ -342,6 +370,12 @@ Run:
 python3 scripts/audit_static_site.py assets/templates/static-business-site index.html
 ```
 
+For public static launches:
+
+```bash
+python3 scripts/audit_static_site.py assets/templates/static-business-site index.html --strict-seo
+```
+
 The script checks:
 
 - local asset references
@@ -350,6 +384,7 @@ The script checks:
 - viewport metadata
 - image `alt` attributes
 - CSS `url()` references
+- title, meta description, `lang`, one `h1`, canonical, Open Graph, Twitter Card, robots warnings, and JSON-LD validity
 
 ---
 
@@ -409,6 +444,7 @@ business-website-skill/
 │   ├── interaction-presets.md
 │   ├── preview-guide.md
 │   ├── qa-checklist.md
+│   ├── seo-geo-checklist.md
 │   └── style-presets.md
 ├── assets/
 │   ├── presets/
@@ -481,5 +517,5 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.2.2"
+  "softwareVersion": "1.3.0"
 } -->

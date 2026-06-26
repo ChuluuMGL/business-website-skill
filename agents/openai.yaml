@@ -1,4 +1,4 @@
 interface:
   display_name: "Business Website Skill"
-  short_description: "Build client-ready business websites by YUEYU TECH"
+  short_description: "Build SEO/GEO-ready client websites by YUEYU TECH"
   default_prompt: "Use $business-website-skill to build a client-ready business website from my materials."

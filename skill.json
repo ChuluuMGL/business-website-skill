@@ -1,8 +1,8 @@
 {
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
-  "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, design direction choices, implementation, and QA.",
-  "version": "1.2.2",
+  "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, SEO/GEO readiness, design direction choices, implementation, and QA.",
+  "version": "1.3.0",
   "author": "月瑀科技 YUEYU TECH",
   "copyright": "Copyright (c) 2026 月瑀科技 YUEYU TECH",
   "maintainer": {
@@ -26,6 +26,9 @@
     "client website",
     "landing page",
     "static website",
+    "SEO",
+    "GEO",
+    "AI search optimization",
     "React",
     "Vite",
     "Next.js",
@@ -38,6 +41,7 @@
     "Site blueprint",
     "Design direction options",
     "Motion tier recommendation",
+    "SEO/GEO readiness report",
     "Website implementation",
     "Static site QA report",
     "Handoff notes"
@@ -67,12 +71,14 @@
     "ai_style_moodboard": "assets/previews/ai-style-moodboard.jpg",
     "style_thumbnails": "assets/previews/styles",
     "interaction_gifs": "assets/previews/interactions",
-    "preview_guide": "references/preview-guide.md"
+    "preview_guide": "references/preview-guide.md",
+    "asset_policy": "Preview PNG/GIF/JPG files are optional human-facing documentation assets. The agent workflow works from markdown references, JSON presets, scripts, and templates without loading binary previews. External release or LFS migration requires an explicit history-rewrite plan."
   },
   "workflow_references": {
     "agent_experience": "references/agent-experience.md",
     "delivery_standards": "references/delivery-standards.md",
-    "qa_checklist": "references/qa-checklist.md"
+    "qa_checklist": "references/qa-checklist.md",
+    "seo_geo_checklist": "references/seo-geo-checklist.md"
   },
   "style_presets": [
     "executive-b2b-trust",
@@ -125,13 +131,16 @@
     {
       "name": "audit_static_site",
       "path": "scripts/audit_static_site.py",
-      "description": "Checks local static site assets, anchors, duplicate IDs, viewport metadata, image alt attributes, and CSS url() references."
+      "description": "Checks local static site assets, anchors, duplicate IDs, viewport metadata, image alt attributes, CSS url() references, and optional strict SEO/GEO launch metadata."
     }
   ],
   "compatibility": {
     "format": "Agent Skills / SKILL.md",
     "tested": [
       "Codex"
+    ],
+    "diagnosed": [
+      "Claude Code"
     ],
     "expected": [
       "Claude Code",
@@ -141,7 +150,7 @@
       "OpenClaw",
       "Hermes"
     ],
-    "notes": "Core workflow uses SKILL.md, references, scripts, and assets. agents/openai.yaml is Codex-specific UI metadata and can be ignored by other runtimes."
+    "notes": "Core workflow uses SKILL.md, references, scripts, and assets. agents/openai.yaml is Codex-specific UI metadata and can be ignored by other runtimes. Claude Code diagnostic feedback has been incorporated, but full Phase 0-7 runtime testing should be recorded before moving it from diagnosed to tested."
   },
   "related_skills": [
     {

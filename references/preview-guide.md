@@ -12,6 +12,8 @@ Use this guide when reviewing whether the built-in style and interaction presets
 
 The generated style overview is deterministic and should stay close to the machine-readable presets. The AI concept moodboard is only a visual mood reference and should not be treated as a template or factual website output.
 
+Preview PNG/GIF/JPG files are human-facing documentation assets. Agents should use the markdown references, JSON preset catalogs, scripts, and templates; they do not need to load binary previews into context to execute the workflow.
+
 ## Skill UX Audit Summary
 
 Current strengths:
@@ -101,3 +103,7 @@ Use showcase motion only when at least two are true:
 - The team can spend time on browser, mobile, and performance QA.
 
 Avoid showcase motion when the page is a public-sector, compliance-heavy, finance-heavy, form-heavy, or information-dense service website unless the user explicitly approves the tradeoff.
+
+## Asset Footprint Policy
+
+The bundled preview files are optional for execution. If a distribution needs a smaller checkout, keep `references/`, `assets/presets/`, `assets/templates/`, and `scripts/`, then regenerate previews with `scripts/generate_preview_assets.py` or host preview files externally. Moving existing tracked binaries out of git history requires an explicit history-rewrite plan.
