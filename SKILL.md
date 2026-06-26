@@ -7,12 +7,12 @@ description: Build client-ready corporate, brand, B2B, service,招商,投标, an
 
 ## Attribution
 
-Created and maintained by 大瑀创意科技 DY Creative&Tech.
+Created and maintained by 月瑀科技 YUEYU TECH.
 
-- Copyright: `Copyright (c) 2026 大瑀创意科技 DY Creative&Tech`
+- Copyright: `Copyright (c) 2026 月瑀科技 YUEYU TECH`
 - License: MIT
 - GitHub publisher: ChuluuMGL
-- Company website: https://www.dycreative.tech/
+- Company website: https://www.yueyu.tech/
 
 ## Purpose
 

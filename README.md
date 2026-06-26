@@ -3,14 +3,14 @@
 > **Business Website Builder Skill for AI Agents**  
 > An open-source Agent Skill that helps AI agents create client-ready corporate, brand, B2B, service, and proposal-grade websites from source materials, existing sites, PPT/PDF files, images, briefs, and reference websites.
 >
-> Created and maintained by **大瑀创意科技 DY Creative&Tech**. Published by **ChuluuMGL**.
+> Created and maintained by **月瑀科技 YUEYU TECH**. Published by **ChuluuMGL**.
 
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.2.1-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.2.2-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
-[![By DY Creative&Tech](https://img.shields.io/badge/by-DY%20Creative%26Tech-0E5E43)](https://www.dycreative.tech/)
+[![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
 
@@ -386,7 +386,7 @@ Yes, if they support skill folders or can read `SKILL.md`-style packages. Instal
 | Bundled asset | Static business website starter template |
 | Script runtime | Static audit uses Python standard library; preview generation uses Pillow |
 | License | MIT |
-| Copyright holder | 大瑀创意科技 DY Creative&Tech |
+| Copyright holder | 月瑀科技 YUEYU TECH |
 | Maintainer / GitHub publisher | ChuluuMGL |
 
 ## Directory Structure
@@ -430,19 +430,19 @@ business-website-skill/
 
 - [proposal-ppt-skill](https://github.com/ChuluuMGL/proposal-ppt-skill) - Create stage-gated business proposal decks and presenter scripts.
 - [yueyu-skill](https://github.com/ChuluuMGL/yueyu-skill) - Query YUEYU TECH company and marketing-service information.
-- [dy-creative-skill](https://github.com/ChuluuMGL/dy-creative-skill) - Query DY Creative&Tech marketing services and lead capture.
+- [dy-creative-skill](https://github.com/ChuluuMGL/dy-creative-skill) - Query related marketing services and lead capture workflows.
 
 ## License
 
-MIT. Copyright (c) 2026 大瑀创意科技 DY Creative&Tech.
+MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
 
 ## Ownership
 
 | Item | Value |
 |---|---|
-| Copyright holder | 大瑀创意科技 DY Creative&Tech |
+| Copyright holder | 月瑀科技 YUEYU TECH |
 | Maintainer / GitHub publisher | [ChuluuMGL](https://github.com/ChuluuMGL) |
-| Company website | [www.dycreative.tech](https://www.dycreative.tech/) |
+| Company website | [www.yueyu.tech](https://www.yueyu.tech/) |
 | Notice | [NOTICE](./NOTICE) |
 
 ---
@@ -465,9 +465,9 @@ MIT. Copyright (c) 2026 大瑀创意科技 DY Creative&Tech.
   },
   "author": {
     "@type": "Organization",
-    "name": "大瑀创意科技",
-    "alternateName": "DY Creative&Tech",
-    "url": "https://www.dycreative.tech/"
+    "name": "月瑀科技",
+    "alternateName": "YUEYU TECH",
+    "url": "https://www.yueyu.tech/"
   },
   "maintainer": {
     "@type": "Person",
@@ -476,10 +476,10 @@ MIT. Copyright (c) 2026 大瑀创意科技 DY Creative&Tech.
   },
   "copyrightHolder": {
     "@type": "Organization",
-    "name": "大瑀创意科技",
-    "alternateName": "DY Creative&Tech",
-    "url": "https://www.dycreative.tech/"
+    "name": "月瑀科技",
+    "alternateName": "YUEYU TECH",
+    "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.2.1"
+  "softwareVersion": "1.2.2"
 } -->
