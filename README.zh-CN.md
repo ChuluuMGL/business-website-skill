@@ -6,7 +6,7 @@
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.0.1-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.1.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
@@ -97,7 +97,11 @@
 | [`references/delivery-standards.md`](./references/delivery-standards.md) | 版式、字体、配色、图片、交互、响应式和文案标准。 |
 | [`references/example-patterns.md`](./references/example-patterns.md) | 从静态站、React 官网和服务型网站提炼的可复用模式。 |
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | 商业官网标杆模式和成熟度检查。 |
+| [`references/style-presets.md`](./references/style-presets.md) | 主流高级商业网站视觉风格预设。 |
+| [`references/interaction-presets.md`](./references/interaction-presets.md) | 交互和动效预设，包括 Anime.js 使用建议。 |
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | 最终 QA 清单和常见失败模式。 |
+| [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | 机器可读的风格预设目录。 |
+| [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | 机器可读的交互预设目录。 |
 | [`assets/templates/static-business-site/`](./assets/templates/static-business-site/) | 无依赖静态官网起步模板。 |
 | [`scripts/audit_static_site.py`](./scripts/audit_static_site.py) | 只使用 Python 标准库的静态站审计脚本。 |
 | [`agents/openai.yaml`](./agents/openai.yaml) | Codex / OpenAI 风格 Skill UI 元数据。 |
@@ -225,6 +229,25 @@ OpenClaw 和其他运行时可能使用可配置的 workspace/global skills root
 - 移动端要和桌面端一样可信。
 - 视觉风格是商业信号：B2B 信任、技术清晰、高端品牌或内容专业感。
 
+## 内置风格与交互预设
+
+这个 Skill 已内置主流高级商业网站方向的预设说明：
+
+| 风格族 | 适用场景 |
+|---|---|
+| Executive B2B Trust | 咨询、专业服务、企业级供应商。 |
+| Industrial Precision | 制造、能源、工程、环保科技。 |
+| AI SaaS / Data Cloud | AI 工具、SaaS 平台、数据分析、自动化。 |
+| Premium Editorial Brand | 品牌工作室、思想领导力、文化/策略型网站。 |
+| Minimal Luxury | 高端产品、创始人品牌、精品服务。 |
+| Dark Data Command Center | 数据看板、诊断工具、AI/运营产品、数据密集服务。 |
+| Sustainable Green Tech | ESG、能源、环保、气候科技。 |
+| Bold Creative Agency | 创意、制作、营销、活动提案型网站。 |
+| Public Sector Civic | 公共服务、NGO、教育、公益和机构型项目。 |
+| Fintech Secure | 金融、保险、合规、支付和 B2B 金融科技网站。 |
+
+交互预设覆盖 CSS-only 动效、Anime.js、GSAP、React Motion 风格库、滚动进入、卡片错峰、数字计数、SVG 线条绘制、sticky CTA、案例筛选、ROI/计算器反馈、数据面板分层进入、产品热点导览、前后对比和流程 stepper。Anime.js 是可选增强：只有在动效能帮助理解业务时才使用，而不是为了炫技。
+
 ---
 
 ## 静态模板
@@ -314,7 +337,15 @@ business-website-skill/
 │   ├── benchmark-patterns.md
 │   ├── delivery-standards.md
 │   ├── example-patterns.md
+│   ├── interaction-presets.md
+│   ├── style-presets.md
 │   └── qa-checklist.md
+├── assets/
+│   ├── presets/
+│   │   ├── design-styles.json
+│   │   └── interaction-presets.json
+│   └── templates/
+│       └── static-business-site/
 └── scripts/
     └── audit_static_site.py
 ```
@@ -353,5 +384,5 @@ MIT
     "url": "https://github.com/ChuluuMGL"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.0.1"
+  "softwareVersion": "1.1.0"
 } -->

@@ -2,7 +2,7 @@
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
   "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, design direction choices, implementation, and QA.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "ChuluuMGL",
   "license": "MIT",
   "repository": "https://github.com/ChuluuMGL/business-website-skill",
@@ -48,6 +48,34 @@
       "path": "assets/templates/static-business-site",
       "description": "Dependency-free static business website starter with generic placeholders."
     }
+  ],
+  "style_presets": [
+    "executive-b2b-trust",
+    "industrial-precision",
+    "ai-saas-data-cloud",
+    "premium-editorial-brand",
+    "minimal-luxury",
+    "dark-data-command-center",
+    "sustainable-green-tech",
+    "bold-creative-agency",
+    "public-sector-civic",
+    "fintech-secure"
+  ],
+  "interaction_presets": [
+    "css-only-business-motion",
+    "animejs-staggered-reveal",
+    "animejs-svg-line-draw",
+    "metric-count-up",
+    "case-filter-transition",
+    "sticky-cta-rail",
+    "roi-calculator-feedback",
+    "premium-image-mask-reveal",
+    "dashboard-panel-sequence",
+    "process-stepper",
+    "gsap-scroll-storyline",
+    "product-hotspot-tour",
+    "comparison-before-after",
+    "reduced-motion-safe-mode"
   ],
   "scripts": [
     {

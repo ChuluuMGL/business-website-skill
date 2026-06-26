@@ -1,0 +1,89 @@
+{
+  "version": "1.1.0",
+  "presets": [
+    {
+      "id": "css-only-business-motion",
+      "library": "CSS",
+      "best_for": ["buttons", "navigation states", "cards", "simple reveals"],
+      "notes": "Default choice for simple motion and maximum compatibility."
+    },
+    {
+      "id": "animejs-staggered-reveal",
+      "library": "Anime.js",
+      "best_for": ["hero cards", "service grids", "case grids"],
+      "notes": "Use animate() and stagger() for lightweight sequencing."
+    },
+    {
+      "id": "animejs-svg-line-draw",
+      "library": "Anime.js",
+      "best_for": ["process diagrams", "network maps", "timelines"],
+      "notes": "Use only when the SVG communicates real structure."
+    },
+    {
+      "id": "metric-count-up",
+      "library": "CSS or JavaScript",
+      "best_for": ["confirmed metrics", "impact data", "coverage numbers"],
+      "notes": "Never count up unconfirmed or fake metrics."
+    },
+    {
+      "id": "case-filter-transition",
+      "library": "CSS or JavaScript",
+      "best_for": ["case grids", "scenario filters", "industry tabs"],
+      "notes": "Maintain stable layout and accessible active states."
+    },
+    {
+      "id": "sticky-cta-rail",
+      "library": "CSS or JavaScript",
+      "best_for": ["long pages", "proposal pages", "service pages"],
+      "notes": "Must not obstruct mobile content."
+    },
+    {
+      "id": "roi-calculator-feedback",
+      "library": "JavaScript",
+      "best_for": ["ROI calculators", "cost estimators", "savings models"],
+      "notes": "Show assumptions and formulas."
+    },
+    {
+      "id": "premium-image-mask-reveal",
+      "library": "CSS or Anime.js",
+      "best_for": ["brand sites", "luxury sections", "editorial case studies"],
+      "notes": "Use only when image crops preserve the subject."
+    },
+    {
+      "id": "dashboard-panel-sequence",
+      "library": "CSS, Anime.js, or Motion",
+      "best_for": ["SaaS dashboards", "AI ops", "analytics product previews"],
+      "notes": "Sequence panels in a real product or workflow order."
+    },
+    {
+      "id": "process-stepper",
+      "library": "CSS or JavaScript",
+      "best_for": ["service workflows", "implementation process", "support journeys"],
+      "notes": "Provide visible active state and keyboard-friendly controls."
+    },
+    {
+      "id": "gsap-scroll-storyline",
+      "library": "GSAP",
+      "best_for": ["campaign pages", "proposal storytelling", "premium case pages"],
+      "notes": "Use for complex scroll-linked sequences, not simple reveals."
+    },
+    {
+      "id": "product-hotspot-tour",
+      "library": "CSS or JavaScript",
+      "best_for": ["product screenshots", "equipment photos", "platform UI walkthroughs"],
+      "notes": "Hotspots must point to real, explainable features."
+    },
+    {
+      "id": "comparison-before-after",
+      "library": "CSS or JavaScript",
+      "best_for": ["renovation", "optimization", "environmental impact", "workflow improvement"],
+      "notes": "Label both states clearly and avoid unsupported claims."
+    },
+    {
+      "id": "reduced-motion-safe-mode",
+      "library": "CSS or JavaScript",
+      "best_for": ["all animated experiences"],
+      "notes": "Respect prefers-reduced-motion and keep content visible without animation."
+    }
+  ]
+}

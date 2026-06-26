@@ -6,7 +6,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.0.1-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.1.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
@@ -97,7 +97,11 @@ The skill does not force every site into the same template. It routes the projec
 | [`references/delivery-standards.md`](./references/delivery-standards.md) | Layout, typography, color, image, interaction, responsive, and copy standards. |
 | [`references/example-patterns.md`](./references/example-patterns.md) | Reusable patterns from static, React, and service-site examples. |
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | Business website benchmark patterns and maturity checks. |
+| [`references/style-presets.md`](./references/style-presets.md) | Premium visual style presets for mainstream business website directions. |
+| [`references/interaction-presets.md`](./references/interaction-presets.md) | Interaction and animation presets, including Anime.js guidance. |
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | Final QA checklist and failure modes. |
+| [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | Machine-readable style preset catalog. |
+| [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | Machine-readable interaction preset catalog. |
 | [`assets/templates/static-business-site/`](./assets/templates/static-business-site/) | Dependency-free static website starter template. |
 | [`scripts/audit_static_site.py`](./scripts/audit_static_site.py) | Static site audit script using only Python standard library. |
 | [`agents/openai.yaml`](./agents/openai.yaml) | Codex/OpenAI-style UI metadata. |
@@ -225,6 +229,25 @@ Goals:
 - Make mobile layouts as credible as desktop layouts.
 - Treat visual style as a business signal: B2B trust, technical clarity, premium brand, or content-led professionalism.
 
+## Built-In Style And Interaction Presets
+
+The skill includes preset guidance for mainstream premium business website directions:
+
+| Preset Family | Best For |
+|---|---|
+| Executive B2B Trust | Consulting, professional services, enterprise suppliers. |
+| Industrial Precision | Manufacturing, energy, engineering, environmental technology. |
+| AI SaaS / Data Cloud | AI tools, SaaS platforms, analytics, automation. |
+| Premium Editorial Brand | Brand studios, thought leadership, cultural or strategy sites. |
+| Minimal Luxury | Premium products, founder brands, high-end services. |
+| Dark Data Command Center | Dashboards, diagnostics, AI/ops products, data-heavy services. |
+| Sustainable Green Tech | ESG, energy, environmental protection, climate technology. |
+| Bold Creative Agency | Creative, production, marketing, campaign proposal sites. |
+| Public Sector Civic | Public service, NGO, education, civic and institutional projects. |
+| Fintech Secure | Finance, insurance, compliance, payment and B2B fintech sites. |
+
+Interaction presets cover CSS-only motion, Anime.js, GSAP, React Motion-style libraries, scroll reveals, staggered cards, metric count-ups, SVG line drawing, sticky CTA rails, case filters, ROI/calculator feedback, dashboard panel sequences, product hotspot tours, before/after comparisons, and process steppers. Anime.js is treated as optional: use it when motion supports comprehension, not as decoration.
+
 ---
 
 ## Static Template
@@ -314,7 +337,15 @@ business-website-skill/
 │   ├── benchmark-patterns.md
 │   ├── delivery-standards.md
 │   ├── example-patterns.md
+│   ├── interaction-presets.md
+│   ├── style-presets.md
 │   └── qa-checklist.md
+├── assets/
+│   ├── presets/
+│   │   ├── design-styles.json
+│   │   └── interaction-presets.json
+│   └── templates/
+│       └── static-business-site/
 └── scripts/
     └── audit_static_site.py
 ```
@@ -353,5 +384,5 @@ MIT
     "url": "https://github.com/ChuluuMGL"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.0.1"
+  "softwareVersion": "1.1.0"
 } -->

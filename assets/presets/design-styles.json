@@ -1,0 +1,85 @@
+{
+  "version": "1.1.0",
+  "presets": [
+    {
+      "id": "executive-b2b-trust",
+      "name": "Executive B2B Trust",
+      "best_for": ["consulting", "professional services", "enterprise suppliers", "corporate websites"],
+      "tone": "credible, restrained, evidence-led",
+      "layout": ["hero proof panel", "service matrix", "credential band", "case cards", "process timeline"],
+      "motion": ["subtle reveal", "CTA hover", "metric count-up"]
+    },
+    {
+      "id": "industrial-precision",
+      "name": "Industrial Precision",
+      "best_for": ["manufacturing", "energy", "engineering", "environmental technology"],
+      "tone": "technical, stable, precise",
+      "layout": ["capability grid", "process axis", "case map", "certificates", "technical parameters"],
+      "motion": ["scroll reveal", "specification tabs", "SVG process-line draw"]
+    },
+    {
+      "id": "ai-saas-data-cloud",
+      "name": "AI SaaS / Data Cloud",
+      "best_for": ["AI tools", "SaaS", "analytics", "automation", "diagnostics"],
+      "tone": "modern, product-led, data-backed",
+      "layout": ["product hero", "feature grid", "workflow diagram", "dashboard preview", "integrations"],
+      "motion": ["staggered cards", "dashboard counters", "scroll-linked product reveals"]
+    },
+    {
+      "id": "premium-editorial-brand",
+      "name": "Premium Editorial Brand",
+      "best_for": ["brand studios", "strategy consultancies", "thought leadership"],
+      "tone": "refined, narrative, editorial",
+      "layout": ["narrative hero", "manifesto", "capability essays", "selected work", "insights"],
+      "motion": ["page transitions", "image mask reveal", "typography reveal"]
+    },
+    {
+      "id": "minimal-luxury",
+      "name": "Minimal Luxury",
+      "best_for": ["premium products", "founder brands", "boutique services"],
+      "tone": "quiet, premium, precise",
+      "layout": ["full-bleed hero", "service story", "craft proof", "selective case details"],
+      "motion": ["slow fades", "image parallax", "refined hover states"]
+    },
+    {
+      "id": "dark-data-command-center",
+      "name": "Dark Data Command Center",
+      "best_for": ["diagnostics", "AI ops", "dashboards", "monitoring"],
+      "tone": "operational, data-dense, high-contrast",
+      "layout": ["command center hero", "live metrics", "data panels", "scenario tabs", "technical workflow"],
+      "motion": ["metric tickers", "panel reveals", "animated traces"]
+    },
+    {
+      "id": "sustainable-green-tech",
+      "name": "Sustainable Green Tech",
+      "best_for": ["ESG", "climate", "energy", "environmental protection", "water treatment"],
+      "tone": "responsible, grounded, impact-led",
+      "layout": ["impact metrics", "solution process", "case evidence", "qualification", "map coverage"],
+      "motion": ["impact count-up", "process line", "before-after reveal"]
+    },
+    {
+      "id": "bold-creative-agency",
+      "name": "Bold Creative Agency",
+      "best_for": ["creative agencies", "production studios", "marketing services", "campaign proposals"],
+      "tone": "confident, expressive, case-led",
+      "layout": ["statement hero", "service packages", "selected work", "process", "reports"],
+      "motion": ["staggered work cards", "text reveal", "media preview hover"]
+    },
+    {
+      "id": "public-sector-civic",
+      "name": "Public Sector Civic",
+      "best_for": ["public service", "NGO", "education", "civic campaigns", "institutional projects"],
+      "tone": "accessible, clear, accountable",
+      "layout": ["mission overview", "services", "impact proof", "resources", "FAQ", "contact"],
+      "motion": ["minimal reveal", "accessible focus states", "progressive disclosure"]
+    },
+    {
+      "id": "fintech-secure",
+      "name": "Fintech Secure",
+      "best_for": ["finance", "insurance", "compliance", "B2B fintech", "enterprise payment services"],
+      "tone": "trustworthy, secure, precise",
+      "layout": ["trust hero", "risk proof", "feature matrix", "security section", "case examples"],
+      "motion": ["subtle data reveal", "security badge hover", "comparison toggles"]
+    }
+  ]
+}
