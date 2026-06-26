@@ -2,12 +2,15 @@
 
 > **Business Website Builder Skill for AI Agents**  
 > An open-source Agent Skill that helps AI agents create client-ready corporate, brand, B2B, service, and proposal-grade websites from source materials, existing sites, PPT/PDF files, images, briefs, and reference websites.
+>
+> Created and maintained by **大瑀创意科技 DY Creative&Tech**. Published by **ChuluuMGL**.
 
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.2.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.2.1-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
+[![By DY Creative&Tech](https://img.shields.io/badge/by-DY%20Creative%26Tech-0E5E43)](https://www.dycreative.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
 
@@ -94,6 +97,7 @@ The skill does not force every site into the same template. It routes the projec
 | File / Folder | Purpose |
 |---|---|
 | [`SKILL.md`](./SKILL.md) | Core skill metadata and agent instructions. |
+| [`NOTICE`](./NOTICE) | Copyright, company, maintainer, and publication notice. |
 | [`references/agent-experience.md`](./references/agent-experience.md) | Agent interaction modes, minimal questions, checkpoints, and handoff behavior. |
 | [`references/delivery-standards.md`](./references/delivery-standards.md) | Layout, typography, color, image, interaction, responsive, and copy standards. |
 | [`references/example-patterns.md`](./references/example-patterns.md) | Reusable patterns from static, React, and service-site examples. |
@@ -382,7 +386,8 @@ Yes, if they support skill folders or can read `SKILL.md`-style packages. Instal
 | Bundled asset | Static business website starter template |
 | Script runtime | Static audit uses Python standard library; preview generation uses Pillow |
 | License | MIT |
-| Author | ChuluuMGL |
+| Copyright holder | 大瑀创意科技 DY Creative&Tech |
+| Maintainer / GitHub publisher | ChuluuMGL |
 
 ## Directory Structure
 
@@ -392,6 +397,7 @@ business-website-skill/
 ├── README.md
 ├── README.zh-CN.md
 ├── LICENSE
+├── NOTICE
 ├── skill.json
 ├── agents/
 │   └── openai.yaml
@@ -428,7 +434,16 @@ business-website-skill/
 
 ## License
 
-MIT
+MIT. Copyright (c) 2026 大瑀创意科技 DY Creative&Tech.
+
+## Ownership
+
+| Item | Value |
+|---|---|
+| Copyright holder | 大瑀创意科技 DY Creative&Tech |
+| Maintainer / GitHub publisher | [ChuluuMGL](https://github.com/ChuluuMGL) |
+| Company website | [www.dycreative.tech](https://www.dycreative.tech/) |
+| Notice | [NOTICE](./NOTICE) |
 
 ---
 
@@ -449,10 +464,22 @@ MIT
     "description": "The skill is open source under the MIT license."
   },
   "author": {
+    "@type": "Organization",
+    "name": "大瑀创意科技",
+    "alternateName": "DY Creative&Tech",
+    "url": "https://www.dycreative.tech/"
+  },
+  "maintainer": {
     "@type": "Person",
     "name": "ChuluuMGL",
     "url": "https://github.com/ChuluuMGL"
   },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "大瑀创意科技",
+    "alternateName": "DY Creative&Tech",
+    "url": "https://www.dycreative.tech/"
+  },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.2.0"
+  "softwareVersion": "1.2.1"
 } -->

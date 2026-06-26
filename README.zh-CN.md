@@ -2,12 +2,15 @@
 
 > **面向 AI Agent 的商业官网搭建 Skill**  
 > 一个开源 Agent Skill，用于从客户资料、现有网站、PPT/PDF、图片素材、brief 和参考网站中，创建可交付的企业官网、品牌官网、B2B 官网、服务型官网和商业提案级网站。
+>
+> 由 **大瑀创意科技 DY Creative&Tech** 创建和维护，由 **ChuluuMGL** 发布。
 
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.2.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.2.1-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
+[![By DY Creative&Tech](https://img.shields.io/badge/by-DY%20Creative%26Tech-0E5E43)](https://www.dycreative.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
 
@@ -94,6 +97,7 @@
 | 文件 / 目录 | 用途 |
 |---|---|
 | [`SKILL.md`](./SKILL.md) | Skill 核心元数据和 Agent 指令。 |
+| [`NOTICE`](./NOTICE) | 版权、公司、维护者和发布说明。 |
 | [`references/agent-experience.md`](./references/agent-experience.md) | Agent 工作模式、最少提问、阶段检查和交付行为。 |
 | [`references/delivery-standards.md`](./references/delivery-standards.md) | 版式、字体、配色、图片、交互、响应式和文案标准。 |
 | [`references/example-patterns.md`](./references/example-patterns.md) | 从静态站、React 官网和服务型网站提炼的可复用模式。 |
@@ -382,7 +386,8 @@ A：可以，只要对应 Agent 支持 Skill 文件夹，或能读取 `SKILL.md`
 | 内置资产 | 静态商业官网起步模板 |
 | 脚本运行时 | 静态审计脚本只用 Python 标准库；预览生成脚本需要 Pillow |
 | License | MIT |
-| 作者 | ChuluuMGL |
+| 版权方 | 大瑀创意科技 DY Creative&Tech |
+| 维护者 / GitHub 发布者 | ChuluuMGL |
 
 ## 目录结构
 
@@ -392,6 +397,7 @@ business-website-skill/
 ├── README.md
 ├── README.zh-CN.md
 ├── LICENSE
+├── NOTICE
 ├── skill.json
 ├── agents/
 │   └── openai.yaml
@@ -428,7 +434,16 @@ business-website-skill/
 
 ## License
 
-MIT
+MIT。Copyright (c) 2026 大瑀创意科技 DY Creative&Tech。
+
+## 版权与归属
+
+| 项目 | 信息 |
+|---|---|
+| 版权方 | 大瑀创意科技 DY Creative&Tech |
+| 维护者 / GitHub 发布者 | [ChuluuMGL](https://github.com/ChuluuMGL) |
+| 公司官网 | [www.dycreative.tech](https://www.dycreative.tech/) |
+| 版权说明 | [NOTICE](./NOTICE) |
 
 ---
 
@@ -449,10 +464,22 @@ MIT
     "description": "Skill 开源免费，MIT 协议"
   },
   "author": {
+    "@type": "Organization",
+    "name": "大瑀创意科技",
+    "alternateName": "DY Creative&Tech",
+    "url": "https://www.dycreative.tech/"
+  },
+  "maintainer": {
     "@type": "Person",
     "name": "ChuluuMGL",
     "url": "https://github.com/ChuluuMGL"
   },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "大瑀创意科技",
+    "alternateName": "DY Creative&Tech",
+    "url": "https://www.dycreative.tech/"
+  },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.2.0"
+  "softwareVersion": "1.2.1"
 } -->

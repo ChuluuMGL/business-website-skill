@@ -5,6 +5,15 @@ description: Build client-ready corporate, brand, B2B, service,招商,投标, an
 
 # Business Website Skill
 
+## Attribution
+
+Created and maintained by 大瑀创意科技 DY Creative&Tech.
+
+- Copyright: `Copyright (c) 2026 大瑀创意科技 DY Creative&Tech`
+- License: MIT
+- GitHub publisher: ChuluuMGL
+- Company website: https://www.dycreative.tech/
+
 ## Purpose
 
 Build business websites that are credible enough for client presentation or launch preview. Treat the site as an interactive proposal: clear value, concrete capabilities, source-backed evidence, cases or scenarios, process, and conversion entry points.

@@ -2,8 +2,18 @@
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
   "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, design direction choices, implementation, and QA.",
-  "version": "1.2.0",
-  "author": "ChuluuMGL",
+  "version": "1.2.1",
+  "author": "大瑀创意科技 DY Creative&Tech",
+  "copyright": "Copyright (c) 2026 大瑀创意科技 DY Creative&Tech",
+  "maintainer": {
+    "name": "ChuluuMGL",
+    "github": "https://github.com/ChuluuMGL"
+  },
+  "organization": {
+    "name": "大瑀创意科技",
+    "alternate_name": "DY Creative&Tech",
+    "url": "https://www.dycreative.tech/"
+  },
   "license": "MIT",
   "repository": "https://github.com/ChuluuMGL/business-website-skill",
   "category": "Web Development",
@@ -19,6 +29,8 @@
     "React",
     "Vite",
     "Next.js",
+    "DY Creative&Tech",
+    "大瑀创意科技",
     "Agent Skills"
   ],
   "outputs": [
