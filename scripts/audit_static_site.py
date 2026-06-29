@@ -2,7 +2,8 @@
 """Audit a static business website for common handoff issues.
 
 Checks local assets, duplicate IDs, hash anchors, viewport meta, missing image alt
-text, and CSS url() references. It intentionally avoids network access.
+text, CSS url() references, and optional final-delivery placeholders. It
+intentionally avoids network access.
 """
 
 from __future__ import annotations
@@ -26,6 +27,13 @@ SKIP_SCHEMES = {
     "data",
     "blob",
 }
+
+
+PLACEHOLDER_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+    ("Chinese placeholder", re.compile(r"待补充|待确认|示例待确认|替换这句|待替换")),
+    ("English placeholder", re.compile(r"\b(TODO|TBD|REPLACE_ME)\b|Lorem ipsum", re.IGNORECASE)),
+    ("example domain", re.compile(r"https?://(?:www\.)?(?:example\.com|your-domain\.com|yourdomain\.com)", re.IGNORECASE)),
+]
 
 
 class HtmlAuditParser(HTMLParser):
@@ -196,7 +204,21 @@ def audit_seo(parser: HtmlAuditParser, html_file: Path, errors: list[str], warni
             add_seo_issue(errors, warnings, strict_seo, html_file, line, f"invalid JSON-LD: {exc.msg}")
 
 
-def audit(site_root: Path, entry: str, *, strict_seo: bool = False) -> tuple[list[str], list[str]]:
+def audit_placeholders(files: set[Path], errors: list[str]) -> None:
+    for file_path in sorted(files):
+        try:
+            lines = file_path.read_text(encoding="utf-8", errors="ignore").splitlines()
+        except OSError as exc:
+            add_issue(errors, file_path, None, f"could not read file for placeholder scan: {exc}")
+            continue
+        for line_no, line in enumerate(lines, start=1):
+            for label, pattern in PLACEHOLDER_PATTERNS:
+                if pattern.search(line):
+                    add_issue(errors, file_path, line_no, f"delivery placeholder remains ({label})")
+                    break
+
+
+def audit(site_root: Path, entry: str, *, strict_seo: bool = False, no_placeholders: bool = False) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
     entry_path = (site_root / entry).resolve()
@@ -208,6 +230,7 @@ def audit(site_root: Path, entry: str, *, strict_seo: bool = False) -> tuple[lis
     html_files = [entry_path]
     seen_html = {entry_path}
     css_files: set[Path] = set()
+    text_files: set[Path] = {entry_path}
 
     index = 0
     while index < len(html_files):
@@ -252,9 +275,13 @@ def audit(site_root: Path, entry: str, *, strict_seo: bool = False) -> tuple[lis
                 continue
             if attr == "href" and local_path.suffix.lower() == ".css":
                 css_files.add(local_path.resolve())
+                text_files.add(local_path.resolve())
+            if attr == "src" and local_path.suffix.lower() == ".js":
+                text_files.add(local_path.resolve())
             if local_path.suffix.lower() in {".html", ".htm"} and local_path not in seen_html:
                 seen_html.add(local_path)
                 html_files.append(local_path)
+                text_files.add(local_path.resolve())
 
             fragment = urlsplit(ref).fragment
             if fragment and local_path.suffix.lower() in {".html", ".htm"}:
@@ -271,6 +298,9 @@ def audit(site_root: Path, entry: str, *, strict_seo: bool = False) -> tuple[lis
             if not asset_path.exists():
                 add_issue(errors, css_file, None, f"missing CSS url() asset {ref!r}")
 
+    if no_placeholders:
+        audit_placeholders(text_files, errors)
+
     return errors, warnings
 
 
@@ -279,10 +309,11 @@ def main() -> int:
     parser.add_argument("site_root", help="Static site root directory")
     parser.add_argument("entry", nargs="?", default="index.html", help="Entry HTML file relative to root")
     parser.add_argument("--strict-seo", action="store_true", help="Treat missing SEO/GEO launch metadata as errors")
+    parser.add_argument("--no-placeholders", action="store_true", help="Treat common placeholder text as final-delivery errors")
     args = parser.parse_args()
 
     site_root = Path(args.site_root).expanduser()
-    errors, warnings = audit(site_root, args.entry, strict_seo=args.strict_seo)
+    errors, warnings = audit(site_root, args.entry, strict_seo=args.strict_seo, no_placeholders=args.no_placeholders)
 
     if errors:
         print("ERRORS:")

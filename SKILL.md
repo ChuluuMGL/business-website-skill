@@ -133,6 +133,7 @@ Run:
 
 - Static site: `python3 <skill-dir>/scripts/audit_static_site.py <site-root> [entry-html]`.
 - Public static launch: add `--strict-seo` after domain, canonical, and preview metadata are ready.
+- Final client delivery: add `--no-placeholders` after all `待补充`, `待确认`, demo text, and example URLs have been resolved or intentionally removed.
 - React/Vite: `npm run lint` if present, then `npm run build`.
 - Next.js: available typecheck/lint/build commands.
 

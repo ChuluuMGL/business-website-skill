@@ -47,6 +47,7 @@ Use this before final handoff.
 
 - Static site: run `python3 <skill-dir>/scripts/audit_static_site.py <site-root> [entry-html]`.
 - Public static launch: run `python3 <skill-dir>/scripts/audit_static_site.py <site-root> [entry-html] --strict-seo`.
+- Final client delivery: run `python3 <skill-dir>/scripts/audit_static_site.py <site-root> [entry-html] --strict-seo --no-placeholders` after all placeholder content has been resolved.
 - React/Vite: run `npm run lint` if present, then `npm run build`.
 - Next.js: run typecheck/lint/build commands available in `package.json`.
 - Start a local server and inspect desktop and mobile viewports when the site requires runtime rendering.
