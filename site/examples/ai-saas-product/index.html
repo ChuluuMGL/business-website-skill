@@ -55,7 +55,7 @@
         <p class="hero-copy">SignalDesk AI 是一个合成演示产品，用来展示 AI SaaS 官网如何讲清产品能力、工作流、目标用户和演示入口，同时避免虚构安全认证、客户 Logo、价格或性能数据。</p>
         <div class="hero-actions">
           <a class="button primary" href="#workflow">查看产品工作流</a>
-          <a class="button secondary" href="https://github.com/ChuluuMGL/business-website-skill/tree/main/examples/ai-saas-product">查看源 brief</a>
+          <a class="button secondary" href="#proof">查看证明说明</a>
         </div>
         <dl class="proof-row" aria-label="示例证明点">
           <div><dt>4 modules</dt><dd>信号收集、证据摘要、任务路由、审核流程</dd></div>
@@ -87,6 +87,41 @@
         <p class="eyebrow">Product workflow</p>
         <h2 id="workflow-title">从信号到行动的产品链路</h2>
         <p>AI 产品官网需要让客户快速理解产品如何进入工作流，而不是只展示抽象 AI 概念。</p>
+      </div>
+      <div class="interaction-demo command-demo" data-command-states aria-label="AI 产品状态切换示例">
+        <div class="demo-meta">
+          <span>Interaction preset</span>
+          <strong>dashboard-panel-sequence / command states</strong>
+        </div>
+        <div class="command-state-layout">
+          <div class="command-state-buttons" role="tablist" aria-label="产品工作状态">
+            <button type="button" class="is-active" role="tab" aria-selected="true" data-command-button="collect">Collect</button>
+            <button type="button" role="tab" aria-selected="false" data-command-button="summarize">Summarize</button>
+            <button type="button" role="tab" aria-selected="false" data-command-button="route">Route</button>
+            <button type="button" role="tab" aria-selected="false" data-command-button="review">Review</button>
+          </div>
+          <div class="command-screen">
+            <div class="screen-lines" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <article class="command-state is-active" data-command-panel="collect">
+              <h3>信号收集视图</h3>
+              <p>显示来源、主题、状态和责任人，让分散输入进入统一信号池。</p>
+            </article>
+            <article class="command-state" data-command-panel="summarize">
+              <h3>证据摘要视图</h3>
+              <p>把结论、来源和上下文整理成可审核摘要，不把 AI 输出当作最终事实。</p>
+            </article>
+            <article class="command-state" data-command-panel="route">
+              <h3>任务路由视图</h3>
+              <p>根据主题和优先级分派给战略、市场、研究或运营团队。</p>
+            </article>
+            <article class="command-state" data-command-panel="review">
+              <h3>人工审核视图</h3>
+              <p>保留确认、评论和决策记录，让产品叙事符合真实业务流程。</p>
+            </article>
+          </div>
+        </div>
       </div>
       <div class="grid-4">
         <article class="card">

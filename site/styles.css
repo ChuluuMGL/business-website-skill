@@ -258,7 +258,8 @@ button:focus-visible {
 }
 
 .feature-grid,
-.quality-grid {
+.quality-grid,
+.coverage-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
@@ -270,6 +271,7 @@ button:focus-visible {
 
 .feature-grid article,
 .quality-grid article,
+.coverage-grid article,
 .command-panel,
 .example-grid article {
   background: var(--surface);
@@ -279,7 +281,8 @@ button:focus-visible {
 }
 
 .feature-grid article,
-.quality-grid article {
+.quality-grid article,
+.coverage-grid article {
   padding: 24px;
 }
 
@@ -287,6 +290,51 @@ button:focus-visible {
   color: var(--blue);
   font-size: 13px;
   font-weight: 900;
+}
+
+.coverage {
+  border-top: 1px solid var(--line);
+}
+
+.coverage-grid article {
+  position: relative;
+  overflow: hidden;
+}
+
+.coverage-grid article::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--blue), var(--amber));
+}
+
+.coverage-grid span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.coverage-grid h3 {
+  margin: 12px 0 10px;
+  font-size: 22px;
+  line-height: 1.24;
+}
+
+.coverage-grid p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.coverage-grid a {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--green);
+  font-weight: 900;
+  text-underline-offset: 4px;
 }
 
 .feature-grid h3,
@@ -461,6 +509,7 @@ pre {
 @media (max-width: 980px) {
   .feature-grid,
   .example-grid,
+  .coverage-grid,
   .quality-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -524,6 +573,7 @@ pre {
 
   .feature-grid,
   .example-grid,
+  .coverage-grid,
   .quality-grid,
   .timeline {
     grid-template-columns: 1fr;

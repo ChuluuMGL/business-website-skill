@@ -382,6 +382,298 @@ h1 {
   line-height: 1.62;
 }
 
+.interaction-demo {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 26px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.demo-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.demo-meta span {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.demo-meta strong {
+  font-size: 14px;
+}
+
+.stepper-tabs,
+.tab-list,
+.command-state-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stepper-tabs button,
+.tab-list button,
+.command-state-buttons button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.stepper-tabs button.is-active,
+.tab-list button.is-active,
+.command-state-buttons button.is-active {
+  border-color: transparent;
+  background: var(--brand);
+  color: #ffffff;
+}
+
+.stepper-panels,
+.tab-panels {
+  display: grid;
+}
+
+.stepper-panel,
+.tab-panel,
+.command-state {
+  display: none;
+}
+
+.stepper-panel.is-active,
+.tab-panel.is-active,
+.command-state.is-active {
+  display: block;
+}
+
+.stepper-panel,
+.tab-panel {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.stepper-panel h3,
+.tab-panel h3,
+.command-state h3 {
+  margin-bottom: 10px;
+}
+
+.stepper-panel p,
+.tab-panel p,
+.command-state p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.tab-panel ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tab-panel li {
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: var(--soft);
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.industrial-flow-map {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 20px 16px;
+  border: 1px solid rgba(31, 127, 114, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(rgba(31, 127, 114, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 127, 114, 0.08) 1px, transparent 1px),
+    rgba(255, 255, 255, 0.52);
+  background-size: 52px 52px;
+}
+
+.industrial-flow-map svg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 118px;
+}
+
+.industrial-line-base,
+.industrial-line-active {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.industrial-line-base {
+  stroke: rgba(31, 127, 114, 0.16);
+  stroke-width: 13;
+}
+
+.industrial-line-active {
+  stroke: url("#industrial-flow-gradient");
+  stroke-width: 8;
+  stroke-dasharray: 620;
+  stroke-dashoffset: 0;
+}
+
+.motion-ready .industrial-line-active {
+  animation: flowTrace 4.8s linear infinite;
+}
+
+.industrial-node {
+  fill: var(--surface);
+  stroke: rgba(42, 95, 127, 0.86);
+  stroke-width: 5;
+  transition: fill 220ms ease, stroke 220ms ease, transform 220ms ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.industrial-flow-labels {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: -8px;
+}
+
+.industrial-flow-labels span {
+  min-height: 34px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+  transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.tabs-demo[data-active="survey"] .node-survey,
+.tabs-demo[data-active="process"] .node-process,
+.tabs-demo[data-active="support"] .node-support {
+  fill: var(--brand);
+  stroke: #ffffff;
+  transform: scale(1.2);
+}
+
+.tabs-demo[data-active="survey"] .flow-label-survey,
+.tabs-demo[data-active="process"] .flow-label-process,
+.tabs-demo[data-active="support"] .flow-label-support {
+  border-color: transparent;
+  background: var(--brand);
+  color: #ffffff;
+}
+
+@keyframes flowTrace {
+  from {
+    stroke-dashoffset: 620;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.command-demo {
+  background: linear-gradient(145deg, rgba(12, 27, 42, 0.96), rgba(7, 18, 31, 0.92));
+  border-color: rgba(76, 145, 190, 0.28);
+}
+
+.command-state-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+}
+
+.command-state-buttons {
+  align-content: start;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.command-state-buttons button {
+  width: 100%;
+  border-color: rgba(76, 145, 190, 0.28);
+  color: var(--ink);
+  text-align: left;
+}
+
+.command-state-buttons button.is-active {
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+}
+
+.command-screen {
+  position: relative;
+  min-height: 230px;
+  overflow: hidden;
+  padding: 24px;
+  border: 1px solid rgba(76, 145, 190, 0.28);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 76% 20%, rgba(32, 179, 134, 0.2), transparent 28%),
+    rgba(7, 18, 31, 0.72);
+}
+
+.screen-lines {
+  position: absolute;
+  inset: 24px;
+  display: grid;
+  gap: 18px;
+  opacity: 0.45;
+}
+
+.screen-lines span {
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(54, 125, 225, 0.4), rgba(32, 179, 134, 0.72));
+}
+
+.screen-lines span:nth-child(2) {
+  width: 72%;
+}
+
+.screen-lines span:nth-child(3) {
+  width: 58%;
+}
+
+.screen-lines span:nth-child(4) {
+  width: 86%;
+}
+
+.command-state {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  margin-top: 78px;
+}
+
 .section-head {
   max-width: 760px;
   margin-bottom: 34px;
@@ -764,6 +1056,14 @@ h1 {
   transform: translateY(-3px);
 }
 
+.demo-industrial .tabs-demo {
+  background: linear-gradient(145deg, #ffffff, #eef7f5);
+}
+
+.demo-b2b .stepper-demo {
+  background: #fffaf2;
+}
+
 .demo-ai .button.primary {
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
 }
@@ -858,6 +1158,7 @@ h1 {
   .split-grid,
   .scenario-grid,
   .process-grid,
+  .command-state-layout,
   .b2b-editorial .industry-strip-inner,
   .industrial-flow .industry-strip-inner,
   .ai-command .industry-strip-inner {
@@ -926,6 +1227,7 @@ h1 {
   .split-grid,
   .scenario-grid,
   .process-grid,
+  .command-state-layout,
   .b2b-editorial .industry-strip-inner,
   .industrial-flow .industry-strip-inner,
   .ai-command .industry-strip-inner {
@@ -948,6 +1250,37 @@ h1 {
     align-items: flex-start;
     flex-direction: column;
     padding: 26px;
+  }
+
+  .interaction-demo {
+    padding: 16px;
+  }
+
+  .tab-panel ul {
+    grid-template-columns: 1fr;
+  }
+
+  .industrial-flow-labels {
+    grid-template-columns: 1fr;
+    margin-top: 8px;
+  }
+
+  .industrial-flow-map svg {
+    height: 86px;
+  }
+
+  .command-state-buttons {
+    flex-direction: row;
+  }
+
+  .command-state-buttons button {
+    width: auto;
+    flex: 1 1 calc(50% - 8px);
+    text-align: center;
+  }
+
+  .command-screen {
+    min-height: 250px;
   }
 
   .site-footer {

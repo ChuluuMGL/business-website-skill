@@ -8,13 +8,13 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.4.2-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.3-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
 
-[Live Site](https://business-website-skill.vercel.app/) | [Public Website Examples](https://business-website-skill.vercel.app/#examples) | [Agent Brief Fixtures](./examples/) | [Testing Matrix](./TESTING.md)
+[Live Site](https://business-website-skill.vercel.app/) | [Public Website Examples](https://business-website-skill.vercel.app/#examples) | [Workflow Fixtures](./examples/) | [Testing Matrix](./TESTING.md)
 
 ---
 
@@ -597,5 +597,5 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.4.2"
+  "softwareVersion": "1.4.3"
 } -->

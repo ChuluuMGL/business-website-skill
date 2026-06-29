@@ -33,3 +33,50 @@ if (!reduceMotion) {
     }, { passive: true });
   }
 }
+
+function wireToggleGroup(root, buttonSelector, panelSelector, buttonAttr, panelAttr) {
+  const buttons = Array.from(root.querySelectorAll(buttonSelector));
+  const panels = Array.from(root.querySelectorAll(panelSelector));
+
+  const activate = (button) => {
+    const target = button.getAttribute(buttonAttr);
+    if (!target) return;
+
+    root.dataset.active = target;
+
+    for (const item of buttons) {
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-selected', active ? 'true' : 'false');
+    }
+
+    for (const panel of panels) {
+      const active = panel.getAttribute(panelAttr) === target;
+      panel.classList.toggle('is-active', active);
+      panel.setAttribute('aria-hidden', active ? 'false' : 'true');
+    }
+  };
+
+  const initialButton = buttons.find((button) => button.classList.contains('is-active')) || buttons[0];
+  if (initialButton) {
+    activate(initialButton);
+  }
+
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      activate(button);
+    });
+  }
+}
+
+for (const stepper of document.querySelectorAll('[data-stepper]')) {
+  wireToggleGroup(stepper, '[data-step-button]', '[data-step-panel]', 'data-step-button', 'data-step-panel');
+}
+
+for (const tabs of document.querySelectorAll('[data-tabs]')) {
+  wireToggleGroup(tabs, '[data-tab-button]', '[data-tab-panel]', 'data-tab-button', 'data-tab-panel');
+}
+
+for (const command of document.querySelectorAll('[data-command-states]')) {
+  wireToggleGroup(command, '[data-command-button]', '[data-command-panel]', 'data-command-button', 'data-command-panel');
+}

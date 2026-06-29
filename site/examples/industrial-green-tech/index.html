@@ -55,7 +55,7 @@
         <p class="hero-copy">ClearFlow Environmental Systems 是一个合成演示品牌，用来展示工程型企业官网如何讲清工艺设计、设备集成、调试计划和运维支持，同时避免虚构处理规模、专利证书或环保成果。</p>
         <div class="hero-actions">
           <a class="button primary" href="#capabilities">查看工程能力</a>
-          <a class="button secondary" href="https://github.com/ChuluuMGL/business-website-skill/tree/main/examples/industrial-green-tech">查看源 brief</a>
+          <a class="button secondary" href="#process">查看项目流程</a>
         </div>
         <dl class="proof-row" aria-label="示例证明点">
           <div><dt>5 deliverables</dt><dd>勘察、方案、配置、调试、维护支持</dd></div>
@@ -86,6 +86,67 @@
         <p class="eyebrow">Engineering capabilities</p>
         <h2 id="capabilities-title">让采购方看清工程交付链路</h2>
         <p>工业环保官网需要把技术能力和项目风险控制讲清楚，而不是只放设备图片和抽象口号。</p>
+      </div>
+      <div class="interaction-demo tabs-demo" data-tabs aria-label="工程交付包切换示例">
+        <div class="demo-meta">
+          <span>Interaction preset</span>
+          <strong>technical tabs / svg process-line</strong>
+        </div>
+        <div class="tab-list" role="tablist" aria-label="工程交付包">
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-tab-button="survey">现场勘察包</button>
+          <button type="button" role="tab" aria-selected="false" data-tab-button="process">工艺方案包</button>
+          <button type="button" role="tab" aria-selected="false" data-tab-button="support">运维支持包</button>
+        </div>
+        <div class="industrial-flow-map" aria-hidden="true">
+          <svg viewBox="0 0 820 130" role="img">
+            <defs>
+              <linearGradient id="industrial-flow-gradient" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0%" stop-color="#1f7f72"></stop>
+                <stop offset="52%" stop-color="#2a5f7f"></stop>
+                <stop offset="100%" stop-color="#a1762a"></stop>
+              </linearGradient>
+            </defs>
+            <path class="industrial-line-base" d="M70 68 C190 18 292 18 410 68 S632 118 750 68"></path>
+            <path class="industrial-line-active" d="M70 68 C190 18 292 18 410 68 S632 118 750 68"></path>
+            <circle class="industrial-node node-survey" cx="70" cy="68" r="18"></circle>
+            <circle class="industrial-node node-process" cx="410" cy="68" r="18"></circle>
+            <circle class="industrial-node node-support" cx="750" cy="68" r="18"></circle>
+          </svg>
+          <div class="industrial-flow-labels">
+            <span class="flow-label-survey">现场输入</span>
+            <span class="flow-label-process">工艺路线</span>
+            <span class="flow-label-support">运维闭环</span>
+          </div>
+        </div>
+        <div class="tab-panels">
+          <article class="tab-panel is-active" data-tab-panel="survey">
+            <h3>输入边界清楚</h3>
+            <p>记录水质、空间、管线、排放要求和运行约束，为后续方案评审建立统一口径。</p>
+            <ul>
+              <li>现场输入清单</li>
+              <li>风险点与施工约束</li>
+              <li>方案评审资料目录</li>
+            </ul>
+          </article>
+          <article class="tab-panel" data-tab-panel="process">
+            <h3>工程方案可评审</h3>
+            <p>用工艺路线、设备配置、调试计划和接口说明帮助采购方判断可实施性。</p>
+            <ul>
+              <li>工艺路线说明</li>
+              <li>设备配置边界</li>
+              <li>调试节点计划</li>
+            </ul>
+          </article>
+          <article class="tab-panel" data-tab-panel="support">
+            <h3>交付后仍可运营</h3>
+            <p>把操作培训、维护响应和复盘材料放入交付包，避免工程官网只讲建设不讲运行。</p>
+            <ul>
+              <li>操作培训材料</li>
+              <li>维护响应机制</li>
+              <li>运行复盘建议</li>
+            </ul>
+          </article>
+        </div>
       </div>
       <div class="grid-3">
         <article class="card">
