@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.3.2-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.3.3-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -135,6 +135,8 @@ The core skill follows the open Agent Skills shape: a folder with `SKILL.md`, pl
 | Antigravity | `.agent/skills/business-website-skill/` or configured skills folder | Expected compatible |
 | OpenClaw | workspace or user skills root documented by OpenClaw | Expected compatible |
 | Hermes | `~/.hermes/skills/business-website-skill/` or configured skills root | Expected compatible |
+| Gemini CLI | `.gemini/skills/business-website-skill/` or `.agents/skills/business-website-skill/` | Expected compatible |
+| Kimi Code CLI | `.kimi/skills/business-website-skill/` or `.agents/skills/business-website-skill/` | Expected compatible |
 
 Only Codex-specific UI metadata lives in `agents/openai.yaml`. Other agents can ignore that file and use `SKILL.md` directly.
 
@@ -142,9 +144,14 @@ Compatibility status is conservative: only runtimes with completed end-to-end ru
 
 ### Publishing Targets
 
-The strongest public distribution targets are GitHub, Claude Code Skills, Codex/OpenAI-style local skills, OpenClaw/ClawHub, and VS Code/GitHub Copilot Agent Skills. Coze, Dify, and ChatGPT GPT Store are possible, but they need wrapper packaging because they are bot/workflow/plugin systems rather than native `SKILL.md` folder registries.
+Recommended distribution order beyond GitHub:
 
-This is not a Xiaohongshu operations skill. Xiaohongshu skills usually automate or assist RedNote account research, publishing, interaction, or analytics. This project can be promoted on Xiaohongshu, or paired with a separate content-promotion companion skill, but should not be listed as a Xiaohongshu automation skill. See [`references/distribution-platforms.md`](./references/distribution-platforms.md).
+1. Publish or index the GitHub repo in SKILL.md-native directories such as OpenClaw/ClawHub, SkillsMP, LobeHub Skills, and SkillsLLM.
+2. Add explicit install notes for Gemini CLI and Kimi Code CLI because both support local Agent Skills.
+3. Build a Coze wrapper only if the target audience is non-technical business users who need a guided bot or workflow.
+4. Keep Dify, ChatGPT GPT Store, and MCP wrappers as optional later packaging paths.
+
+A Chrome extension is not needed for distribution. Browser or Chrome automation is useful for QA, screenshots, responsive checks, and live-site audits, but the skill itself should remain a lightweight `SKILL.md` package. See [`references/distribution-platforms.md`](./references/distribution-platforms.md).
 
 ### Ask An AI Agent
 
@@ -521,5 +528,5 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.3.2"
+  "softwareVersion": "1.3.3"
 } -->
