@@ -19,6 +19,19 @@ Use this order when deciding where to publish beyond GitHub:
 
 Do not build a standalone Chrome extension for distribution. Browser or Chrome automation is useful as a QA capability, but it is not the right packaging format for this skill.
 
+## Update Sync Behavior
+
+GitHub is the source of truth. Treat every other platform as either a subscriber, an index, or a wrapper.
+
+| Target type | Sync behavior | Required action |
+|---|---|---|
+| GitHub Release | Manual release creation or release automation | Create a new tag/release when `skill.json` version changes. |
+| ClawHub | Can be automated from GitHub Releases | Set `CLAWHUB_TOKEN` in GitHub repository secrets. The included `.github/workflows/clawhub-publish.yml` publishes on new releases and supports manual dry-runs. |
+| SkillsMP / LobeHub Skills / SkillsLLM | Usually index GitHub, but timing is not guaranteed | Submit the repo once, then check listing freshness after major updates. Resubmit or request re-indexing if stale. |
+| Gemini CLI / Kimi Code CLI local installs | Not automatic for users | Users reinstall/update the local skill from GitHub or the release package. |
+| Coze / Dify / GPT Store wrappers | Not automatic | Update their knowledge files, prompts, workflows, or plugin package when the GitHub skill changes. |
+| MCP or plugin wrappers | Depends on wrapper implementation | Version and publish the wrapper separately, then point it back to the GitHub release. |
+
 ## Native Or Near-Native Skill Targets
 
 | Target | Fit | Packaging approach | Notes |

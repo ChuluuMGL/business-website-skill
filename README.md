@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.3.3-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.3.4-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -152,6 +152,10 @@ Recommended distribution order beyond GitHub:
 4. Keep Dify, ChatGPT GPT Store, and MCP wrappers as optional later packaging paths.
 
 A Chrome extension is not needed for distribution. Browser or Chrome automation is useful for QA, screenshots, responsive checks, and live-site audits, but the skill itself should remain a lightweight `SKILL.md` package. See [`references/distribution-platforms.md`](./references/distribution-platforms.md).
+
+### Update Sync
+
+GitHub is the source of truth. Future GitHub Releases can automatically publish to ClawHub after the repository secret `CLAWHUB_TOKEN` is configured. Directory/index sites may re-crawl GitHub, but timing is not guaranteed. Coze, Dify, GPT Store, Gemini CLI, and Kimi Code CLI installs do not automatically receive GitHub changes unless their wrapper, knowledge base, or local skill install is updated.
 
 ### Ask An AI Agent
 
@@ -528,5 +532,5 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.3.3"
+  "softwareVersion": "1.3.4"
 } -->

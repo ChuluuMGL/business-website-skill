@@ -1,0 +1,32 @@
+name: Publish Skill To ClawHub
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview publish without uploading
+        required: true
+        default: true
+        type: boolean
+  release:
+    types:
+      - published
+
+jobs:
+  publish-on-release:
+    if: github.event_name == 'release'
+    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v1
+    with:
+      skill_path: .
+      dry_run: false
+    secrets:
+      clawhub_token: ${{ secrets.CLAWHUB_TOKEN }}
+
+  publish-manual:
+    if: github.event_name == 'workflow_dispatch'
+    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v1
+    with:
+      skill_path: .
+      dry_run: ${{ inputs.dry_run }}
+    secrets:
+      clawhub_token: ${{ secrets.CLAWHUB_TOKEN }}

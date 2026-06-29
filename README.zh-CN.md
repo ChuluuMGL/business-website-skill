@@ -8,7 +8,7 @@
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.3.3-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.3.4-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -152,6 +152,10 @@ GitHub 之外，建议按这个顺序处理：
 4. Dify、ChatGPT GPT Store、MCP 包装可以作为后续可选渠道，不是第一优先级。
 
 不建议为了发布这个项目单独做 Chrome 插件。浏览器或 Chrome 自动化适合做 QA、截图、响应式检查和线上网站审计；这个 skill 本身应保持轻量的 `SKILL.md` 包。详见 [`references/distribution-platforms.md`](./references/distribution-platforms.md)。
+
+### 更新同步
+
+GitHub 是唯一源头。后续发布 GitHub Release 时，只要仓库 secret 配好 `CLAWHUB_TOKEN`，可以自动发布到 ClawHub。目录/索引型平台可能会重新抓取 GitHub，但时间不保证。Coze、Dify、GPT Store、Gemini CLI 和 Kimi Code CLI 的本地安装不会自动收到 GitHub 更新，除非同步更新它们的包装、知识库或本地 skill。
 
 ### 让 AI Agent 帮你安装
 
@@ -528,5 +532,5 @@ MIT。Copyright (c) 2026 月瑀科技 YUEYU TECH。
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.3.3"
+  "softwareVersion": "1.3.4"
 } -->
