@@ -29,12 +29,37 @@ Use this when improving the skill against strong business, B2B, corporate, profe
 - Require a short intake before major implementation.
 - Produce an evidence map before writing factual claims.
 - Offer 2 to 3 design directions instead of assuming a single style.
+- Require benchmark selection for premium, public-example, or high-taste visual work.
+- Convert benchmarks into a design logic and divergence contract before writing code.
 - Create a sitemap/section outline before writing code.
 - Define exit criteria for every phase.
 - Run deterministic checks and report evidence, not vibes.
 - Keep references modular so the agent loads only what it needs.
 - Separate public-launch checks from prototype checks; a private preview may be `noindex`, while a launch page needs canonical, sitemap, and share metadata.
 - Treat preview images and GIFs as optional human-facing assets, not required runtime context for agents.
+
+## Benchmark-First Design Maturity
+
+Strong website skills do not only list visual presets. They force the agent to make design choices with evidence.
+
+Use `references/design-taste-benchmarks.md` when the design needs to feel premium or distinctive. The benchmark pass should answer:
+
+- Which 2 to 3 references were studied?
+- What design logic is being borrowed?
+- What is explicitly not being copied?
+- What makes this project visually different from other demos?
+- Which one motion or interaction pattern is the signature?
+- Which screenshots or viewports were inspected before handoff?
+
+If a design can be described only as "same layout, different colors", it fails the benchmark gate.
+
+## Open-Source Template Patterns Worth Studying
+
+- Astro/Tailwind templates such as ScrewFast and AstroWind: useful for content architecture, SEO surfaces, docs/blog/resource patterns, navigation, and service/product page organization.
+- SaaS landing templates such as Cruip Simple Light: useful for hero rhythm, CTA hierarchy, and restrained product/service conversion flows.
+- Component libraries such as Launch UI and Page UI: useful for nav, hero, stats, FAQ, CTA, footer, and responsive component variants.
+- Strong skill packages such as `guizang-ppt-skill`: useful for constrained style systems, layout libraries, theme controls, preflight checks, and quality gates.
+- Design-guidance skills such as Anthropic `frontend-design`: useful for subject-specific aesthetics, self-critique, and avoiding generic AI defaults.
 
 ## Avoid
 

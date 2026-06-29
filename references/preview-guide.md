@@ -22,6 +22,7 @@ Current strengths:
 - Strong public-safety rules against fake facts, fake metrics, and private data leakage.
 - Practical style families for common business website categories.
 - Machine-readable presets and preview assets for cross-agent use.
+- Benchmark-first quality gate for public examples, premium redesigns, and high-taste client-facing work.
 
 Improvements added in v1.2.0:
 
@@ -43,6 +44,8 @@ Some overlap is intentional because real client websites often combine a primary
 | `premium-editorial-brand` vs `bold-creative-agency` | Editorial is refined and essay-like; bold agency can use stronger contrast, case grids, and expressive motion. |
 | `public-sector-civic` vs `executive-b2b-trust` | Public sector prioritizes accessibility, service clarity, eligibility/FAQ, and accountability over persuasion. |
 
+For public examples or multiple demo sites, also use `references/design-taste-benchmarks.md`. A demo set fails overlap review when the sites share the same navigation shape, hero split, card grid, proof area, motion recipe, and footer path with only color and copy changes.
+
 ## Practicality Check
 
 Rate each visual direction against the actual project:
@@ -52,6 +55,8 @@ Rate each visual direction against the actual project:
 - Asset fit: can the client provide photos, screenshots, diagrams, or case visuals that match the style?
 - Motion fit: does animation clarify sequence, feedback, or product value?
 - Risk level: could the style feel too flashy, too dark, too generic, or too close to another preset?
+- Benchmark fit: can the output name what it learned from references and what it deliberately changed?
+- Screenshot fit: do hero, proof, mid-page module, footer, and mobile screenshots look intentional rather than patched?
 
 ## Interaction Overlap Review
 

@@ -1,8 +1,8 @@
 {
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
-  "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, SEO/GEO readiness, design direction choices, implementation, and QA.",
-  "version": "1.4.3",
+  "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, benchmark-first design taste gates, SEO/GEO readiness, implementation, and QA.",
+  "version": "1.4.4",
   "author": "月瑀科技 YUEYU TECH",
   "copyright": "Copyright (c) 2026 月瑀科技 YUEYU TECH",
   "maintainer": {
@@ -27,6 +27,8 @@
     "client website",
     "landing page",
     "static website",
+    "benchmark-first design",
+    "design taste",
     "SEO",
     "GEO",
     "AI search optimization",
@@ -40,6 +42,7 @@
   "outputs": [
     "Evidence map",
     "Site blueprint",
+    "Benchmark and taste-gate notes",
     "Design direction options",
     "Motion tier recommendation",
     "SEO/GEO readiness report",
@@ -87,6 +90,7 @@
   },
   "workflow_references": {
     "agent_experience": "references/agent-experience.md",
+    "design_taste_benchmarks": "references/design-taste-benchmarks.md",
     "delivery_standards": "references/delivery-standards.md",
     "qa_checklist": "references/qa-checklist.md",
     "seo_geo_checklist": "references/seo-geo-checklist.md",

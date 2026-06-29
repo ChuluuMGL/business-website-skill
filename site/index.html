@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Business Website Skill | 月瑀科技</title>
-  <meta name="description" content="Business Website Skill 是由月瑀科技维护的开源 Agent Skill，用于搭建企业官网、B2B 官网、品牌官网和提案级网站原型。">
+  <meta name="description" content="Business Website Skill 是由月瑀科技维护的开源 Agent Skill，用于搭建企业官网、B2B 官网、品牌官网和提案级网站原型，内置标杆研究、品位闸门、SEO/GEO 和交付 QA。">
   <link rel="canonical" href="https://business-website-skill.vercel.app/">
   <meta property="og:title" content="Business Website Skill | 月瑀科技">
-  <meta property="og:description" content="面向团队和 AI Agent 的商业官网搭建 Skill，内置阶段工作流、示例、模板、SEO/GEO 检查和交付验收脚本。">
+  <meta property="og:description" content="面向团队和 AI Agent 的商业官网搭建 Skill，内置阶段工作流、标杆研究、品位闸门、SEO/GEO 检查和交付验收脚本。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://business-website-skill.vercel.app/">
   <meta property="og:image" content="https://business-website-skill.vercel.app/assets/hero-workflow.png">
@@ -19,7 +19,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareSourceCode",
     "name": "Business Website Skill",
-    "description": "An open Agent Skill for building client-ready corporate, B2B, brand, and proposal-grade websites.",
+    "description": "An open Agent Skill for building client-ready corporate, B2B, brand, and proposal-grade websites with benchmark-first design taste gates.",
     "codeRepository": "https://github.com/ChuluuMGL/business-website-skill",
     "license": "https://github.com/ChuluuMGL/business-website-skill/blob/main/LICENSE",
     "programmingLanguage": ["Markdown", "Python", "HTML", "CSS", "JavaScript"],
@@ -52,8 +52,8 @@
       <div class="hero-inner">
         <div class="hero-copy-block">
           <p class="eyebrow">Open Agent Skill for business websites</p>
-          <h1 id="hero-title">把商业官网搭建成团队可复用的交付流程</h1>
-          <p class="hero-copy">从资料读取、证据地图、网站蓝图、视觉方向、代码实现到 SEO/GEO 与交付检查，帮助 AI Agent 搭建更接近客户交付标准的企业官网、B2B 官网、品牌官网和提案级页面。</p>
+          <h1 id="hero-title">把商业官网搭建成有品位的团队交付流程</h1>
+          <p class="hero-copy">从资料读取、证据地图、网站蓝图、标杆研究、视觉方向、代码实现到 SEO/GEO 与交付检查，帮助 AI Agent 搭建更接近客户交付标准的企业官网、B2B 官网、品牌官网和提案级页面。</p>
           <div class="hero-actions" aria-label="主要操作">
             <a class="button primary" href="https://github.com/ChuluuMGL/business-website-skill">查看 GitHub</a>
             <a class="button secondary" href="#quickstart">3 分钟上手</a>
@@ -90,7 +90,7 @@
       <div class="section-head">
         <p class="eyebrow">Why it helps</p>
         <h2 id="intro-title">不是普通建站提示词，而是一套交付流程</h2>
-        <p>这个 Skill 约束 Agent 先读资料、区分事实和未知项，再进入蓝图、设计、实现和 QA。它不会编造客户、数据、资质、奖项或表单提交结果。</p>
+        <p>这个 Skill 约束 Agent 先读资料、区分事实和未知项，再进入蓝图、标杆研究、设计、实现和 QA。它不会编造客户、数据、资质、奖项或表单提交结果。</p>
       </div>
       <div class="feature-grid">
         <article>
@@ -100,13 +100,13 @@
         </article>
         <article>
           <span>02</span>
-          <h3>商业结构</h3>
-          <p>默认覆盖首屏价值、能力、证据、案例、流程、FAQ、转化入口和联系路径。</p>
+          <h3>品位闸门</h3>
+          <p>高级或公开项目先研究外部参考，提炼设计逻辑和差异化契约，避免同质化模板感。</p>
         </article>
         <article>
           <span>03</span>
           <h3>可验收</h3>
-          <p>内置静态审计、SEO/GEO 检查和交付级占位内容拦截，方便团队统一质量标准。</p>
+          <p>内置静态审计、SEO/GEO、截图级视觉检查和交付级占位内容拦截，方便团队统一质量标准。</p>
         </article>
       </div>
     </section>
@@ -227,8 +227,8 @@ scripts/install.sh codex</code></pre>
           <p>检查标题、描述、canonical、Open Graph、Twitter Card、JSON-LD 和主 H1。</p>
         </article>
         <article>
-          <h3>交付占位拦截</h3>
-          <p>正式交付前阻止未处理内容进入客户预览页。</p>
+          <h3>品位与截图检查</h3>
+          <p>公开或客户交付页面需要检查标杆记录、差异化、模块边界、空白异常和移动端截图。</p>
         </article>
         <article>
           <h3>运行时矩阵</h3>
@@ -246,7 +246,7 @@ scripts/install.sh codex</code></pre>
         <li><span>0</span><strong>问诊</strong><small>网站类型、技术栈、视觉方向</small></li>
         <li><span>1</span><strong>证据地图</strong><small>事实、未知项、禁止编造项</small></li>
         <li><span>2</span><strong>网站蓝图</strong><small>站点地图、区块、CTA、证明模块</small></li>
-        <li><span>3</span><strong>设计方向</strong><small>2 到 3 个可选视觉路线</small></li>
+        <li><span>3</span><strong>标杆与设计</strong><small>参考研究、品位闸门、视觉路线</small></li>
         <li><span>4</span><strong>实施计划</strong><small>文件、组件、素材、交互、命令</small></li>
         <li><span>5</span><strong>构建</strong><small>静态站、React/Vite、Next 或现有栈</small></li>
         <li><span>6-7</span><strong>QA 与交付</strong><small>验证结果、预览方式、未确认事项</small></li>

@@ -23,6 +23,10 @@ Use this before final handoff.
 - Typography hierarchy is consistent and readable.
 - Palette is brand-appropriate and not one-note.
 - Images are relevant, loaded, and not badly cropped.
+- Sections have clear boundaries and do not create awkward empty zones or cramped edges.
+- Module types fit the content instead of defaulting to repeated card grids.
+- Public examples or multi-demo sets differ in hero structure, proof module, section morphology, interaction signature, and footer/conversion path, not only color.
+- Premium/client-facing work has a short benchmark record: references studied, design logic borrowed, and what was intentionally different.
 - Desktop, tablet, and mobile have no horizontal scroll, overlap, hidden titles, or clipped buttons.
 - Fixed navigation does not cover anchor targets.
 
@@ -52,4 +56,5 @@ Use this before final handoff.
 - Next.js: run typecheck/lint/build commands available in `package.json`.
 - Start a local server and inspect desktop and mobile viewports when the site requires runtime rendering.
 - Check browser console for errors and missing assets.
+- For premium, public example, or client-facing redesigns, capture or inspect screenshots for hero, proof, one mid-page module, footer, and mobile. Resolve obvious alignment, spacing, boundary, cropping, and repeated-template issues before handoff.
 - Keep unrelated user changes untouched.

@@ -54,6 +54,7 @@ Use checkpoints to keep the user in control without slowing down simple builds.
 | Evidence map | Sparse materials, regulated claims, unknown metrics, client-facing facts. |
 | Blueprint | Ambiguous page count, unclear CTA, multiple business lines. |
 | Design direction | Brand direction unclear or user explicitly asks for style choices. |
+| Benchmark/taste gate | Public examples, premium redesigns, multiple demos, or user asks for high-taste/distinctive/non-generic design. |
 | Motion tier | User requests premium/showcase motion or heavy animation libraries. |
 | Handoff | Always summarize validation, files, preview method, and unresolved `待确认`. |
 
@@ -76,6 +77,7 @@ Before final handoff, verify:
 - First screen explains business value in 5 seconds.
 - Unknown facts are not written as real facts.
 - CTA path is visible and specific.
+- Premium or public work has benchmark references, a divergence contract, and a distinct visual signature.
 - Mobile has no horizontal scroll or hidden content.
 - Motion has reduced-motion fallback and does not block forms/navigation.
 - Showcase effects have a clear business purpose, not just decoration.

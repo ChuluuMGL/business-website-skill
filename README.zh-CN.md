@@ -8,7 +8,7 @@
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.4.3-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.4-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -29,7 +29,7 @@ scripts/install.sh codex
 调用方式：
 
 ```text
-使用 $business-website-skill 根据当前文件夹资料，先输出证据地图、站点地图、首页大纲、3 个设计方向和需要确认的问题。
+使用 $business-website-skill 根据当前文件夹资料，先输出证据地图、站点地图、首页大纲、标杆/品位判断、3 个设计方向和需要确认的问题。
 ```
 
 正式交付前：
@@ -48,6 +48,7 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 |---|---|
 | 证据地图 | 已确认事实、缺失信息、禁止编造项和可用素材清单。 |
 | 网站蓝图 | 站点地图、首页区块、行动路径、证明模块、案例/场景分类。 |
+| 标杆与品位闸门 | 针对高级/公开/客户交付项目，先研究外部参考、提炼设计逻辑、写明差异化契约和反同质化检查。 |
 | 设计方向选项 | 当品牌方向不明确时，提供 2-3 个视觉路线。 |
 | 网站实现 | 根据项目情况使用静态 HTML/CSS/JS、React/Vite、Next.js 或现有技术栈。 |
 | SEO/GEO 就绪检查 | 页面标题、描述、canonical 假设、社交分享元数据、JSON-LD 候选、可抓取文本和证据摘要模块。 |
@@ -81,7 +82,7 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 | 0. 问诊 | 判断网站类型、技术栈、视觉方向和交付模式。 | 假设与用户选择 |
 | 1. 证据地图 | 区分已确认事实、未知信息和禁止编造项。 | 证据地图 |
 | 2. 网站蓝图 | 建立站点地图、首页大纲、证明模块和行动路径。 | 待确认蓝图 |
-| 3. 设计方向 | 品牌方向不明确时，给出 2-3 个视觉路线。 | 方向选项 |
+| 3. 标杆与设计方向 | 高级/公开项目先研究外部参考，再给出 2-3 个视觉路线。 | 标杆记录与方向选项 |
 | 4. 实施计划 | 明确文件、组件、素材、交互和检查方式。 | 构建计划 |
 | 5. 构建 | 用静态文件、React/Vite/Next 或现有技术栈实现。 | 网站文件 |
 | 6. QA | 检查事实、资源、锚点、版式、移动端、表单和交付状态。 | QA 结果 |
@@ -127,6 +128,7 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 | [`references/delivery-standards.md`](./references/delivery-standards.md) | 版式、字体、配色、图片、交互、响应式和文案标准。 |
 | [`references/example-patterns.md`](./references/example-patterns.md) | 从静态站、React 官网和服务型网站提炼的可复用模式。 |
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | 商业官网标杆模式和成熟度检查。 |
+| [`references/design-taste-benchmarks.md`](./references/design-taste-benchmarks.md) | 标杆优先的设计流程、品位闸门、反同质化规则和开源模板研究指南。 |
 | [`references/seo-geo-checklist.md`](./references/seo-geo-checklist.md) | SEO、GEO、AI 搜索就绪、结构化数据、可抓取性和上线索引检查。 |
 | [`references/style-presets.md`](./references/style-presets.md) | 主流高级商业网站视觉风格预设。 |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | 交互和动效预设，包括 Anime.js 使用建议。 |
@@ -270,8 +272,9 @@ OpenClaw 和其他运行时可能使用可配置的 workspace/global skills root
 2. 站点地图
 3. 首页区块大纲
 4. 行动路径
-5. 3 个设计方向
-6. 需要我确认的问题
+5. 标杆/品位判断
+6. 3 个设计方向
+7. 需要我确认的问题
 ```
 
 ### 直接做静态原型
@@ -597,5 +600,5 @@ MIT。Copyright (c) 2026 月瑀科技 YUEYU TECH。
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.4.3"
+  "softwareVersion": "1.4.4"
 } -->

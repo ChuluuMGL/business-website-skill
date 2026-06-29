@@ -27,6 +27,7 @@ Build business websites that are credible enough for client presentation or laun
 - Ask for user choice only when the decision materially changes the site. If the user asks to proceed quickly, choose a conservative default and state assumptions.
 - Read `references/agent-experience.md` when choosing interaction mode, deciding whether to ask questions, presenting A/B/C options, or managing checkpoints.
 - Read `references/seo-geo-checklist.md` for public launch, SEO-sensitive, GEO-sensitive, AI-search-sensitive, or multi-page website work.
+- Read `references/design-taste-benchmarks.md` before public examples, premium/client-facing redesigns, or any request for higher-taste, elegant, distinctive, advanced, or non-generic visual output.
 
 ## Phase Workflow
 
@@ -85,6 +86,8 @@ Checkpoint: if the page count, CTA, or business modules are ambiguous, ask the u
 
 ### Phase 3 - Design Direction
 
+For premium, public, or client-facing work, start with a benchmark-first taste gate before coding. Read `references/design-taste-benchmarks.md`, select or request 2 to 3 relevant benchmark references, extract the design logic, and write a short divergence contract so the output does not become a color-swapped clone of prior demos.
+
 Read `references/style-presets.md` when the user asks for richer styles, trendy design, premium visual directions, or multiple preset looks.
 Read `references/preview-guide.md` when the user asks to compare style previews, judge overlap, review visual quality, or inspect GIF interaction previews.
 
@@ -102,6 +105,8 @@ Read `references/delivery-standards.md` before significant layout, typography, c
 Read `references/interaction-presets.md` when the user asks for advanced interactions, Anime.js, GSAP, scroll effects, cinematic motion, micro-interactions, or a more current/trendy experience.
 If the user asks for "炫酷", "高级动效", "潮流交互", "showcase", 3D, WebGL, pinned scroll, or cinematic motion, offer standard/premium/showcase choices and implement the lowest tier that satisfies the goal.
 
+Before coding, reject any design direction that could be reused unchanged for a different industry. Distinct demos or routes must differ in navigation, hero composition, section morphology, proof modules, typography, visual assets, motion signature, and conversion path, not only color and copy.
+
 ### Phase 4 - Implementation Plan
 
 Before major edits, identify:
@@ -112,6 +117,7 @@ Before major edits, identify:
 - Asset folders to use.
 - Interactions to implement.
 - Verification commands.
+- Benchmark logic, visual signature, and how this build will stay distinct from other demos or templates.
 
 Use `assets/templates/static-business-site/` for a fast dependency-free starting point. Treat templates as structure only; replace placeholders with source-backed content.
 
@@ -139,6 +145,8 @@ Run:
 
 When possible, start a local server and inspect desktop and mobile. Verify no horizontal scroll, overlap, broken anchors, missing assets, fake facts, or false submit-success behavior.
 
+For premium, public example, or client-facing visual work, inspect screenshots of the hero, proof area, at least one mid-page module, and footer on desktop and mobile. Fix obvious alignment, spacing, blank-zone, module-boundary, image-cropping, and same-template issues before handoff.
+
 ### Phase 7 - Handoff
 
 Final response should include:
@@ -153,6 +161,7 @@ Final response should include:
 
 - Read `references/example-patterns.md` when deciding architecture or reusable modules from prior project patterns.
 - Read `references/benchmark-patterns.md` when improving strategy, conversion, trust, B2B buyer support, or overall maturity.
+- Read `references/design-taste-benchmarks.md` when choosing external design references, raising visual quality, avoiding templated AI output, differentiating multiple demos, or planning public showcase examples.
 - Read `references/agent-experience.md` when selecting mode, minimizing questions, or deciding checkpoint behavior.
 - Read `references/style-presets.md` when selecting a visual preset or combining multiple premium website styles.
 - Read `references/interaction-presets.md` when selecting animation libraries, motion recipes, or interaction intensity.

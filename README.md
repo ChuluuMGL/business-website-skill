@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.4.3-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.4-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -29,7 +29,7 @@ scripts/install.sh codex
 Invoke:
 
 ```text
-Use $business-website-skill with the materials in this folder. First return an evidence map, sitemap, homepage outline, 3 design directions, and questions that need confirmation.
+Use $business-website-skill with the materials in this folder. First return an evidence map, sitemap, homepage outline, benchmark/taste notes, 3 design directions, and questions that need confirmation.
 ```
 
 Before final delivery:
@@ -48,6 +48,7 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 |---|---|
 | Evidence map | Confirmed facts, missing facts, forbidden assumptions, and usable asset inventory. |
 | Site blueprint | Sitemap, homepage section outline, CTA path, proof modules, and case/scenario taxonomy. |
+| Benchmark and taste gate | External references, design logic, divergence contract, visual signature, and anti-generic checks for premium work. |
 | Design direction options | 2-3 visual routes when brand direction is unclear. |
 | Website implementation | Static HTML/CSS/JS, React/Vite, Next.js, or existing-stack edits depending on the project. |
 | SEO/GEO readiness | Titles, descriptions, canonical assumptions, social metadata, JSON-LD candidates, crawlability, and source-backed summary modules. |
@@ -81,7 +82,7 @@ This skill uses a stage-gated workflow inspired by professional website strategy
 | 0. Intake | Choose site type, stack, visual direction, and delivery mode. | Assumptions and user choices |
 | 1. Evidence map | Separate confirmed facts from unknowns and forbidden assumptions. | Source-backed evidence map |
 | 2. Site blueprint | Build sitemap, homepage outline, proof modules, and CTA path. | Blueprint for review |
-| 3. Design direction | Offer 2-3 visual routes when the brand direction is unclear. | Direction options |
+| 3. Benchmark and design direction | For premium/public work, study references first; then offer 2-3 visual routes when needed. | Benchmark notes and direction options |
 | 4. Implementation plan | Define files, components, assets, interactions, and checks. | Build plan |
 | 5. Build | Implement with static files, React/Vite/Next, or the existing stack. | Website files |
 | 6. QA | Check source integrity, assets, anchors, layout, mobile, forms, and handoff. | QA result |
@@ -127,6 +128,7 @@ The skill does not force every site into the same template. It routes the projec
 | [`references/delivery-standards.md`](./references/delivery-standards.md) | Layout, typography, color, image, interaction, responsive, and copy standards. |
 | [`references/example-patterns.md`](./references/example-patterns.md) | Reusable patterns from static, React, and service-site examples. |
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | Business website benchmark patterns and maturity checks. |
+| [`references/design-taste-benchmarks.md`](./references/design-taste-benchmarks.md) | Benchmark-first design workflow, taste gate, anti-generic rules, and open-source template study guide. |
 | [`references/seo-geo-checklist.md`](./references/seo-geo-checklist.md) | SEO, GEO, AI-search readiness, structured-data, crawlability, and launch-indexing checks. |
 | [`references/style-presets.md`](./references/style-presets.md) | Premium visual style presets for mainstream business website directions. |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | Interaction and animation presets, including Anime.js guidance. |
@@ -270,8 +272,9 @@ Do not implement yet. First return:
 2. Sitemap
 3. Homepage section outline
 4. CTA path
-5. 3 design direction options
-6. Questions that need my confirmation
+5. Benchmark and taste-gate notes
+6. 3 design direction options
+7. Questions that need my confirmation
 ```
 
 ### Direct Static Prototype
@@ -597,5 +600,5 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.4.3"
+  "softwareVersion": "1.4.4"
 } -->

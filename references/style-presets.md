@@ -9,6 +9,9 @@ Use this reference when the user asks for many styles, premium visual directions
 - Default to `executive-b2b-trust` for general business websites with limited brand input.
 - Do not use dark/cinematic/trendy styles for regulated, industrial, or government-facing projects unless the brand supports it.
 - Keep accessibility, copy clarity, and evidence hierarchy stronger than decoration.
+- Treat presets as directions, not templates. A preset does not define the header, hero, proof module, section shapes, or motion by itself.
+- For multiple demos or multiple client routes, do not reuse the same module stack with different colors. Change the structure, media treatment, proof pattern, and interaction signature.
+- For high-taste work, pair this file with `references/design-taste-benchmarks.md` before implementation.
 
 ## Preset Families
 

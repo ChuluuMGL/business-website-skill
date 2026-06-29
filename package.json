@@ -1,7 +1,7 @@
 {
   "name": "business-website-skill-site",
   "private": true,
-  "version": "1.4.3",
+  "version": "1.4.4",
   "scripts": {
     "build:site": "rm -rf public && mkdir -p public && cp -R site/. public/",
     "validate:site": "python3 scripts/audit_static_site.py site index.html --strict-seo --no-placeholders",
