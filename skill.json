@@ -2,7 +2,7 @@
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
   "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, SEO/GEO readiness, design direction choices, implementation, and QA.",
-  "version": "1.3.7",
+  "version": "1.4.0",
   "author": "月瑀科技 YUEYU TECH",
   "copyright": "Copyright (c) 2026 月瑀科技 YUEYU TECH",
   "maintainer": {
@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "repository": "https://github.com/ChuluuMGL/business-website-skill",
+  "homepage": "https://business-website-skill.vercel.app/",
   "category": "Web Development",
   "keywords": [
     "business website",
@@ -46,6 +47,8 @@
     "Static site QA report",
     "Handoff notes"
   ],
+  "examples": "examples/README.md",
+  "testing_matrix": "TESTING.md",
   "use_cases": [
     "Corporate website",
     "B2B service website",
@@ -127,6 +130,11 @@
     "accessibility"
   ],
   "scripts": [
+    {
+      "name": "install",
+      "path": "scripts/install.sh",
+      "description": "Installs the skill into common local agent skills directories."
+    },
     {
       "name": "generate_preview_assets",
       "path": "scripts/generate_preview_assets.py",

@@ -8,11 +8,35 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.3.7-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.0-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
+
+[Live Site](https://business-website-skill.vercel.app/) | [Examples](./examples/) | [Testing Matrix](./TESTING.md)
+
+---
+
+## 3-Minute Quick Start
+
+```bash
+git clone https://github.com/ChuluuMGL/business-website-skill.git
+cd business-website-skill
+scripts/install.sh codex
+```
+
+Invoke:
+
+```text
+Use $business-website-skill with the materials in this folder. First return an evidence map, sitemap, homepage outline, 3 design directions, and questions that need confirmation.
+```
+
+Before final delivery:
+
+```bash
+python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-placeholders
+```
 
 ---
 
@@ -109,6 +133,8 @@ The skill does not force every site into the same template. It routes the projec
 | [`references/preview-guide.md`](./references/preview-guide.md) | Visual preview, overlap review, and motion-intensity evaluation guide. |
 | [`references/distribution-platforms.md`](./references/distribution-platforms.md) | Public distribution, marketplace packaging, and platform boundary guide. |
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | Final QA checklist and failure modes. |
+| [`examples/`](./examples/) | Synthetic example briefs for public testing. |
+| [`TESTING.md`](./TESTING.md) | Agent/runtime testing matrix. |
 | [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | Machine-readable style preset catalog. |
 | [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | Machine-readable interaction preset catalog. |
 | [`assets/previews/README.md`](./assets/previews/README.md) | Release-hosted style preview images and interaction GIFs. |
@@ -116,6 +142,8 @@ The skill does not force every site into the same template. It routes the projec
 | [`scripts/generate_preview_assets.py`](./scripts/generate_preview_assets.py) | Regenerates style preview images and interaction GIFs. |
 | [`scripts/audit_static_site.py`](./scripts/audit_static_site.py) | Static site audit script using only Python standard library. |
 | [`scripts/package_runtime_skill.py`](./scripts/package_runtime_skill.py) | Creates a lightweight runtime ZIP for team and partner installation. |
+| [`scripts/install.sh`](./scripts/install.sh) | One-command installer for common agent skills directories. |
+| [`site/`](./site/) | Vercel showcase site source. |
 | [`agents/openai.yaml`](./agents/openai.yaml) | Codex/OpenAI-style UI metadata. |
 | [`skill.json`](./skill.json) | Machine-readable metadata for directories and marketplaces. |
 
@@ -168,7 +196,7 @@ You can ask a coding agent:
 
 For teammates or external partners, use three steps:
 
-1. Install: clone the repository into the agent's skills directory, or use the generic install command below.
+1. Install: clone the repository into the agent's skills directory, or use `scripts/install.sh <target>`.
 2. Invoke: ask the agent to use `$business-website-skill`, then specify whether to start with a blueprint or build a prototype directly.
 3. Verify: before client delivery, run `audit_static_site.py --strict-seo --no-placeholders` to catch missing launch metadata and unresolved placeholders.
 
@@ -184,6 +212,15 @@ Share `dist/business-website-skill-runtime.zip` with teammates so they can unzip
 
 ```bash
 git clone https://github.com/ChuluuMGL/business-website-skill.git .agents/skills/business-website-skill
+```
+
+Installer script:
+
+```bash
+scripts/install.sh codex
+scripts/install.sh claude
+scripts/install.sh cursor
+scripts/install.sh custom "$HOME/.config/agents/skills"
 ```
 
 Or with SSH:
@@ -472,11 +509,13 @@ business-website-skill/
 ├── SKILL.md
 ├── README.md
 ├── README.zh-CN.md
+├── TESTING.md
 ├── LICENSE
 ├── NOTICE
 ├── skill.json
 ├── agents/
 │   └── openai.yaml
+├── examples/
 ├── references/
 │   ├── agent-experience.md
 │   ├── benchmark-patterns.md
@@ -495,10 +534,12 @@ business-website-skill/
 │   │   └── README.md
 │   └── templates/
 │       └── static-business-site/
+├── site/
 └── scripts/
     ├── generate_preview_assets.py
     ├── audit_static_site.py
-    └── package_runtime_skill.py
+    ├── package_runtime_skill.py
+    └── install.sh
 ```
 
 ## Related Skills
@@ -556,5 +597,5 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.3.7"
+  "softwareVersion": "1.4.0"
 } -->

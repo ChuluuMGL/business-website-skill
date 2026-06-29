@@ -4,6 +4,7 @@ __pycache__/
 node_modules/
 dist/
 build/
+public/
 .env
 .env.*
 !.env.example
@@ -11,3 +12,4 @@ assets/previews/*.png
 assets/previews/*.jpg
 assets/previews/interactions/*.gif
 assets/previews/styles/*.png
+.vercel

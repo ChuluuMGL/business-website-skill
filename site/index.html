@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Website Skill | 月瑀科技</title>
+  <meta name="description" content="Business Website Skill 是由月瑀科技维护的开源 Agent Skill，用于搭建企业官网、B2B 官网、品牌官网和提案级网站原型。">
+  <link rel="canonical" href="https://business-website-skill.vercel.app/">
+  <meta property="og:title" content="Business Website Skill | 月瑀科技">
+  <meta property="og:description" content="面向团队和 AI Agent 的商业官网搭建 Skill，内置阶段工作流、示例、模板、SEO/GEO 检查和交付验收脚本。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://business-website-skill.vercel.app/">
+  <meta property="og:image" content="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/style-overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Business Website Skill",
+    "description": "An open Agent Skill for building client-ready corporate, B2B, brand, and proposal-grade websites.",
+    "codeRepository": "https://github.com/ChuluuMGL/business-website-skill",
+    "license": "https://github.com/ChuluuMGL/business-website-skill/blob/main/LICENSE",
+    "programmingLanguage": ["Markdown", "Python", "HTML", "CSS", "JavaScript"],
+    "creator": {
+      "@type": "Organization",
+      "name": "月瑀科技 YUEYU TECH",
+      "url": "https://www.yueyu.tech/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Business Website Skill">
+      <span>Business Website Skill</span>
+      <small>by 月瑀科技</small>
+    </a>
+    <nav aria-label="页面导航">
+      <a href="#quickstart">快速上手</a>
+      <a href="#examples">示例</a>
+      <a href="#quality">验收</a>
+      <a href="https://github.com/ChuluuMGL/business-website-skill">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">Open Agent Skill for business websites</p>
+        <h1 id="hero-title">把商业官网搭建变成可复用的团队流程</h1>
+        <p class="hero-copy">从资料读取、证据地图、网站蓝图、视觉方向、代码实现到 SEO/GEO 与交付检查，帮助 AI Agent 搭建更接近客户交付标准的企业官网、B2B 官网、品牌官网和提案级页面。</p>
+        <div class="hero-actions" aria-label="主要操作">
+          <a class="button primary" href="https://github.com/ChuluuMGL/business-website-skill">查看 GitHub</a>
+          <a class="button secondary" href="#quickstart">3 分钟上手</a>
+        </div>
+        <dl class="hero-proof">
+          <div><dt>7</dt><dd>阶段工作流</dd></div>
+          <div><dt>10</dt><dd>视觉风格族</dd></div>
+          <div><dt>20+</dt><dd>交互预设</dd></div>
+          <div><dt>68K</dt><dd>轻量运行包</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section intro" aria-labelledby="intro-title">
+      <div class="section-head">
+        <p class="eyebrow">Why it helps</p>
+        <h2 id="intro-title">不是普通建站提示词，而是一套交付流程</h2>
+        <p>这个 Skill 约束 Agent 先读资料、区分事实和未知项，再进入蓝图、设计、实现和 QA。它不会编造客户、数据、资质、奖项或表单提交结果。</p>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <span>01</span>
+          <h3>证据优先</h3>
+          <p>把已确认事实、缺失信息、禁止编造项和素材清单分开，减少公开页面里的虚假表述。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>商业结构</h3>
+          <p>默认覆盖首屏价值、能力、证据、案例、流程、FAQ、转化入口和联系路径。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>可验收</h3>
+          <p>内置静态审计、SEO/GEO 检查和交付级占位内容拦截，方便团队统一质量标准。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section quickstart" id="quickstart" aria-labelledby="quickstart-title">
+      <div class="section-head">
+        <p class="eyebrow">Quick start</p>
+        <h2 id="quickstart-title">3 分钟让团队用起来</h2>
+        <p>克隆到 Agent 的 skills 目录后，直接用 `$business-website-skill` 调用。也可以用安装脚本写入常见目录。</p>
+      </div>
+      <div class="command-layout">
+        <div class="command-panel">
+          <div class="panel-title">
+            <strong>安装到 Codex</strong>
+            <button type="button" data-copy="scripts/install.sh codex">复制</button>
+          </div>
+          <pre><code>git clone https://github.com/ChuluuMGL/business-website-skill.git
+cd business-website-skill
+scripts/install.sh codex</code></pre>
+        </div>
+        <div class="command-panel">
+          <div class="panel-title">
+            <strong>生成轻量包</strong>
+            <button type="button" data-copy="python3 scripts/package_runtime_skill.py">复制</button>
+          </div>
+          <pre><code>python3 scripts/package_runtime_skill.py
+# dist/business-website-skill-runtime.zip</code></pre>
+        </div>
+        <div class="command-panel">
+          <div class="panel-title">
+            <strong>交付前验收</strong>
+            <button type="button" data-copy="python3 scripts/audit_static_site.py &lt;site-root&gt; index.html --strict-seo --no-placeholders">复制</button>
+          </div>
+          <pre><code>python3 scripts/audit_static_site.py &lt;site-root&gt; index.html \
+  --strict-seo --no-placeholders</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section examples" id="examples" aria-labelledby="examples-title">
+      <div class="section-head">
+        <p class="eyebrow">Synthetic examples</p>
+        <h2 id="examples-title">三类可公开测试的示例</h2>
+        <p>示例全部为合成资料，适合团队培训、公开演示和不同 Agent 的兼容测试。</p>
+      </div>
+      <div class="example-grid">
+        <article>
+          <img src="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/executive-b2b-trust.png" alt="Executive B2B Trust 风格预览">
+          <div>
+            <p>B2B Service</p>
+            <h3>专业服务官网</h3>
+            <span>咨询、代理、运营、企业服务</span>
+            <a href="https://github.com/ChuluuMGL/business-website-skill/tree/main/examples/b2b-service">查看示例 brief</a>
+          </div>
+        </article>
+        <article>
+          <img src="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/industrial-precision.png" alt="Industrial Precision 风格预览">
+          <div>
+            <p>Industrial Green Tech</p>
+            <h3>工业环保官网</h3>
+            <span>能源、环保、制造、工程项目</span>
+            <a href="https://github.com/ChuluuMGL/business-website-skill/tree/main/examples/industrial-green-tech">查看示例 brief</a>
+          </div>
+        </article>
+        <article>
+          <img src="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/ai-saas-data-cloud.png" alt="AI SaaS Data Cloud 风格预览">
+          <div>
+            <p>AI SaaS Product</p>
+            <h3>AI 产品官网</h3>
+            <span>AI 工具、SaaS、数据平台、自动化</span>
+            <a href="https://github.com/ChuluuMGL/business-website-skill/tree/main/examples/ai-saas-product">查看示例 brief</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section quality" id="quality" aria-labelledby="quality-title">
+      <div class="section-head">
+        <p class="eyebrow">Quality gate</p>
+        <h2 id="quality-title">让交付检查变成默认动作</h2>
+        <p>团队使用时，不只看页面是否好看，还要检查事实来源、移动端、链接、图片、SEO/GEO 元数据和未处理占位内容。</p>
+      </div>
+      <div class="quality-grid">
+        <article>
+          <h3>静态审计</h3>
+          <p>检查锚点、资源、重复 ID、viewport、图片 alt、CSS 资源引用。</p>
+        </article>
+        <article>
+          <h3>SEO/GEO 就绪</h3>
+          <p>检查标题、描述、canonical、Open Graph、Twitter Card、JSON-LD 和主 H1。</p>
+        </article>
+        <article>
+          <h3>交付占位拦截</h3>
+          <p>正式交付前阻止未处理内容进入客户预览页。</p>
+        </article>
+        <article>
+          <h3>运行时矩阵</h3>
+          <p>公开记录 Codex、Claude Code、Cursor、Trae、OpenClaw、Hermes 等运行时验证状态。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section workflow" aria-labelledby="workflow-title">
+      <div class="section-head">
+        <p class="eyebrow">Workflow</p>
+        <h2 id="workflow-title">从资料到交付的 7 个阶段</h2>
+      </div>
+      <ol class="timeline">
+        <li><span>0</span><strong>问诊</strong><small>网站类型、技术栈、视觉方向</small></li>
+        <li><span>1</span><strong>证据地图</strong><small>事实、未知项、禁止编造项</small></li>
+        <li><span>2</span><strong>网站蓝图</strong><small>站点地图、区块、CTA、证明模块</small></li>
+        <li><span>3</span><strong>设计方向</strong><small>2 到 3 个可选视觉路线</small></li>
+        <li><span>4</span><strong>实施计划</strong><small>文件、组件、素材、交互、命令</small></li>
+        <li><span>5</span><strong>构建</strong><small>静态站、React/Vite、Next 或现有栈</small></li>
+        <li><span>6-7</span><strong>QA 与交付</strong><small>验证结果、预览方式、未确认事项</small></li>
+      </ol>
+    </section>
+
+    <section class="section final-cta" aria-labelledby="final-title">
+      <div>
+        <p class="eyebrow">Open source</p>
+        <h2 id="final-title">把它装进你的团队工作流</h2>
+        <p>适合商业网站原型、客户提案、官网改版、投标/招商页面和上线前审计。</p>
+      </div>
+      <a class="button primary" href="https://github.com/ChuluuMGL/business-website-skill">打开 GitHub 仓库</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.</p>
+    <p><a href="https://www.yueyu.tech/">www.yueyu.tech</a></p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
