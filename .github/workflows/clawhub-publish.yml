@@ -13,6 +13,13 @@ on:
       - published
 
 jobs:
+  release-publish-disabled:
+    if: github.event_name == 'release' && vars.CLAWHUB_PUBLISH_ENABLED != 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip ClawHub publish
+        run: echo "ClawHub release publishing is disabled. Set CLAWHUB_PUBLISH_ENABLED=true and CLAWHUB_TOKEN to enable it."
+
   publish-on-release:
     if: github.event_name == 'release' && vars.CLAWHUB_PUBLISH_ENABLED == 'true'
     uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v1
