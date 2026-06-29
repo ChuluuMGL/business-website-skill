@@ -26,7 +26,7 @@ GitHub is the source of truth. Treat every other platform as either a subscriber
 | Target type | Sync behavior | Required action |
 |---|---|---|
 | GitHub Release | Manual release creation or release automation | Create a new tag/release when `skill.json` version changes. |
-| ClawHub | Can be automated from GitHub Releases | Set `CLAWHUB_TOKEN` in GitHub repository secrets. The included `.github/workflows/clawhub-publish.yml` publishes on new releases and supports manual dry-runs. |
+| ClawHub | Can be automated from GitHub Releases | Set `CLAWHUB_TOKEN` in GitHub repository secrets and set repository variable `CLAWHUB_PUBLISH_ENABLED=true`. The included `.github/workflows/clawhub-publish.yml` publishes on new releases when enabled and supports manual dry-runs. |
 | SkillsMP / LobeHub Skills / SkillsLLM | Usually index GitHub, but timing is not guaranteed | Submit the repo once, then check listing freshness after major updates. Resubmit or request re-indexing if stale. |
 | Gemini CLI / Kimi Code CLI local installs | Not automatic for users | Users reinstall/update the local skill from GitHub or the release package. |
 | Coze / Dify / GPT Store wrappers | Not automatic | Update their knowledge files, prompts, workflows, or plugin package when the GitHub skill changes. |

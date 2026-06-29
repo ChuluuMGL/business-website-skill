@@ -155,7 +155,7 @@ A Chrome extension is not needed for distribution. Browser or Chrome automation 
 
 ### Update Sync
 
-GitHub is the source of truth. Future GitHub Releases can automatically publish to ClawHub after the repository secret `CLAWHUB_TOKEN` is configured. Directory/index sites may re-crawl GitHub, but timing is not guaranteed. Coze, Dify, GPT Store, Gemini CLI, and Kimi Code CLI installs do not automatically receive GitHub changes unless their wrapper, knowledge base, or local skill install is updated.
+GitHub is the source of truth. Future GitHub Releases can automatically publish to ClawHub after the repository secret `CLAWHUB_TOKEN` is configured and the repository variable `CLAWHUB_PUBLISH_ENABLED` is set to `true`. Directory/index sites may re-crawl GitHub, but timing is not guaranteed. Coze, Dify, GPT Store, Gemini CLI, and Kimi Code CLI installs do not automatically receive GitHub changes unless their wrapper, knowledge base, or local skill install is updated.
 
 ### Ask An AI Agent
 

@@ -155,7 +155,7 @@ GitHub 之外，建议按这个顺序处理：
 
 ### 更新同步
 
-GitHub 是唯一源头。后续发布 GitHub Release 时，只要仓库 secret 配好 `CLAWHUB_TOKEN`，可以自动发布到 ClawHub。目录/索引型平台可能会重新抓取 GitHub，但时间不保证。Coze、Dify、GPT Store、Gemini CLI 和 Kimi Code CLI 的本地安装不会自动收到 GitHub 更新，除非同步更新它们的包装、知识库或本地 skill。
+GitHub 是唯一源头。后续发布 GitHub Release 时，只要仓库 secret 配好 `CLAWHUB_TOKEN`，并把仓库 variable `CLAWHUB_PUBLISH_ENABLED` 设为 `true`，就可以自动发布到 ClawHub。目录/索引型平台可能会重新抓取 GitHub，但时间不保证。Coze、Dify、GPT Store、Gemini CLI 和 Kimi Code CLI 的本地安装不会自动收到 GitHub 更新，除非同步更新它们的包装、知识库或本地 skill。
 
 ### 让 AI Agent 帮你安装
 
