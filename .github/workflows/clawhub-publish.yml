@@ -20,20 +20,36 @@ jobs:
       - name: Skip ClawHub publish
         run: echo "ClawHub release publishing is disabled. Set CLAWHUB_PUBLISH_ENABLED=true and CLAWHUB_TOKEN to enable it."
 
-  publish-on-release:
-    if: github.event_name == 'release' && vars.CLAWHUB_PUBLISH_ENABLED == 'true'
-    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v1
-    with:
-      skill_path: .
-      dry_run: false
-    secrets:
-      clawhub_token: ${{ secrets.CLAWHUB_TOKEN }}
+  dry-run:
+    if: github.event_name == 'workflow_dispatch' && inputs.dry_run == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Read skill version
+        id: version
+        run: echo "version=$(python3 -c 'import json; print(json.load(open(\"skill.json\"))[\"version\"])')" >> "$GITHUB_OUTPUT"
+      - name: ClawHub dry-run
+        run: npm exec --yes --package clawhub -- clawhub skill publish "$PWD" --dry-run --version "${{ steps.version.outputs.version }}" --json
 
-  publish-manual:
-    if: github.event_name == 'workflow_dispatch'
-    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v1
-    with:
-      skill_path: .
-      dry_run: ${{ inputs.dry_run }}
-    secrets:
-      clawhub_token: ${{ secrets.CLAWHUB_TOKEN }}
+  publish:
+    if: (github.event_name == 'release' && vars.CLAWHUB_PUBLISH_ENABLED == 'true') || (github.event_name == 'workflow_dispatch' && inputs.dry_run == false)
+    runs-on: ubuntu-latest
+    env:
+      CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Require ClawHub token
+        run: test -n "$CLAWHUB_TOKEN"
+      - name: Read skill version
+        id: version
+        run: echo "version=$(python3 -c 'import json; print(json.load(open(\"skill.json\"))[\"version\"])')" >> "$GITHUB_OUTPUT"
+      - name: Login to ClawHub
+        run: npm exec --yes --package clawhub -- clawhub login --token "$CLAWHUB_TOKEN"
+      - name: Publish to ClawHub
+        run: npm exec --yes --package clawhub -- clawhub skill publish "$PWD" --version "${{ steps.version.outputs.version }}" --json
