@@ -8,13 +8,13 @@
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.4.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.1-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
 
-[在线展示页](https://business-website-skill.vercel.app/) | [示例](./examples/) | [测试矩阵](./TESTING.md)
+[在线展示页](https://business-website-skill.vercel.app/) | [公开网站示例](https://business-website-skill.vercel.app/#examples) | [合成任务输入](./examples/) | [测试矩阵](./TESTING.md)
 
 ---
 
@@ -133,7 +133,7 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 | [`references/preview-guide.md`](./references/preview-guide.md) | 视觉预览、风格重合和动效强度评估说明。 |
 | [`references/distribution-platforms.md`](./references/distribution-platforms.md) | 公开发布、市场上架和平台边界说明。 |
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | 最终 QA 清单和常见失败模式。 |
-| [`examples/`](./examples/) | 可公开测试的脱敏/合成示例 brief。 |
+| [`examples/`](./examples/) | 用于 Agent 工作流测试的合成任务输入。 |
 | [`TESTING.md`](./TESTING.md) | Agent/runtime 测试矩阵。 |
 | [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | 机器可读的风格预设目录。 |
 | [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | 机器可读的交互预设目录。 |
@@ -143,7 +143,7 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 | [`scripts/audit_static_site.py`](./scripts/audit_static_site.py) | 只使用 Python 标准库的静态站审计脚本。 |
 | [`scripts/package_runtime_skill.py`](./scripts/package_runtime_skill.py) | 生成团队和外部伙伴安装用的轻量运行包。 |
 | [`scripts/install.sh`](./scripts/install.sh) | 安装到常见 Agent skills 目录的一键脚本。 |
-| [`site/`](./site/) | Vercel 展示页源码。 |
+| [`site/`](./site/) | Vercel 展示页源码，包含公开网站示例。 |
 | [`agents/openai.yaml`](./agents/openai.yaml) | Codex / OpenAI 风格 Skill UI 元数据。 |
 | [`skill.json`](./skill.json) | 供目录、市场和其他 Agent 读取的机器可读元数据。 |
 
@@ -597,5 +597,5 @@ MIT。Copyright (c) 2026 月瑀科技 YUEYU TECH。
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.4.0"
+  "softwareVersion": "1.4.1"
 } -->

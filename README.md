@@ -8,13 +8,13 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.4.0-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.1-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
 
-[Live Site](https://business-website-skill.vercel.app/) | [Examples](./examples/) | [Testing Matrix](./TESTING.md)
+[Live Site](https://business-website-skill.vercel.app/) | [Public Website Examples](https://business-website-skill.vercel.app/#examples) | [Agent Brief Fixtures](./examples/) | [Testing Matrix](./TESTING.md)
 
 ---
 
@@ -133,7 +133,7 @@ The skill does not force every site into the same template. It routes the projec
 | [`references/preview-guide.md`](./references/preview-guide.md) | Visual preview, overlap review, and motion-intensity evaluation guide. |
 | [`references/distribution-platforms.md`](./references/distribution-platforms.md) | Public distribution, marketplace packaging, and platform boundary guide. |
 | [`references/qa-checklist.md`](./references/qa-checklist.md) | Final QA checklist and failure modes. |
-| [`examples/`](./examples/) | Synthetic example briefs for public testing. |
+| [`examples/`](./examples/) | Synthetic agent brief fixtures for workflow testing. |
 | [`TESTING.md`](./TESTING.md) | Agent/runtime testing matrix. |
 | [`assets/presets/design-styles.json`](./assets/presets/design-styles.json) | Machine-readable style preset catalog. |
 | [`assets/presets/interaction-presets.json`](./assets/presets/interaction-presets.json) | Machine-readable interaction preset catalog. |
@@ -143,7 +143,7 @@ The skill does not force every site into the same template. It routes the projec
 | [`scripts/audit_static_site.py`](./scripts/audit_static_site.py) | Static site audit script using only Python standard library. |
 | [`scripts/package_runtime_skill.py`](./scripts/package_runtime_skill.py) | Creates a lightweight runtime ZIP for team and partner installation. |
 | [`scripts/install.sh`](./scripts/install.sh) | One-command installer for common agent skills directories. |
-| [`site/`](./site/) | Vercel showcase site source. |
+| [`site/`](./site/) | Vercel showcase site source, including public website examples. |
 | [`agents/openai.yaml`](./agents/openai.yaml) | Codex/OpenAI-style UI metadata. |
 | [`skill.json`](./skill.json) | Machine-readable metadata for directories and marketplaces. |
 
@@ -597,5 +597,5 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://www.yueyu.tech/"
   },
   "programmingModel": "Agent Skills / SKILL.md",
-  "softwareVersion": "1.4.0"
+  "softwareVersion": "1.4.1"
 } -->

@@ -10,8 +10,9 @@
   <meta property="og:description" content="面向团队和 AI Agent 的商业官网搭建 Skill，内置阶段工作流、示例、模板、SEO/GEO 检查和交付验收脚本。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://business-website-skill.vercel.app/">
-  <meta property="og:image" content="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/style-overview.png">
+  <meta property="og:image" content="https://business-website-skill.vercel.app/assets/hero-workflow.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://business-website-skill.vercel.app/assets/hero-workflow.png">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
@@ -38,7 +39,7 @@
     </a>
     <nav aria-label="页面导航">
       <a href="#quickstart">快速上手</a>
-      <a href="#examples">示例</a>
+      <a href="#examples">网站示例</a>
       <a href="#quality">验收</a>
       <a href="https://github.com/ChuluuMGL/business-website-skill">GitHub</a>
     </nav>
@@ -49,19 +50,22 @@
       <div class="hero-backdrop" aria-hidden="true"></div>
       <div class="hero-inner">
         <p class="eyebrow">Open Agent Skill for business websites</p>
-        <h1 id="hero-title">把商业官网搭建变成可复用的团队流程</h1>
+        <h1 id="hero-title">把商业官网搭建成团队可复用的交付流程</h1>
         <p class="hero-copy">从资料读取、证据地图、网站蓝图、视觉方向、代码实现到 SEO/GEO 与交付检查，帮助 AI Agent 搭建更接近客户交付标准的企业官网、B2B 官网、品牌官网和提案级页面。</p>
         <div class="hero-actions" aria-label="主要操作">
           <a class="button primary" href="https://github.com/ChuluuMGL/business-website-skill">查看 GitHub</a>
           <a class="button secondary" href="#quickstart">3 分钟上手</a>
         </div>
-        <dl class="hero-proof">
-          <div><dt>7</dt><dd>阶段工作流</dd></div>
-          <div><dt>10</dt><dd>视觉风格族</dd></div>
-          <div><dt>20+</dt><dd>交互预设</dd></div>
-          <div><dt>68K</dt><dd>轻量运行包</dd></div>
-        </dl>
       </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Skill 摘要指标">
+      <dl class="proof-inner">
+        <div><dt>7</dt><dd>阶段工作流</dd></div>
+        <div><dt>10</dt><dd>视觉风格族</dd></div>
+        <div><dt>20+</dt><dd>交互预设</dd></div>
+        <div><dt>68K</dt><dd>轻量运行包</dd></div>
+      </dl>
     </section>
 
     <section class="section intro" aria-labelledby="intro-title">
@@ -126,9 +130,9 @@ scripts/install.sh codex</code></pre>
 
     <section class="section examples" id="examples" aria-labelledby="examples-title">
       <div class="section-head">
-        <p class="eyebrow">Synthetic examples</p>
-        <h2 id="examples-title">三类可公开测试的示例</h2>
-        <p>示例全部为合成资料，适合团队培训、公开演示和不同 Agent 的兼容测试。</p>
+        <p class="eyebrow">Public website examples</p>
+        <h2 id="examples-title">三类可公开查看的网站示例</h2>
+        <p>示例网站全部基于合成资料制作，适合团队培训、公开演示和不同 Agent 的兼容测试；仓库中的 brief 仍保留给 Agent 跑工作流。</p>
       </div>
       <div class="example-grid">
         <article>
@@ -137,7 +141,7 @@ scripts/install.sh codex</code></pre>
             <p>B2B Service</p>
             <h3>专业服务官网</h3>
             <span>咨询、代理、运营、企业服务</span>
-            <a href="https://github.com/ChuluuMGL/business-website-skill/tree/main/examples/b2b-service">查看示例 brief</a>
+            <a href="/examples/b2b-service/">打开网站示例</a>
           </div>
         </article>
         <article>
@@ -146,7 +150,7 @@ scripts/install.sh codex</code></pre>
             <p>Industrial Green Tech</p>
             <h3>工业环保官网</h3>
             <span>能源、环保、制造、工程项目</span>
-            <a href="https://github.com/ChuluuMGL/business-website-skill/tree/main/examples/industrial-green-tech">查看示例 brief</a>
+            <a href="/examples/industrial-green-tech/">打开网站示例</a>
           </div>
         </article>
         <article>
@@ -155,7 +159,7 @@ scripts/install.sh codex</code></pre>
             <p>AI SaaS Product</p>
             <h3>AI 产品官网</h3>
             <span>AI 工具、SaaS、数据平台、自动化</span>
-            <a href="https://github.com/ChuluuMGL/business-website-skill/tree/main/examples/ai-saas-product">查看示例 brief</a>
+            <a href="/examples/ai-saas-product/">打开网站示例</a>
           </div>
         </article>
       </div>
@@ -209,7 +213,10 @@ scripts/install.sh codex</code></pre>
         <h2 id="final-title">把它装进你的团队工作流</h2>
         <p>适合商业网站原型、客户提案、官网改版、投标/招商页面和上线前审计。</p>
       </div>
-      <a class="button primary" href="https://github.com/ChuluuMGL/business-website-skill">打开 GitHub 仓库</a>
+      <div class="final-actions">
+        <a class="button secondary dark" href="#examples">查看网站示例</a>
+        <a class="button primary" href="https://github.com/ChuluuMGL/business-website-skill">打开 GitHub 仓库</a>
+      </div>
     </section>
   </main>
 

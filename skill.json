@@ -2,7 +2,7 @@
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
   "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, SEO/GEO readiness, design direction choices, implementation, and QA.",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "author": "月瑀科技 YUEYU TECH",
   "copyright": "Copyright (c) 2026 月瑀科技 YUEYU TECH",
   "maintainer": {
@@ -48,6 +48,11 @@
     "Handoff notes"
   ],
   "examples": "examples/README.md",
+  "showcase_examples": [
+    "https://business-website-skill.vercel.app/examples/b2b-service/",
+    "https://business-website-skill.vercel.app/examples/industrial-green-tech/",
+    "https://business-website-skill.vercel.app/examples/ai-saas-product/"
+  ],
   "testing_matrix": "TESTING.md",
   "use_cases": [
     "Corporate website",
