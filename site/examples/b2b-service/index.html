@@ -44,24 +44,36 @@
   </header>
 
   <main>
-    <section
-      class="hero-site"
-      style="--hero-image: url('/assets/example-b2b-hero.png');"
-      aria-labelledby="hero-title"
-    >
-      <div class="hero-content">
-        <p class="demo-label">Synthetic website example</p>
-        <h1 id="hero-title">为服务型企业重建可执行的运营系统</h1>
-        <p class="hero-copy">Northstar Operations Studio 是一个合成演示品牌，用来展示 B2B 专业服务官网如何说明业务价值、交付方式、适用对象和咨询路径，同时避免虚构客户、年份和量化成果。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#process">查看合作流程</a>
-          <a class="button secondary" href="#proof">查看证明边界</a>
+    <section class="hero-site" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="demo-label">Synthetic website example</p>
+          <h1 id="hero-title">为服务型企业重建可执行的运营系统</h1>
+          <p class="hero-copy">Northstar Operations Studio 是一个合成演示品牌，用来展示 B2B 专业服务官网如何说明业务价值、交付方式、适用对象和咨询路径，同时避免虚构客户、年份和量化成果。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#process">查看合作流程</a>
+            <a class="button secondary" href="#proof">查看证明边界</a>
+          </div>
+          <dl class="proof-row" aria-label="示例证明点">
+            <div><dt>3 phases</dt><dd>诊断、重设、嵌入的服务模型</dd></div>
+            <div><dt>4 roles</dt><dd>面向创始人、总经理、运营和客服负责人</dd></div>
+            <div><dt>Safe proof</dt><dd>不展示未经来源支持的客户与 ROI</dd></div>
+          </dl>
         </div>
-        <dl class="proof-row" aria-label="示例证明点">
-          <div><dt>3 phases</dt><dd>诊断、重设、嵌入的服务模型</dd></div>
-          <div><dt>4 roles</dt><dd>面向创始人、总经理、运营和客服负责人</dd></div>
-          <div><dt>Safe proof</dt><dd>不展示未经来源支持的客户与 ROI</dd></div>
-        </dl>
+        <div class="hero-visual b2b-hero-visual" aria-hidden="true">
+          <div class="desk-panel panel-main">
+            <span class="panel-label">Operating dossier</span>
+            <i></i><i></i><i></i>
+          </div>
+          <div class="desk-panel panel-stack">
+            <span>Service map</span>
+            <em></em><em></em><em></em>
+          </div>
+          <div class="desk-card card-a"><strong>Scope</strong><span></span></div>
+          <div class="desk-card card-b"><strong>Roles</strong><span></span></div>
+          <div class="desk-card card-c"><strong>Proof</strong><span></span></div>
+          <div class="desk-timeline"><span></span><span></span><span></span><span></span></div>
+        </div>
       </div>
     </section>
 
@@ -140,11 +152,16 @@
             </article>
           </div>
         </div>
-        <aside
-          class="visual-panel"
-          style="--panel-image: url('https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/minimal-luxury.png');"
-          aria-label="服务证据结构示意"
-        >
+        <aside class="visual-panel visual-panel-b2b" aria-label="服务证据结构示意">
+          <div class="panel-visual service-proof-visual" aria-hidden="true">
+            <span class="proof-axis"></span>
+            <span class="proof-rowline row-one"></span>
+            <span class="proof-rowline row-two"></span>
+            <span class="proof-rowline row-three"></span>
+            <span class="proof-pill pill-one">Source</span>
+            <span class="proof-pill pill-two">Scope</span>
+            <span class="proof-pill pill-three">Review</span>
+          </div>
           <h3>服务官网的证据层级</h3>
           <p>先给客户看清楚服务如何被执行，再把真实案例、数据和客户背书放入对应位置。</p>
           <ul class="visual-list">
@@ -214,12 +231,16 @@
       </div>
       <div class="scenario-grid">
         <article class="scenario">
-          <img src="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/editorial-professional.png" alt="专业服务官网场景示意图">
+          <figure class="scenario-visual service-delivery-visual" role="img" aria-label="专业服务交付地图示意图">
+            <span></span><span></span><span></span><span></span>
+          </figure>
           <h3>服务交付开始依赖个人经验</h3>
           <p>客户增长后，团队需要统一服务边界、责任分工和复盘机制，减少交付不稳定。</p>
         </article>
         <article class="scenario">
-          <img src="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/executive-b2b-trust.png" alt="B2B 管理层决策页面示意图">
+          <figure class="scenario-visual operating-map-visual" role="img" aria-label="B2B 管理层运营地图示意图">
+            <span></span><span></span><span></span><span></span><span></span>
+          </figure>
           <h3>管理层需要看清运营瓶颈</h3>
           <p>把客户体验、团队协作和业务指标放到同一张运营地图上，方便管理层做优先级判断。</p>
         </article>
@@ -239,8 +260,16 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>Demo site for Business Website Skill.</p>
+  <footer class="site-footer site-footer-b2b">
+    <div>
+      <strong>Northstar Operations Studio</strong>
+      <p>Service website demo for Business Website Skill.</p>
+    </div>
+    <nav aria-label="页脚导航">
+      <a href="#capabilities">服务能力</a>
+      <a href="#process">合作流程</a>
+      <a href="/">Skill 首页</a>
+    </nav>
     <p>MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.</p>
   </footer>
   <script src="/examples/example-sites.js"></script>

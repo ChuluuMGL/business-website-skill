@@ -44,24 +44,41 @@
   </header>
 
   <main>
-    <section
-      class="hero-site"
-      style="--hero-image: url('/assets/example-ai-hero.png');"
-      aria-labelledby="hero-title"
-    >
-      <div class="hero-content">
-        <p class="demo-label">Synthetic website example</p>
-        <h1 id="hero-title">把报告、文档和公开信号变成团队可审核的洞察流</h1>
-        <p class="hero-copy">SignalDesk AI 是一个合成演示产品，用来展示 AI SaaS 官网如何讲清产品能力、工作流、目标用户和演示入口，同时避免虚构安全认证、客户 Logo、价格或性能数据。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#workflow">查看产品工作流</a>
-          <a class="button secondary" href="#proof">查看证明说明</a>
+    <section class="hero-site" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="demo-label">Synthetic website example</p>
+          <h1 id="hero-title">把报告、文档和公开信号变成团队可审核的洞察流</h1>
+          <p class="hero-copy">SignalDesk AI 是一个合成演示产品，用来展示 AI SaaS 官网如何讲清产品能力、工作流、目标用户和演示入口，同时避免虚构安全认证、客户 Logo、价格或性能数据。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#workflow">查看产品工作流</a>
+            <a class="button secondary" href="#proof">查看证明说明</a>
+          </div>
+          <dl class="proof-row" aria-label="示例证明点">
+            <div><dt>4 modules</dt><dd>信号收集、证据摘要、任务路由、审核流程</dd></div>
+            <div><dt>4 teams</dt><dd>战略、市场、研究和运营团队</dd></div>
+            <div><dt>Launch preview</dt><dd>不展示未公开定价和客户 Logo</dd></div>
+          </dl>
         </div>
-        <dl class="proof-row" aria-label="示例证明点">
-          <div><dt>4 modules</dt><dd>信号收集、证据摘要、任务路由、审核流程</dd></div>
-          <div><dt>4 teams</dt><dd>战略、市场、研究和运营团队</dd></div>
-          <div><dt>Launch preview</dt><dd>不展示未公开定价和客户 Logo</dd></div>
-        </dl>
+        <div class="hero-visual ai-hero-visual" aria-hidden="true">
+          <div class="ai-window">
+            <span class="ai-line line-one"></span>
+            <span class="ai-line line-two"></span>
+            <span class="ai-line line-three"></span>
+            <span class="ai-line line-four"></span>
+            <span class="ai-bar bar-one"></span>
+            <span class="ai-bar bar-two"></span>
+            <span class="ai-bar bar-three"></span>
+            <span class="ai-bar bar-four"></span>
+            <span class="ai-node node-one"></span>
+            <span class="ai-node node-two"></span>
+            <span class="ai-node node-three"></span>
+            <span class="ai-link link-one"></span>
+            <span class="ai-link link-two"></span>
+          </div>
+          <div class="ai-status-card">Evidence graph</div>
+          <div class="ai-status-card secondary">Review queue</div>
+        </div>
       </div>
     </section>
 
@@ -173,11 +190,15 @@
             </article>
           </div>
         </div>
-        <aside
-          class="visual-panel"
-          style="--panel-image: url('https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/dark-data-command-center.png');"
-          aria-label="AI 产品信任结构示意"
-        >
+        <aside class="visual-panel visual-panel-ai" aria-label="AI 产品信任结构示意">
+          <div class="panel-visual ai-trust-visual" aria-hidden="true">
+            <span class="trust-source source-one">Docs</span>
+            <span class="trust-source source-two">Reports</span>
+            <span class="trust-source source-three">Dashboards</span>
+            <span class="trust-core">Human review</span>
+            <span class="trust-route route-one"></span>
+            <span class="trust-route route-two"></span>
+          </div>
           <h3>产品信任模块</h3>
           <p>AI SaaS 官网适合把功能、证据、审核和安全说明放在客户决策路径上。</p>
           <ul class="visual-list">
@@ -221,12 +242,16 @@
       </div>
       <div class="scenario-grid">
         <article class="scenario">
-          <img src="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/ai-saas-data-cloud.png" alt="AI SaaS 数据云官网示意图">
+          <figure class="scenario-visual research-signal-visual" role="img" aria-label="战略与研究团队信号流示意图">
+            <span></span><span></span><span></span><span></span>
+          </figure>
           <h3>战略与研究团队</h3>
           <p>把分散报告、市场动态和内部材料整理成可审核摘要，提高团队信息同步效率。</p>
         </article>
         <article class="scenario">
-          <img src="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/dark-data-command-center.png" alt="数据指挥中心风格示意图">
+          <figure class="scenario-visual command-center-visual" role="img" aria-label="市场与运营团队指挥舱示意图">
+            <span></span><span></span><span></span><span></span><span></span>
+          </figure>
           <h3>市场与运营团队</h3>
           <p>跟踪主题、竞品、渠道和行动项，让跨职能协作更容易形成闭环。</p>
         </article>
@@ -246,8 +271,16 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>Demo site for Business Website Skill.</p>
+  <footer class="site-footer site-footer-ai">
+    <div>
+      <strong>SignalDesk AI</strong>
+      <p>AI SaaS website demo for Business Website Skill.</p>
+    </div>
+    <nav aria-label="页脚导航">
+      <a href="#workflow">产品工作流</a>
+      <a href="#proof">证明说明</a>
+      <a href="#use-cases">使用场景</a>
+    </nav>
     <p>MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.</p>
   </footer>
   <script src="/examples/example-sites.js"></script>

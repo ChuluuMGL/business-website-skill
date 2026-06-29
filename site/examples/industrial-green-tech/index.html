@@ -44,24 +44,34 @@
   </header>
 
   <main>
-    <section
-      class="hero-site"
-      style="--hero-image: url('/assets/example-industrial-hero.png');"
-      aria-labelledby="hero-title"
-    >
-      <div class="hero-content">
-        <p class="demo-label">Synthetic website example</p>
-        <h1 id="hero-title">面向工业现场的水处理与环保工程方案</h1>
-        <p class="hero-copy">ClearFlow Environmental Systems 是一个合成演示品牌，用来展示工程型企业官网如何讲清工艺设计、设备集成、调试计划和运维支持，同时避免虚构处理规模、专利证书或环保成果。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#capabilities">查看工程能力</a>
-          <a class="button secondary" href="#process">查看项目流程</a>
+    <section class="hero-site" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="demo-label">Synthetic website example</p>
+          <h1 id="hero-title">面向工业现场的水处理与环保工程方案</h1>
+          <p class="hero-copy">ClearFlow Environmental Systems 是一个合成演示品牌，用来展示工程型企业官网如何讲清工艺设计、设备集成、调试计划和运维支持，同时避免虚构处理规模、专利证书或环保成果。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#capabilities">查看工程能力</a>
+            <a class="button secondary" href="#process">查看项目流程</a>
+          </div>
+          <dl class="proof-row" aria-label="示例证明点">
+            <div><dt>5 deliverables</dt><dd>勘察、方案、配置、调试、维护支持</dd></div>
+            <div><dt>3 scenarios</dt><dd>工业园区、制造设施、市政配套项目</dd></div>
+            <div><dt>Evidence-safe</dt><dd>不编造影响指标、证书和项目名</dd></div>
+          </dl>
         </div>
-        <dl class="proof-row" aria-label="示例证明点">
-          <div><dt>5 deliverables</dt><dd>勘察、方案、配置、调试、维护支持</dd></div>
-          <div><dt>3 scenarios</dt><dd>工业园区、制造设施、市政配套项目</dd></div>
-          <div><dt>Evidence-safe</dt><dd>不编造影响指标、证书和项目名</dd></div>
-        </dl>
+        <div class="hero-visual industrial-hero-visual" aria-hidden="true">
+          <span class="pipe pipe-top"></span>
+          <span class="pipe pipe-mid"></span>
+          <span class="pipe pipe-bottom"></span>
+          <span class="tank tank-one"><i></i></span>
+          <span class="tank tank-two"><i></i></span>
+          <span class="tank tank-three"><i></i></span>
+          <span class="sensor sensor-one"></span>
+          <span class="sensor sensor-two"></span>
+          <span class="sensor sensor-three"></span>
+          <span class="control-skid"><i></i><i></i><i></i></span>
+        </div>
       </div>
     </section>
 
@@ -172,11 +182,18 @@
 
     <section class="section" id="proof" aria-labelledby="proof-title">
       <div class="split-grid">
-        <aside
-          class="visual-panel"
-          style="--panel-image: url('https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/industrial-precision.png');"
-          aria-label="工程证明结构示意"
-        >
+        <aside class="visual-panel visual-panel-industrial" aria-label="工程证明结构示意">
+          <div class="panel-visual engineering-proof-visual" aria-hidden="true">
+            <span class="eng-line"></span>
+            <span class="eng-node node-one"></span>
+            <span class="eng-node node-two"></span>
+            <span class="eng-node node-three"></span>
+            <span class="eng-node node-four"></span>
+            <span class="eng-card card-one">合规</span>
+            <span class="eng-card card-two">可靠性</span>
+            <span class="eng-card card-three">成本</span>
+            <span class="eng-card card-four">风险</span>
+          </div>
           <h3>工程买家关心的证据</h3>
           <p>合规、可靠性、运行成本和交付风险需要靠真实资料支撑。</p>
           <ul class="visual-list">
@@ -244,12 +261,16 @@
       </div>
       <div class="scenario-grid">
         <article class="scenario">
-          <img src="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/industrial-precision.png" alt="工业环保工程官网示意图">
+          <figure class="scenario-visual water-plant-visual" role="img" aria-label="工业园区水处理系统示意图">
+            <span></span><span></span><span></span><span></span>
+          </figure>
           <h3>工业园区水处理项目</h3>
           <p>适合展示多方协作、合规要求、运行稳定性和维护机制。</p>
         </article>
         <article class="scenario">
-          <img src="https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/green-energy-impact.png" alt="绿色能源与环保官网示意图">
+          <figure class="scenario-visual retrofit-visual" role="img" aria-label="制造设施环保改造示意图">
+            <span></span><span></span><span></span><span></span>
+          </figure>
           <h3>制造设施环保改造</h3>
           <p>适合讲清现场约束、设备改造、调试节奏和后续运行支持。</p>
         </article>
@@ -269,8 +290,16 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>Demo site for Business Website Skill.</p>
+  <footer class="site-footer site-footer-industrial">
+    <div>
+      <strong>ClearFlow Environmental Systems</strong>
+      <p>Industrial website demo for Business Website Skill.</p>
+    </div>
+    <nav aria-label="页脚导航">
+      <a href="#capabilities">工程能力</a>
+      <a href="#proof">证明边界</a>
+      <a href="#process">项目流程</a>
+    </nav>
     <p>MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.</p>
   </footer>
   <script src="/examples/example-sites.js"></script>
