@@ -30,15 +30,22 @@
   </script>
 </head>
 <body class="demo-industrial">
-  <header class="site-header">
-    <a class="brand" href="/examples/industrial-green-tech/" aria-label="ClearFlow Environmental Systems">
-      <strong>ClearFlow Environmental Systems</strong>
-      <span>Synthetic industrial website</span>
-    </a>
-    <nav aria-label="示例网站导航">
-      <a href="#capabilities">工程能力</a>
-      <a href="#site">现场系统</a>
-      <a href="#process">项目流程</a>
+  <header class="site-header industrial-console">
+    <div class="industrial-brandbar">
+      <a class="brand" href="/examples/industrial-green-tech/" aria-label="ClearFlow Environmental Systems">
+        <strong>ClearFlow Environmental Systems</strong>
+        <span>Synthetic industrial website</span>
+      </a>
+      <div class="industrial-status" aria-label="工程状态">
+        <span>Input checked</span>
+        <span>Evidence safe</span>
+        <span>Launch preview</span>
+      </div>
+    </div>
+    <nav aria-label="示例网站导航" class="industrial-nav">
+      <a href="#capabilities">01 工程能力</a>
+      <a href="#site">02 现场系统</a>
+      <a href="#process">03 项目流程</a>
       <a href="/">Skill 首页</a>
     </nav>
   </header>
@@ -230,9 +237,14 @@
   </main>
 
   <footer class="site-footer industrial-footer">
-    <div>
+    <div class="industrial-footer-title">
       <strong>ClearFlow Environmental Systems</strong>
       <p>Industrial website demo for Business Website Skill.</p>
+    </div>
+    <div class="industrial-footer-grid" aria-label="工程资料索引">
+      <div><span>Input</span><b>水质 / 空间 / 管线</b></div>
+      <div><span>System</span><b>工艺 / 设备 / 接口</b></div>
+      <div><span>Delivery</span><b>调试 / 培训 / 支持</b></div>
     </div>
     <nav aria-label="页脚导航">
       <a href="#capabilities">工程能力</a>

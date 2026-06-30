@@ -30,16 +30,20 @@
   </script>
 </head>
 <body class="demo-ai">
-  <header class="site-header">
+  <header class="site-header ai-command-nav">
     <a class="brand" href="/examples/ai-saas-product/" aria-label="SignalDesk AI">
       <strong>SignalDesk AI</strong>
       <span>Synthetic AI SaaS website</span>
     </a>
+    <div class="ai-prompt" aria-label="产品命令提示">
+      <span>signaldesk.ai</span>
+      <code>run launch-preview --review-required</code>
+    </div>
     <nav aria-label="示例网站导航">
-      <a href="#workflow">工作流</a>
-      <a href="#surface">产品界面</a>
-      <a href="#trust">信任边界</a>
-      <a href="/">Skill 首页</a>
+      <a href="#workflow">Flow</a>
+      <a href="#surface">Surface</a>
+      <a href="#trust">Trust</a>
+      <a href="/">Skill</a>
     </nav>
   </header>
 
@@ -213,9 +217,14 @@
   </main>
 
   <footer class="site-footer ai-footer">
-    <div>
+    <div class="ai-footer-terminal">
       <strong>SignalDesk AI</strong>
-      <p>AI SaaS website demo for Business Website Skill.</p>
+      <p><code>status:</code> launch preview / human review required / public claims limited</p>
+    </div>
+    <div class="ai-footer-log" aria-label="产品页脚日志">
+      <span>Sources linked</span>
+      <span>Tasks routed</span>
+      <span>Review pending</span>
     </div>
     <nav aria-label="页脚导航">
       <a href="#workflow">工作流</a>
