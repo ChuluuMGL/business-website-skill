@@ -3,7 +3,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 if (!reduceMotion) {
   document.documentElement.classList.add('motion-ready');
 
-  const revealItems = document.querySelectorAll('.card, .process-card, .scenario, .visual-panel, .final-cta');
+  const revealItems = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
@@ -23,7 +23,7 @@ if (!reduceMotion) {
     }
   }
 
-  for (const hero of document.querySelectorAll('.hero-site')) {
+  for (const hero of document.querySelectorAll('.b2b-hero, .industrial-hero, .ai-hero')) {
     hero.addEventListener('pointermove', (event) => {
       const rect = hero.getBoundingClientRect();
       const x = ((event.clientX - rect.left) / rect.width) * 100;

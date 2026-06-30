@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Northstar Operations Studio | B2B 服务官网示例</title>
-  <meta name="description" content="Northstar Operations Studio 是 business-website-skill 的合成 B2B 服务官网示例，展示专业服务公司如何组织价值、能力、流程和咨询入口。">
+  <meta name="description" content="Northstar Operations Studio 是 business-website-skill 的合成 B2B 服务官网示例，展示专业服务公司如何用标杆优先的方式组织定位、服务、证据和咨询路径。">
   <link rel="canonical" href="https://business-website-skill.vercel.app/examples/b2b-service/">
   <meta property="og:title" content="Northstar Operations Studio | B2B 服务官网示例">
-  <meta property="og:description" content="一个合成的专业服务官网示例，展示业务定位、服务能力、证据安全和咨询转化结构。">
+  <meta property="og:description" content="一个合成的专业服务官网示例，采用编辑式 dossier 结构展示业务定位、服务能力、证据安全和合作流程。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://business-website-skill.vercel.app/examples/b2b-service/">
   <meta property="og:image" content="https://business-website-skill.vercel.app/assets/example-b2b-hero.png">
@@ -36,135 +36,143 @@
       <span>Synthetic B2B service website</span>
     </a>
     <nav aria-label="示例网站导航">
-      <a href="#capabilities">服务能力</a>
-      <a href="#proof">证据方式</a>
+      <a href="#services">服务目录</a>
+      <a href="#proof">证据结构</a>
       <a href="#process">合作流程</a>
       <a href="/">Skill 首页</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero-site" aria-labelledby="hero-title">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <p class="demo-label">Synthetic website example</p>
-          <h1 id="hero-title">为服务型企业重建可执行的运营系统</h1>
-          <p class="hero-copy">Northstar Operations Studio 是一个合成演示品牌，用来展示 B2B 专业服务官网如何说明业务价值、交付方式、适用对象和咨询路径，同时避免虚构客户、年份和量化成果。</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#process">查看合作流程</a>
-            <a class="button secondary" href="#proof">查看证明边界</a>
+    <section class="b2b-hero" aria-labelledby="hero-title">
+      <div class="b2b-hero-inner">
+        <div>
+          <p class="demo-label b2b-kicker">Synthetic website example / editorial dossier</p>
+          <h1 id="hero-title">把专业服务官网做成管理层能读懂的运营档案</h1>
+          <p class="b2b-hero-copy">Northstar Operations Studio 是一个合成演示品牌，用来展示 B2B 专业服务官网如何先讲清服务对象、交付目录、证据边界和咨询路径，而不是堆叠空泛口号或虚构客户背书。</p>
+          <div class="b2b-actions">
+            <a class="button primary" href="#services">查看服务目录</a>
+            <a class="button secondary" href="#proof">查看证据结构</a>
           </div>
-          <dl class="proof-row" aria-label="示例证明点">
-            <div><dt>3 phases</dt><dd>诊断、重设、嵌入的服务模型</dd></div>
-            <div><dt>4 roles</dt><dd>面向创始人、总经理、运营和客服负责人</dd></div>
-            <div><dt>Safe proof</dt><dd>不展示未经来源支持的客户与 ROI</dd></div>
-          </dl>
         </div>
-        <div class="hero-visual b2b-hero-visual" aria-hidden="true">
-          <div class="desk-panel panel-main">
-            <span class="panel-label">Operating dossier</span>
-            <i></i><i></i><i></i>
+        <aside class="dossier-board" aria-label="B2B 服务官网运营档案示意">
+          <div class="dossier-title">
+            <strong>Operating Dossier</strong>
+            <span>Proposal-grade site</span>
           </div>
-          <div class="desk-panel panel-stack">
-            <span>Service map</span>
-            <em></em><em></em><em></em>
+          <div class="dossier-index">
+            <div>
+              <small>Audience</small>
+              <b>创始人与管理层</b>
+              <p>先看到业务问题、交付边界和决策路径。</p>
+            </div>
+            <div>
+              <small>Service model</small>
+              <b>诊断 / 重设 / 嵌入</b>
+              <p>把咨询工作拆成可解释、可评审、可跟进的服务阶段。</p>
+            </div>
+            <div>
+              <small>Proof rule</small>
+              <b>先留证据位</b>
+              <p>未提供真实客户和数据时，不编造案例、ROI 或评价。</p>
+            </div>
+            <div>
+              <small>Conversion</small>
+              <b>预约诊断沟通</b>
+              <p>用清楚行动入口替代泛泛的“了解更多”。</p>
+            </div>
           </div>
-          <div class="desk-card card-a"><strong>Scope</strong><span></span></div>
-          <div class="desk-card card-b"><strong>Roles</strong><span></span></div>
-          <div class="desk-card card-c"><strong>Proof</strong><span></span></div>
-          <div class="desk-timeline"><span></span><span></span><span></span><span></span></div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <section class="industry-strip b2b-editorial" aria-label="B2B 服务官网信息目录">
-      <div class="industry-strip-inner">
-        <div class="industry-note">
-          <strong>Executive operating dossier</strong>
-          <p>把专业服务官网做成管理层能快速浏览的咨询目录，而不是普通服务列表。</p>
-        </div>
-        <div class="industry-chip">
-          <strong>诊断议题</strong>
-          <p>客户旅程、责任边界、交接风险和服务承诺。</p>
-        </div>
-        <div class="industry-chip">
-          <strong>方案资产</strong>
-          <p>流程地图、服务包、运营看板和培训材料。</p>
-        </div>
-        <div class="industry-chip">
-          <strong>交付节奏</strong>
-          <p>管理层评审、团队嵌入和复盘机制。</p>
-        </div>
+    <section class="b2b-strip" aria-label="B2B 服务官网信息摘要">
+      <div>
+        <strong>定位</strong>
+        <p>运营咨询与服务交付重建伙伴。</p>
+      </div>
+      <div>
+        <strong>对象</strong>
+        <p>服务型企业创始人、总经理、运营与客服负责人。</p>
+      </div>
+      <div>
+        <strong>交付</strong>
+        <p>流程地图、服务包、看板、培训材料和复盘机制。</p>
+      </div>
+      <div>
+        <strong>边界</strong>
+        <p>演示页面不声明真实客户、年份、奖项和量化成果。</p>
       </div>
     </section>
 
-    <section class="section" id="capabilities" aria-labelledby="capabilities-title">
-      <div class="section-head">
-        <p class="eyebrow">Capabilities</p>
-        <h2 id="capabilities-title">把复杂服务拆成可交付模块</h2>
-        <p>专业服务官网不能只讲口号，需要让客户看到服务范围、协作方式和交付物。这个示例用三张能力卡说明核心工作。</p>
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="section-head reveal">
+        <p class="eyebrow b2b-kicker">Service ledger</p>
+        <h2 id="services-title">不是服务卡片，而是可采购的工作目录</h2>
+        <p>B2B 服务官网要让客户判断“我该买什么、团队要投入什么、交付后得到什么”。这个示例用 ledger 结构替代常见三卡片。</p>
       </div>
-      <div class="grid-3">
-        <article class="card">
-          <span>01</span>
-          <h3>流程地图</h3>
-          <p>梳理客户旅程、内部责任、关键节点和交接风险，形成团队可讨论的现状地图。</p>
-          <div class="pill-row"><span>访谈</span><span>流程图</span><span>问题清单</span></div>
+      <div class="b2b-ledger">
+        <article class="ledger-row reveal">
+          <span>01 / Diagnose</span>
+          <div>
+            <h3>流程与责任诊断</h3>
+            <p>梳理客户旅程、内部责任、关键节点和交接风险，形成管理层能讨论的现状地图。</p>
+          </div>
+          <p>产出：访谈摘要、流程图、问题清单、优先级建议。</p>
         </article>
-        <article class="card">
-          <span>02</span>
-          <h3>服务包重设</h3>
-          <p>把模糊服务拆成可报价、可交付、可复盘的服务包，减少销售承诺和交付能力的错位。</p>
-          <div class="pill-row"><span>服务分层</span><span>交付边界</span><span>定价输入</span></div>
+        <article class="ledger-row reveal">
+          <span>02 / Redesign</span>
+          <div>
+            <h3>服务包与交付边界重设</h3>
+            <p>把模糊服务拆成可报价、可交付、可复盘的服务包，减少销售承诺和交付能力错位。</p>
+          </div>
+          <p>产出：服务分层、交付边界、协作说明、报价输入。</p>
         </article>
-        <article class="card">
-          <span>03</span>
-          <h3>仪表盘与培训</h3>
-          <p>建立运营看板、例会节奏和团队训练材料，让方案进入日常工作而不是停在文档里。</p>
-          <div class="pill-row"><span>看板</span><span>复盘</span><span>团队培训</span></div>
+        <article class="ledger-row reveal">
+          <span>03 / Embed</span>
+          <div>
+            <h3>看板、例会和培训嵌入</h3>
+            <p>建立运营看板、例会节奏和团队训练材料，让方案进入日常工作而不是停在文档里。</p>
+          </div>
+          <p>产出：看板字段、复盘节奏、培训材料、验收清单。</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="proof" aria-labelledby="proof-title">
-      <div class="split-grid">
+      <div class="proof-dossier">
         <div>
-          <div class="section-head">
-            <p class="eyebrow">Proof without fabrication</p>
+          <div class="section-head reveal">
+            <p class="eyebrow b2b-kicker">Proof without fabrication</p>
             <h2 id="proof-title">用证据结构替代虚假背书</h2>
             <p>演示资料没有真实客户名、年份和效率数据，所以页面展示的是证据位置和证明方式，而不是冒充真实成果。</p>
           </div>
-          <div class="grid-3">
-            <article class="card">
-              <span>A</span>
+          <div class="proof-cards">
+            <article class="reveal">
+              <span>A / Public</span>
               <h3>可公开事实</h3>
               <p>服务对象、工作内容和三阶段交付模型来自合成 brief，可安全展示。</p>
             </article>
-            <article class="card">
-              <span>B</span>
-              <h3>需真实来源</h3>
+            <article class="reveal">
+              <span>B / Source needed</span>
+              <h3>需要真实来源</h3>
               <p>客户名称、效率结果、证书和联系方式应在真实项目中由客户提供。</p>
             </article>
-            <article class="card">
-              <span>C</span>
+            <article class="reveal">
+              <span>C / Forbidden</span>
               <h3>禁止虚构</h3>
               <p>不编造奖项、案例、评价、收益百分比或已经接入后端的表单结果。</p>
             </article>
           </div>
         </div>
-        <aside class="visual-panel visual-panel-b2b" aria-label="服务证据结构示意">
-          <div class="panel-visual service-proof-visual" aria-hidden="true">
-            <span class="proof-axis"></span>
-            <span class="proof-rowline row-one"></span>
-            <span class="proof-rowline row-two"></span>
-            <span class="proof-rowline row-three"></span>
-            <span class="proof-pill pill-one">Source</span>
-            <span class="proof-pill pill-two">Scope</span>
-            <span class="proof-pill pill-three">Review</span>
+        <aside class="evidence-ledger reveal" aria-label="证据结构示意">
+          <div class="evidence-map" aria-hidden="true">
+            <i></i><i></i><i></i>
+            <span>Source</span>
+            <span>Scope</span>
+            <span>Review</span>
           </div>
-          <h3>服务官网的证据层级</h3>
-          <p>先给客户看清楚服务如何被执行，再把真实案例、数据和客户背书放入对应位置。</p>
-          <ul class="visual-list">
+          <ul>
             <li><strong>定位</strong><span>运营咨询与实施伙伴</span></li>
             <li><strong>对象</strong><span>中型服务公司管理层</span></li>
             <li><strong>交付</strong><span>流程、服务包、看板、培训</span></li>
@@ -174,104 +182,60 @@
       </div>
     </section>
 
-    <section class="section process" id="process" aria-labelledby="process-title">
-      <div class="section-head">
-        <p class="eyebrow">Process</p>
-        <h2 id="process-title">三阶段合作路径</h2>
-        <p>流程区帮助潜在客户判断合作成本、参与方式和产出形态。</p>
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="section-head reveal">
+        <p class="eyebrow b2b-kicker">Guided interaction</p>
+        <h2 id="process-title">合作流程用 stepper 呈现，而不是再放三张卡片</h2>
+        <p>这个交互用于说明 skill 的过程型交付能力：客户可以按阶段理解网站建设从证据到蓝图再到验收。</p>
       </div>
-      <div class="interaction-demo stepper-demo" data-stepper aria-label="合作流程交互示例">
-        <div class="demo-meta">
-          <span>Interaction preset</span>
-          <strong>process-stepper / guided delivery</strong>
-        </div>
+      <div class="b2b-stepper reveal" data-stepper>
         <div class="stepper-tabs" role="tablist" aria-label="合作流程阶段">
-          <button type="button" class="is-active" role="tab" aria-selected="true" data-step-button="diagnose">诊断</button>
-          <button type="button" role="tab" aria-selected="false" data-step-button="redesign">重设</button>
-          <button type="button" role="tab" aria-selected="false" data-step-button="embed">嵌入</button>
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-step-button="diagnose">01 诊断</button>
+          <button type="button" role="tab" aria-selected="false" data-step-button="blueprint">02 蓝图</button>
+          <button type="button" role="tab" aria-selected="false" data-step-button="delivery">03 交付</button>
         </div>
-        <div class="stepper-panels">
+        <div>
           <article class="stepper-panel is-active" data-step-panel="diagnose">
             <h3>先建立证据地图</h3>
-            <p>把已确认事实、缺失信息、禁止编造项和素材清单拆开，避免专业服务官网出现虚假客户或成果。</p>
+            <p>把已确认事实、缺失信息、禁止编造项和素材清单拆开，避免专业服务官网出现虚假客户、假数据或假成功提交。</p>
           </article>
-          <article class="stepper-panel" data-step-panel="redesign">
+          <article class="stepper-panel" data-step-panel="blueprint">
             <h3>再输出网站蓝图</h3>
             <p>把服务入口、证明模块、案例位置和咨询 CTA 排进页面结构，让客户先评审逻辑再进入实现。</p>
           </article>
-          <article class="stepper-panel" data-step-panel="embed">
+          <article class="stepper-panel" data-step-panel="delivery">
             <h3>最后进入交付检查</h3>
-            <p>运行静态审计、SEO/GEO 检查和占位内容拦截，确保页面像客户预览而不是草稿。</p>
+            <p>运行静态审计、SEO/GEO 检查、占位内容拦截和截图级视觉检查，确保页面像客户预览而不是草稿。</p>
           </article>
         </div>
       </div>
-      <div class="process-grid">
-        <article class="process-card">
-          <span>1</span>
-          <h3>Diagnose</h3>
-          <p>访谈关键角色，梳理客户服务链路、交接节点和影响交付质量的主要问题。</p>
-        </article>
-        <article class="process-card">
-          <span>2</span>
-          <h3>Redesign</h3>
-          <p>重建服务包、责任边界、指标口径和例会机制，形成可评审的运营方案。</p>
-        </article>
-        <article class="process-card">
-          <span>3</span>
-          <h3>Embed</h3>
-          <p>协助团队落地看板、培训材料和复盘节奏，让新流程进入日常管理。</p>
-        </article>
-      </div>
     </section>
 
-    <section class="section" aria-labelledby="scenario-title">
-      <div class="section-head">
-        <p class="eyebrow">Scenarios</p>
-        <h2 id="scenario-title">适合这类业务场景</h2>
-      </div>
-      <div class="scenario-grid">
-        <article class="scenario">
-          <figure class="scenario-visual service-delivery-visual" role="img" aria-label="专业服务交付地图示意图">
-            <span></span><span></span><span></span><span></span>
-          </figure>
-          <h3>服务交付开始依赖个人经验</h3>
-          <p>客户增长后，团队需要统一服务边界、责任分工和复盘机制，减少交付不稳定。</p>
-        </article>
-        <article class="scenario">
-          <figure class="scenario-visual operating-map-visual" role="img" aria-label="B2B 管理层运营地图示意图">
-            <span></span><span></span><span></span><span></span><span></span>
-          </figure>
-          <h3>管理层需要看清运营瓶颈</h3>
-          <p>把客户体验、团队协作和业务指标放到同一张运营地图上，方便管理层做优先级判断。</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section final-cta" aria-labelledby="final-title">
+    <section class="final-cta reveal" aria-labelledby="final-title">
       <div>
-        <p class="eyebrow">Built with Business Website Skill</p>
-        <h2 id="final-title">这个页面是可公开查看的网站示例</h2>
-        <p>它展示的是信息架构和视觉完成度，不代表真实公司、客户或经营数据。真实项目交付时，应替换为客户提供的事实材料。</p>
+        <p class="eyebrow b2b-kicker">Built with Business Website Skill</p>
+        <h2 id="final-title">这个页面展示 B2B 服务官网的 dossier 方向</h2>
+        <p>它不是 Northstar 的真实官网，也不代表真实公司、客户或经营数据。真实项目应替换为客户确认的事实资料。</p>
       </div>
-      <div class="section-cta">
-        <a class="button light" href="/">返回 Skill 首页</a>
+      <div class="b2b-actions">
+        <a class="button secondary" href="/">返回 Skill 首页</a>
         <a class="button primary" href="https://github.com/ChuluuMGL/business-website-skill">查看 GitHub</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer site-footer-b2b">
+  <footer class="site-footer b2b-footer">
     <div>
       <strong>Northstar Operations Studio</strong>
-      <p>Service website demo for Business Website Skill.</p>
+      <p>B2B service website demo for Business Website Skill.</p>
     </div>
     <nav aria-label="页脚导航">
-      <a href="#capabilities">服务能力</a>
+      <a href="#services">服务目录</a>
+      <a href="#proof">证据结构</a>
       <a href="#process">合作流程</a>
-      <a href="/">Skill 首页</a>
     </nav>
-    <p>MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.</p>
   </footer>
-  <script src="/examples/example-sites.js"></script>
+
+  <script src="/examples/example-sites.js" defer></script>
 </body>
 </html>
