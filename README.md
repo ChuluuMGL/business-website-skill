@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.4.5-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.6-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -95,7 +95,9 @@ Default behavior is pragmatic: if the user wants speed, the agent proceeds with 
 
 ## Visual System Discovery
 
-Version `1.4.5` adds a stronger design gate inspired by public skill and deck references such as [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) and [Zara Zhang's deck site](https://deck.zarazhang.com/). The skill now asks agents to choose a complete visual system before coding premium or public examples.
+Version `1.4.6` tightens the public demo site and example websites after screenshot QA: author attribution now names Chuluu and 月瑀科技, homepage navigation follows the reading order, and the three public examples use more distinct B2B dossier, industrial field-system, and AI command-center layouts.
+
+The design gate continues to learn from public skill and deck references such as [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) and [Zara Zhang's deck site](https://deck.zarazhang.com/) as methodology references, not as copied content.
 
 A valid system must define its business fit, visual thesis, typography, palette, layout grammar, signature element, proof/evidence treatment, image/media treatment, interaction/motion, mobile behavior, and what to avoid. This is meant to prevent three common failures: color-swapped demos, repeated card grids, and mobile pages that lose the original design identity.
 

@@ -8,7 +8,7 @@
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.4.5-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.6-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -95,7 +95,9 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 
 ## 视觉系统发现
 
-`1.4.5` 版本新增更严格的设计检查门，参考了 [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) 和 [Zara Zhang 的 deck 网站](https://deck.zarazhang.com/) 这类公开案例的方法：高级或公开网站不应只选择“科技风、商务风、品牌风”，而要先确定一套完整的视觉系统。
+`1.4.6` 版本进一步收紧公开展示站和三个网站示例：主站署名改为 Chuluu 与月瑀科技，导航顺序与页面阅读顺序统一，三个示例分别强化为 B2B 档案型、工业现场系统型和 AI 指挥舱型页面，并修复截图中暴露的对齐、空白和标题换行问题。
+
+设计检查门仍然把 [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) 和 [Zara Zhang 的 deck 网站](https://deck.zarazhang.com/) 这类公开案例作为方法参考：学习“先定义视觉系统、先预览、再验证”的工作方式，而不是复制内容。
 
 一套合格的视觉系统必须说明业务适配、视觉主张、字体、配色、版式语法、招牌元素、证明/证据呈现方式、图片/媒体处理、交互动效、移动端行为和不适合使用的场景。这样可以减少三类问题：只是换颜色的 demo、反复出现的三卡片布局、以及移动端丢失原本设计识别度。
 

@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -77,7 +78,7 @@ a {
 nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   font-size: 14px;
   font-weight: 700;
 }
@@ -94,7 +95,7 @@ nav a:focus-visible {
 
 .hero {
   position: relative;
-  min-height: 760px;
+  min-height: 708px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -105,9 +106,9 @@ nav a:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 76% 24%, rgba(35, 79, 123, 0.3), transparent 28%),
-    radial-gradient(circle at 88% 70%, rgba(14, 94, 67, 0.28), transparent 26%),
-    linear-gradient(135deg, #061611 0%, #12271f 100%);
+    radial-gradient(circle at 74% 22%, rgba(35, 79, 123, 0.34), transparent 26%),
+    radial-gradient(circle at 88% 72%, rgba(183, 119, 35, 0.16), transparent 28%),
+    linear-gradient(135deg, #061611 0%, #0e2b21 70%, #123326 100%);
 }
 
 .hero-backdrop::after {
@@ -128,7 +129,7 @@ nav a:focus-visible {
   gap: clamp(44px, 7vw, 92px);
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
-  padding: 132px 0 102px;
+  padding: 118px 0 82px;
 }
 
 .hero-copy-block {
@@ -138,7 +139,7 @@ nav a:focus-visible {
 
 .home-hero-visual {
   position: relative;
-  min-height: 500px;
+  min-height: 460px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
@@ -288,6 +289,12 @@ p {
   margin-top: 0;
 }
 
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
 h1 {
   max-width: 560px;
   margin-bottom: 20px;
@@ -350,7 +357,7 @@ button:focus-visible {
 }
 
 .proof-strip {
-  background: #ffffff;
+  background: linear-gradient(180deg, #fbfaf5, #ffffff);
   border-bottom: 1px solid var(--line);
 }
 
@@ -390,6 +397,10 @@ button:focus-visible {
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
   padding: 92px 0;
+}
+
+.intro {
+  padding-top: 82px;
 }
 
 .section-head {
@@ -813,6 +824,8 @@ pre code {
 }
 
 .example-grid article {
+  display: grid;
+  grid-template-rows: auto 1fr;
   overflow: hidden;
 }
 
@@ -824,6 +837,10 @@ pre code {
 }
 
 .example-grid div {
+  min-height: 208px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 20px;
 }
 
@@ -835,9 +852,13 @@ pre code {
   text-transform: uppercase;
 }
 
+.example-grid h3 {
+  min-height: 2.5em;
+}
+
 .example-grid a {
   display: inline-flex;
-  margin-top: 16px;
+  margin-top: auto;
   color: var(--green);
   font-weight: 800;
   text-decoration-thickness: 1px;
@@ -968,10 +989,12 @@ pre code {
 
   nav {
     width: 100%;
-    overflow-x: auto;
-    gap: 14px;
-    padding-bottom: 4px;
-    white-space: nowrap;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 10px 14px;
+    padding-bottom: 0;
+    white-space: normal;
+    font-size: 13px;
   }
 
   pre {

@@ -48,6 +48,12 @@ b {
   overflow-wrap: anywhere;
 }
 
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
 p,
 li,
 span {
@@ -126,7 +132,7 @@ nav a:focus-visible {
 .section {
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
-  padding: 96px 0;
+  padding: 88px 0;
 }
 
 .section-head {
@@ -170,7 +176,7 @@ nav a:focus-visible {
   align-items: end;
   gap: 28px;
   width: min(var(--max), calc(100% - 40px));
-  margin: 0 auto 76px;
+  margin: 0 auto 68px;
   padding: 34px;
 }
 
@@ -228,9 +234,9 @@ nav a:focus-visible {
 
 .b2b-hero {
   position: relative;
-  min-height: 760px;
+  min-height: 690px;
   overflow: hidden;
-  padding: 86px 0 78px;
+  padding: 74px 0 64px;
   border-bottom: 1px solid var(--line);
   background:
     linear-gradient(rgba(156, 91, 22, 0.07) 1px, transparent 1px),
@@ -254,12 +260,11 @@ nav a:focus-visible {
 }
 
 .b2b-hero h1 {
-  max-width: 640px;
+  max-width: 580px;
   margin-bottom: 20px;
-  font-size: 68px;
-  line-height: 1.02;
+  font-size: 52px;
+  line-height: 1.08;
   font-weight: 900;
-  text-wrap: normal;
 }
 
 .b2b-hero-copy {
@@ -288,7 +293,7 @@ nav a:focus-visible {
 
 .dossier-board {
   position: relative;
-  min-height: 540px;
+  min-height: 410px;
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: 0;
@@ -333,7 +338,7 @@ nav a:focus-visible {
 }
 
 .dossier-index div {
-  min-height: 92px;
+  min-height: 86px;
   padding: 18px;
   border-bottom: 1px solid var(--line);
 }
@@ -436,17 +441,20 @@ nav a:focus-visible {
 
 .proof-dossier {
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1.12fr);
-  gap: 48px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   align-items: start;
 }
 
 .proof-cards {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
 .proof-cards article {
+  min-width: 0;
+  min-height: 220px;
   padding: 24px;
   border: 1px solid var(--line);
   background: var(--sheet);
@@ -478,7 +486,7 @@ nav a:focus-visible {
 
 .evidence-map {
   position: relative;
-  min-height: 245px;
+  min-height: 220px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
@@ -566,9 +574,9 @@ nav a:focus-visible {
 
 .b2b-stepper {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 34px;
-  padding: 26px;
+  grid-template-columns: 250px 1fr;
+  gap: 28px;
+  padding: 22px;
   border: 1px solid var(--line);
   background: var(--sheet);
 }
@@ -598,8 +606,8 @@ nav a:focus-visible {
 
 .stepper-panel {
   display: none;
-  min-height: 250px;
-  padding: 34px;
+  min-height: 196px;
+  padding: 30px;
   background:
     linear-gradient(rgba(23, 31, 26, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(23, 31, 26, 0.05) 1px, transparent 1px),
@@ -613,7 +621,7 @@ nav a:focus-visible {
 
 .stepper-panel h3 {
   margin-bottom: 12px;
-  font-size: 34px;
+  font-size: 30px;
 }
 
 .stepper-panel p {
@@ -685,8 +693,8 @@ nav a:focus-visible {
 .industrial-hero {
   position: relative;
   overflow: hidden;
-  min-height: 760px;
-  padding: 92px 0 0;
+  min-height: 704px;
+  padding: 88px 0 0;
   color: #eff8f5;
   background:
     radial-gradient(circle at 72% 20%, rgba(52, 150, 136, 0.28), transparent 28%),
@@ -727,9 +735,8 @@ nav a:focus-visible {
 
 .industrial-hero h1 {
   margin-bottom: 20px;
-  font-size: 64px;
-  line-height: 1.04;
-  text-wrap: normal;
+  font-size: 58px;
+  line-height: 1.06;
 }
 
 .industrial-hero-copy {
@@ -758,7 +765,7 @@ nav a:focus-visible {
 
 .plant-diagram {
   position: relative;
-  min-height: 520px;
+  min-height: 468px;
   border: 1px solid rgba(180, 220, 214, 0.2);
   background: rgba(4, 28, 30, 0.62);
   overflow: hidden;
@@ -1090,14 +1097,14 @@ nav a:focus-visible {
 
 .site-hotspots {
   display: grid;
-  grid-template-columns: minmax(420px, 1fr) minmax(0, 0.9fr);
-  gap: 36px;
+  grid-template-columns: minmax(360px, 0.86fr) minmax(0, 1fr);
+  gap: 48px;
   align-items: start;
 }
 
 .field-photo {
   position: relative;
-  min-height: 520px;
+  min-height: 430px;
   overflow: hidden;
   border: 1px solid var(--line);
   background:
@@ -1105,6 +1112,27 @@ nav a:focus-visible {
     linear-gradient(90deg, rgba(27, 117, 109, 0.08) 1px, transparent 1px),
     linear-gradient(145deg, #f7fbfa, #d9e9e6);
   background-size: 56px 56px, 56px 56px, auto;
+}
+
+.field-photo::before,
+.field-photo::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(27, 117, 109, 0.18), rgba(27, 117, 109, 0.72), rgba(41, 94, 123, 0.5));
+}
+
+.field-photo::before {
+  top: 18%;
+}
+
+.field-photo::after {
+  bottom: 18%;
+  left: 20%;
+  right: 18%;
 }
 
 .field-photo .unit {
@@ -1167,6 +1195,7 @@ nav a:focus-visible {
 }
 
 .hotspot-notes article {
+  min-width: 0;
   padding: 22px;
   border: 1px solid var(--line);
   background: var(--panel);
@@ -1206,7 +1235,7 @@ nav a:focus-visible {
 }
 
 .project-rail article {
-  min-height: 250px;
+  min-height: 220px;
   padding: 24px;
   border-right: 1px solid var(--line);
 }
@@ -1305,12 +1334,12 @@ nav a:focus-visible {
 .ai-hero {
   position: relative;
   overflow: hidden;
-  min-height: 780px;
-  padding: 90px 0 72px;
+  min-height: 708px;
+  padding: 76px 0 64px;
   background:
-    radial-gradient(circle at var(--mx, 78%) var(--my, 24%), rgba(54, 125, 225, 0.34), transparent 28%),
-    radial-gradient(circle at 86% 72%, rgba(32, 179, 134, 0.18), transparent 26%),
-    linear-gradient(135deg, #07121f 0%, #0a2032 100%);
+    radial-gradient(circle at var(--mx, 76%) var(--my, 22%), rgba(54, 125, 225, 0.28), transparent 26%),
+    radial-gradient(circle at 88% 70%, rgba(32, 179, 134, 0.14), transparent 24%),
+    linear-gradient(135deg, #050d18 0%, #071827 56%, #091f2f 100%);
 }
 
 .ai-hero::before {
@@ -1337,8 +1366,8 @@ nav a:focus-visible {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(460px, 1.22fr);
-  gap: clamp(42px, 7vw, 92px);
+  grid-template-columns: minmax(0, 0.82fr) minmax(430px, 1.18fr);
+  gap: clamp(38px, 6vw, 76px);
   align-items: center;
   width: min(1260px, calc(100% - 40px));
   margin: 0 auto;
@@ -1346,9 +1375,8 @@ nav a:focus-visible {
 
 .ai-hero h1 {
   margin-bottom: 20px;
-  font-size: 66px;
-  line-height: 1.03;
-  text-wrap: normal;
+  font-size: 58px;
+  line-height: 1.06;
 }
 
 .ai-hero-copy {
@@ -1376,7 +1404,7 @@ nav a:focus-visible {
 
 .command-window {
   position: relative;
-  min-height: 560px;
+  min-height: 500px;
   overflow: hidden;
   border: 1px solid rgba(91, 162, 208, 0.26);
   border-radius: 8px;
@@ -1439,7 +1467,7 @@ nav a:focus-visible {
 }
 
 .terminal-card {
-  min-height: 290px;
+  min-height: 250px;
   padding: 22px;
 }
 
@@ -1453,7 +1481,7 @@ nav a:focus-visible {
 
 .signal-graph {
   position: relative;
-  min-height: 290px;
+  min-height: 250px;
 }
 
 .signal-graph span {
@@ -1685,8 +1713,8 @@ nav a:focus-visible {
   }
 
   .demo-b2b .b2b-hero {
-    min-height: 820px;
-    padding: 96px 0 86px;
+    min-height: auto;
+    padding: 68px 0 54px;
   }
 
   .demo-b2b .b2b-hero-inner,
@@ -1697,7 +1725,7 @@ nav a:focus-visible {
   }
 
   .demo-b2b .b2b-hero-inner {
-    grid-template-columns: minmax(0, 0.76fr) minmax(440px, 1.24fr);
+    grid-template-columns: minmax(0, 0.78fr) minmax(430px, 1.22fr);
   }
 
   .demo-b2b .b2b-strip {
@@ -1912,7 +1940,7 @@ nav a:focus-visible {
   }
 
   .demo-ai .ai-hero {
-    min-height: 720px;
+    min-height: 680px;
     padding: 78px 0 64px;
   }
 
@@ -1932,7 +1960,7 @@ nav a:focus-visible {
   }
 
   .demo-ai .command-window {
-    min-height: 500px;
+    min-height: 460px;
   }
 
   .demo-ai .terminal-card,
@@ -2226,7 +2254,9 @@ nav a:focus-visible {
 }
 
 .ai-bento article {
-  min-height: 220px;
+  position: relative;
+  min-width: 0;
+  min-height: 210px;
   padding: 24px;
   border: 1px solid rgba(91, 162, 208, 0.24);
   border-radius: 8px;
@@ -2234,7 +2264,23 @@ nav a:focus-visible {
 }
 
 .ai-bento article:first-child {
+  display: grid;
+  align-content: start;
   grid-row: span 2;
+}
+
+.ai-bento article:first-child::after {
+  content: "";
+  align-self: end;
+  min-height: 168px;
+  margin-top: 28px;
+  border: 1px solid rgba(91, 162, 208, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(32, 179, 134, 0.76) 0 28%, transparent 28% 34%, rgba(54, 125, 225, 0.7) 34% 62%, transparent 62% 68%, rgba(240, 194, 125, 0.78) 68% 100%) 28px 34px / calc(100% - 56px) 10px no-repeat,
+    linear-gradient(90deg, rgba(54, 125, 225, 0.42), rgba(32, 179, 134, 0.38)) 28px 78px / 62% 10px no-repeat,
+    linear-gradient(90deg, rgba(91, 162, 208, 0.18), rgba(91, 162, 208, 0.08)) 28px 118px / 82% 10px no-repeat,
+    rgba(7, 18, 31, 0.55);
 }
 
 .ai-bento span {
@@ -2257,14 +2303,37 @@ nav a:focus-visible {
 
 .trust-orbit {
   position: relative;
-  min-height: 460px;
+  min-height: 320px;
   border: 1px solid rgba(91, 162, 208, 0.24);
   border-radius: 8px;
   background:
+    linear-gradient(26deg, transparent 49.85%, rgba(32, 179, 134, 0.22) 50%, transparent 50.15%),
+    linear-gradient(-26deg, transparent 49.85%, rgba(54, 125, 225, 0.2) 50%, transparent 50.15%),
     linear-gradient(rgba(91, 162, 208, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(91, 162, 208, 0.08) 1px, transparent 1px),
     rgba(12, 27, 42, 0.7);
   background-size: 54px 54px;
+}
+
+.trust-orbit::before,
+.trust-orbit::after {
+  content: "";
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(32, 179, 134, 0.55), transparent);
+}
+
+.trust-orbit::after {
+  left: 50%;
+  right: auto;
+  top: 14%;
+  bottom: 14%;
+  width: 2px;
+  height: auto;
+  background: linear-gradient(180deg, transparent, rgba(54, 125, 225, 0.52), transparent);
 }
 
 .orbit-core,
@@ -2280,8 +2349,8 @@ nav a:focus-visible {
 .orbit-core {
   left: 50%;
   top: 50%;
-  width: 170px;
-  height: 72px;
+  width: 164px;
+  height: 66px;
   color: #061622;
   background: var(--green);
   transform: translate(-50%, -50%);
@@ -2294,23 +2363,23 @@ nav a:focus-visible {
 }
 
 .orbit-node.n1 {
-  left: 12%;
-  top: 18%;
+  left: 10%;
+  top: 16%;
 }
 
 .orbit-node.n2 {
-  right: 12%;
-  top: 18%;
+  right: 10%;
+  top: 16%;
 }
 
 .orbit-node.n3 {
-  left: 12%;
-  bottom: 18%;
+  left: 10%;
+  bottom: 16%;
 }
 
 .orbit-node.n4 {
-  right: 12%;
-  bottom: 18%;
+  right: 10%;
+  bottom: 16%;
 }
 
 .ai-footer {
@@ -2498,6 +2567,7 @@ nav a:focus-visible {
   }
 
   .b2b-strip,
+  .proof-cards,
   .industrial-spec-strip,
   .ai-product-bar,
   .project-rail,
