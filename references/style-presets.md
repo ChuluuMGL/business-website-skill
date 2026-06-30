@@ -12,6 +12,7 @@ Use this reference when the user asks for many styles, premium visual directions
 - Treat presets as directions, not templates. A preset does not define the header, hero, proof module, section shapes, or motion by itself.
 - For multiple demos or multiple client routes, do not reuse the same module stack with different colors. Change the structure, media treatment, proof pattern, and interaction signature.
 - For high-taste work, pair this file with `references/design-taste-benchmarks.md` before implementation.
+- For public examples, premium redesigns, or any request for "更有品位", "不一样", "不要同质化", or "像成熟模板", pair this file with `references/visual-system-discovery.md` and output named visual systems instead of only preset names.
 
 ## Preset Families
 
@@ -44,6 +45,7 @@ Use this reference when the user asks for many styles, premium visual directions
 - Best for: brand studios, cultural brands, strategy consultancies, thought leadership.
 - Visual: editorial spacing, refined image crops, serif/sans pairing, strong article-like hierarchy.
 - Layout: narrative hero, manifesto, capability essays, selected work, insights/resources.
+- Signature element: publication-like proof frame, editorial index, or image-led case spread.
 - Motion: page transitions, image mask reveal, subtle typography reveal.
 - Avoid: dense cards, dashboard visuals, too many CTAs.
 
@@ -104,6 +106,50 @@ Use one primary preset and one secondary modifier:
 - Creative agency with enterprise clients: `bold-creative-agency` + `executive-b2b-trust`.
 - ESG SaaS: `sustainable-green-tech` + `ai-saas-data-cloud`.
 
+## Visual System Starters
+
+Use these when the user wants higher taste, more variety, or less template similarity. These are not extra color themes. Each starter changes module shapes, proof treatment, and interaction behavior.
+
+### editorial-evidence-chroma
+
+- Best for: creative studios, brand strategy, public skill pages, editorial professional services.
+- Visual thesis: a confident editorial surface with high-saturation accents used as evidence or category rails.
+- Layout grammar: asymmetric editorial intro, chroma bands, publication-like proof boards, selected case spreads.
+- Signature element: chroma rail or diagonal evidence band.
+- Proof treatment: source cards, report frames, case snapshots, and tags are built into the visual rhythm.
+- Motion: mask reveal, band sweep, section progress indicator.
+- Avoid: conservative industrial, government, or regulated websites unless the brand explicitly supports expressive design.
+
+### executive-proof-dossier
+
+- Best for: B2B service firms, consulting, agencies, operations partners, proposal pages.
+- Visual thesis: management-ready dossier, not a generic service brochure.
+- Layout grammar: source labels, ledger rows, stakeholder paths, memo panels, service maps, decision tables.
+- Signature element: evidence ledger with source, scope, review, and action rows.
+- Proof treatment: every claim is paired with a source state, pending state, or safe placeholder.
+- Motion: process stepper, active evidence row, restrained tabs.
+- Avoid: consumer lifestyle brands or expressive launch pages.
+
+### industrial-field-blueprint
+
+- Best for: engineering, environmental protection, equipment, manufacturing, energy, construction.
+- Visual thesis: field-ready blueprint that shows process, constraints, handoff, and proof boundaries.
+- Layout grammar: process line, site map, equipment/spec matrix, compliance board, lifecycle, before/after slots.
+- Signature element: technical flow map with hotspots or node states.
+- Proof treatment: certificates, reports, site images, equipment photos, and parameters are separated by source status.
+- Motion: SVG line draw, hotspot tour, spec tab switch, before/after comparison.
+- Avoid: projects without any real process, equipment, certificate, or site material.
+
+### product-command-theater
+
+- Best for: AI SaaS, data tools, monitoring, automation, diagnostics, platform launches.
+- Visual thesis: a product system in motion, with clear trust boundaries and user actions.
+- Layout grammar: command hero, product state sequence, workflow map, integration matrix, risk/approval module.
+- Signature element: stateful command surface or dashboard sequence.
+- Proof treatment: product screenshots, docs, integrations, approval states, and safety boundaries are visible as product evidence.
+- Motion: panel morph, dashboard sequence, integration orbit, reduced-motion fallback.
+- Avoid: products with no confirmed workflow, screenshots, or feature scope.
+
 ## Output Format For User Choices
 
 When offering choices, use:
@@ -112,6 +158,8 @@ When offering choices, use:
 Option A - Executive B2B Trust
 Best for: ...
 Look: ...
+Signature element: ...
+Proof treatment: ...
 Interaction: ...
 Tradeoff: ...
 

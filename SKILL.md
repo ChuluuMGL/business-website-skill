@@ -28,6 +28,7 @@ Build business websites that are credible enough for client presentation or laun
 - Read `references/agent-experience.md` when choosing interaction mode, deciding whether to ask questions, presenting A/B/C options, or managing checkpoints.
 - Read `references/seo-geo-checklist.md` for public launch, SEO-sensitive, GEO-sensitive, AI-search-sensitive, or multi-page website work.
 - Read `references/design-taste-benchmarks.md` before public examples, premium/client-facing redesigns, or any request for higher-taste, elegant, distinctive, advanced, or non-generic visual output.
+- Read `references/visual-system-discovery.md` when the user asks for distinctive style, premium taste, non-generic demos, visual previews, style families, or when several website examples must not look like variants of one template.
 
 ## Phase Workflow
 
@@ -88,15 +89,20 @@ Checkpoint: if the page count, CTA, or business modules are ambiguous, ask the u
 
 For premium, public, or client-facing work, start with a benchmark-first taste gate before coding. Read `references/design-taste-benchmarks.md`, select or request 2 to 3 relevant benchmark references, extract the design logic, and write a short divergence contract so the output does not become a color-swapped clone of prior demos.
 
+For high-taste, showcase, public-example, or multi-demo work, read `references/visual-system-discovery.md` and offer 2 to 3 named visual systems before coding. Each system must include business fit, visual thesis, typography, palette, layout grammar, signature element, proof/evidence treatment, image/media treatment, interaction/motion, mobile behavior, and what to avoid. Do not present only color palettes or generic preset labels.
+
 Read `references/style-presets.md` when the user asks for richer styles, trendy design, premium visual directions, or multiple preset looks.
 Read `references/preview-guide.md` when the user asks to compare style previews, judge overlap, review visual quality, or inspect GIF interaction previews.
 
-Offer 2 to 3 design directions when brand direction is unclear. Each option should include:
+Offer 2 to 3 design directions when brand direction is unclear. For premium/public work, these should be named visual systems. Each option should include:
 
 - Tone and audience.
 - Layout strategy.
 - Color direction.
 - Image/visual approach.
+- Signature element.
+- Proof/evidence treatment.
+- Motion and mobile behavior.
 - Best-fit use case.
 
 Then implement the selected direction. If the user does not choose, default to a restrained, evidence-led B2B direction.
@@ -117,7 +123,7 @@ Before major edits, identify:
 - Asset folders to use.
 - Interactions to implement.
 - Verification commands.
-- Benchmark logic, visual signature, and how this build will stay distinct from other demos or templates.
+- Benchmark logic, selected visual system, visual signature, proof treatment, mobile behavior, and how this build will stay distinct from other demos or templates.
 
 Use `assets/templates/static-business-site/` for a fast dependency-free starting point. Treat templates as structure only; replace placeholders with source-backed content.
 
@@ -162,6 +168,7 @@ Final response should include:
 - Read `references/example-patterns.md` when deciding architecture or reusable modules from prior project patterns.
 - Read `references/benchmark-patterns.md` when improving strategy, conversion, trust, B2B buyer support, or overall maturity.
 - Read `references/design-taste-benchmarks.md` when choosing external design references, raising visual quality, avoiding templated AI output, differentiating multiple demos, or planning public showcase examples.
+- Read `references/visual-system-discovery.md` when generating named visual systems, style families, style previews, public examples, or distinct demo directions that must differ in structure and interaction.
 - Read `references/agent-experience.md` when selecting mode, minimizing questions, or deciding checkpoint behavior.
 - Read `references/style-presets.md` when selecting a visual preset or combining multiple premium website styles.
 - Read `references/interaction-presets.md` when selecting animation libraries, motion recipes, or interaction intensity.

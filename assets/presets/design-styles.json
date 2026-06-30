@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "presets": [
     {
       "id": "executive-b2b-trust",
@@ -80,6 +80,65 @@
       "tone": "trustworthy, secure, precise",
       "layout": ["trust hero", "risk proof", "feature matrix", "security section", "case examples"],
       "motion": ["subtle data reveal", "security badge hover", "comparison toggles"]
+    }
+  ],
+  "visual_system_rules": [
+    "A style preset is not a complete direction. Pair it with a named visual system for premium, public, or multi-demo work.",
+    "Each visual system must define layout grammar, signature element, proof treatment, motion signature, and mobile behavior.",
+    "Reject systems that only change colors, copy, icons, or background effects."
+  ],
+  "visual_systems": [
+    {
+      "id": "editorial-evidence-chroma",
+      "name": "Editorial Evidence Chroma",
+      "best_for": ["creative studios", "brand strategy", "public skill pages", "editorial professional services"],
+      "tone": "expressive, editorial, proof-aware",
+      "visual_thesis": "A confident editorial surface with high-saturation accents used as evidence or category rails.",
+      "layout_grammar": ["asymmetric editorial intro", "chroma bands", "publication proof boards", "selected case spreads"],
+      "signature_element": "Chroma rail or diagonal evidence band.",
+      "proof_treatment": "Source cards, report frames, case snapshots, and tags are built into the visual rhythm.",
+      "motion": ["mask reveal", "band sweep", "section progress indicator"],
+      "mobile_behavior": "Keep the chroma rail as a compact section marker instead of collapsing into plain stacked cards.",
+      "avoid_for": ["regulated trust pages", "conservative government sites", "dense technical specification sites"]
+    },
+    {
+      "id": "executive-proof-dossier",
+      "name": "Executive Proof Dossier",
+      "best_for": ["B2B services", "consulting", "agencies", "operations partners", "proposal pages"],
+      "tone": "management-ready, structured, evidence-led",
+      "visual_thesis": "A management-ready dossier rather than a generic service brochure.",
+      "layout_grammar": ["source labels", "ledger rows", "stakeholder paths", "memo panels", "decision tables"],
+      "signature_element": "Evidence ledger with source, scope, review, and action rows.",
+      "proof_treatment": "Every claim is paired with a source state, pending state, or safe placeholder.",
+      "motion": ["process stepper", "active evidence row", "restrained tabs"],
+      "mobile_behavior": "Convert ledgers into compact source blocks while preserving labels and row logic.",
+      "avoid_for": ["consumer lifestyle brands", "image-led brand launches"]
+    },
+    {
+      "id": "industrial-field-blueprint",
+      "name": "Industrial Field Blueprint",
+      "best_for": ["engineering", "environmental protection", "equipment", "manufacturing", "energy"],
+      "tone": "technical, grounded, field-ready",
+      "visual_thesis": "A field-ready blueprint that shows process, constraints, handoff, and proof boundaries.",
+      "layout_grammar": ["process line", "site map", "equipment/spec matrix", "compliance board", "project lifecycle"],
+      "signature_element": "Technical flow map with hotspots or node states.",
+      "proof_treatment": "Certificates, reports, site images, equipment photos, and parameters are separated by source status.",
+      "motion": ["SVG line draw", "hotspot tour", "spec tab switch", "before-after comparison"],
+      "mobile_behavior": "Turn the blueprint into a vertical site route with node states and clear section boundaries.",
+      "avoid_for": ["projects without process assets", "projects without equipment or site material"]
+    },
+    {
+      "id": "product-command-theater",
+      "name": "Product Command Theater",
+      "best_for": ["AI SaaS", "data tools", "monitoring", "automation", "diagnostics"],
+      "tone": "product-led, operational, stateful",
+      "visual_thesis": "A product system in motion, with clear trust boundaries and user actions.",
+      "layout_grammar": ["command hero", "product state sequence", "workflow map", "integration matrix", "risk/approval module"],
+      "signature_element": "Stateful command surface or dashboard sequence.",
+      "proof_treatment": "Screenshots, docs, integrations, approval states, and safety boundaries are visible as product evidence.",
+      "motion": ["panel morph", "dashboard sequence", "integration orbit", "reduced-motion fallback"],
+      "mobile_behavior": "Convert the command surface into swipe-free stacked states with persistent action labels.",
+      "avoid_for": ["products without confirmed workflow", "products without screenshots", "products without feature scope"]
     }
   ]
 }

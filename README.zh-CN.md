@@ -8,7 +8,7 @@
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.4.4-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.5-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -29,7 +29,7 @@ scripts/install.sh codex
 调用方式：
 
 ```text
-使用 $business-website-skill 根据当前文件夹资料，先输出证据地图、站点地图、首页大纲、标杆/品位判断、3 个设计方向和需要确认的问题。
+使用 $business-website-skill 根据当前文件夹资料，先输出证据地图、站点地图、首页大纲、标杆/品位判断、3 个命名视觉系统和需要确认的问题。
 ```
 
 正式交付前：
@@ -49,7 +49,8 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 | 证据地图 | 已确认事实、缺失信息、禁止编造项和可用素材清单。 |
 | 网站蓝图 | 站点地图、首页区块、行动路径、证明模块、案例/场景分类。 |
 | 标杆与品位闸门 | 针对高级/公开/客户交付项目，先研究外部参考、提炼设计逻辑、写明差异化契约和反同质化检查。 |
-| 设计方向选项 | 当品牌方向不明确时，提供 2-3 个视觉路线。 |
+| 视觉系统发现 | 提供 2-3 个命名视觉系统，明确版式语法、招牌元素、证明方式、动效签名和移动端行为。 |
+| 设计方向选项 | 当品牌方向不明确，或用户希望先选择时，提供 2-3 个视觉路线。 |
 | 网站实现 | 根据项目情况使用静态 HTML/CSS/JS、React/Vite、Next.js 或现有技术栈。 |
 | SEO/GEO 就绪检查 | 页面标题、描述、canonical 假设、社交分享元数据、JSON-LD 候选、可抓取文本和证据摘要模块。 |
 | QA 结果 | 断链、锚点、响应式、移动端、事实真实性和交付说明。 |
@@ -82,13 +83,23 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 | 0. 问诊 | 判断网站类型、技术栈、视觉方向和交付模式。 | 假设与用户选择 |
 | 1. 证据地图 | 区分已确认事实、未知信息和禁止编造项。 | 证据地图 |
 | 2. 网站蓝图 | 建立站点地图、首页大纲、证明模块和行动路径。 | 待确认蓝图 |
-| 3. 标杆与设计方向 | 高级/公开项目先研究外部参考，再给出 2-3 个视觉路线。 | 标杆记录与方向选项 |
+| 3. 标杆与视觉系统 | 高级/公开项目先研究外部参考，再给出 2-3 个命名视觉系统。 | 标杆记录、系统选项和方向选择 |
 | 4. 实施计划 | 明确文件、组件、素材、交互和检查方式。 | 构建计划 |
 | 5. 构建 | 用静态文件、React/Vite/Next 或现有技术栈实现。 | 网站文件 |
 | 6. QA | 检查事实、资源、锚点、版式、移动端、表单和交付状态。 | QA 结果 |
 | 7. 交付 | 汇总文件、预览方式、验证结果和待确认项。 | 交付说明 |
 
 默认行为是务实的：如果用户需要速度，Agent 会用保守假设推进，并把未知项标为待确认；如果用户需要控制，Agent 会先停在蓝图和设计方向阶段等待确认。
+
+---
+
+## 视觉系统发现
+
+`1.4.5` 版本新增更严格的设计检查门，参考了 [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) 和 [Zara Zhang 的 deck 网站](https://deck.zarazhang.com/) 这类公开案例的方法：高级或公开网站不应只选择“科技风、商务风、品牌风”，而要先确定一套完整的视觉系统。
+
+一套合格的视觉系统必须说明业务适配、视觉主张、字体、配色、版式语法、招牌元素、证明/证据呈现方式、图片/媒体处理、交互动效、移动端行为和不适合使用的场景。这样可以减少三类问题：只是换颜色的 demo、反复出现的三卡片布局、以及移动端丢失原本设计识别度。
+
+内置视觉系统起点包括：`editorial-evidence-chroma`、`executive-proof-dossier`、`industrial-field-blueprint`、`product-command-theater`。
 
 ---
 
@@ -129,6 +140,7 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 | [`references/example-patterns.md`](./references/example-patterns.md) | 从静态站、React 官网和服务型网站提炼的可复用模式。 |
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | 商业官网标杆模式和成熟度检查。 |
 | [`references/design-taste-benchmarks.md`](./references/design-taste-benchmarks.md) | 标杆优先的设计流程、品位闸门、反同质化规则和开源模板研究指南。 |
+| [`references/visual-system-discovery.md`](./references/visual-system-discovery.md) | 面向高级、公开、非同质化网站的命名视觉系统工作流。 |
 | [`references/seo-geo-checklist.md`](./references/seo-geo-checklist.md) | SEO、GEO、AI 搜索就绪、结构化数据、可抓取性和上线索引检查。 |
 | [`references/style-presets.md`](./references/style-presets.md) | 主流高级商业网站视觉风格预设。 |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | 交互和动效预设，包括 Anime.js 使用建议。 |

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Business Website Skill | 月瑀科技</title>
-  <meta name="description" content="Business Website Skill 是由月瑀科技维护的开源 Agent Skill，用于搭建企业官网、B2B 官网、品牌官网和提案级网站原型，内置标杆研究、品位闸门、SEO/GEO 和交付 QA。">
+  <meta name="description" content="Business Website Skill 是由月瑀科技维护的开源 Agent Skill，用于搭建企业官网、B2B 官网、品牌官网和提案级网站原型，内置视觉系统发现、标杆研究、品位闸门、SEO/GEO 和交付 QA。">
   <link rel="canonical" href="https://business-website-skill.vercel.app/">
   <meta property="og:title" content="Business Website Skill | 月瑀科技">
-  <meta property="og:description" content="面向团队和 AI Agent 的商业官网搭建 Skill，内置阶段工作流、标杆研究、品位闸门、SEO/GEO 检查和交付验收脚本。">
+  <meta property="og:description" content="面向团队和 AI Agent 的商业官网搭建 Skill，内置阶段工作流、视觉系统发现、标杆研究、SEO/GEO 检查和交付验收脚本。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://business-website-skill.vercel.app/">
   <meta property="og:image" content="https://business-website-skill.vercel.app/assets/hero-workflow.png">
@@ -19,7 +19,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareSourceCode",
     "name": "Business Website Skill",
-    "description": "An open Agent Skill for building client-ready corporate, B2B, brand, and proposal-grade websites with benchmark-first design taste gates.",
+    "description": "An open Agent Skill for building client-ready corporate, B2B, brand, and proposal-grade websites with visual-system discovery and benchmark-first design taste gates.",
     "codeRepository": "https://github.com/ChuluuMGL/business-website-skill",
     "license": "https://github.com/ChuluuMGL/business-website-skill/blob/main/LICENSE",
     "programmingLanguage": ["Markdown", "Python", "HTML", "CSS", "JavaScript"],
@@ -39,8 +39,8 @@
     </a>
     <nav aria-label="页面导航">
       <a href="#quickstart">快速上手</a>
+      <a href="#systems">视觉系统</a>
       <a href="#examples">网站示例</a>
-      <a href="#coverage">能力覆盖</a>
       <a href="#quality">验收</a>
       <a href="https://github.com/ChuluuMGL/business-website-skill">GitHub</a>
     </nav>
@@ -53,7 +53,7 @@
         <div class="hero-copy-block">
           <p class="eyebrow">Open Agent Skill for business websites</p>
           <h1 id="hero-title">把商业官网搭建成有品位的团队交付流程</h1>
-          <p class="hero-copy">从资料读取、证据地图、网站蓝图、标杆研究、视觉方向、代码实现到 SEO/GEO 与交付检查，帮助 AI Agent 搭建更接近客户交付标准的企业官网、B2B 官网、品牌官网和提案级页面。</p>
+          <p class="hero-copy">从资料读取、证据地图、网站蓝图、标杆研究、视觉系统发现、代码实现到 SEO/GEO 与交付检查，帮助 AI Agent 搭建更接近客户交付标准的企业官网、B2B 官网、品牌官网和提案级页面。</p>
           <div class="hero-actions" aria-label="主要操作">
             <a class="button primary" href="https://github.com/ChuluuMGL/business-website-skill">查看 GitHub</a>
             <a class="button secondary" href="#quickstart">3 分钟上手</a>
@@ -80,7 +80,7 @@
     <section class="proof-strip" aria-label="Skill 摘要指标">
       <dl class="proof-inner">
         <div><dt>7</dt><dd>阶段工作流</dd></div>
-        <div><dt>10</dt><dd>视觉风格族</dd></div>
+        <div><dt>4+</dt><dd>命名视觉系统</dd></div>
         <div><dt>20+</dt><dd>交互预设</dd></div>
         <div><dt>68K</dt><dd>轻量运行包</dd></div>
       </dl>
@@ -108,6 +108,65 @@
           <h3>可验收</h3>
           <p>内置静态审计、SEO/GEO、截图级视觉检查和交付级占位内容拦截，方便团队统一质量标准。</p>
         </article>
+      </div>
+    </section>
+
+    <section class="systems-band" id="systems" aria-labelledby="systems-title">
+      <div class="systems-inner">
+        <div class="section-head">
+          <p class="eyebrow">Visual system discovery</p>
+          <h2 id="systems-title">先选择视觉系统，再开始写页面</h2>
+          <p>新版 workflow 会让 Agent 在高级、公开或多 demo 项目前先给出 2-3 个命名视觉系统。每个系统都要明确版式语法、招牌元素、证明方式、动效签名和移动端保真方式。</p>
+        </div>
+        <div class="systems-grid" aria-label="视觉系统示例">
+          <article class="system-panel chroma">
+            <div class="system-visual" aria-hidden="true">
+              <span class="band hot"></span>
+              <span class="band sun"></span>
+              <span class="band blue"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="system-copy">
+              <p>Editorial Evidence Chroma</p>
+              <h3>编辑部证据彩带</h3>
+              <span>适合品牌、创意、公开 skill 页面。用彩色证据带和出版物式版面替代普通卡片。</span>
+            </div>
+          </article>
+          <article class="system-panel dossier">
+            <div class="system-visual" aria-hidden="true">
+              <span>Source</span>
+              <span>Scope</span>
+              <span>Review</span>
+              <span>Action</span>
+            </div>
+            <div class="system-copy">
+              <p>Executive Proof Dossier</p>
+              <h3>管理层证明档案</h3>
+              <span>适合咨询、代理、运营和 B2B 服务。用证据台账、备忘录和决策表呈现可信度。</span>
+            </div>
+          </article>
+          <article class="system-panel blueprint">
+            <div class="system-visual" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <div class="system-copy">
+              <p>Industrial Field Blueprint</p>
+              <h3>工业现场蓝图</h3>
+              <span>适合环保、能源、设备和工程。用流程线、节点、参数矩阵和证明边界展示专业度。</span>
+            </div>
+          </article>
+          <article class="system-panel command">
+            <div class="system-visual" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <strong>Human review</strong>
+            </div>
+            <div class="system-copy">
+              <p>Product Command Theater</p>
+              <h3>产品指挥剧场</h3>
+              <span>适合 AI SaaS、数据工具和自动化平台。用产品状态、指令面板和审核边界组织页面。</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -246,7 +305,7 @@ scripts/install.sh codex</code></pre>
         <li><span>0</span><strong>问诊</strong><small>网站类型、技术栈、视觉方向</small></li>
         <li><span>1</span><strong>证据地图</strong><small>事实、未知项、禁止编造项</small></li>
         <li><span>2</span><strong>网站蓝图</strong><small>站点地图、区块、CTA、证明模块</small></li>
-        <li><span>3</span><strong>标杆与设计</strong><small>参考研究、品位闸门、视觉路线</small></li>
+        <li><span>3</span><strong>标杆与系统</strong><small>参考研究、品位闸门、命名视觉系统</small></li>
         <li><span>4</span><strong>实施计划</strong><small>文件、组件、素材、交互、命令</small></li>
         <li><span>5</span><strong>构建</strong><small>静态站、React/Vite、Next 或现有栈</small></li>
         <li><span>6-7</span><strong>QA 与交付</strong><small>验证结果、预览方式、未确认事项</small></li>

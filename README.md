@@ -8,7 +8,7 @@
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
-[![Version](https://img.shields.io/badge/version-1.4.4-green)](./skill.json)
+[![Version](https://img.shields.io/badge/version-1.4.5-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
 [![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
@@ -29,7 +29,7 @@ scripts/install.sh codex
 Invoke:
 
 ```text
-Use $business-website-skill with the materials in this folder. First return an evidence map, sitemap, homepage outline, benchmark/taste notes, 3 design directions, and questions that need confirmation.
+Use $business-website-skill with the materials in this folder. First return an evidence map, sitemap, homepage outline, benchmark/taste notes, 3 named visual systems, and questions that need confirmation.
 ```
 
 Before final delivery:
@@ -49,7 +49,8 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 | Evidence map | Confirmed facts, missing facts, forbidden assumptions, and usable asset inventory. |
 | Site blueprint | Sitemap, homepage section outline, CTA path, proof modules, and case/scenario taxonomy. |
 | Benchmark and taste gate | External references, design logic, divergence contract, visual signature, and anti-generic checks for premium work. |
-| Design direction options | 2-3 visual routes when brand direction is unclear. |
+| Visual system discovery | 2-3 named systems with layout grammar, signature element, proof treatment, motion signature, and mobile behavior. |
+| Design direction options | 2-3 visual routes when brand direction is unclear or the user wants to choose before implementation. |
 | Website implementation | Static HTML/CSS/JS, React/Vite, Next.js, or existing-stack edits depending on the project. |
 | SEO/GEO readiness | Titles, descriptions, canonical assumptions, social metadata, JSON-LD candidates, crawlability, and source-backed summary modules. |
 | QA report | Broken asset checks, anchor checks, responsive/mobile review guidance, source-integrity checks, and handoff notes. |
@@ -82,13 +83,23 @@ This skill uses a stage-gated workflow inspired by professional website strategy
 | 0. Intake | Choose site type, stack, visual direction, and delivery mode. | Assumptions and user choices |
 | 1. Evidence map | Separate confirmed facts from unknowns and forbidden assumptions. | Source-backed evidence map |
 | 2. Site blueprint | Build sitemap, homepage outline, proof modules, and CTA path. | Blueprint for review |
-| 3. Benchmark and design direction | For premium/public work, study references first; then offer 2-3 visual routes when needed. | Benchmark notes and direction options |
+| 3. Benchmark and visual system | For premium/public work, study references first; then offer 2-3 named visual systems when needed. | Benchmark notes, system options, and direction choice |
 | 4. Implementation plan | Define files, components, assets, interactions, and checks. | Build plan |
 | 5. Build | Implement with static files, React/Vite/Next, or the existing stack. | Website files |
 | 6. QA | Check source integrity, assets, anchors, layout, mobile, forms, and handoff. | QA result |
 | 7. Handoff | Summarize files, preview/run steps, validation, and remaining confirmations. | Delivery notes |
 
 Default behavior is pragmatic: if the user wants speed, the agent proceeds with conservative assumptions and marks unknowns as `to be confirmed`; if the user wants control, the agent pauses after blueprint and design direction choices.
+
+---
+
+## Visual System Discovery
+
+Version `1.4.5` adds a stronger design gate inspired by public skill and deck references such as [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) and [Zara Zhang's deck site](https://deck.zarazhang.com/). The skill now asks agents to choose a complete visual system before coding premium or public examples.
+
+A valid system must define its business fit, visual thesis, typography, palette, layout grammar, signature element, proof/evidence treatment, image/media treatment, interaction/motion, mobile behavior, and what to avoid. This is meant to prevent three common failures: color-swapped demos, repeated card grids, and mobile pages that lose the original design identity.
+
+Built-in starters include `editorial-evidence-chroma`, `executive-proof-dossier`, `industrial-field-blueprint`, and `product-command-theater`.
 
 ---
 
@@ -129,6 +140,7 @@ The skill does not force every site into the same template. It routes the projec
 | [`references/example-patterns.md`](./references/example-patterns.md) | Reusable patterns from static, React, and service-site examples. |
 | [`references/benchmark-patterns.md`](./references/benchmark-patterns.md) | Business website benchmark patterns and maturity checks. |
 | [`references/design-taste-benchmarks.md`](./references/design-taste-benchmarks.md) | Benchmark-first design workflow, taste gate, anti-generic rules, and open-source template study guide. |
+| [`references/visual-system-discovery.md`](./references/visual-system-discovery.md) | Named visual-system workflow for premium, public, and non-generic website work. |
 | [`references/seo-geo-checklist.md`](./references/seo-geo-checklist.md) | SEO, GEO, AI-search readiness, structured-data, crawlability, and launch-indexing checks. |
 | [`references/style-presets.md`](./references/style-presets.md) | Premium visual style presets for mainstream business website directions. |
 | [`references/interaction-presets.md`](./references/interaction-presets.md) | Interaction and animation presets, including Anime.js guidance. |

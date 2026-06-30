@@ -1,8 +1,8 @@
 {
   "name": "business-website-skill",
   "display_name": "Business Website Skill",
-  "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, benchmark-first design taste gates, SEO/GEO readiness, implementation, and QA.",
-  "version": "1.4.4",
+  "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, named visual-system discovery, benchmark-first design taste gates, SEO/GEO readiness, implementation, and QA.",
+  "version": "1.4.5",
   "author": "月瑀科技 YUEYU TECH",
   "copyright": "Copyright (c) 2026 月瑀科技 YUEYU TECH",
   "maintainer": {
@@ -29,6 +29,9 @@
     "static website",
     "benchmark-first design",
     "design taste",
+    "visual system discovery",
+    "show don't tell previews",
+    "anti-generic design",
     "SEO",
     "GEO",
     "AI search optimization",
@@ -43,6 +46,7 @@
     "Evidence map",
     "Site blueprint",
     "Benchmark and taste-gate notes",
+    "Named visual system options",
     "Design direction options",
     "Motion tier recommendation",
     "SEO/GEO readiness report",
@@ -91,6 +95,7 @@
   "workflow_references": {
     "agent_experience": "references/agent-experience.md",
     "design_taste_benchmarks": "references/design-taste-benchmarks.md",
+    "visual_system_discovery": "references/visual-system-discovery.md",
     "delivery_standards": "references/delivery-standards.md",
     "qa_checklist": "references/qa-checklist.md",
     "seo_geo_checklist": "references/seo-geo-checklist.md",
@@ -107,6 +112,12 @@
     "bold-creative-agency",
     "public-sector-civic",
     "fintech-secure"
+  ],
+  "visual_systems": [
+    "editorial-evidence-chroma",
+    "executive-proof-dossier",
+    "industrial-field-blueprint",
+    "product-command-theater"
   ],
   "interaction_presets": [
     "css-only-business-motion",

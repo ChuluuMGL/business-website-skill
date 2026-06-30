@@ -12,6 +12,8 @@ These references are examples of useful design or skill behavior. Use them as be
 |---|---|---|
 | Anthropic `frontend-design` skill | Distinctive visual point of view, subject-specific design, one justified aesthetic risk, self-critique before code. | https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md |
 | `guizang-ppt-skill` | Opinionated style systems, constrained layouts, theme selection, visual preflight, validation scripts, previewable examples. | https://github.com/op7418/guizang-ppt-skill |
+| `frontend-slides` | Show-don't-only-tell previews, compact style metadata, progressive disclosure, anti-generic constraints, and visual validation before final output. | https://github.com/zarazhangrui/frontend-slides |
+| Zara Zhang deck site | Named visual system, signature graphic language, strong typography, evidence/card framing, and mobile identity preservation. | https://deck.zarazhang.com/ |
 | ScrewFast | Astro/Tailwind business-site structure, product/service pages, docs/blog integration, SEO and content architecture. | https://github.com/mearashadowfax/ScrewFast |
 | AstroWind | Production-ready Astro site architecture, SEO metadata, blog/resource sections, sitemap and responsive best practices. | https://github.com/onwidget/astrowind |
 | Cruip Simple Light | SaaS and online-service landing-page rhythm, clear hero, sections, CTA hierarchy, and minimal React/Next implementation. | https://github.com/cruip/tailwind-landing-page-template |
@@ -77,6 +79,18 @@ Distinct from other demos by:
 ```
 
 Reject the plan if it could be reused unchanged for a different industry. A water-treatment engineering website, an AI SaaS launch page, and a B2B service consultancy must not share the same hero structure, card rhythm, proof module, motion pattern, and footer shape.
+
+For higher-stakes work, replace the compact taste plan with the full visual-system canvas in `references/visual-system-discovery.md`. A preset such as `ai-saas-data-cloud` or `industrial-precision` is not enough by itself. The selected direction needs a name, layout grammar, proof treatment, signature element, motion signature, and mobile behavior.
+
+## Website Lessons From Deck References
+
+Presentation and slide-system references can raise taste, but their logic must be adapted to responsive websites.
+
+- Keep the "show, do not only tell" habit: when the user is comparing styles, create previewable systems, not abstract adjectives.
+- Use a signature element that carries meaning: chroma bands, evidence ledgers, process rails, command surfaces, or case boards.
+- Treat proof as design material: reports, certificates, dashboards, case photos, and source labels should be framed intentionally, not dropped into generic cards.
+- Preserve identity on mobile: the responsive version should keep the signature element, not collapse into indistinguishable stacked cards.
+- Do not copy fixed 16:9 slide staging into a website. Convert it into scroll-native sections, flexible containers, and breakpoints.
 
 ## Anti-Generic Rules
 
