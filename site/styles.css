@@ -546,6 +546,10 @@ pre {
   line-height: 1.65;
 }
 
+pre code {
+  white-space: pre;
+}
+
 .example-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -693,6 +697,17 @@ pre {
     gap: 14px;
     padding-bottom: 4px;
     white-space: nowrap;
+  }
+
+  pre {
+    overflow-x: visible;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  pre code {
+    white-space: inherit;
+    word-break: inherit;
   }
 
   .hero {
