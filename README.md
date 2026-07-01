@@ -16,6 +16,18 @@
 
 [Live Site](https://business-website-skill.vercel.app/) | [Public Website Examples](https://business-website-skill.vercel.app/#examples) | [Workflow Fixtures](./examples/) | [Testing Matrix](./TESTING.md)
 
+### Real showcases — click to open the live demo
+
+<table>
+  <tr>
+    <td width="33.33%" align="center"><a href="https://business-website-skill.vercel.app/examples/b2b-service/"><img src="./site/assets/example-b2b-hero.png" alt="B2B service website demo" width="100%"></a><br><sub>B2B service · executive-b2b-trust</sub></td>
+    <td width="33.33%" align="center"><a href="https://business-website-skill.vercel.app/examples/industrial-green-tech/"><img src="./site/assets/example-industrial-hero.png" alt="Industrial green-tech demo" width="100%"></a><br><sub>Industrial · industrial-precision</sub></td>
+    <td width="33.33%" align="center"><a href="https://business-website-skill.vercel.app/examples/ai-saas-product/"><img src="./site/assets/example-ai-hero.png" alt="AI SaaS product demo" width="100%"></a><br><sub>AI SaaS · ai-saas-data-cloud</sub></td>
+  </tr>
+</table>
+
+These are real, audited outputs of the skill — not mockups. Each demo is generated from its `examples/<name>/brief.md` and passes `audit_static_site.py --strict-seo --no-placeholders` with zero errors (verified by `scripts/smoke_examples.py`).
+
 ---
 
 ## 3-Minute Quick Start

@@ -16,6 +16,18 @@
 
 [在线展示页](https://business-website-skill.vercel.app/) | [公开网站示例](https://business-website-skill.vercel.app/#examples) | [合成任务输入](./examples/) | [测试矩阵](./TESTING.md)
 
+### 真实案例 · 点击直达线上 demo
+
+<table>
+  <tr>
+    <td width="33.33%" align="center"><a href="https://business-website-skill.vercel.app/examples/b2b-service/"><img src="./site/assets/example-b2b-hero.png" alt="B2B 服务官网示例" width="100%"></a><br><sub>B2B 服务 · executive-b2b-trust</sub></td>
+    <td width="33.33%" align="center"><a href="https://business-website-skill.vercel.app/examples/industrial-green-tech/"><img src="./site/assets/example-industrial-hero.png" alt="工业环保科技示例" width="100%"></a><br><sub>工业环保 · industrial-precision</sub></td>
+    <td width="33.33%" align="center"><a href="https://business-website-skill.vercel.app/examples/ai-saas-product/"><img src="./site/assets/example-ai-hero.png" alt="AI SaaS 产品示例" width="100%"></a><br><sub>AI SaaS · ai-saas-data-cloud</sub></td>
+  </tr>
+</table>
+
+以上均为本 skill 的真实、经审计产出——非效果图。每个 demo 由对应的 `examples/<name>/brief.md` 生成，并通过 `audit_static_site.py --strict-seo --no-placeholders` 零错误校验（由 `scripts/smoke_examples.py` 自动验证）。
+
 ---
 
 ## 3 分钟上手
