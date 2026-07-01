@@ -201,14 +201,14 @@ nav a:focus-visible {
 
 /* B2B editorial dossier */
 .demo-b2b {
-  --paper: #f6efe3;
-  --sheet: #fffaf1;
-  --ink: #171f1a;
-  --muted: #6e6356;
-  --line: #d9c8ae;
-  --green: #0d6347;
-  --brown: #9c5b16;
-  --blue: #24384f;
+  --paper: #eef1f7;
+  --sheet: #f7f9fc;
+  --ink: #101a2b;
+  --muted: #566378;
+  --line: #cdd8e6;
+  --green: #1c4c9e;
+  --brown: #b08534;
+  --blue: #0f2a52;
   background: var(--paper);
   color: var(--ink);
 }
@@ -218,7 +218,7 @@ nav a:focus-visible {
   grid-template-columns: minmax(180px, 1fr) auto;
   align-items: center;
   padding: 18px var(--pad);
-  background: rgba(246, 239, 227, 0.92);
+  background: rgba(238, 242, 247, 0.92);
   border-bottom: 1px solid rgba(23, 31, 26, 0.12);
   backdrop-filter: blur(14px);
 }
@@ -227,7 +227,7 @@ nav a:focus-visible {
   padding: 7px;
   border: 1px solid rgba(23, 31, 26, 0.12);
   border-radius: 999px;
-  background: rgba(255, 250, 241, 0.72);
+  background: rgba(248, 250, 253, 0.72);
   font-size: 14px;
   font-weight: 900;
 }
@@ -239,9 +239,9 @@ nav a:focus-visible {
   padding: 74px 0 64px;
   border-bottom: 1px solid var(--line);
   background:
-    linear-gradient(rgba(156, 91, 22, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(156, 91, 22, 0.06) 1px, transparent 1px),
-    radial-gradient(circle at 82% 20%, rgba(156, 91, 22, 0.15), transparent 26%),
+    linear-gradient(rgba(28, 76, 158, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 76, 158, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at 82% 20%, rgba(28, 76, 158, 0.15), transparent 26%),
     var(--paper);
   background-size: 64px 64px, 64px 64px, auto, auto;
 }
@@ -269,7 +269,7 @@ nav a:focus-visible {
 
 .b2b-hero-copy {
   max-width: 640px;
-  color: #3d4a43;
+  color: #2a3340;
   font-size: 18px;
   line-height: 1.85;
 }
@@ -297,8 +297,8 @@ nav a:focus-visible {
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: 0;
-  background: rgba(255, 250, 241, 0.9);
-  box-shadow: 0 28px 70px rgba(83, 59, 30, 0.12);
+  background: rgba(248, 250, 253, 0.9);
+  box-shadow: 0 28px 70px rgba(30, 52, 92, 0.12);
 }
 
 .dossier-board::before {
@@ -345,7 +345,7 @@ nav a:focus-visible {
 
 .dossier-index div:nth-child(odd) {
   border-right: 1px solid var(--line);
-  background: rgba(239, 227, 210, 0.42);
+  background: rgba(226, 232, 242, 0.42);
 }
 
 .dossier-index div:nth-last-child(-n+2) {
@@ -490,8 +490,8 @@ nav a:focus-visible {
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
-    linear-gradient(rgba(156, 91, 22, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(156, 91, 22, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(28, 76, 158, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 76, 158, 0.06) 1px, transparent 1px);
   background-size: 54px 54px;
 }
 
@@ -505,7 +505,7 @@ nav a:focus-visible {
   left: 14%;
   right: 12%;
   height: 2px;
-  background: rgba(156, 91, 22, 0.32);
+  background: rgba(28, 76, 158, 0.32);
 }
 
 .evidence-map i:nth-child(1) {
@@ -611,7 +611,7 @@ nav a:focus-visible {
   background:
     linear-gradient(rgba(23, 31, 26, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(23, 31, 26, 0.05) 1px, transparent 1px),
-    rgba(239, 227, 210, 0.35);
+    rgba(226, 232, 242, 0.35);
   background-size: 48px 48px;
 }
 
@@ -633,7 +633,7 @@ nav a:focus-visible {
 
 .b2b-footer {
   border-top: 1px solid var(--line);
-  background: #eee0cc;
+  background: #dfe6f0;
   color: var(--muted);
 }
 
@@ -646,7 +646,7 @@ nav a:focus-visible {
   border: 1px solid var(--line);
   background:
     linear-gradient(90deg, var(--green) 0 8px, transparent 8px),
-    linear-gradient(135deg, rgba(255, 250, 241, 0.96), rgba(239, 227, 210, 0.72));
+    linear-gradient(135deg, rgba(248, 250, 253, 0.96), rgba(226, 232, 242, 0.72));
 }
 
 /* Industrial engineering system */
