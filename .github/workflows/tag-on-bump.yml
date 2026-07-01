@@ -1,0 +1,56 @@
+name: Tag on version bump
+
+# Keeps skill.json version, the git tag, and the GitHub Release locked in step.
+# On every push to main, if skill.json's version has no matching v<x.y.z> tag,
+# this creates the tag + a generated-notes release. This prevents the drift seen
+# at 1.4.6 (code claimed 1.4.6, latest tag was v1.3.7, so tag/badge/install were
+# out of sync).
+#
+# Caveat: releases created with the default GITHUB_TOKEN do not emit a
+# `release: published` event that triggers OTHER workflows (GitHub blocks
+# GITHUB_TOKEN-initiated events from spawning downstream runs). So this workflow
+# fixes tag/badge drift on its own; to ALSO auto-publish to ClawHub on a bump,
+# either (a) add a PAT here as `tag-token`, or (b) run the ClawHub workflow
+# manually / add a `push: tags: ["v*"]` trigger to clawhub-publish.yml.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tag-on-bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create tag + release if skill.json version is untagged
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          VERSION=$(jq -r '.version' skill.json)
+          TAG="v${VERSION}"
+          echo "skill.json version: ${VERSION} -> candidate tag: ${TAG}"
+
+          if git ls-remote --tags origin "refs/tags/${TAG}" | grep -q "${TAG}"; then
+            echo "Tag ${TAG} already exists on origin; nothing to do."
+            exit 0
+          fi
+
+          if [[ ! "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Version ${VERSION} is not a clean semver; skipping auto-tag."
+            exit 0
+          fi
+
+          echo "No existing ${TAG}; creating tag + release..."
+          gh release create "${TAG}" \
+            --title "business-website-skill ${TAG}" \
+            --generate-notes \
+            --target main
+          echo "Created ${TAG}."
