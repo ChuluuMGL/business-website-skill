@@ -1,6 +1,6 @@
 ---
 name: business-website-skill
-description: Build client-ready corporate, brand, B2B, service,招商,投标, and proposal-grade business websites from source materials, existing static or React/Vite/Next sites, PPT/PDF/image assets, and reference sites. Use when an agent needs to create, refactor, polish, or QA a business website prototype or launch preview with phased discovery, evidence mapping, sitemap/outline, SEO/GEO readiness, design direction options, implementation, delivery checks, and standard/premium/showcase interaction choices. Not focused on e-commerce storefronts.
+description: Build client-ready corporate, brand, B2B, service,招商,投标, and proposal-grade business websites from source materials, existing static or React/Vite/Next sites, PPT/PDF/image assets, and reference sites. Use when an agent needs to create, refactor, polish, or QA a business website prototype or launch preview with phased discovery, evidence mapping, sitemap/outline, SEO/GEO readiness, design direction options, implementation, delivery checks, and standard/premium/showcase interaction choices. Scoped to the marketing and presentation layer (corporate, brand, B2B, service, proposal, showcase, personal-brand sites); does not build transactional e-commerce (cart, checkout, payments) or application backends needing logins, CRUD, or CMS workflows.
 ---
 
 # Business Website Skill
@@ -20,15 +20,13 @@ Build business websites that are credible enough for client presentation or laun
 
 ## Operating Rules
 
+- **Never store client-private facts, contact details, credentials, `.env` values, server IPs, or deployment secrets in this skill.** Keep templates generic and placeholder-based, and keep unsupported metrics as pending or unavailable — never convert an unknown value to `0`.
 - Inspect real files and materials before writing copy or code.
 - Do not invent qualifications, customers, years, metrics, addresses, contacts, awards, case results, news, or backend submissions.
 - Use `待补充`, `待确认`, or `示例待确认` for missing facts while keeping the visual structure complete.
 - Keep the existing stack unless the requested delivery shape requires a change.
 - Ask for user choice only when the decision materially changes the site. If the user asks to proceed quickly, choose a conservative default and state assumptions.
-- Read `references/agent-experience.md` when choosing interaction mode, deciding whether to ask questions, presenting A/B/C options, or managing checkpoints.
-- Read `references/seo-geo-checklist.md` for public launch, SEO-sensitive, GEO-sensitive, AI-search-sensitive, or multi-page website work.
-- Read `references/design-taste-benchmarks.md` before public examples, premium/client-facing redesigns, or any request for higher-taste, elegant, distinctive, advanced, or non-generic visual output.
-- Read `references/visual-system-discovery.md` when the user asks for distinctive style, premium taste, non-generic demos, visual previews, style families, or when several website examples must not look like variants of one template.
+- For specialized work, consult the [Reference Routing](#reference-routing) section for which `references/*.md` to load (interaction mode, SEO/GEO, design taste, visual systems, delivery, QA) rather than reading them all upfront. Phase Workflow below also notes the right reference at the right phase.
 
 ## Phase Workflow
 
@@ -176,9 +174,3 @@ Final response should include:
 - Read `references/seo-geo-checklist.md` when planning SEO, GEO, public launch metadata, AI-search readiness, robots/indexing, or structured data.
 - Read `references/delivery-standards.md` before significant visual or responsive work.
 - Read `references/qa-checklist.md` before final handoff or review.
-
-## Public Safety
-
-- Do not store client-private facts, contact details, credentials, `.env` values, server IPs, or deployment secrets in this skill.
-- Keep templates generic and placeholder-based.
-- Keep unsupported metrics as pending or unavailable; never convert unknown values to `0`.
