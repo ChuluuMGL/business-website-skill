@@ -829,15 +829,51 @@ pre code {
   overflow: hidden;
 }
 
+.example-grid picture {
+  position: relative;
+  display: block;
+  height: clamp(170px, 17vw, 226px);
+  overflow: hidden;
+  background: #edf2ee;
+  border-bottom: 1px solid var(--line);
+}
+
+.example-grid picture::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 12px;
+  width: 44px;
+  height: 8px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 4px 4px, rgba(255, 255, 255, 0.92) 0 3px, transparent 3.5px),
+    radial-gradient(circle at 18px 4px, rgba(255, 255, 255, 0.72) 0 3px, transparent 3.5px),
+    radial-gradient(circle at 32px 4px, rgba(255, 255, 255, 0.58) 0 3px, transparent 3.5px);
+  opacity: 0.88;
+}
+
+.example-grid picture::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 34%;
+  background: linear-gradient(180deg, transparent, rgba(6, 22, 17, 0.2));
+  pointer-events: none;
+}
+
 .example-grid img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
+  transform: scale(1.02);
 }
 
 .example-grid div {
-  min-height: 208px;
+  min-height: 178px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -853,7 +889,7 @@ pre code {
 }
 
 .example-grid h3 {
-  min-height: 2.5em;
+  min-height: 0;
 }
 
 .example-grid a {
@@ -1085,6 +1121,14 @@ pre code {
   .quality-grid,
   .timeline {
     grid-template-columns: 1fr;
+  }
+
+  .example-grid picture {
+    height: 178px;
+  }
+
+  .example-grid div {
+    min-height: 164px;
   }
 
   .systems-band {
