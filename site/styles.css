@@ -1126,3 +1126,16 @@ pre code {
     transition: none !important;
   }
 }
+
+/* Slim gallery hero — single column (no workflow visual), ~half-screen height. */
+.hero.hero-slim { min-height: 560px; }
+.hero.hero-slim .hero-inner {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
+  padding: 128px 0 92px;
+}
+.hero.hero-slim .hero-copy { max-width: 56ch; }
+@media (max-width: 720px) {
+  .hero.hero-slim { min-height: 460px; }
+  .hero.hero-slim .hero-inner { padding: 108px 0 72px; }
+}

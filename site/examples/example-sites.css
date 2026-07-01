@@ -2641,3 +2641,50 @@ nav a:focus-visible {
     transform: none;
   }
 }
+
+/* Shared demo frame nav — injected by example-sites.js as a small floating
+   capsule so visitors can jump between demos and back to the gallery without
+   touching each demo's own header. Neutral dark-glass so it never clashes
+   with a demo's palette. Scoped under .demo-frame-nav. */
+.demo-frame-nav {
+  position: fixed;
+  z-index: 2147483000;
+  right: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(12, 14, 17, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.32);
+  -webkit-backdrop-filter: saturate(150%) blur(10px);
+  backdrop-filter: saturate(150%) blur(10px);
+  font: 600 12px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.demo-frame-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 120ms ease, color 120ms ease;
+}
+.demo-frame-nav a:hover { background: rgba(255, 255, 255, 0.16); color: #fff; }
+.demo-frame-nav a.frame-nav-primary { background: #fff; color: #0c0e11; }
+.demo-frame-nav a.frame-nav-primary:hover { background: #e9eaec; color: #0c0e11; }
+.demo-frame-nav .frame-nav-divider {
+  width: 1px;
+  align-self: center;
+  height: 16px;
+  margin: 0 2px;
+  background: rgba(255, 255, 255, 0.18);
+}
+@media (max-width: 560px) {
+  .demo-frame-nav { right: 10px; left: 10px; bottom: 10px; justify-content: center; }
+  .demo-frame-nav a { padding: 9px 10px; }
+}

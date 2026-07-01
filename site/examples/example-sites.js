@@ -80,3 +80,43 @@ for (const tabs of document.querySelectorAll('[data-tabs]')) {
 for (const command of document.querySelectorAll('[data-command-states]')) {
   wireToggleGroup(command, '[data-command-button]', '[data-command-panel]', 'data-command-button', 'data-command-panel');
 }
+
+// Shared demo frame nav. Adds a small floating capsule to every example demo
+// (this script is loaded by all three) so visitors can return to the gallery
+// or move between demos without using the browser back button. It does not
+// touch each demo's own header, so the "real website" showcase illusion stays.
+(function attachDemoFrameNav() {
+  const demos = [
+    { slug: 'b2b-service', label: 'B2B Service' },
+    { slug: 'industrial-green-tech', label: 'Industrial Green Tech' },
+    { slug: 'ai-saas-product', label: 'AI SaaS Product' },
+  ];
+  const path = window.location.pathname;
+  const current = demos.findIndex((d) => path.indexOf('/examples/' + d.slug) !== -1);
+  if (current === -1) return; // not on a demo page — render nothing
+
+  const isEn = (document.documentElement.lang || '').indexOf('en') === 0;
+  const gallery = isEn ? '/en/#examples' : '/#examples';
+  const t = isEn
+    ? { gallery: 'Gallery', ariaNav: 'Demo navigation' }
+    : { gallery: '画廊', ariaNav: '示例导航' };
+  const prev = demos[(current - 1 + demos.length) % demos.length];
+  const next = demos[(current + 1) % demos.length];
+
+  function mount() {
+    if (document.querySelector('.demo-frame-nav')) return;
+    const nav = document.createElement('nav');
+    nav.className = 'demo-frame-nav';
+    nav.setAttribute('aria-label', t.ariaNav);
+    nav.innerHTML =
+      '<a href="' + gallery + '">← ' + t.gallery + '</a>' +
+      '<span class="frame-nav-divider"></span>' +
+      '<a href="/examples/' + prev.slug + '/" title="' + prev.label + '" aria-label="' + prev.label + '">‹</a>' +
+      '<a href="/examples/' + next.slug + '/" title="' + next.label + '" aria-label="' + next.label + '">›</a>' +
+      '<span class="frame-nav-divider"></span>' +
+      '<a class="frame-nav-primary" href="https://github.com/ChuluuMGL/business-website-skill" target="_blank" rel="noopener">GitHub</a>';
+    document.body.appendChild(nav);
+  }
+  if (document.body) mount();
+  else document.addEventListener('DOMContentLoaded', mount, { once: true });
+})();
