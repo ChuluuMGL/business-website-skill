@@ -9,12 +9,14 @@ from pathlib import Path
 
 
 DEFAULT_OUTPUT = Path("dist/business-website-skill-runtime.zip")
+# NOTE: The bilingual marketing READMEs (~30 KB each) are intentionally excluded
+# from the runtime package. Agents execute from SKILL.md + references + presets +
+# templates + scripts; the READMEs are human-facing install/marketing docs and
+# are the single biggest non-essential weight in the package.
 INCLUDE_PATHS = [
     "SKILL.md",
     "LICENSE",
     "NOTICE",
-    "README.md",
-    "README.zh-CN.md",
     "TESTING.md",
     "agents/openai.yaml",
     "assets/presets",
