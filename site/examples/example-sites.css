@@ -1295,14 +1295,14 @@ nav a:focus-visible {
 
 /* AI command center */
 .demo-ai {
-  --bg: #07121f;
-  --panel: #0c1b2a;
-  --panel-2: #10243a;
-  --ink: #edf7ff;
-  --muted: #9fb3c4;
-  --line: #1d3d59;
-  --green: #20b386;
-  --blue: #367de1;
+  --bg: #0f0a20;
+  --panel: #160f2e;
+  --panel-2: #1f1640;
+  --ink: #f3edff;
+  --muted: #a99fc4;
+  --line: #2e2159;
+  --green: #8b5cf6;
+  --blue: #a78bfa;
   --gold: #f0c27d;
   background: var(--bg);
   color: var(--ink);
@@ -1313,8 +1313,8 @@ nav a:focus-visible {
   grid-template-columns: minmax(210px, 1fr) auto;
   align-items: center;
   padding: 16px var(--pad);
-  background: rgba(7, 18, 31, 0.88);
-  border-bottom: 1px solid rgba(91, 162, 208, 0.16);
+  background: rgba(15, 10, 32, 0.88);
+  border-bottom: 1px solid rgba(168, 148, 208, 0.16);
   backdrop-filter: blur(14px);
 }
 
@@ -1324,9 +1324,9 @@ nav a:focus-visible {
 
 .demo-ai nav {
   padding: 6px;
-  border: 1px solid rgba(91, 162, 208, 0.18);
+  border: 1px solid rgba(168, 148, 208, 0.18);
   border-radius: 999px;
-  background: rgba(12, 27, 42, 0.74);
+  background: rgba(22, 15, 46, 0.74);
   font-size: 14px;
   font-weight: 900;
 }
@@ -1337,9 +1337,9 @@ nav a:focus-visible {
   min-height: 708px;
   padding: 76px 0 64px;
   background:
-    radial-gradient(circle at var(--mx, 76%) var(--my, 22%), rgba(54, 125, 225, 0.28), transparent 26%),
-    radial-gradient(circle at 88% 70%, rgba(32, 179, 134, 0.14), transparent 24%),
-    linear-gradient(135deg, #050d18 0%, #071827 56%, #091f2f 100%);
+    radial-gradient(circle at var(--mx, 76%) var(--my, 22%), rgba(139, 92, 246, 0.28), transparent 26%),
+    radial-gradient(circle at 88% 70%, rgba(139, 92, 246, 0.14), transparent 24%),
+    linear-gradient(135deg, #0a0518 0%, #120a27 56%, #160e30 100%);
 }
 
 .ai-hero::before {
@@ -1347,8 +1347,8 @@ nav a:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(91, 162, 208, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(91, 162, 208, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(168, 148, 208, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 148, 208, 0.1) 1px, transparent 1px);
   background-size: 74px 74px;
   opacity: 0.7;
 }
@@ -1357,7 +1357,7 @@ nav a:focus-visible {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 18%, rgba(32, 179, 134, 0.2), transparent 42%);
+  background: linear-gradient(120deg, transparent 18%, rgba(139, 92, 246, 0.2), transparent 42%);
   opacity: 0.55;
   animation: ai-scan 8s ease-in-out infinite alternate;
 }
@@ -1393,12 +1393,12 @@ nav a:focus-visible {
 }
 
 .demo-ai .button.primary {
-  color: #061622;
+  color: #140a26;
   background: linear-gradient(135deg, var(--green), #6ee3bd);
 }
 
 .demo-ai .button.secondary {
-  border-color: rgba(91, 162, 208, 0.38);
+  border-color: rgba(168, 148, 208, 0.38);
   color: var(--ink);
 }
 
@@ -1406,9 +1406,9 @@ nav a:focus-visible {
   position: relative;
   min-height: 500px;
   overflow: hidden;
-  border: 1px solid rgba(91, 162, 208, 0.26);
+  border: 1px solid rgba(168, 148, 208, 0.26);
   border-radius: 8px;
-  background: rgba(7, 18, 31, 0.72);
+  background: rgba(15, 10, 32, 0.72);
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
 }
 
@@ -1417,8 +1417,8 @@ nav a:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(91, 162, 208, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(91, 162, 208, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(168, 148, 208, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 148, 208, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
@@ -1430,8 +1430,8 @@ nav a:focus-visible {
   justify-content: space-between;
   gap: 12px;
   padding: 18px 20px;
-  border-bottom: 1px solid rgba(91, 162, 208, 0.2);
-  background: rgba(12, 27, 42, 0.8);
+  border-bottom: 1px solid rgba(168, 148, 208, 0.2);
+  background: rgba(22, 15, 46, 0.8);
 }
 
 .command-topbar span {
@@ -1461,9 +1461,9 @@ nav a:focus-visible {
 .terminal-card,
 .signal-graph,
 .review-card {
-  border: 1px solid rgba(91, 162, 208, 0.22);
+  border: 1px solid rgba(168, 148, 208, 0.22);
   border-radius: 8px;
-  background: rgba(12, 27, 42, 0.78);
+  background: rgba(22, 15, 46, 0.78);
 }
 
 .terminal-card {
@@ -1473,7 +1473,7 @@ nav a:focus-visible {
 
 .terminal-card code {
   display: block;
-  color: #bde8d9;
+  color: #dcd6f5;
   font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 13px;
   line-height: 1.8;
@@ -1551,9 +1551,9 @@ nav a:focus-visible {
 .review-card div {
   min-height: 86px;
   padding: 16px;
-  border: 1px solid rgba(91, 162, 208, 0.2);
+  border: 1px solid rgba(168, 148, 208, 0.2);
   border-radius: 8px;
-  background: rgba(7, 18, 31, 0.64);
+  background: rgba(15, 10, 32, 0.64);
 }
 
 .review-card strong {
@@ -1576,15 +1576,15 @@ nav a:focus-visible {
   width: min(var(--max), calc(100% - 40px));
   margin: -44px auto 0;
   overflow: hidden;
-  border: 1px solid rgba(91, 162, 208, 0.24);
+  border: 1px solid rgba(168, 148, 208, 0.24);
   border-radius: 8px;
-  background: rgba(91, 162, 208, 0.24);
+  background: rgba(168, 148, 208, 0.24);
 }
 
 .ai-product-bar div {
   min-height: 128px;
   padding: 22px;
-  background: rgba(12, 27, 42, 0.94);
+  background: rgba(22, 15, 46, 0.94);
 }
 
 .ai-product-bar span {
@@ -1614,11 +1614,11 @@ nav a:focus-visible {
 }
 
 .demo-ai .final-cta {
-  border: 1px solid rgba(91, 162, 208, 0.24);
+  border: 1px solid rgba(168, 148, 208, 0.24);
   border-radius: 8px;
   background:
-    radial-gradient(circle at 82% 20%, rgba(32, 179, 134, 0.16), transparent 28%),
-    linear-gradient(135deg, rgba(16, 36, 58, 0.94), rgba(7, 18, 31, 0.9));
+    radial-gradient(circle at 82% 20%, rgba(139, 92, 246, 0.16), transparent 28%),
+    linear-gradient(135deg, rgba(31, 22, 64, 0.94), rgba(15, 10, 32, 0.9));
 }
 
 .demo-ai .final-cta p {
@@ -2006,8 +2006,8 @@ nav a:focus-visible {
 
 .industrial-status span {
   padding: 7px 10px;
-  border: 1px solid rgba(180, 220, 214, 0.18);
-  color: rgba(239, 248, 245, 0.68);
+  border: 1px solid rgba(200, 188, 224, 0.18);
+  color: rgba(243, 240, 252, 0.68);
   font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
@@ -2017,7 +2017,7 @@ nav a:focus-visible {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
-  border-top: 1px solid rgba(180, 220, 214, 0.16);
+  border-top: 1px solid rgba(200, 188, 224, 0.16);
   font-size: 12px;
   letter-spacing: 0;
 }
@@ -2026,7 +2026,7 @@ nav a:focus-visible {
   min-height: 38px;
   display: grid;
   place-items: center;
-  border-right: 1px solid rgba(180, 220, 214, 0.14);
+  border-right: 1px solid rgba(200, 188, 224, 0.14);
 }
 
 .demo-industrial .industrial-nav a:last-child {
@@ -2048,13 +2048,13 @@ nav a:focus-visible {
 .industrial-footer-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border: 1px solid rgba(180, 220, 214, 0.18);
+  border: 1px solid rgba(200, 188, 224, 0.18);
 }
 
 .industrial-footer-grid div {
   min-height: 82px;
   padding: 16px;
-  border-right: 1px solid rgba(180, 220, 214, 0.18);
+  border-right: 1px solid rgba(200, 188, 224, 0.18);
 }
 
 .industrial-footer-grid div:last-child {
@@ -2088,9 +2088,9 @@ nav a:focus-visible {
   gap: 12px;
   min-height: 42px;
   padding: 0 14px;
-  border: 1px solid rgba(91, 162, 208, 0.22);
+  border: 1px solid rgba(168, 148, 208, 0.22);
   border-radius: 999px;
-  background: rgba(12, 27, 42, 0.76);
+  background: rgba(22, 15, 46, 0.76);
 }
 
 .ai-prompt span {
@@ -2101,7 +2101,7 @@ nav a:focus-visible {
 
 .ai-prompt code {
   overflow: hidden;
-  color: #bde8d9;
+  color: #dcd6f5;
   font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 12px;
   text-overflow: ellipsis;
@@ -2120,7 +2120,7 @@ nav a:focus-visible {
   min-height: 34px;
   align-items: center;
   padding: 0 10px;
-  border: 1px solid rgba(91, 162, 208, 0.18);
+  border: 1px solid rgba(168, 148, 208, 0.18);
   border-radius: 999px;
 }
 
@@ -2147,7 +2147,7 @@ nav a:focus-visible {
 
 .ai-footer-log span {
   padding: 8px 10px;
-  border: 1px solid rgba(91, 162, 208, 0.2);
+  border: 1px solid rgba(168, 148, 208, 0.2);
   border-radius: 999px;
   color: var(--muted);
   font-size: 12px;
@@ -2159,9 +2159,9 @@ nav a:focus-visible {
   grid-template-columns: 230px 1fr;
   gap: 18px;
   padding: 22px;
-  border: 1px solid rgba(91, 162, 208, 0.24);
+  border: 1px solid rgba(168, 148, 208, 0.24);
   border-radius: 8px;
-  background: rgba(12, 27, 42, 0.78);
+  background: rgba(22, 15, 46, 0.78);
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.24);
 }
 
@@ -2174,9 +2174,9 @@ nav a:focus-visible {
 .command-state-buttons button {
   min-height: 50px;
   padding: 0 16px;
-  border: 1px solid rgba(91, 162, 208, 0.24);
+  border: 1px solid rgba(168, 148, 208, 0.24);
   border-radius: 8px;
-  background: rgba(7, 18, 31, 0.62);
+  background: rgba(15, 10, 32, 0.62);
   color: var(--ink);
   font-weight: 900;
   text-align: left;
@@ -2184,7 +2184,7 @@ nav a:focus-visible {
 }
 
 .command-state-buttons button.is-active {
-  color: #061622;
+  color: #140a26;
   background: linear-gradient(135deg, var(--green), #6ee3bd);
 }
 
@@ -2192,11 +2192,11 @@ nav a:focus-visible {
   position: relative;
   min-height: 360px;
   overflow: hidden;
-  border: 1px solid rgba(91, 162, 208, 0.24);
+  border: 1px solid rgba(168, 148, 208, 0.24);
   border-radius: 8px;
   background:
-    radial-gradient(circle at 76% 20%, rgba(32, 179, 134, 0.18), transparent 28%),
-    rgba(7, 18, 31, 0.72);
+    radial-gradient(circle at 76% 20%, rgba(139, 92, 246, 0.18), transparent 28%),
+    rgba(15, 10, 32, 0.72);
 }
 
 .screen-lines {
@@ -2210,7 +2210,7 @@ nav a:focus-visible {
 .screen-lines span {
   height: 12px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(54, 125, 225, 0.42), rgba(32, 179, 134, 0.74));
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.42), rgba(139, 92, 246, 0.74));
 }
 
 .screen-lines span:nth-child(2) {
@@ -2258,9 +2258,9 @@ nav a:focus-visible {
   min-width: 0;
   min-height: 210px;
   padding: 24px;
-  border: 1px solid rgba(91, 162, 208, 0.24);
+  border: 1px solid rgba(168, 148, 208, 0.24);
   border-radius: 8px;
-  background: linear-gradient(145deg, rgba(12, 27, 42, 0.94), rgba(10, 22, 34, 0.86));
+  background: linear-gradient(145deg, rgba(22, 15, 46, 0.94), rgba(18, 14, 38, 0.86));
 }
 
 .ai-bento article:first-child {
@@ -2274,13 +2274,13 @@ nav a:focus-visible {
   align-self: end;
   min-height: 168px;
   margin-top: 28px;
-  border: 1px solid rgba(91, 162, 208, 0.2);
+  border: 1px solid rgba(168, 148, 208, 0.2);
   border-radius: 8px;
   background:
-    linear-gradient(90deg, rgba(32, 179, 134, 0.76) 0 28%, transparent 28% 34%, rgba(54, 125, 225, 0.7) 34% 62%, transparent 62% 68%, rgba(240, 194, 125, 0.78) 68% 100%) 28px 34px / calc(100% - 56px) 10px no-repeat,
-    linear-gradient(90deg, rgba(54, 125, 225, 0.42), rgba(32, 179, 134, 0.38)) 28px 78px / 62% 10px no-repeat,
-    linear-gradient(90deg, rgba(91, 162, 208, 0.18), rgba(91, 162, 208, 0.08)) 28px 118px / 82% 10px no-repeat,
-    rgba(7, 18, 31, 0.55);
+    linear-gradient(90deg, rgba(139, 92, 246, 0.76) 0 28%, transparent 28% 34%, rgba(139, 92, 246, 0.7) 34% 62%, transparent 62% 68%, rgba(240, 194, 125, 0.78) 68% 100%) 28px 34px / calc(100% - 56px) 10px no-repeat,
+    linear-gradient(90deg, rgba(139, 92, 246, 0.42), rgba(139, 92, 246, 0.38)) 28px 78px / 62% 10px no-repeat,
+    linear-gradient(90deg, rgba(168, 148, 208, 0.18), rgba(168, 148, 208, 0.08)) 28px 118px / 82% 10px no-repeat,
+    rgba(15, 10, 32, 0.55);
 }
 
 .ai-bento span {
@@ -2304,14 +2304,14 @@ nav a:focus-visible {
 .trust-orbit {
   position: relative;
   min-height: 320px;
-  border: 1px solid rgba(91, 162, 208, 0.24);
+  border: 1px solid rgba(168, 148, 208, 0.24);
   border-radius: 8px;
   background:
-    linear-gradient(26deg, transparent 49.85%, rgba(32, 179, 134, 0.22) 50%, transparent 50.15%),
-    linear-gradient(-26deg, transparent 49.85%, rgba(54, 125, 225, 0.2) 50%, transparent 50.15%),
-    linear-gradient(rgba(91, 162, 208, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(91, 162, 208, 0.08) 1px, transparent 1px),
-    rgba(12, 27, 42, 0.7);
+    linear-gradient(26deg, transparent 49.85%, rgba(139, 92, 246, 0.22) 50%, transparent 50.15%),
+    linear-gradient(-26deg, transparent 49.85%, rgba(139, 92, 246, 0.2) 50%, transparent 50.15%),
+    linear-gradient(rgba(168, 148, 208, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 148, 208, 0.08) 1px, transparent 1px),
+    rgba(22, 15, 46, 0.7);
   background-size: 54px 54px;
 }
 
@@ -2323,7 +2323,7 @@ nav a:focus-visible {
   right: 16%;
   top: 50%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(32, 179, 134, 0.55), transparent);
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.55), transparent);
 }
 
 .trust-orbit::after {
@@ -2333,7 +2333,7 @@ nav a:focus-visible {
   bottom: 14%;
   width: 2px;
   height: auto;
-  background: linear-gradient(180deg, transparent, rgba(54, 125, 225, 0.52), transparent);
+  background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.52), transparent);
 }
 
 .orbit-core,
@@ -2341,7 +2341,7 @@ nav a:focus-visible {
   position: absolute;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(91, 162, 208, 0.3);
+  border: 1px solid rgba(168, 148, 208, 0.3);
   border-radius: 999px;
   font-weight: 900;
 }
@@ -2351,7 +2351,7 @@ nav a:focus-visible {
   top: 50%;
   width: 164px;
   height: 66px;
-  color: #061622;
+  color: #140a26;
   background: var(--green);
   transform: translate(-50%, -50%);
 }
@@ -2359,7 +2359,7 @@ nav a:focus-visible {
 .orbit-node {
   width: 122px;
   height: 52px;
-  background: rgba(7, 18, 31, 0.86);
+  background: rgba(15, 10, 32, 0.86);
 }
 
 .orbit-node.n1 {
@@ -2383,7 +2383,7 @@ nav a:focus-visible {
 }
 
 .ai-footer {
-  border-top: 1px solid rgba(91, 162, 208, 0.18);
+  border-top: 1px solid rgba(168, 148, 208, 0.18);
   background: #05101c;
   color: var(--muted);
 }
@@ -2518,7 +2518,7 @@ nav a:focus-visible {
   .demo-industrial .industrial-nav {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    border-top: 1px solid rgba(180, 220, 214, 0.16);
+    border-top: 1px solid rgba(200, 188, 224, 0.16);
     overflow-x: visible;
     white-space: normal;
   }
@@ -2527,7 +2527,7 @@ nav a:focus-visible {
     min-width: 0;
     min-height: 40px;
     padding: 0 12px;
-    border-right: 1px solid rgba(180, 220, 214, 0.14);
+    border-right: 1px solid rgba(200, 188, 224, 0.14);
     text-align: center;
   }
 
