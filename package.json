@@ -3,8 +3,9 @@
   "private": true,
   "version": "1.4.6",
   "scripts": {
-    "build:site": "rm -rf public && mkdir -p public && cp -R site/. public/",
-    "validate:site": "python3 scripts/audit_static_site.py site index.html --strict-seo --no-placeholders",
+    "sync:metrics": "python3 scripts/sync_site_metrics.py",
+    "build:site": "python3 scripts/sync_site_metrics.py && rm -rf public && mkdir -p public && cp -R site/. public/",
+    "validate:site": "python3 scripts/audit_static_site.py site index.html --strict-seo --no-placeholders && python3 scripts/audit_static_site.py site en/index.html --strict-seo --no-placeholders && python3 scripts/smoke_examples.py",
     "package:runtime": "python3 scripts/package_runtime_skill.py"
   }
 }
