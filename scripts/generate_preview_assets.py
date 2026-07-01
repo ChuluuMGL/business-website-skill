@@ -31,13 +31,13 @@ FONT_BOLD_CANDIDATES = [
 
 STYLE_PALETTES = {
     "executive-b2b-trust": {
-        "bg": "#F7FAF8",
-        "surface": "#FFFFFF",
-        "text": "#10211C",
-        "muted": "#69766F",
-        "accent": "#0E5E43",
-        "accent2": "#C9A35D",
-        "line": "#DCE5DF",
+        "bg": "#EEF1F7",
+        "surface": "#F7F9FC",
+        "text": "#101A2B",
+        "muted": "#566378",
+        "accent": "#1C4C9E",
+        "accent2": "#B08534",
+        "line": "#CDD8E6",
     },
     "industrial-precision": {
         "bg": "#F3F6F5",

@@ -19,7 +19,7 @@ Use this reference when the user asks for many styles, premium visual directions
 ### executive-b2b-trust
 
 - Best for: consulting, professional services, enterprise suppliers, corporate websites.
-- Visual: light background, restrained color, wide margins, confident typography, proof-first layout.
+- Visual: light cool-blue background, navy trust blue with a muted gold accent, wide margins, confident typography, proof-first layout.
 - Layout: hero plus proof panel, service matrix, credential band, case cards, process timeline.
 - Motion: subtle reveal, CTA hover, count-up metrics.
 - Avoid: flashy gradients, oversized decorative shapes, casual copy.
