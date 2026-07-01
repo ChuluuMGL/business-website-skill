@@ -18,8 +18,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "SignalDesk AI SaaS Demo",
-    "description": "A synthetic AI SaaS website demo produced for the Business Website Skill showcase.",
+    "name": "SignalDesk AI 产品官网示例",
+    "description": "Business Website Skill 展示用的合成 AI SaaS 产品官网示例。",
     "url": "https://business-website-skill.vercel.app/examples/ai-saas-product/",
     "isPartOf": {
       "@type": "WebSite",
@@ -33,17 +33,17 @@
   <header class="site-header ai-command-nav">
     <a class="brand" href="/examples/ai-saas-product/" aria-label="SignalDesk AI">
       <strong>SignalDesk AI</strong>
-      <span>Synthetic AI SaaS website</span>
+      <span>合成 AI SaaS 官网示例</span>
     </a>
     <div class="ai-prompt" aria-label="产品命令提示">
       <span>signaldesk.ai</span>
       <code>run launch-preview --review-required</code>
     </div>
     <nav aria-label="示例网站导航">
-      <a href="#workflow">Flow</a>
-      <a href="#surface">Surface</a>
-      <a href="#trust">Trust</a>
-      <a href="/">Skill</a>
+      <a href="#workflow">产品工作流</a>
+      <a href="#surface">产品界面</a>
+      <a href="#trust">信任边界</a>
+      <a href="/">Skill 首页</a>
     </nav>
   </header>
 
@@ -51,7 +51,7 @@
     <section class="ai-hero" aria-labelledby="hero-title">
       <div class="ai-hero-inner">
         <div>
-          <p class="demo-label">Synthetic website example / command center</p>
+          <p class="demo-label">合成示例网站 / AI 指挥舱</p>
           <h1 id="hero-title"><span class="hero-phrase">让报告与信号</span><span class="hero-phrase">进入可审核</span><span class="hero-phrase">洞察流</span></h1>
           <p class="ai-hero-copy">SignalDesk AI 是一个合成演示产品，用来展示 AI SaaS 官网如何讲清产品能力、工作流、目标用户和演示入口，同时避免虚构安全认证、客户 Logo、价格或性能数据。</p>
           <div class="ai-actions">
@@ -61,7 +61,7 @@
         </div>
         <aside class="command-window" aria-label="AI 产品指挥舱示意">
           <div class="command-topbar">
-            <span>Launch preview</span>
+            <span>演示预览</span>
             <i></i>
           </div>
           <div class="command-grid">
@@ -84,9 +84,9 @@
               <span class="node n3"></span>
             </div>
             <div class="review-card">
-              <div><strong>Sources</strong><span>报告、文档、公开材料</span></div>
-              <div><strong>Tasks</strong><span>责任人、优先级、状态</span></div>
-              <div><strong>Review</strong><span>人工确认、评论、记录</span></div>
+              <div><strong>来源</strong><span>报告、文档、公开材料</span></div>
+              <div><strong>任务</strong><span>责任人、优先级、状态</span></div>
+              <div><strong>审核</strong><span>人工确认、评论、记录</span></div>
             </div>
           </div>
         </aside>
@@ -96,42 +96,59 @@
     <section class="ai-product-bar" aria-label="AI SaaS 产品模块摘要">
       <div>
         <span>01</span>
-        <strong>Signal intake</strong>
+        <strong>信号接入</strong>
         <p>聚合报告、仪表盘、文档和公开来源。</p>
       </div>
       <div>
         <span>02</span>
-        <strong>Evidence graph</strong>
+        <strong>证据图谱</strong>
         <p>保留结论、来源和上下文关系。</p>
       </div>
       <div>
         <span>03</span>
-        <strong>Review routing</strong>
+        <strong>审核路由</strong>
         <p>把洞察推送到对应责任人。</p>
       </div>
       <div>
         <span>04</span>
-        <strong>Human review</strong>
+        <strong>人工审核</strong>
         <p>把 AI 输出放入可审核协作流。</p>
       </div>
     </section>
 
     <section class="section" id="workflow" aria-labelledby="workflow-title">
       <div class="section-head reveal">
-        <p class="eyebrow">Product workflow</p>
+        <p class="eyebrow">产品工作流</p>
         <h2 id="workflow-title">让客户看到产品如何进入团队工作流</h2>
-        <p>AI 产品官网不能只讲模型和自动化。这个示例用 command states 解释从信号到审核的真实业务路径。</p>
+        <p>AI 产品官网不能只讲模型和自动化。这个示例用命令状态解释从信号到审核的真实业务路径。</p>
       </div>
       <div class="command-demo reveal" data-command-states>
         <div class="command-state-buttons" role="tablist" aria-label="产品工作状态">
-          <button type="button" class="is-active" role="tab" aria-selected="true" data-command-button="collect">Collect</button>
-          <button type="button" role="tab" aria-selected="false" data-command-button="summarize">Summarize</button>
-          <button type="button" role="tab" aria-selected="false" data-command-button="route">Route</button>
-          <button type="button" role="tab" aria-selected="false" data-command-button="review">Review</button>
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-command-button="collect">01 信号收集</button>
+          <button type="button" role="tab" aria-selected="false" data-command-button="summarize">02 证据摘要</button>
+          <button type="button" role="tab" aria-selected="false" data-command-button="route">03 任务路由</button>
+          <button type="button" role="tab" aria-selected="false" data-command-button="review">04 人工审核</button>
+          <div class="command-state-note" aria-hidden="true">
+            <span>可审核路径</span>
+            <strong>来源 → 摘要 → 责任人 → 审核记录</strong>
+          </div>
         </div>
         <div class="command-screen">
-          <div class="screen-lines" aria-hidden="true">
-            <span></span><span></span><span></span><span></span>
+          <div class="workflow-visual" aria-hidden="true">
+            <div class="workflow-chart">
+              <span class="bar c1"></span>
+              <span class="bar c2"></span>
+              <span class="bar c3"></span>
+              <span class="bar c4"></span>
+              <span class="pulse p1"></span>
+              <span class="pulse p2"></span>
+            </div>
+            <div class="workflow-pipeline">
+              <span>来源</span>
+              <span>证据</span>
+              <span>责任人</span>
+              <span>审核</span>
+            </div>
           </div>
           <article class="command-state is-active" data-command-panel="collect">
             <h3>信号收集视图</h3>
@@ -155,33 +172,33 @@
 
     <section class="section" id="surface" aria-labelledby="surface-title">
       <div class="section-head reveal">
-        <p class="eyebrow">Interface narrative</p>
+        <p class="eyebrow">界面叙事</p>
         <h2 id="surface-title">用 bento 结构拆解产品价值</h2>
         <p>AI SaaS 示例使用产品模块和界面状态，而不是普通企业官网的服务列表。</p>
       </div>
       <div class="ai-bento">
         <article class="reveal">
-          <span>Primary surface</span>
+          <span>主界面</span>
           <h3>证据摘要不是黑箱回答</h3>
           <p>页面明确说明 AI 输出需要保留来源、上下文和人工审核，不把生成内容包装成未经确认的事实。</p>
         </article>
         <article class="reveal">
-          <span>Team use</span>
+          <span>团队使用</span>
           <h3>战略与研究</h3>
           <p>把分散报告、市场动态和内部材料整理成可审核摘要。</p>
         </article>
         <article class="reveal">
-          <span>Workflow</span>
+          <span>工作流</span>
           <h3>任务路由</h3>
           <p>根据主题、责任人和优先级把信号分派到对应团队。</p>
         </article>
         <article class="reveal">
-          <span>Boundary</span>
-          <h3>Launch preview</h3>
+          <span>边界</span>
+          <h3>演示预览</h3>
           <p>不展示未确认的价格、客户 Logo、安全认证或生产性能。</p>
         </article>
         <article class="reveal">
-          <span>Conversion</span>
+          <span>转化</span>
           <h3>预约演示</h3>
           <p>把转化入口放在产品工作流后，让客户先理解价值再行动。</p>
         </article>
@@ -190,22 +207,36 @@
 
     <section class="section" id="trust" aria-labelledby="trust-title">
       <div class="section-head reveal">
-        <p class="eyebrow">Trust surface</p>
+        <p class="eyebrow">信任边界</p>
         <h2 id="trust-title">AI 官网更要清楚说明边界</h2>
-        <p>演示产品处于 launch preview 阶段，所以页面不声明认证、客户名单、价格、集成清单或生产性能。</p>
+        <p>演示产品处于预览发布阶段，所以页面不声明认证、客户名单、价格、集成清单或生产性能。</p>
       </div>
-      <div class="trust-orbit reveal" aria-label="AI 产品信任结构示意">
-        <span class="orbit-core">Human review</span>
-        <span class="orbit-node n1">Docs</span>
-        <span class="orbit-node n2">Reports</span>
-        <span class="orbit-node n3">Dashboards</span>
-        <span class="orbit-node n4">Tasks</span>
+      <div class="trust-orbit reveal" aria-label="AI 产品信任边界流程示意">
+        <article class="trust-step">
+          <span>01 输入材料</span>
+          <strong>报告、文档、仪表盘</strong>
+          <p>只展示已接入或可公开说明的资料类型。</p>
+        </article>
+        <article class="trust-step trust-review-step">
+          <span>02 人工审核</span>
+          <strong>确认来源与结论边界</strong>
+          <p>AI 摘要进入人工确认，不直接作为发布事实。</p>
+        </article>
+        <article class="trust-step">
+          <span>03 可发布页面</span>
+          <strong>价值、流程、演示入口</strong>
+          <p>没有证据的价格、客户、认证和性能数据不展示。</p>
+        </article>
+        <div class="trust-rule">
+          <span>不展示</span>
+          <p>未确认客户名单 / 安全认证 / 价格 / 集成清单 / 生产性能</p>
+        </div>
       </div>
     </section>
 
     <section class="final-cta reveal" aria-labelledby="final-title">
       <div>
-        <p class="eyebrow">Built with Business Website Skill</p>
+        <p class="eyebrow">由 Business Website Skill 生成</p>
         <h2 id="final-title">AI 产品官网的指挥舱方向</h2>
         <p>页面展示产品叙事、信任边界和转化路径。真实项目中，应补充由产品团队确认的安全、集成、价格和客户资料。</p>
       </div>
@@ -219,12 +250,12 @@
   <footer class="site-footer ai-footer">
     <div class="ai-footer-terminal">
       <strong>SignalDesk AI</strong>
-      <p><code>status:</code> launch preview / human review required / public claims limited</p>
+      <p><code>状态：</code>演示预览 / 需要人工审核 / 公开声明受限</p>
     </div>
     <div class="ai-footer-log" aria-label="产品页脚日志">
-      <span>Sources linked</span>
-      <span>Tasks routed</span>
-      <span>Review pending</span>
+      <span>来源已连接</span>
+      <span>任务已路由</span>
+      <span>等待人工审核</span>
     </div>
     <nav aria-label="页脚导航">
       <a href="#workflow">工作流</a>

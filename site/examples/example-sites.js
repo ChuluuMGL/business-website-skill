@@ -82,7 +82,7 @@ for (const command of document.querySelectorAll('[data-command-states]')) {
 }
 
 // Shared demo frame nav. Adds a small floating capsule to every example demo
-// (this script is loaded by all three) so visitors can return to the gallery
+// (this script is loaded by all three) so visitors can return to the demo home
 // or move between demos without using the browser back button. It does not
 // touch each demo's own header, so the "real website" showcase illusion stays.
 (function attachDemoFrameNav() {
@@ -98,8 +98,8 @@ for (const command of document.querySelectorAll('[data-command-states]')) {
   const isEn = (document.documentElement.lang || '').indexOf('en') === 0;
   const gallery = isEn ? '/en/#examples' : '/#examples';
   const t = isEn
-    ? { gallery: 'Gallery', ariaNav: 'Demo navigation' }
-    : { gallery: '画廊', ariaNav: '示例导航' };
+    ? { gallery: 'Home', ariaNav: 'Demo navigation' }
+    : { gallery: 'Demo 主站', ariaNav: '示例导航' };
   const prev = demos[(current - 1 + demos.length) % demos.length];
   const next = demos[(current + 1) % demos.length];
 
