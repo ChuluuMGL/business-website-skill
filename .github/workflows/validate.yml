@@ -1,0 +1,33 @@
+name: Validate
+
+# Runs the same checks the maintainer runs locally, so a bad commit can't slip
+# in purely through local discipline: JSON must parse, the static-site audit
+# (strict SEO, no placeholders) must pass on both locales, and the example
+# fixtures must smoke-clean. No external deps — audit/smoke are stdlib-only.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: JSON + strict site audit + example smoke
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: JSON parses (skill.json + presets)
+        run: |
+          set -euo pipefail
+          for f in skill.json assets/presets/design-styles.json assets/presets/interaction-presets.json package.json; do
+            python3 -m json.tool "$f" >/dev/null
+            echo "ok: $f"
+          done
+
+      - name: Site audit (strict SEO, no placeholders) + example smoke tests
+        run: npm run validate:site

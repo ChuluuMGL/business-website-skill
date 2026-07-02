@@ -1,17 +1,21 @@
 name: Tag on version bump
 
-# Keeps skill.json version, the git tag, and the GitHub Release locked in step.
+# Keeps skill.json version, the git tag, and the GitHub Release locked in step,
+# AND auto-publishes to ClawHub when a new tag is created.
+#
 # On every push to main, if skill.json's version has no matching v<x.y.z> tag,
 # this creates the tag + a generated-notes release. This prevents the drift seen
 # at 1.4.6 (code claimed 1.4.6, latest tag was v1.3.7, so tag/badge/install were
 # out of sync).
 #
-# Caveat: releases created with the default GITHUB_TOKEN do not emit a
-# `release: published` event that triggers OTHER workflows (GitHub blocks
-# GITHUB_TOKEN-initiated events from spawning downstream runs). So this workflow
-# fixes tag/badge drift on its own; to ALSO auto-publish to ClawHub on a bump,
-# either (a) add a PAT here as `tag-token`, or (b) run the ClawHub workflow
-# manually / add a `push: tags: ["v*"]` trigger to clawhub-publish.yml.
+# Auto-publish to ClawHub: releases created with the default GITHUB_TOKEN do NOT
+# emit a `release: published` event (GitHub suppresses GITHUB_TOKEN-spawned
+# events), so clawhub-publish.yml's `on: release` would never fire for an
+# auto-created release. Instead, when a new tag is created here, the
+# publish-to-clawhub job below calls clawhub-publish.yml directly via
+# workflow_call — a direct invocation is not subject to that suppression, so no
+# PAT is required. Gated on vars.CLAWHUB_PUBLISH_ENABLED == 'true'; otherwise it
+# is skipped and publishing stays manual via the ClawHub workflow's run button.
 
 on:
   push:
@@ -24,12 +28,15 @@ permissions:
 jobs:
   tag-on-bump:
     runs-on: ubuntu-latest
+    outputs:
+      tagged: ${{ steps.maybe_tag.outputs.tagged }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Create tag + release if skill.json version is untagged
+        id: maybe_tag
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -38,13 +45,15 @@ jobs:
           TAG="v${VERSION}"
           echo "skill.json version: ${VERSION} -> candidate tag: ${TAG}"
 
-          if git ls-remote --tags origin "refs/tags/${TAG}" | grep -q "${TAG}"; then
-            echo "Tag ${TAG} already exists on origin; nothing to do."
+          if [[ ! "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Version ${VERSION} is not a clean semver; skipping auto-tag."
+            echo "tagged=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          if [[ ! "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            echo "Version ${VERSION} is not a clean semver; skipping auto-tag."
+          if git ls-remote --tags origin "refs/tags/${TAG}" | grep -q "${TAG}"; then
+            echo "Tag ${TAG} already exists on origin; nothing to do."
+            echo "tagged=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -54,3 +63,12 @@ jobs:
             --generate-notes \
             --target main
           echo "Created ${TAG}."
+          echo "tagged=true" >> "$GITHUB_OUTPUT"
+
+  publish-to-clawhub:
+    needs: tag-on-bump
+    if: needs.tag-on-bump.outputs.tagged == 'true' && vars.CLAWHUB_PUBLISH_ENABLED == 'true'
+    uses: ./.github/workflows/clawhub-publish.yml
+    with:
+      dry_run: false
+    secrets: inherit

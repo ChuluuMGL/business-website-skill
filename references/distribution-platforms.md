@@ -70,14 +70,13 @@ Plugins are useful when they provide capabilities the skill cannot encode as ins
 
 Before publishing to any public registry:
 
-1. Run `python3 /Users/chuluu/.codex/skills/.system/skill-creator/scripts/quick_validate.py .`.
-2. Run `python3 scripts/audit_static_site.py assets/templates/static-business-site index.html --strict-seo`.
-3. Run `python3 -m json.tool skill.json`.
-4. Confirm `assets/previews/` contains only lightweight documentation or release links.
-5. Confirm `skill.json.compatibility.tested` only lists runtimes with completed end-to-end tests.
-6. Confirm copyright reads `月瑀科技 YUEYU TECH` and the website is `https://www.yueyu.tech/`.
-7. Review all scripts for destructive filesystem commands, network calls, token handling, and hidden data upload.
-8. Add platform-specific install notes only after checking that platform's current packaging rules.
+1. Run `python3 scripts/audit_static_site.py assets/templates/static-business-site index.html --strict-seo`.
+2. Run `python3 -m json.tool skill.json`.
+3. Confirm `assets/previews/` contains only lightweight documentation or release links.
+4. Confirm `skill.json.compatibility.tested` only lists runtimes with completed end-to-end tests.
+5. Confirm copyright reads `月瑀科技 YUEYU TECH` and the website is `https://www.yueyu.tech/`.
+6. Review all scripts for destructive filesystem commands, network calls, token handling, and hidden data upload.
+7. Add platform-specific install notes only after checking that platform's current packaging rules.
 
 ## Platform Docs To Recheck
 

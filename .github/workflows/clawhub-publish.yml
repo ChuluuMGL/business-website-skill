@@ -1,6 +1,23 @@
 name: Publish Skill To ClawHub
 
+# Publishes the skill to ClawHub. Three entry points:
+#   - workflow_dispatch: manual; defaults to a dry-run preview.
+#   - release (published): real release created by a human or a PAT.
+#   - workflow_call: invoked by tag-on-bump.yml right after a new version tag
+#     is created. This is the path that makes bump → publish automatic, because
+#     a tag/release created with the default GITHUB_TOKEN does NOT emit the
+#     `release: published` event that would otherwise trigger this workflow
+#     (GitHub suppresses GITHUB_TOKEN-spawned events). A direct workflow_call
+#     bypasses that suppression, so no PAT is required for auto-publish.
+
 on:
+  workflow_call:
+    inputs:
+      dry_run:
+        description: Preview publish without uploading
+        required: false
+        type: boolean
+        default: false
   workflow_dispatch:
     inputs:
       dry_run:
@@ -13,15 +30,17 @@ on:
       - published
 
 jobs:
+  # Non-blocking notice when publishing is off (skipped for manual dry-runs,
+  # which are useful even without the token/enabled flag set).
   release-publish-disabled:
-    if: github.event_name == 'release' && vars.CLAWHUB_PUBLISH_ENABLED != 'true'
+    if: vars.CLAWHUB_PUBLISH_ENABLED != 'true' && inputs.dry_run != true
     runs-on: ubuntu-latest
     steps:
       - name: Skip ClawHub publish
-        run: echo "ClawHub release publishing is disabled. Set CLAWHUB_PUBLISH_ENABLED=true and CLAWHUB_TOKEN to enable it."
+        run: echo "ClawHub publishing is disabled. Set CLAWHUB_PUBLISH_ENABLED=true and CLAWHUB_TOKEN to enable it."
 
   dry-run:
-    if: github.event_name == 'workflow_dispatch' && inputs.dry_run == true
+    if: inputs.dry_run == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -35,7 +54,7 @@ jobs:
         run: npm exec --yes --package clawhub -- clawhub skill publish "$PWD" --dry-run --version "${{ steps.version.outputs.version }}" --json
 
   publish:
-    if: (github.event_name == 'release' && vars.CLAWHUB_PUBLISH_ENABLED == 'true') || (github.event_name == 'workflow_dispatch' && inputs.dry_run == false)
+    if: inputs.dry_run != true && vars.CLAWHUB_PUBLISH_ENABLED == 'true'
     runs-on: ubuntu-latest
     env:
       CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
