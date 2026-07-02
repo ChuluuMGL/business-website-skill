@@ -125,6 +125,8 @@ Before major edits, identify:
 
 Use `assets/templates/static-business-site/` for a fast dependency-free starting point. Treat templates as structure only; replace placeholders with source-backed content.
 
+Checkpoint: state the build plan before coding — files, components, assets, interactions, verification commands, and the pinned visual system and proof treatment.
+
 ### Phase 5 - Build
 
 Implement narrowly and consistently with the project.

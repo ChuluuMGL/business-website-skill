@@ -49,11 +49,13 @@ Official references:
 
 ### Anime.js
 
+These snippets assume Anime.js v4+, which ships named exports (`animate`, `stagger`). v3 used a default export (`anime({...})`) — if you must stay on v3, switch to `import anime from 'animejs'` and the callback API. Pin the major version to avoid silent breakage.
+
 - Use for: staggered card reveals, text/hero sequences, SVG line drawing, metric emphasis, lightweight timelines.
-- Install with NPM in bundled projects: `npm install animejs`.
+- Install (v4+): `npm install animejs@^4`.
 - Import in ES modules: `import { animate, stagger } from 'animejs';`.
-- Static ESM option: `import { animate } from 'https://esm.sh/animejs';`.
-- Static UMD option: load `https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js`, then use `const { animate } = anime;`.
+- Static ESM option (pinned): `import { animate } from 'https://esm.sh/animejs@4';`.
+- Static UMD option: pin a specific v4 tag on jsdelivr that ships a UMD bundle, then `const { animate } = anime;`.
 - Keep optional: do not add Anime.js to every site by default.
 
 ### GSAP

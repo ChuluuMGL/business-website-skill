@@ -1,0 +1,5 @@
+# Development dependencies for business-website-skill.
+# Only needed to regenerate human-facing preview assets, not to run the skill.
+# Install with: python3 -m pip install -r requirements-dev.txt
+
+Pillow>=10

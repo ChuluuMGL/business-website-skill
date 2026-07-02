@@ -13,3 +13,4 @@ assets/previews/*.jpg
 assets/previews/interactions/*.gif
 assets/previews/styles/*.png
 .vercel
+.lighthouseci/

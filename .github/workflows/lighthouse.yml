@@ -1,0 +1,37 @@
+name: Lighthouse
+
+# Runtime perf / a11y / SEO scoring on the built site. Complements the static
+# audit (validate.yml) with checks that need a real browser: LCP/CLS/INP,
+# rendered color contrast, heading order, tap targets, meta rendering, etc.
+# Performance is a WARNING only (Lighthouse scores vary run to run and would
+# cause false failures); accessibility / best-practices / SEO fail below 0.9.
+# Thresholds live in .github/lighthouserc.json — check the first run and tune
+# if a category is unexpectedly marginal.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build site
+        run: npm run build:site
+
+      - name: Run Lighthouse CI
+        run: |
+          python3 -m http.server 8080 --directory public &
+          SERVER_PID=$!
+          sleep 2
+          npx --yes @lhci/cli@^0.14 autorun --config=.github/lighthouserc.json
+          STATUS=$?
+          kill "$SERVER_PID" 2>/dev/null || true
+          exit "$STATUS"
