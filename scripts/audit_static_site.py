@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Audit a static business website for common handoff issues.
 
-Checks local assets, duplicate IDs, hash anchors, viewport meta, missing image alt
-text, image width/height (CLS hygiene), target=_blank without rel=noopener,
-CSS url() and @import references, large inline data: URIs, and optional
-final-delivery placeholders. It intentionally avoids network access.
+Checks local assets, duplicate IDs, hash anchors, viewport meta, image alt text,
+image width/height (CLS hygiene), a skip-to-content link, target=_blank without
+rel=noopener, CSS url() and @import references, large inline data: URIs, and
+optional final-delivery placeholders. Under --strict-seo, missing image alt and
+width/height are treated as errors (launch-readiness). It avoids network access.
 """
 
 from __future__ import annotations
@@ -180,6 +181,17 @@ def has_link_rel(parser: HtmlAuditParser, rel_name: str) -> bool:
     return False
 
 
+def has_skip_link(html_text: str) -> bool:
+    """Heuristic: detect a skip-to-content link — an in-page anchor that wears a
+    skip class/id or carries skip/跳到主 text. Advisory only (a warning, not an
+    error) since legitimate minimalist pages may omit it."""
+    patterns = [
+        r'<a\b[^>]*\b(?:class|id)="[^"]*\bskip\b[^"]*"[^>]*href="#',
+        r'<a\b[^>]*href="#[^"]*"[^>]*>\s*[^<]{0,16}?(?:skip\s*to|跳到主|跳转)',
+    ]
+    return any(re.search(p, html_text, re.IGNORECASE) for p in patterns)
+
+
 def add_seo_issue(
     errors: list[str],
     warnings: list[str],
@@ -279,6 +291,9 @@ def audit(
         if html_file == entry_path and not parser.viewport_found:
             add_issue(errors, html_file, None, "missing viewport meta tag")
 
+        if html_file == entry_path and not has_skip_link(html_file.read_text(encoding="utf-8", errors="ignore")):
+            add_issue(warnings, html_file, None, "no skip-to-content link found (add an in-page anchor as the first focusable element for keyboard users)")
+
         audit_seo(parser, html_file, errors, warnings, strict_seo)
 
         id_set = set(parser.ids)
@@ -296,9 +311,9 @@ def audit(
                 if not image_path.exists():
                     add_issue(errors, html_file, line, f"missing image asset {src!r}")
             if alt is None:
-                add_issue(warnings, html_file, line, "image missing alt attribute")
+                add_seo_issue(errors, warnings, strict_seo, html_file, line, "image missing alt attribute")
             if not has_dims and src and not src.startswith("data:"):
-                add_issue(warnings, html_file, line, "image missing width/height attributes (may cause layout shift / CLS)")
+                add_seo_issue(errors, warnings, strict_seo, html_file, line, "image missing width/height attributes (causes layout shift / CLS)")
 
         for href, rel, line in parser.blank_targets:
             rels = {item.strip().lower() for item in rel.split()}
