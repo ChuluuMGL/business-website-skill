@@ -3,16 +3,16 @@
   "display_name": "Business Website Skill",
   "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, named visual-system discovery, benchmark-first design taste gates, SEO/GEO readiness, implementation, and QA.",
   "version": "1.4.6",
-  "author": "月瑀科技 YUEYU TECH",
-  "copyright": "Copyright (c) 2026 月瑀科技 YUEYU TECH",
+  "author": "Chuluu",
+  "copyright": "Copyright (c) 2026 Chuluu",
   "maintainer": {
     "name": "ChuluuMGL",
     "github": "https://github.com/ChuluuMGL"
   },
   "organization": {
-    "name": "月瑀科技",
-    "alternate_name": "YUEYU TECH",
-    "url": "https://www.yueyu.tech/"
+    "name": "Chuluu",
+    "alternate_name": "ChuluuMGL",
+    "url": "https://github.com/ChuluuMGL"
   },
   "license": "MIT",
   "repository": "https://github.com/ChuluuMGL/business-website-skill",
@@ -38,8 +38,8 @@
     "React",
     "Vite",
     "Next.js",
-    "YUEYU TECH",
-    "月瑀科技",
+    "Chuluu",
+    "ChuluuMGL",
     "Agent Skills"
   ],
   "outputs": [

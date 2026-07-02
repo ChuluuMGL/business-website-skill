@@ -3,14 +3,14 @@
 > **面向 AI Agent 的商业官网搭建 Skill**  
 > 一个开源 Agent Skill，用于从客户资料、现有网站、PPT/PDF、图片素材、brief 和参考网站中，创建可交付的企业官网、品牌官网、B2B 官网、服务型官网和商业提案级网站。
 >
-> 由 **月瑀科技 YUEYU TECH** 创建和维护，由 **ChuluuMGL** 发布。
+> 由 **Chuluu** 创建和维护。
 
 中文 | [English](README.md)
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
 [![Version](https://img.shields.io/badge/version-1.4.6-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
-[![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
+[![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
 
@@ -528,7 +528,7 @@ A：可以，只要对应 Agent 支持 Skill 文件夹，或能读取 `SKILL.md`
 | 内置资产 | 静态商业官网起步模板 |
 | 脚本运行时 | 静态审计脚本只用 Python 标准库；预览生成脚本需要 Pillow |
 | License | MIT |
-| 版权方 | 月瑀科技 YUEYU TECH |
+| 版权方 | Chuluu |
 | 维护者 / GitHub 发布者 | ChuluuMGL |
 
 ## 目录结构
@@ -579,15 +579,15 @@ business-website-skill/
 
 ## License
 
-MIT。Copyright (c) 2026 月瑀科技 YUEYU TECH。
+MIT。Copyright (c) 2026 Chuluu。
 
 ## 版权与归属
 
 | 项目 | 信息 |
 |---|---|
-| 版权方 | 月瑀科技 YUEYU TECH |
+| 版权方 | Chuluu |
 | 维护者 / GitHub 发布者 | [ChuluuMGL](https://github.com/ChuluuMGL) |
-| 公司官网 | [www.yueyu.tech](https://www.yueyu.tech/) |
+| 网站 | [github.com/ChuluuMGL](https://github.com/ChuluuMGL) |
 | 版权说明 | [NOTICE](./NOTICE) |
 
 ---
@@ -609,10 +609,9 @@ MIT。Copyright (c) 2026 月瑀科技 YUEYU TECH。
     "description": "Skill 开源免费，MIT 协议"
   },
   "author": {
-    "@type": "Organization",
-    "name": "月瑀科技",
-    "alternateName": "YUEYU TECH",
-    "url": "https://www.yueyu.tech/"
+    "@type": "Person",
+    "name": "Chuluu",
+    "url": "https://github.com/ChuluuMGL"
   },
   "maintainer": {
     "@type": "Person",
@@ -620,10 +619,9 @@ MIT。Copyright (c) 2026 月瑀科技 YUEYU TECH。
     "url": "https://github.com/ChuluuMGL"
   },
   "copyrightHolder": {
-    "@type": "Organization",
-    "name": "月瑀科技",
-    "alternateName": "YUEYU TECH",
-    "url": "https://www.yueyu.tech/"
+    "@type": "Person",
+    "name": "Chuluu",
+    "url": "https://github.com/ChuluuMGL"
   },
   "programmingModel": "Agent Skills / SKILL.md",
   "softwareVersion": "1.4.4"

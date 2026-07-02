@@ -3,14 +3,14 @@
 > **Business Website Builder Skill for AI Agents**  
 > An open-source Agent Skill that helps AI agents create client-ready corporate, brand, B2B, service, and proposal-grade websites from source materials, existing sites, PPT/PDF files, images, briefs, and reference websites.
 >
-> Created and maintained by **月瑀科技 YUEYU TECH**. Published by **ChuluuMGL**.
+> Created and maintained by **Chuluu**.
 
 [中文说明](README.zh-CN.md) | English
 
 [![AI Skill](https://img.shields.io/badge/AI%20Skill-business--website-0E5E43)](./SKILL.md)
 [![Version](https://img.shields.io/badge/version-1.4.6-green)](./skill.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
-[![By YUEYU TECH](https://img.shields.io/badge/by-YUEYU%20TECH-0E5E43)](https://www.yueyu.tech/)
+[![by Chuluu](https://img.shields.io/badge/by-Chuluu-0E5E43)](https://github.com/ChuluuMGL)
 [![Template](https://img.shields.io/badge/template-static--business--site-blue)](./assets/templates/static-business-site/)
 [![Workflow](https://img.shields.io/badge/workflow-stage--gated-purple)](./SKILL.md)
 
@@ -528,7 +528,7 @@ Yes, if they support skill folders or can read `SKILL.md`-style packages. Instal
 | Bundled asset | Static business website starter template |
 | Script runtime | Static audit uses Python standard library; preview generation uses Pillow |
 | License | MIT |
-| Copyright holder | 月瑀科技 YUEYU TECH |
+| Copyright holder | Chuluu |
 | Maintainer / GitHub publisher | ChuluuMGL |
 
 ## Directory Structure
@@ -579,15 +579,15 @@ business-website-skill/
 
 ## License
 
-MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
+MIT. Copyright (c) 2026 Chuluu.
 
 ## Ownership
 
 | Item | Value |
 |---|---|
-| Copyright holder | 月瑀科技 YUEYU TECH |
+| Copyright holder | Chuluu |
 | Maintainer / GitHub publisher | [ChuluuMGL](https://github.com/ChuluuMGL) |
-| Company website | [www.yueyu.tech](https://www.yueyu.tech/) |
+| Website | [github.com/ChuluuMGL](https://github.com/ChuluuMGL) |
 | Notice | [NOTICE](./NOTICE) |
 
 ---
@@ -609,10 +609,9 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "description": "The skill is open source under the MIT license."
   },
   "author": {
-    "@type": "Organization",
-    "name": "月瑀科技",
-    "alternateName": "YUEYU TECH",
-    "url": "https://www.yueyu.tech/"
+    "@type": "Person",
+    "name": "Chuluu",
+    "url": "https://github.com/ChuluuMGL"
   },
   "maintainer": {
     "@type": "Person",
@@ -620,10 +619,9 @@ MIT. Copyright (c) 2026 月瑀科技 YUEYU TECH.
     "url": "https://github.com/ChuluuMGL"
   },
   "copyrightHolder": {
-    "@type": "Organization",
-    "name": "月瑀科技",
-    "alternateName": "YUEYU TECH",
-    "url": "https://www.yueyu.tech/"
+    "@type": "Person",
+    "name": "Chuluu",
+    "url": "https://github.com/ChuluuMGL"
   },
   "programmingModel": "Agent Skills / SKILL.md",
   "softwareVersion": "1.4.4"
