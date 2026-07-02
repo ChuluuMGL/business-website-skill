@@ -107,8 +107,6 @@ Default behavior is pragmatic: if the user wants speed, the agent proceeds with 
 
 ## Visual System Discovery
 
-Version `1.4.6` tightens the public demo site and example websites after screenshot QA: author attribution now names Chuluu and 月瑀科技, homepage navigation follows the reading order, and the three public examples use more distinct B2B dossier, industrial field-system, and AI command-center layouts.
-
 The design gate continues to learn from public skill and deck references such as [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) and [Zara Zhang's deck site](https://deck.zarazhang.com/) as methodology references, not as copied content.
 
 A valid system must define its business fit, visual thesis, typography, palette, layout grammar, signature element, proof/evidence treatment, image/media treatment, interaction/motion, mobile behavior, and what to avoid. This is meant to prevent three common failures: color-swapped demos, repeated card grids, and mobile pages that lose the original design identity.
@@ -199,20 +197,9 @@ Only Codex-specific UI metadata lives in `agents/openai.yaml`. Other agents can 
 
 Compatibility status is conservative: only runtimes with completed end-to-end runs should be moved into `skill.json` `tested`. Claude Code has been reported as tested by the maintainer; other listed runtimes remain expected-compatible until verified.
 
-### Publishing Targets
+### Publishing And Sync
 
-Recommended distribution order beyond GitHub:
-
-1. Publish or index the GitHub repo in SKILL.md-native directories such as OpenClaw/ClawHub, SkillsMP, LobeHub Skills, and SkillsLLM.
-2. Add explicit install notes for Gemini CLI and Kimi Code CLI because both support local Agent Skills.
-3. Build a Coze wrapper only if the target audience is non-technical business users who need a guided bot or workflow.
-4. Keep Dify, ChatGPT GPT Store, and MCP wrappers as optional later packaging paths.
-
-A Chrome extension is not needed for distribution. Browser or Chrome automation is useful for QA, screenshots, responsive checks, and live-site audits, but the skill itself should remain a lightweight `SKILL.md` package. See [`references/distribution-platforms.md`](./references/distribution-platforms.md).
-
-### Update Sync
-
-GitHub is the source of truth. Future GitHub Releases can automatically publish to ClawHub after the repository secret `CLAWHUB_TOKEN` is configured and the repository variable `CLAWHUB_PUBLISH_ENABLED` is set to `true`. Directory/index sites may re-crawl GitHub, but timing is not guaranteed. Coze, Dify, GPT Store, Gemini CLI, and Kimi Code CLI installs do not automatically receive GitHub changes unless their wrapper, knowledge base, or local skill install is updated.
+Publishing targets, sync order, ClawHub automation, and the public-release checklist live in [`references/distribution-platforms.md`](./references/distribution-platforms.md). In short: GitHub is the source of truth; new version tags auto-publish to ClawHub when `CLAWHUB_TOKEN` and `CLAWHUB_PUBLISH_ENABLED=true` are set. A Chrome extension is not a useful distribution format — browser automation is a QA capability, not packaging.
 
 ### Ask An AI Agent
 
@@ -262,27 +249,6 @@ Then invoke by name where supported:
 ```text
 $business-website-skill
 ```
-
-### Agent-Specific Examples
-
-```bash
-# Claude Code
-git clone https://github.com/ChuluuMGL/business-website-skill.git .claude/skills/business-website-skill
-
-# Cursor
-git clone https://github.com/ChuluuMGL/business-website-skill.git .cursor/skills/business-website-skill
-
-# Trae
-git clone https://github.com/ChuluuMGL/business-website-skill.git .trae/skills/business-website-skill
-
-# Antigravity
-git clone https://github.com/ChuluuMGL/business-website-skill.git .agent/skills/business-website-skill
-
-# Hermes
-git clone https://github.com/ChuluuMGL/business-website-skill.git ~/.hermes/skills/business-website-skill
-```
-
-OpenClaw and other runtimes may use configurable workspace or global skill roots. Place the cloned folder under the root they scan.
 
 ---
 

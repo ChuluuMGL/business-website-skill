@@ -107,8 +107,6 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 
 ## 视觉系统发现
 
-`1.4.6` 版本进一步收紧公开展示站和三个网站示例：主站署名改为 Chuluu 与月瑀科技，导航顺序与页面阅读顺序统一，三个示例分别强化为 B2B 档案型、工业现场系统型和 AI 指挥舱型页面，并修复截图中暴露的对齐、空白和标题换行问题。
-
 设计检查门仍然把 [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) 和 [Zara Zhang 的 deck 网站](https://deck.zarazhang.com/) 这类公开案例作为方法参考：学习“先定义视觉系统、先预览、再验证”的工作方式，而不是复制内容。
 
 一套合格的视觉系统必须说明业务适配、视觉主张、字体、配色、版式语法、招牌元素、证明/证据呈现方式、图片/媒体处理、交互动效、移动端行为和不适合使用的场景。这样可以减少三类问题：只是换颜色的 demo、反复出现的三卡片布局、以及移动端丢失原本设计识别度。
@@ -199,20 +197,9 @@ python3 scripts/audit_static_site.py <site-root> index.html --strict-seo --no-pl
 
 兼容性状态保持保守：只有完成端到端实测的运行时才应写入 `skill.json` 的 `tested`。Claude Code 已由维护者测试；其他列出的运行时在验证前保持预期兼容。
 
-### 可发布平台
+### 发布与同步
 
-GitHub 之外，建议按这个顺序处理：
-
-1. 先把 GitHub 仓库提交到 OpenClaw / ClawHub、SkillsMP、LobeHub Skills、SkillsLLM 这类支持 `SKILL.md` 的目录或索引。
-2. 给 Gemini CLI 和 Kimi Code CLI 补明确安装说明，因为它们都支持本地 Agent Skills。
-3. 只有当目标用户是非技术业务用户，需要一个引导式 Bot 或 Workflow 时，再做 Coze 包装。
-4. Dify、ChatGPT GPT Store、MCP 包装可以作为后续可选渠道，不是第一优先级。
-
-不建议为了发布这个项目单独做 Chrome 插件。浏览器或 Chrome 自动化适合做 QA、截图、响应式检查和线上网站审计；这个 skill 本身应保持轻量的 `SKILL.md` 包。详见 [`references/distribution-platforms.md`](./references/distribution-platforms.md)。
-
-### 更新同步
-
-GitHub 是唯一源头。后续发布 GitHub Release 时，只要仓库 secret 配好 `CLAWHUB_TOKEN`，并把仓库 variable `CLAWHUB_PUBLISH_ENABLED` 设为 `true`，就可以自动发布到 ClawHub。目录/索引型平台可能会重新抓取 GitHub，但时间不保证。Coze、Dify、GPT Store、Gemini CLI 和 Kimi Code CLI 的本地安装不会自动收到 GitHub 更新，除非同步更新它们的包装、知识库或本地 skill。
+发布目标、同步顺序、ClawHub 自动发布和公开发布清单见 [`references/distribution-platforms.md`](./references/distribution-platforms.md)。简要：GitHub 是唯一源头；配好 `CLAWHUB_TOKEN` 并把 `CLAWHUB_PUBLISH_ENABLED=true` 后，新版本 tag 会自动发布到 ClawHub。不建议为发布单独做 Chrome 插件——浏览器自动化是 QA 能力，不是打包方式。
 
 ### 让 AI Agent 帮你安装
 
@@ -262,27 +249,6 @@ git clone git@github.com:ChuluuMGL/business-website-skill.git .agents/skills/bus
 ```text
 $business-website-skill
 ```
-
-### 常见 Agent 安装示例
-
-```bash
-# Claude Code
-git clone https://github.com/ChuluuMGL/business-website-skill.git .claude/skills/business-website-skill
-
-# Cursor
-git clone https://github.com/ChuluuMGL/business-website-skill.git .cursor/skills/business-website-skill
-
-# Trae
-git clone https://github.com/ChuluuMGL/business-website-skill.git .trae/skills/business-website-skill
-
-# Antigravity
-git clone https://github.com/ChuluuMGL/business-website-skill.git .agent/skills/business-website-skill
-
-# Hermes
-git clone https://github.com/ChuluuMGL/business-website-skill.git ~/.hermes/skills/business-website-skill
-```
-
-OpenClaw 和其他运行时可能使用可配置的 workspace/global skills root。把仓库克隆到对应扫描目录即可。
 
 ---
 
