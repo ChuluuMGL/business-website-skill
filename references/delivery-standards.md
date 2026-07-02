@@ -91,6 +91,29 @@ Avoid a one-color palette, cheap purple-blue gradients, neon, large dark areas w
 - Provide hover/focus states. Use `aria-expanded` for menus, image `alt`, and form labels.
 - Anchor jumps must account for fixed header height with `scroll-margin-top` or JS offset.
 
+## Accessibility
+
+Target WCAG 2.1 AA as the baseline for any public or client site.
+
+- Provide a "skip to main content" link as the first focusable element.
+- Keep every interaction operable by keyboard: logical tab order, visible `:focus-visible` styles, and no widget traps focus. This is mandatory for pinned-scroll, horizontal-wall, and showcase motion presets — verify Tab and Escape can leave them.
+- Color contrast: at least 4.5:1 for body text and 3:1 for large text and UI boundaries. Do not rely on color alone to signal state.
+- Use landmark elements (`header`, `nav`, `main`, `footer`) with one clear label per region.
+- Respect `prefers-reduced-motion` with a static or simplified fallback for every animated preset.
+- Never hide primary content, proof, or CTAs behind canvas, WebGL, or scroll-linked animation — keep them in the DOM and readable by assistive tech.
+- Images and icons carry meaningful `alt` or labels; purely decorative ones use `alt=""`.
+
+## Performance Budget
+
+Target Core Web Vitals on the deployed site: LCP < 2.5s, CLS < 0.1, INP < 200ms.
+
+- Set explicit `width` and `height` (or `aspect-ratio`) on every image so the page reserves space and CLS stays near zero.
+- Lazy-load below-the-fold images (`loading="lazy"`); load the hero/LCP image eagerly.
+- Serve modern formats via `<picture>`: WebP/AVIF source with a PNG/JPEG fallback, and keep hero assets small.
+- Defer or `async` non-critical scripts, and place analytics and motion scripts at the end of `<body>` so they never block first paint.
+- Cap JavaScript for showcase motion (Three.js, GSAP, shaders): load it only on pages that use it, with a reduced-motion and no-JS fallback.
+- Keep the LCP element (usually the hero) free of render-blocking CSS/JS and avoid layout-thrashing animation.
+
 ## Responsive
 
 - At 1100px and below: reduce multi-column grids to two or one columns.
@@ -122,3 +145,13 @@ Avoid a one-color palette, cheap purple-blue gradients, neon, large dark areas w
 - Use JSON-LD only for facts visible on the page and confirmed by source materials.
 - For private preview links, use `noindex` or access control; remove those controls before public launch.
 - Keep AI-search/GEO readiness evidence-based: specific claims, useful summaries, clear headings, proof near claims, and no hidden keyword text.
+
+## Analytics And Privacy
+
+Add measurement only when the site is going live, and keep it honest.
+
+- Prefer lightweight, privacy-respecting analytics (Plausible, Umami, Fathom) for marketing sites; use GA4 when the client already relies on it.
+- Show a consent banner before loading tracking scripts when the audience includes EU/UK (GDPR) or California (CCPA) visitors; respect opt-outs and store consent.
+- Track real business events (consultation submit, download, primary CTA), not vanity scrolls, and never send PII beyond what the visitor explicitly submitted.
+- Exclude analytics from preview/noindex builds so staging traffic is not counted as production.
+- Record the chosen tool, cookie/no-cookie behavior, and consent model in the handoff.

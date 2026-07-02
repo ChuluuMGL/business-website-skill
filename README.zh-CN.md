@@ -374,39 +374,22 @@ Anime.js 是可选增强：只有在动效能帮助理解业务时才使用，�
 
 ### 视觉预览
 
-下面这张确定性预览图由预设目录生成，适合判断这些方向是否足够区分、是否实用：
+下面这张确定性总览图由预设目录生成，适合判断这些方向是否足够区分、是否实用：
 
 ![商业网站风格预设总览](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/style-overview.png)
 
-AI 概念情绪板只作为视觉氛围参考，不应当被当作可复用模板或真实网站输出：
-
-![商业网站风格 AI 概念情绪板](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/ai-style-moodboard.jpg)
-
 ### 交互动效 GIF 预览
 
-代表性 Standard/Premium 动效预览：
+横跨 Standard / Premium / Showcase 三档的代表性动效：
 
-| 交互 | 预览 |
-|---|---|
-| Anime.js 卡片错峰进入 | ![Anime.js staggered reveal](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/animejs-staggered-reveal.gif) |
-| Anime.js SVG 线条绘制 | ![Anime.js SVG line draw](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/animejs-svg-line-draw.gif) |
-| 数字计数 | ![Metric count-up](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/metric-count-up.gif) |
-| 案例筛选过渡 | ![Case filter transition](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/case-filter-transition.gif) |
-| 数据面板分层进入 | ![Dashboard panel sequence](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/dashboard-panel-sequence.gif) |
-| 产品热点导览 | ![Product hotspot tour](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/product-hotspot-tour.gif) |
-
-Showcase 级动效预览：
-
-| 交互 | 预览 |
-|---|---|
-| 滚动钉住叙事 | ![Pinned scroll storytelling](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/pinned-scroll-storytelling.gif) |
-| Dashboard 滚动变形 | ![Scroll-scrub dashboard morph](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/scroll-scrub-dashboard-morph.gif) |
-| 横向案例墙 | ![Horizontal case wall](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/horizontal-case-wall.gif) |
-| Shared layout 过渡 | ![Shared layout transition](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/shared-layout-transition.gif) |
-| Three.js 产品轨道 Hero | ![Three.js product orbit hero](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/threejs-product-orbit-hero.gif) |
-| Shader / 液体揭示 | ![Shader liquid reveal](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/shader-liquid-reveal.gif) |
-| 磁吸媒体 Hover | ![Magnetic media hover](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/magnetic-media-hover.gif) |
-| 交互式 Orbit Network | ![Interactive orbit network](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/interactive-orbit-network.gif) |
+| 交互 | 档位 | 预览 |
+|---|---|---|
+| 数字计数 | Standard | ![Metric count-up](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/metric-count-up.gif) |
+| 案例筛选过渡 | Premium | ![Case filter transition](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/case-filter-transition.gif) |
+| 数据面板分层进入 | Premium | ![Dashboard panel sequence](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/dashboard-panel-sequence.gif) |
+| 滚动钉住叙事 | Showcase | ![Pinned scroll storytelling](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/pinned-scroll-storytelling.gif) |
+| Three.js 产品轨道 Hero | Showcase | ![Three.js product orbit hero](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/threejs-product-orbit-hero.gif) |
+| Shader / 液体揭示 | Showcase | ![Shader liquid reveal](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/shader-liquid-reveal.gif) |
 
 完整 GIF 见 [预览资产 Release](https://github.com/ChuluuMGL/business-website-skill/releases/tag/preview-assets-v1.3.0)，重合度和实用性判断见 [`references/preview-guide.md`](./references/preview-guide.md)。
 

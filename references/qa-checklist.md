@@ -37,6 +37,8 @@ Use this before final handoff.
 - Forms have labels or aria-labels and honest feedback.
 - Images have meaningful `alt` unless decorative.
 - Filters, tabs, calculators, counters, and anchor jumps work after resize and navigation.
+- WCAG 2.1 AA is met: skip-to-content link, visible `:focus-visible`, keyboard operability with no focus traps (verified for pinned-scroll, horizontal-wall, and showcase presets), and text contrast at least 4.5:1 (3:1 for large text and UI boundaries).
+- `prefers-reduced-motion` triggers a static or simplified fallback for every animated preset.
 
 ## SEO And GEO Readiness
 
@@ -46,6 +48,13 @@ Use this before final handoff.
 - JSON-LD matches visible page content and contains no unsupported organization, address, rating, customer, product, price, or review facts.
 - Public pages are not blocked by `noindex`, login, robots rules, or missing crawlable content.
 - The handoff states whether sitemap, robots, canonical domain, and structured-data validation are done or pending.
+
+## Performance
+
+- Deployed Core Web Vitals hit target: LCP under 2.5s, CLS under 0.1, INP under 200ms.
+- Every image has explicit width/height (or aspect-ratio); below-fold images lazy-load; the hero/LCP image loads eagerly.
+- Images are served as WebP/AVIF with a fallback; non-critical scripts are deferred or placed at the end of `<body>`.
+- At launch, analytics (if used) is lightweight and privacy-respecting, gated behind a consent banner for EU/UK/CA audiences, excluded from noindex/preview builds, and tracks real conversions only.
 
 ## Technical Verification
 

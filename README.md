@@ -374,39 +374,22 @@ Anime.js is treated as optional: use it when motion supports comprehension, not 
 
 ### Visual Preview
 
-The deterministic preview sheet below is generated from the preset catalog and is useful for checking whether the directions are distinct and practical:
+The deterministic overview below is generated from the preset catalog — useful for checking that the directions are distinct and practical:
 
 ![Business website style preset overview](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/style-overview.png)
 
-The AI concept moodboard is included only as a visual mood reference, not as a reusable template or factual website output:
-
-![AI concept moodboard for business website styles](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/ai-style-moodboard.jpg)
-
 ### Interaction GIF Preview
 
-Representative standard/premium motion previews:
+Representative motion across the standard, premium, and showcase tiers:
 
-| Interaction | Preview |
-|---|---|
-| Anime.js staggered reveal | ![Anime.js staggered reveal](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/animejs-staggered-reveal.gif) |
-| Anime.js SVG line draw | ![Anime.js SVG line draw](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/animejs-svg-line-draw.gif) |
-| Metric count-up | ![Metric count-up](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/metric-count-up.gif) |
-| Case filter transition | ![Case filter transition](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/case-filter-transition.gif) |
-| Dashboard panel sequence | ![Dashboard panel sequence](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/dashboard-panel-sequence.gif) |
-| Product hotspot tour | ![Product hotspot tour](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/product-hotspot-tour.gif) |
-
-Showcase motion previews:
-
-| Interaction | Preview |
-|---|---|
-| Pinned scroll storytelling | ![Pinned scroll storytelling](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/pinned-scroll-storytelling.gif) |
-| Scroll-scrub dashboard morph | ![Scroll-scrub dashboard morph](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/scroll-scrub-dashboard-morph.gif) |
-| Horizontal case wall | ![Horizontal case wall](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/horizontal-case-wall.gif) |
-| Shared layout transition | ![Shared layout transition](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/shared-layout-transition.gif) |
-| Three.js product orbit hero | ![Three.js product orbit hero](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/threejs-product-orbit-hero.gif) |
-| Shader/liquid reveal | ![Shader liquid reveal](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/shader-liquid-reveal.gif) |
-| Magnetic media hover | ![Magnetic media hover](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/magnetic-media-hover.gif) |
-| Interactive orbit network | ![Interactive orbit network](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/interactive-orbit-network.gif) |
+| Interaction | Tier | Preview |
+|---|---|---|
+| Metric count-up | Standard | ![Metric count-up](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/metric-count-up.gif) |
+| Case filter transition | Premium | ![Case filter transition](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/case-filter-transition.gif) |
+| Dashboard panel sequence | Premium | ![Dashboard panel sequence](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/dashboard-panel-sequence.gif) |
+| Pinned scroll storytelling | Showcase | ![Pinned scroll storytelling](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/pinned-scroll-storytelling.gif) |
+| Three.js product orbit hero | Showcase | ![Three.js product orbit hero](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/threejs-product-orbit-hero.gif) |
+| Shader/liquid reveal | Showcase | ![Shader liquid reveal](https://github.com/ChuluuMGL/business-website-skill/releases/download/preview-assets-v1.3.0/shader-liquid-reveal.gif) |
 
 See the [preview assets release](https://github.com/ChuluuMGL/business-website-skill/releases/tag/preview-assets-v1.3.0) for the full GIF set and [`references/preview-guide.md`](./references/preview-guide.md) for overlap and practicality notes.
 
