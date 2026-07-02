@@ -108,47 +108,7 @@ Use one primary preset and one secondary modifier:
 
 ## Visual System Starters
 
-Use these when the user wants higher taste, more variety, or less template similarity. These are not extra color themes. Each starter changes module shapes, proof treatment, and interaction behavior.
-
-### editorial-evidence-chroma
-
-- Best for: creative studios, brand strategy, public skill pages, editorial professional services.
-- Visual thesis: a confident editorial surface with high-saturation accents used as evidence or category rails.
-- Layout grammar: asymmetric editorial intro, chroma bands, publication-like proof boards, selected case spreads.
-- Signature element: chroma rail or diagonal evidence band.
-- Proof treatment: source cards, report frames, case snapshots, and tags are built into the visual rhythm.
-- Motion: mask reveal, band sweep, section progress indicator.
-- Avoid: conservative industrial, government, or regulated websites unless the brand explicitly supports expressive design.
-
-### executive-proof-dossier
-
-- Best for: B2B service firms, consulting, agencies, operations partners, proposal pages.
-- Visual thesis: management-ready dossier, not a generic service brochure.
-- Layout grammar: source labels, ledger rows, stakeholder paths, memo panels, service maps, decision tables.
-- Signature element: evidence ledger with source, scope, review, and action rows.
-- Proof treatment: every claim is paired with a source state, pending state, or safe placeholder.
-- Motion: process stepper, active evidence row, restrained tabs.
-- Avoid: consumer lifestyle brands or expressive launch pages.
-
-### industrial-field-blueprint
-
-- Best for: engineering, environmental protection, equipment, manufacturing, energy, construction.
-- Visual thesis: field-ready blueprint that shows process, constraints, handoff, and proof boundaries.
-- Layout grammar: process line, site map, equipment/spec matrix, compliance board, lifecycle, before/after slots.
-- Signature element: technical flow map with hotspots or node states.
-- Proof treatment: certificates, reports, site images, equipment photos, and parameters are separated by source status.
-- Motion: SVG line draw, hotspot tour, spec tab switch, before/after comparison.
-- Avoid: projects without any real process, equipment, certificate, or site material.
-
-### product-command-theater
-
-- Best for: AI SaaS, data tools, monitoring, automation, diagnostics, platform launches.
-- Visual thesis: a product system in motion, with clear trust boundaries and user actions.
-- Layout grammar: command hero, product state sequence, workflow map, integration matrix, risk/approval module.
-- Signature element: stateful command surface or dashboard sequence.
-- Proof treatment: product screenshots, docs, integrations, approval states, and safety boundaries are visible as product evidence.
-- Motion: panel morph, dashboard sequence, integration orbit, reduced-motion fallback.
-- Avoid: products with no confirmed workflow, screenshots, or feature scope.
+For higher-taste work, named visual systems replace plain presets — they change module shapes, proof treatment, and interaction behavior, not just color. The four starters (**Editorial Evidence Chroma**, **Executive Proof Dossier**, **Industrial Field Blueprint**, **Product Command Theater**) are defined in [`visual-system-discovery.md`](./visual-system-discovery.md) with thesis, layout grammar, signature element, proof treatment, motion, and avoid-when. Load that file when the request is "更有品位", "不一样", "不要同质化", or "像成熟模板".
 
 ## Output Format For User Choices
 
