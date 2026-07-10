@@ -18,10 +18,10 @@ Choose the mode from the user's wording and available materials.
 
 Ask no more than 3 questions before work starts. If answers are missing and risk is low, default and continue.
 
-Ask the fewest of these questions needed for the request:
+First form a Demo thesis: "This Demo shows [primary subject] to [viewer] so they understand or experience [intended outcome]." Infer it from the supplied material when possible. Ask the fewest of these questions needed for the request:
 
-1. What should a viewer understand, feel, or experience from this Demo?
-2. Which material or reference is mandatory, and is it content or visual direction?
+1. What is the primary subject when the material contains competing subjects: a product, brand, person, company, project, or growth direction?
+2. What should a viewer understand, feel, or experience? Confirm which material or reference is mandatory when that remains unclear.
 3. Should the Demo be primarily visual or require clickable interactions?
 
 Do not ask a question already answered by the supplied files, current code, or user wording. Use A/B/C choices only when the answer would materially change the result:
@@ -52,7 +52,7 @@ Use checkpoints to keep the user in control without slowing down simple builds.
 
 | Checkpoint | When To Pause |
 |---|---|
-| Demo intake | Missing answers would materially change the intended visual, information, or interaction experience. |
+| Demo intake | The primary subject or missing answers would materially change the intended visual, information, or interaction experience. |
 | Evidence map | Regulated claims, unknown metrics, real lead collection, public launch, or other high-risk facts. |
 | Blueprint | The user requests multi-page work or a Demo is being promoted to a complete site. |
 | Design direction | The user explicitly requests comparison or unresolved references would lead to materially different results. |
@@ -78,6 +78,7 @@ For an audit request, lead with findings ordered by severity before summarizing 
 Before final handoff, verify:
 
 - The Demo makes its intended subject or experience clear in the first view.
+- The title, hero visual, navigation, and primary CTA point to the same primary subject.
 - Unknown facts are not written as real facts.
 - The core module demonstrates the intended visual, information, or interaction direction.
 - A revision preserves unrelated sections and works on desktop and mobile after the change.

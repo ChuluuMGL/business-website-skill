@@ -25,6 +25,7 @@ Created and maintained by 月瑀科技 YUEYU TECH.
 - Use `待补充`, `待确认`, or `示例待确认` for missing facts while keeping the visual structure complete.
 - Keep the existing stack unless the requested delivery shape requires a change.
 - Default to Demo Mode. Ask 0 to 3 questions only when the answers materially change what the Demo should validate, preserve, or let viewers experience.
+- Before building a Demo, form a one-sentence Demo thesis: the primary subject, intended viewer, and intended understanding or experience. Ask for the primary subject only when the material leaves product, brand, person, company, project, or growth direction in genuine conflict.
 - Do not default to a corporate-site structure. Build only the pages and modules needed for the Demo goal and supplied material.
 - For feedback on an existing Demo, classify the request as content, visual, interaction, or structure; change only the affected scope and preserve the rest.
 - Read `references/agent-experience.md` when choosing interaction mode, deciding whether to ask questions, presenting A/B/C options, or managing checkpoints.
@@ -48,10 +49,10 @@ Choose from the user's request and available material:
 
 Inspect supplied files, references, assets, and existing code. Keep an internal evidence map of confirmed facts, pending facts, forbidden assumptions, and usable assets.
 
-Ask only unanswered questions that materially affect the Demo:
+First form a Demo thesis: "This Demo shows [primary subject] to [viewer] so they understand or experience [intended outcome]." Use the supplied material when it resolves the subject. Ask only unanswered questions that materially affect the Demo:
 
-1. What should this Demo help a viewer understand, feel, or experience?
-2. Which source material or reference is mandatory, and is it a content or visual reference?
+1. What is the primary subject when the material contains competing subjects: a product, brand, person, company, project, or growth direction?
+2. What should this Demo help a viewer understand, feel, or experience? Confirm which material or reference is mandatory when that is still unclear.
 3. Should the result be a visual Demo or a clickable interaction Demo?
 
 Use supplied answers instead of repeating questions. If the remaining risk is low, choose a conservative default and state it in one sentence before building.
@@ -67,6 +68,7 @@ Every Demo should contain only what it needs:
 3. A clear closing state, next action, or conclusion.
 
 Do not add company introductions, cases, news, maps, forms, or generic navigation unless they are supported by the source material or useful to the Demo goal.
+Keep the title, hero visual, navigation, and primary CTA aligned with the Demo thesis. Do not make a product, brand, company, or growth direction compete as equal primary subjects in the first view.
 
 For a reference website, separate reusable design logic from its content and structure. Read `references/design-taste-benchmarks.md` before premium, client-facing, or non-generic visual work. Read `references/visual-system-discovery.md` for distinct visual systems, style previews, or multiple demos. Offer 2 to 3 directions only when the user asks to compare them or when unresolved references would produce materially different results.
 
@@ -98,6 +100,7 @@ For every Demo:
 
 - Start a local preview when possible and inspect desktop and mobile.
 - Verify the intended subject is clear in the first view, key interactions work, and there is no horizontal scroll, overlap, broken anchor, missing asset, fake fact, or false submit-success behavior.
+- Verify the title, hero visual, navigation, and primary CTA point to the same primary subject.
 - For premium, public example, or client-facing visual work, inspect screenshots of the first view, one core module, and the closing state on desktop and mobile. Fix obvious alignment, spacing, blank-zone, image-cropping, and same-template issues before handoff.
 
 ### 6. Upgrade to Production
