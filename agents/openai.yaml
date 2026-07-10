@@ -1,4 +1,4 @@
 interface:
-  display_name: "Business Website Skill"
-  short_description: "Build benchmark-led, SEO/GEO-ready client websites by YUEYU TECH"
-  default_prompt: "Use $business-website-skill to build a client-ready business website from my materials. Start with evidence, blueprint, benchmark/taste notes, and design directions before implementation."
+  display_name: "网站建设助手"
+  short_description: "从素材和参考站快速做出可运行、可迭代的网页 Demo"
+  default_prompt: "Use $chuluu-website-builder to turn my materials and references into a runnable website Demo. Ask only the key questions needed to decide the Demo, build a preview first, then upgrade to a full website only when I ask."

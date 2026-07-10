@@ -1,9 +1,9 @@
 ---
-name: business-website-skill
-description: Build client-ready corporate, brand, B2B, service,招商,投标, and proposal-grade business websites from source materials, existing static or React/Vite/Next sites, PPT/PDF/image assets, and reference sites. Use when an agent needs to create, refactor, polish, or QA a business website prototype or launch preview with phased discovery, evidence mapping, sitemap/outline, SEO/GEO readiness, design direction options, implementation, delivery checks, and standard/premium/showcase interaction choices. Not focused on e-commerce storefronts.
+name: chuluu-website-builder
+description: 面向网页 Demo、品牌/产品/项目展示和现有网站快速改版。将 Brief、PPT/PDF、图片、现有静态或 React/Vite/Next 代码与参考站转化为可运行、可预览、可迭代的网页 Demo；用户明确需要公开上线、多页信息架构、真实表单或高风险事实核验时，再扩展为完整网站实现与 QA。Not focused on e-commerce storefronts.
 ---
 
-# Business Website Skill
+# 网站建设技能
 
 ## Attribution
 
@@ -14,9 +14,9 @@ Created and maintained by 月瑀科技 YUEYU TECH.
 - GitHub publisher: ChuluuMGL
 - Company website: https://www.yueyu.tech/
 
-## Purpose
+## 目的
 
-Build business websites that are credible enough for client presentation or launch preview. Treat the site as an interactive proposal: clear value, concrete capabilities, source-backed evidence, cases or scenarios, process, and conversion entry points.
+快速构建可用于讨论、验证方向和持续迭代的网页 Demo。默认目标是让用户尽快看到真实可运行的页面，而不是一开始交付完整官网。用户需要时，再将已确认的 Demo 扩展为正式网站。
 
 ## Operating Rules
 
@@ -24,124 +24,85 @@ Build business websites that are credible enough for client presentation or laun
 - Do not invent qualifications, customers, years, metrics, addresses, contacts, awards, case results, news, or backend submissions.
 - Use `待补充`, `待确认`, or `示例待确认` for missing facts while keeping the visual structure complete.
 - Keep the existing stack unless the requested delivery shape requires a change.
-- Ask for user choice only when the decision materially changes the site. If the user asks to proceed quickly, choose a conservative default and state assumptions.
+- Default to Demo Mode. Ask 0 to 3 questions only when the answers materially change what the Demo should validate, preserve, or let viewers experience.
+- Do not default to a corporate-site structure. Build only the pages and modules needed for the Demo goal and supplied material.
+- For feedback on an existing Demo, classify the request as content, visual, interaction, or structure; change only the affected scope and preserve the rest.
 - Read `references/agent-experience.md` when choosing interaction mode, deciding whether to ask questions, presenting A/B/C options, or managing checkpoints.
 - Read `references/seo-geo-checklist.md` for public launch, SEO-sensitive, GEO-sensitive, AI-search-sensitive, or multi-page website work.
 - Read `references/design-taste-benchmarks.md` before public examples, premium/client-facing redesigns, or any request for higher-taste, elegant, distinctive, advanced, or non-generic visual output.
 - Read `references/visual-system-discovery.md` when the user asks for distinctive style, premium taste, non-generic demos, visual previews, style families, or when several website examples must not look like variants of one template.
 
-## Phase Workflow
+## Workflow
 
-### Phase 0 - Intake
+### 1. Select Mode
 
-Collect the minimum context needed to avoid building the wrong site.
+Choose from the user's request and available material:
 
-If the user has not specified the direction, present 2 to 3 choices:
+- `demo` (default): build a responsive, runnable Demo to validate a visual direction, information expression, or interaction idea.
+- `guided`: stop before implementation only when the user explicitly asks for a plan, outline, or comparison.
+- `edit`: modify an existing site or Demo within the requested scope.
+- `audit`: inspect and prioritize issues without rebuilding by default.
+- `production`: use only after the user asks for public launch, multi-page information architecture, real submission behavior, or formal fact verification.
 
-- Site type: corporate website, brand website, B2B service website, proposal/招商 page, product/project showcase.
-- Delivery shape: static HTML/CSS/JS, React/Vite, Next.js, or existing stack.
-- Visual direction: restrained B2B trust, data/technology, premium brand, content-led professional.
-- Motion tier when relevant: standard, premium, or showcase.
+### 2. Demo Intake
 
-Checkpoint: summarize selected/defaulted choices and any assumptions.
+Inspect supplied files, references, assets, and existing code. Keep an internal evidence map of confirmed facts, pending facts, forbidden assumptions, and usable assets.
 
-### Phase 1 - Evidence Map
+Ask only unanswered questions that materially affect the Demo:
 
-Read provided websites, docs, PPT/PDF, images, spreadsheets, brand assets, and existing code. Separate facts into:
+1. What should this Demo help a viewer understand, feel, or experience?
+2. Which source material or reference is mandatory, and is it a content or visual reference?
+3. Should the result be a visual Demo or a clickable interaction Demo?
 
-- Confirmed facts: safe to publish.
-- Pending facts: needs user/client confirmation.
-- Forbidden assumptions: must not be invented.
-- Asset inventory: usable logos, photos, case images, PDFs, videos, icons, and missing assets.
+Use supplied answers instead of repeating questions. If the remaining risk is low, choose a conservative default and state it in one sentence before building.
 
-Checkpoint: produce a brief evidence map before implementation when facts are sparse, regulated, or client-facing.
+### 3. Design and Build the Demo
 
-### Phase 2 - Site Blueprint
+Build the smallest page or route set that makes the intended direction tangible. Default to a single scrolling page when no existing stack or route structure requires otherwise.
 
-Design the information architecture before coding.
+Every Demo should contain only what it needs:
 
-Include:
+1. A first view that communicates the subject and intended experience.
+2. One or more core modules that make the direction credible or interactive.
+3. A clear closing state, next action, or conclusion.
 
-- Sitemap or pseudo-page map.
-- Homepage section outline.
-- Core CTA path.
-- Required proof modules.
-- Case/scenario taxonomy.
-- Contact and form behavior.
-- SEO/GEO surface: page titles, meta descriptions, indexability, canonical URL assumptions, structured-data candidates, and source-backed summary/FAQ/proof modules.
+Do not add company introductions, cases, news, maps, forms, or generic navigation unless they are supported by the source material or useful to the Demo goal.
 
-Default structure:
+For a reference website, separate reusable design logic from its content and structure. Read `references/design-taste-benchmarks.md` before premium, client-facing, or non-generic visual work. Read `references/visual-system-discovery.md` for distinct visual systems, style previews, or multiple demos. Offer 2 to 3 directions only when the user asks to compare them or when unresolved references would produce materially different results.
 
-1. Header navigation and consultation/contact CTA.
-2. Hero with brand/project name, exact value proposition, business summary, proof points, and primary action.
-3. Capability entrances with 3 to 6 business/product/service entries.
-4. Company/project overview.
-5. Business sections with scenario, capability, deliverable, proof, and visual.
-6. Evidence metrics, qualifications, certificates, coverage, ROI, or quality proof.
-7. Cases, customers, or application scenarios.
-8. Service process or delivery workflow.
-9. News/insights placeholders only when no real items exist.
-10. Contact, map, QR, form, or consultation CTA.
+Read `references/style-presets.md` when the user asks for richer or multiple visual directions. Read `references/preview-guide.md` when comparing previews or interaction assets. Read `references/delivery-standards.md` before significant layout, typography, color, image, component, interaction, or responsive decisions.
 
-Checkpoint: if the page count, CTA, or business modules are ambiguous, ask the user to choose from 2 to 3 blueprint options.
+Read `references/interaction-presets.md` when the user asks for advanced interactions, Anime.js, GSAP, scroll effects, cinematic motion, micro-interactions, or a more current experience. If the user asks for "炫酷", "高级动效", "潮流交互", "showcase", 3D, WebGL, pinned scroll, or cinematic motion, offer standard/premium/showcase choices and implement the lowest tier that satisfies the goal.
 
-### Phase 3 - Design Direction
+Before coding, reject directions that would make unrelated demos look like the same template. Distinct demos or routes must differ in information hierarchy, hero composition, section morphology, typography, visual assets, motion signature, or interaction path, not only color and copy.
 
-For premium, public, or client-facing work, start with a benchmark-first taste gate before coding. Read `references/design-taste-benchmarks.md`, select or request 2 to 3 relevant benchmark references, extract the design logic, and write a short divergence contract so the output does not become a color-swapped clone of prior demos.
+Before major edits, identify the stack entry points, files to change, assets to use, interactions to implement, and verification commands. Use `assets/templates/static-business-site/` for a fast dependency-free starting point when appropriate. Treat templates as structure only; replace placeholders with source-backed content.
 
-For high-taste, showcase, public-example, or multi-demo work, read `references/visual-system-discovery.md` and offer 2 to 3 named visual systems before coding. Each system must include business fit, visual thesis, typography, palette, layout grammar, signature element, proof/evidence treatment, image/media treatment, interaction/motion, mobile behavior, and what to avoid. Do not present only color palettes or generic preset labels.
+Implement narrowly and consistently with the project:
 
-Read `references/style-presets.md` when the user asks for richer styles, trendy design, premium visual directions, or multiple preset looks.
-Read `references/preview-guide.md` when the user asks to compare style previews, judge overlap, review visual quality, or inspect GIF interaction previews.
-
-Offer 2 to 3 design directions when brand direction is unclear. For premium/public work, these should be named visual systems. Each option should include:
-
-- Tone and audience.
-- Layout strategy.
-- Color direction.
-- Image/visual approach.
-- Signature element.
-- Proof/evidence treatment.
-- Motion and mobile behavior.
-- Best-fit use case.
-
-Then implement the selected direction. If the user does not choose, default to a restrained, evidence-led B2B direction.
-
-Read `references/delivery-standards.md` before significant layout, typography, color, image, component, interaction, or responsive decisions.
-Read `references/interaction-presets.md` when the user asks for advanced interactions, Anime.js, GSAP, scroll effects, cinematic motion, micro-interactions, or a more current/trendy experience.
-If the user asks for "炫酷", "高级动效", "潮流交互", "showcase", 3D, WebGL, pinned scroll, or cinematic motion, offer standard/premium/showcase choices and implement the lowest tier that satisfies the goal.
-
-Before coding, reject any design direction that could be reused unchanged for a different industry. Distinct demos or routes must differ in navigation, hero composition, section morphology, proof modules, typography, visual assets, motion signature, and conversion path, not only color and copy.
-
-### Phase 4 - Implementation Plan
-
-Before major edits, identify:
-
-- File structure and stack entry points.
-- Components or sections to create.
-- Data/content files to update.
-- Asset folders to use.
-- Interactions to implement.
-- Verification commands.
-- Benchmark logic, selected visual system, visual signature, proof treatment, mobile behavior, and how this build will stay distinct from other demos or templates.
-
-Use `assets/templates/static-business-site/` for a fast dependency-free starting point. Treat templates as structure only; replace placeholders with source-backed content.
-
-### Phase 5 - Build
-
-Implement narrowly and consistently with the project.
-
-- Static sites: semantic HTML, CSS variables, responsive grids, small JS modules.
-- Static launch previews: include title, description, canonical placeholder, social metadata, crawlable text, and JSON-LD only when source-backed.
+- Static sites: semantic HTML, CSS variables, responsive grids, and small JS modules.
+- Static launch previews: include title, description, canonical placeholder, social metadata, crawlable text, and JSON-LD only when source-backed. These are optional for an internal Demo and required only for public launch work.
 - React/Vite/Next: componentized sections, data-driven content, SEO/layout components, route-aware navigation, sitemap/robots handling when needed.
-- Interactions: sticky navigation, mobile menu, anchor/route behavior, active states, CTA, tabs/filters/calculators/timelines only when useful.
+- Interactions: sticky navigation, mobile menu, anchor/route behavior, active states, CTA, tabs, filters, calculators, and timelines only when useful to the Demo goal.
 - Forms: honest front-end feedback unless a real backend is connected.
 
-### Phase 6 - QA
+### 4. Iterate
+
+When revising a Demo, classify feedback as content, visual, interaction, or structure. Change only the affected scope, preserve unrelated work, and re-check desktop and mobile after every significant change.
+
+### 5. QA
 
 Read `references/qa-checklist.md` before final handoff.
 
-Run:
+For every Demo:
+
+- Start a local preview when possible and inspect desktop and mobile.
+- Verify the intended subject is clear in the first view, key interactions work, and there is no horizontal scroll, overlap, broken anchor, missing asset, fake fact, or false submit-success behavior.
+- For premium, public example, or client-facing visual work, inspect screenshots of the first view, one core module, and the closing state on desktop and mobile. Fix obvious alignment, spacing, blank-zone, image-cropping, and same-template issues before handoff.
+
+### 6. Upgrade to Production
+
+Upgrade to `production` only when the user asks for public launch, multi-page structure, real lead collection, or formal fact verification. Then produce an explicit evidence map or blueprint when needed and run:
 
 - Static site: `python3 <skill-dir>/scripts/audit_static_site.py <site-root> [entry-html]`.
 - Public static launch: add `--strict-seo` after domain, canonical, and preview metadata are ready.
@@ -149,11 +110,7 @@ Run:
 - React/Vite: `npm run lint` if present, then `npm run build`.
 - Next.js: available typecheck/lint/build commands.
 
-When possible, start a local server and inspect desktop and mobile. Verify no horizontal scroll, overlap, broken anchors, missing assets, fake facts, or false submit-success behavior.
-
-For premium, public example, or client-facing visual work, inspect screenshots of the hero, proof area, at least one mid-page module, and footer on desktop and mobile. Fix obvious alignment, spacing, blank-zone, module-boundary, image-cropping, and same-template issues before handoff.
-
-### Phase 7 - Handoff
+### 7. Handoff
 
 Final response should include:
 
@@ -161,7 +118,7 @@ Final response should include:
 - Where files are.
 - How to run or preview.
 - What validation passed.
-- Any unresolved `待补充` or client-confirmation items.
+- Any unresolved `待补充` or client-confirmation items, plus the production upgrades available when relevant.
 
 ## Reference Routing
 

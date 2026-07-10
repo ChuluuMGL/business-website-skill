@@ -1,7 +1,7 @@
 {
-  "name": "business-website-skill",
-  "display_name": "Business Website Skill",
-  "description": "Build client-ready corporate, brand, B2B, service, and proposal-grade business websites from source materials with phased discovery, evidence mapping, named visual-system discovery, benchmark-first design taste gates, SEO/GEO readiness, implementation, and QA.",
+  "name": "chuluu-website-builder",
+  "display_name": "网站建设助手",
+  "description": "快速把 Brief、PPT/PDF、图片、现有代码和参考站做成可运行、可预览、可迭代的网页 Demo；需要公开上线、多页结构、真实表单或正式事实核验时，再扩展为完整网站实现与 QA。",
   "version": "1.4.6",
   "author": "月瑀科技 YUEYU TECH",
   "copyright": "Copyright (c) 2026 月瑀科技 YUEYU TECH",
@@ -19,6 +19,8 @@
   "homepage": "https://business-website-skill.vercel.app/",
   "category": "Web Development",
   "keywords": [
+    "website demo",
+    "rapid web demo",
     "business website",
     "corporate website",
     "brand website",
@@ -43,16 +45,13 @@
     "Agent Skills"
   ],
   "outputs": [
-    "Evidence map",
-    "Site blueprint",
-    "Benchmark and taste-gate notes",
-    "Named visual system options",
-    "Design direction options",
-    "Motion tier recommendation",
-    "SEO/GEO readiness report",
-    "Website implementation",
-    "Static site QA report",
-    "Handoff notes"
+    "Runnable responsive website demo",
+    "Preview and device QA",
+    "Scoped Demo iteration",
+    "Evidence map when facts need confirmation",
+    "Site blueprint when multi-page work is requested",
+    "SEO/GEO readiness when public launch is requested",
+    "Full website implementation and QA when requested"
   ],
   "examples": "examples/README.md",
   "showcase_examples": [
@@ -62,6 +61,7 @@
   ],
   "testing_matrix": "TESTING.md",
   "use_cases": [
+    "Rapid website demo",
     "Corporate website",
     "B2B service website",
     "Brand website",
